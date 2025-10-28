@@ -141,8 +141,26 @@
       }
     }
 
+    .agree-checkbox-wrapper {
+      justify-content: start;
+    display: flex
+
+    ;
+
+    &> div {
+      margin: 0;
+      label {
+        margin: 2px 0 0 -4px;
+    padding: 0 0 0 0;
+      }
+    }
+    }
+    .btn-submit-container {
+      position: static;
+    }
+
     /* Modal styles removed - using policies.html page instead */
-  </style>
+  </style> 
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"
     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous""></script>
   <script src=" https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.7.0/jquery.lettering.min.js"></script>
@@ -895,7 +913,7 @@
               </div>
 
               <!-- Terms and Conditions Link -->
-              <div class="form-group mb-3">
+              <div class="form-group mb-3 agree-checkbox-wrapper" >
                 <div class="form-check d-flex align-items-center justify-content-center">
                   <input class="form-check-input me-2" type="checkbox" id="agreeTerms" required>
                   <label class="form-check-label" for="agreeTerms">
