@@ -154,7 +154,7 @@ supportItem.addEventListener("click", () => {
   overlay.classList.add("show");
 })
 
-overlay.addEventListener("click", () => {
+overlay.addEventListener("mouseover", () => {
   desktopNav.classList.remove("hide");
   searchContainer.classList.add("hide");
   servicesDropdown.classList.add("hide");
