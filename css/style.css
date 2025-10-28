@@ -2697,7 +2697,12 @@ header .head-swiper .swiper-button-prev.swiper-button-disabled i {
     border-radius: .4rem;
     z-index: 1;
 }
-
+.swiper-navigation-icon{
+    display: none;
+}
+.swiper-button-next.support-swiper-button{
+    width: max-content;
+}
 @media (max-width: 960px) {
     .about-us_section-description {
         height: 100%;
@@ -9137,9 +9142,7 @@ ol.steps li.current~li a::after {
         display: none;
     }
 
-    .carousel-inner .carousel-item>div:first-child {
-        display: block;
-    }
+    
 }
 
 .shopHomeList .carousel-control-prev,
@@ -12729,8 +12732,13 @@ div.carousel-nav-icon>svg {
     }
 
     .carousel-inner .carousel-item>div:first-child {
-        display: block;
+        display: flex;
     }
+    .progress_app,
+   .col-Z-10{
+    padding: 0 !important;
+   }
+   
 }
 
 .carousel-inner .carousel-item.active,
@@ -12792,7 +12800,10 @@ div.carousel-nav-icon>svg {
     color: var(--ex-black);
 }
 
+
+
 .progress_app .content_app_inner {
+    height: 700px;
     padding: 16px;
     background: linear-gradient(137deg, var(--card-linear-color1) 0%, var(--card-linear-color2) 0%, var(--card-linear-color3) 49%, var(--card-linear-color1) 100%);
     overflow: hidden;
@@ -12864,6 +12875,7 @@ div.carousel-nav-icon>svg {
     .our_partners .CommercialPartners_title.consumer::before {
         left: 0;
     }
+    
 }
 
 .appliances-repair-section {
@@ -13058,49 +13070,7 @@ div.carousel-nav-icon>svg {
     font-weight: 400;
 }
 
-#multiCardCarousel .carousel-inner {
-    overflow: hidden;
-}
 
-#multiCardCarousel .slide-row {
-    margin-left: 0;
-    margin-right: 0;
-}
-
-#multiCardCarousel .custom-col {
-    flex: 0 0 100%;
-    max-width: 100%;
-}
-
-@media (min-width: 992px) {
-    #multiCardCarousel .custom-col {
-        flex: 0 0 calc(100% / 2.5);
-        max-width: calc(100% / 2.5);
-    }
-
-    #multiCardCarousel .carousel-item.offset-half .slide-row {
-        margin-left: calc(-1 * (100% / 5));
-    }
-
-    .w-lg-75 {
-        width: 75% !important;
-    }
-}
-
-@media (max-width: 991px) {
-    #multiCardCarousel .carousel-item .custom-col {
-        width: 100%;
-    }
-
-    #multiCardCarousel .carousel-item .custom-col:nth-child(n+2) {
-        display: none;
-    }
-}
-
-#multiCardCarousel .progress_app {
-    border-radius: .75rem;
-    border: 1px solid rgba(0, 0, 0, 0.06);
-}
 
 /* ---------  appliances request repair  ----------- */
 .appliances-Repair-page {
