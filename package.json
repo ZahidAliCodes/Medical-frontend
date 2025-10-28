@@ -1,0 +1,27 @@
+{
+  "name": "idigital-optimization",
+  "version": "1.0.0",
+  "description": "iDigital Website Optimization Tools",
+  "scripts": {
+    "optimize": "node optimize.js",
+    "minify": "node minify.js",
+    "seo": "node seo-optimizer.js",
+    "performance": "node performance-optimizer.js",
+    "ai-tools": "node ai-content-tools.js"
+  },
+  "dependencies": {
+    "sharp": "^0.32.6",
+    "html-minifier": "^4.0.0",
+    "clean-css": "^5.3.2",
+    "terser": "^5.19.4",
+    "imagemin": "^8.0.1",
+    "imagemin-mozjpeg": "^10.0.0",
+    "imagemin-pngquant": "^9.0.2",
+    "imagemin-webp": "^7.0.0",
+    "lighthouse": "^11.0.0",
+    "puppeteer": "^21.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.0.0"
+  }
+}

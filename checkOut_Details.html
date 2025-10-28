@@ -1,0 +1,1507 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1,user-scalable=no">
+
+  <!-- Meta tags -->
+  <meta name="keywords" content="">
+  <meta name="author" content="">
+
+  <!-- Title -->
+  <title>iDigital - Checkout</title>
+
+  <!-- Shortcut icon -->
+  <link rel="shortcut icon" href="" type="image/x-icon">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Syne:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <link href="fonts/fontawesome/css/all.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/css/bootstrap.min.css">
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/8.4.6/css/intlTelInput.css" rel="stylesheet" />
+
+  <!-- Styles -->
+
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"" />
+    <link rel=" stylesheet" href="css/animate.min.css" />
+  <link rel="stylesheet" href="css/slicknav.css">
+  <link rel="stylesheet" href="css/style.css" class="StyleLink">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous""></script>
+    <script src=" https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous""></script>
+    <script src=" https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+    integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+    crossorigin="anonymous""></script>
+    <script src=" https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.7.0/jquery.lettering.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+  <!-- Styles -->
+</head>
+
+<body class="CheckOUt-Page">
+  <!-- Header section start -->
+  <!-- Preloader -->
+  <div class="loader">
+    <div class="word">iDigital...</div>
+    <div class="loadOverlay"></div>
+  </div>
+
+  <script type="text/javascript">
+    function Ticker(elem) {
+      elem.lettering();
+      this.done = false;
+      this.cycleCount = 5;
+      this.cycleCurrent = 0;
+      this.chars = 'iDigital...'.split('');
+      this.charsCount = this.chars.length;
+      this.letters = elem.find('span');
+      this.letterCount = this.letters.length;
+      this.letterCurrent = 0;
+
+      this.letters.each(function () {
+        var $this = $(this);
+        $this.attr('data-orig', $this.text());
+        $this.text('-');
+      });
+    }
+
+    Ticker.prototype.getChar = function () {
+      return this.chars[Math.floor(Math.random() * this.charsCount)];
+    };
+
+    Ticker.prototype.reset = function () {
+      this.done = false;
+      this.cycleCurrent = 0;
+      this.letterCurrent = 0;
+      this.letters.each(function () {
+        var $this = $(this);
+        $this.text($this.attr('data-orig'));
+        $this.removeClass('done');
+      });
+      this.loop();
+    };
+
+    Ticker.prototype.loop = function () {
+      var self = this;
+
+      this.letters.each(function (index, elem) {
+        var $elem = $(elem);
+        if (index >= self.letterCurrent) {
+          if ($elem.text() !== ' ') {
+            $elem.text(self.getChar());
+            $elem.css('opacity', Math.random());
+          }
+        }
+      });
+
+      if (this.cycleCurrent < this.cycleCount) {
+        this.cycleCurrent++;
+      } else if (this.letterCurrent < this.letterCount) {
+        var currLetter = this.letters.eq(this.letterCurrent);
+        this.cycleCurrent = 0;
+        currLetter.text(currLetter.attr('data-orig')).css('opacity', 1).addClass('done');
+        this.letterCurrent++;
+      } else {
+        this.done = true;
+      }
+
+      if (!this.done) {
+        requestAnimationFrame(function () {
+          self.loop();
+        });
+      } else {
+        setTimeout(function () {
+          self.reset();
+        }, 750);
+      }
+    };
+
+    $words = $(".word");
+
+    $words.each(function () {
+      var $this = $(this),
+        ticker = new Ticker($this).reset();
+      $this.data('ticker', ticker);
+    });
+  </script>
+  <!--Ended Preloading -->
+  <!-- ScrollBar -->
+  <div class="scrollbar" id="style-7">
+    <div class="force-overflow"></div>
+  </div>
+  <!-- Back to Top -->
+  <div class="BackTop-wrap">
+    <svg class="BackTop-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+      <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+    </svg>
+  </div>
+  <!-- Navbar -->
+  <nav class="navbar primaryNav navbar-expand-xl navbar-dark p-0 wow animate__animated animate__slideInDown"
+    data-wow-duration="1000ms" data-wow-delay="400ms">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand textLogo p-0" href="index.html">
+          iDigital
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav desktop-nav ms-auto mb-2 mb-lg-0 align-items-center">
+          <li class="nav-item">
+            <a class="nav-link " aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item dropdown service_dropDownMenu">
+            <a class="nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Services
+            </a>
+            <div class="dropdown-menu services-dropdown" data-wow-duration="300ms" data-wow-delay="0ms"
+              aria-labelledby="navbarDropdown">
+              <ul class="nav nav-tabs services-dropdown_wrap" id="services-dropdown_wrap" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <a class="services-dropdown_item" id="home-tab" data-bs-toggle="tab" type="button"
+                    data-bs-target="#home" role="tab" aria-controls="home" aria-selected="true">
+                    <img class="start-repair_services-img" src="img/start_repair/recovery.png" alt="">
+                    <h4 class="start-repair_services-text">Data Recovery</h4>
+                  </a>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <a class="services-dropdown_item" id="profile-tab" data-bs-toggle="tab" type="button"
+                    data-bs-target="#profile" role="tab" aria-controls="profile" aria-selected="false">
+                    <img class="start-repair_services-img" src="img/start_repair/service.png" alt="">
+                    <h4 class="start-repair_services-text">Repair Service</h4>
+                  </a>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <a class="services-dropdown_item" id="contact-tab" data-bs-toggle="tab" type="button"
+                    data-bs-target="#contact" role="tab" aria-controls="contact" aria-selected="false">
+                    <img class="start-repair_services-img" src="img/start_repair/home.png" alt="">
+                    <h4 class="start-repair_services-text">Home Services</h4>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="nav-item dropdown support_dropDownMenu" onmouseover="supportMenu()">
+            <a class="nav-link" id="support-tab" data-bs-toggle="tab" type="button" data-bs-target="#support" role="tab"
+              aria-controls="support" aria-selected="true">
+              Support
+
+            </a>
+          </li>
+
+
+          <li class="nav-item">
+            <a class="nav-link link-search" href="#"><i class="fas fa-search"></i></a>
+          </li>
+          <li class="nav-item ">
+            <!--<a class="nav-link find-your-store" href="#"><img src="img/icons/map-pin.png" />Find Your Store</a>-->
+            <div class="locationbar">
+              <input type="text" class="input LocationInput" placeholder="location">
+              <div class="btn btnLocation"><img src="img/icons/map-pin.png" /><a class="btnTextLocation">Find Your
+                  Store</a></div>
+            </div>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link sign-in btn-primary" href="sign-in.html"><i class="fa fa-arrow-right"></i>Sign In</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link language dropdown-toggle_custom" href="#" id="navbarDropdown" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              <img width="36px" height="24px" class="lang-selected-img" src="img/flags/usa.png" />
+            </a>
+
+            <ul class="dropdown-menu dropdown-menu-end language_dropdown" data-wow-duration="300ms" data-wow-delay="0ms"
+              aria-labelledby="navbarDropdown">
+              <li><a data-lang-code="en-GB" class="dropdown-item selected" href="#"><img
+                    src="img/flags/usa.png" /><span>en</span></a></li>
+              <li><a data-lang-code="fr-FR" class="dropdown-item" href="#"><img
+                    src="img/flags/fr.png" /><span>fr</span></a></li>
+              <li><a data-lang-code="es-ES" class="dropdown-item" href="#"><img
+                    src="img/flags/es.png" /><span>es</span></a></li>
+              <li><a data-lang-code="ar-AR" class="dropdown-item" href="#"><img
+                    src="img/flags/pal.jpg" /><span>ar</span></a></li>
+            </ul>
+          </li>
+        </ul>
+        <img src="img/icons/moon.png" id="icon-mode" class="icon-mode" />
+      </div>
+    </div>
+  </nav>
+
+  <!-- Search icon -->
+  <div class="search-container hide">
+    <div class="link-search"><i class="fas fa-search" style="color:#fff"></i>
+    </div>
+    <div class="search-bar">
+      <form action="" class="ui-widget">
+        <input type="text" class="inputSearch" placeholder="Search iDigital.com" id="inputSearch">
+      </form>
+    </div>
+    <div class="link-close"></div>
+
+    <div class="quick-links">
+      <h2>Quick Links</h2>
+      <ul>
+        <li>
+          <a href="#">Covid -19 information</a>
+        </li>
+        <li>
+          <a href="#">Most popular Questions</a>
+        </li>
+        <li>
+          <a href="#">Amet minim mollit non deserunt</a>
+        </li>
+        <li>
+          <a href="#">Velit officia consequat duis en</a>
+        </li>
+        <li>
+          <a href="#">Exercitation veniam consequat sunt</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="tab-content services-dropdown_menu hide" id="services-dropdown_tab">
+    <div class="tab-pane fade" id="home" role="tabpanel" aria-labelledby="home-tab">
+      <div class="container">
+        <div class="services-swiper_wrap">
+          <!-- Swiper -->
+          <div class="swiper-container services-swiper services-swiper1">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide box">
+                <a href="Single-hard-drive.html" class="services-swiper_item">
+                  <img src="img/services/single_hard.png" alt="">
+                  <h5>Single Hard Drive</h5>
+                </a>
+              </div>
+              <div class="swiper-slide box">
+                <a href="raid-hard.html" class="services-swiper_item">
+                  <img src="img/services/raid_hard.png" alt="">
+                  <h5>Raid Hard Drive</h5>
+                </a>
+              </div>
+              <div class="swiper-slide box">
+                <a href="solid-state.html" class="services-swiper_item">
+                  <img src="img/services/solid_state.png" alt="">
+                  <h5>Solid State</h5>
+                </a>
+              </div>
+              <div class="swiper-slide box">
+                <a href="smartphone.html" class="services-swiper_item">
+                  <img src="img/services/smartphone.png" alt="">
+                  <h5>Smartphone</h5>
+                </a>
+              </div>
+              <div class="swiper-slide box">
+                <a href="Nand&Chip.html" class="services-swiper_item">
+                  <img src="img/services/nand.png" alt="">
+                  <h5>Nand & Chip Off</h5>
+                </a>
+              </div>
+              <div class="swiper-slide box">
+                <a href="USB-flash.html" class="services-swiper_item">
+                  <img src="img/services/flash.png" alt="">
+                  <h5>USB Flash</h5>
+                </a>
+              </div>
+              <div class="swiper-slide box">
+                <a href="file-system.html" class="services-swiper_item">
+                  <img src="img/services/file.png" alt="">
+                  <h5>File System</h5>
+                </a>
+              </div>
+              <div class="swiper-slide box">
+                <a href="Mac-OS.html" class="services-swiper_item">
+                  <img src="img/services/mac.png" alt="">
+                  <h5>Mac OS</h5>
+                </a>
+              </div>
+              <div class="swiper-slide box">
+                <a href="windows-repair.html" class="services-swiper_item">
+                  <img src="img/services/windows.png" alt="">
+                  <h5>Windows</h5>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="Linux&Unix.html" class="services-swiper_item">
+                  <img src="img/services/linux.png" alt="">
+                  <h5>Linux & Unix</h5>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="exchange-repair.html" class="services-swiper_item">
+                  <img src="img/services/exchange.png" alt="">
+                  <h5>Exchange Server</h5>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="sql-server.html" class="services-swiper_item">
+                  <img src="img/services/sql.png" alt="">
+                  <h5>SQL Server</h5>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="virtual-machine.html" class="services-swiper_item">
+                  <img src="img/services/virtual.png" alt="">
+                  <h5>Virtual Machine</h5>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="voip-system.html" class="services-swiper_item">
+                  <img src="img/services/voip.png" alt="">
+                  <h5>VoIP System</h5>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="password.html" class="services-swiper_item">
+                  <img src="img/services/pass.png" alt="">
+                  <h5>Password</h5>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="Bitcoin.html" class="services-swiper_item">
+                  <img src="img/services/bitcoin.png" alt="">
+                  <h5>Bitcoin</h5>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="Tape.html" class="services-swiper_item">
+                  <img src="img/services/tape.png" alt="">
+                  <h5>Tape</h5>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="CD-DVD-Bluray.html" class="services-swiper_item">
+                  <img src="img/services/cd.png" alt="">
+                  <h5>CD - DVD - BLURAY</h5>
+                </a>
+              </div>
+            </div>
+
+          </div>
+          <div class="swiper-button-next services-swiper-button services-swiper1-button"><img
+              src="img/icons/chevron-right.png" /></div>
+          <div class="swiper-button-prev services-swiper-button services-swiper1-button"><img
+              src="img/icons/chevron-left.png" /></div>
+        </div>
+      </div>
+    </div>
+    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+      <div class="container">
+        <div class="services-swiper_wrap">
+          <!-- Swiper -->
+          <div class="swiper-container services-swiper services-swiper2">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <a href="smartphone.html" class="services-swiper_item">
+                  <img src="img/services/smartphone.png" alt="">
+                  <h5>Smartphone</h5>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="SmartWatch.html" class="services-swiper_item">
+                  <img src="img/services/watch.png" alt="">
+                  <h5>Smart Watches</h5>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="tablet.html" class="services-swiper_item">
+                  <img src="img/services/tablet.png" alt="">
+                  <h5>Tablet</h5>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="computer.html" class="services-swiper_item">
+                  <img src="img/services/computer.png" alt="">
+                  <h5>Computer</h5>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="laptop.html" class="services-swiper_item">
+                  <img src="img/services/laptop.png" alt="">
+                  <h5>Laptop</h5>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="game-console-repair.html" class="services-swiper_item">
+                  <img src="img/services/console.png" alt="">
+                  <h5>Game Consoles</h5>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="Drone-Automation.html" class="services-swiper_item">
+                  <img src="img/services/drone.png" alt="">
+                  <h5>Drone & Automation</h5>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="Portable-music-playery.html" class="services-swiper_item">
+                  <img src="img/services/player.png" alt="">
+                  <h5>Portable Music Player</h5>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="Virtual-Reality.html" class="services-swiper_item">
+                  <img src="img/services/vr.png" alt="">
+                  <h5>Virtual Reality</h5>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="sound-system.html" class="services-swiper_item">
+                  <img src="img/services/sound.png" alt="">
+                  <h5>Sound System</h5>
+                </a>
+              </div>
+
+              <div class="swiper-slide">
+                <a href="motherBoard-repair.html" class="services-swiper_item">
+                  <img src="img/services/logic.png" alt="">
+                  <h5>Logic Boards</h5>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="Medical-devices.html" class="services-swiper_item">
+                  <img src="img/services/med.png" alt="">
+                  <h5>Medical Devices</h5>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="home-appliances.html" class="services-swiper_item">
+                  <img src="https://i.postimg.cc/tJ0WCVxV/electric-appliance.png" alt="">
+                  <h5>Appliances</h5>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button-next services-swiper-button services-swiper2-button"><img
+              src="img/icons/chevron-right.png" /></div>
+          <div class="swiper-button-prev services-swiper-button services-swiper2-button"><img
+              src="img/icons/chevron-left.png" /></div>
+        </div>
+      </div>
+    </div>
+    <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+      <div class="container">
+        <div class="services-swiper_wrap">
+          <!-- Swiper -->
+          <div class="swiper-container services-swiper services-swiper3">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <a href="solar-panel.html" class="services-swiper_item">
+                  <img src="img/services/solar.png" alt="">
+                  <h5>Solar Panel</h5>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="smart-home.html" class="services-swiper_item">
+                  <img src="img/services/smarthome.png" alt="">
+                  <h5>Smarthome</h5>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="home-security.html" class="services-swiper_item">
+                  <img src="img/services/security.png" alt="">
+                  <h5>Home Security</h5>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="tv-sound.html" class="services-swiper_item">
+                  <img src="img/services/tv_sound.png" alt="">
+                  <h5>TV Sound System</h5>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button-next services-swiper-button services-swiper3-button"><img
+              src="img/icons/chevron-right.png" /></div>
+          <div class="swiper-button-prev services-swiper-button services-swiper3-button"><img
+              src="img/icons/chevron-left.png" /></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-content support-dropdown_menu hide" id="support-dropdown_tab">
+    <div id="support" role="tabpanel" aria-labelledby="support-tab">
+      <div class="container">
+        <div class="services-swiper_wrap">
+          <!-- Swiper -->
+          <div class="swiper-container services-swiper support-swiper1">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide box">
+                <a href="about-us.html" class="services-swiper_item">
+                  <img src="https://i.postimg.cc/DyshNTMx/team.png" alt="">
+                  <h5>About Us</h5>
+                </a>
+              </div>
+              <div class="swiper-slide box">
+                <a href="contact-us.html" class="services-swiper_item">
+                  <img src="https://i.postimg.cc/MG276kMh/contact-Us.png" alt="">
+                  <h5>Contact Us</h5>
+                </a>
+              </div>
+              <div class="swiper-slide box">
+                <a href="partners.html" class="services-swiper_item">
+                  <img src="https://i.postimg.cc/43t474nc/team-1.png" alt="">
+                  <h5>Partners</h5>
+                </a>
+              </div>
+              <div class="swiper-slide box">
+                <a href="franchising.html" class="services-swiper_item">
+                  <img src="https://i.postimg.cc/nhLzM1Yy/franchise.png" alt="">
+                  <h5>Franchising</h5>
+                </a>
+              </div>
+              <div class="swiper-slide box">
+                <a href="pricing.html" class="services-swiper_item">
+                  <img src="https://i.postimg.cc/tgNnxgnf/price-tag.png" alt="">
+                  <h5>Pricing</h5>
+                </a>
+              </div>
+              <div class="swiper-slide box">
+                <a href="Policies.html" class="services-swiper_item">
+                  <img src="https://i.postimg.cc/hvp0brJk/privacy-policy.png" alt="">
+                  <h5>Policies</h5>
+                </a>
+              </div>
+              <div class="swiper-slide box">
+                <a href="go-green.html" class="services-swiper_item">
+                  <img src="https://i.postimg.cc/Zq7D4JKk/353727633-979064989956272-7164428973325253639-n.png" alt="">
+                  <h5>Go Green life at iDigital</h5>
+                </a>
+              </div>
+              <div class="swiper-slide box">
+                <a href="iDigital-careers.html" class="services-swiper_item">
+                  <img src="https://i.postimg.cc/HWvznTM3/career-choice.png" alt="">
+                  <h5>iDigital Career</h5>
+                </a>
+              </div>
+              <div class="swiper-slide box">
+                <a href="work-at-iDigital.html" class="services-swiper_item">
+                  <img src="https://i.postimg.cc/tJcsjSYt/work.png" alt="">
+                  <h5>Work at iDigital</h5>
+                </a>
+              </div>
+              <div class="swiper-slide box">
+                <a href="life-at-iDigital.html" class="services-swiper_item">
+                  <img src="https://i.postimg.cc/4NtWSrK5/working-at-home.png" alt="">
+                  <h5>life at iDigital</h5>
+                </a>
+              </div>
+              <div class="swiper-slide box">
+                <a href="blog.html" class="services-swiper_item">
+                  <img src="https://i.postimg.cc/kMvzRgL3/blog.png" alt="">
+                  <h5>Blog</h5>
+                </a>
+              </div>
+              <div class="swiper-slide box">
+                <a href="solid-state.html" class="services-swiper_item">
+                  <img src="https://i.postimg.cc/sDBbTQck/a86e5695-6268-441b-bf2a-8fd4473969ba.png" alt="">
+                  <h5>Discussion</h5>
+                </a>
+              </div>
+              <div class="swiper-slide box">
+                <a href="faq.html" class="services-swiper_item">
+                  <img src="https://i.postimg.cc/T1ryqYpB/question.png" alt="">
+                  <h5>FAQ</h5>
+                </a>
+              </div>
+
+            </div>
+
+          </div>
+          <div class="swiper-button-next support-swiper-button support-swiper1-button"><img
+              src="img/icons/chevron-right.png" /></div>
+          <div class="swiper-button-prev support-swiper-button support-swiper1-button"><img
+              src="img/icons/chevron-left.png" /></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Mobile Menu Start -->
+  <ul class="mobile-menu">
+    <li>
+      <a href="index.html">Home</a>
+    </li>
+    <li>Services
+      <ul class="submenu">
+        <li class="submenu-item"><img class="img-fluid" src="img/start_repair/recovery.png" alt="">Data
+          Recovery
+          <ul class="submenu-list">
+            <li><a href="Single-hard-drive.html">Single Hard Drive</a></li>
+            <li><a href="raid-hard.html">Raid Hard Drive</a></li>
+            <li><a href="solid-state.html">Solid State</a></li>
+            <li><a href="smartphone.html">Smartphone</a></li>
+            <li><a href="Nand&Chip.html">Nand & Chip Off</a></li>
+            <li><a href="USB-flash.html">USB Flash</a></li>
+            <li><a href="file-system.html">File System</a></li>
+            <li><a href="Mac-OS.html">Mac OS</a></li>
+            <li><a href="windows-repair.html">Windows</a></li>
+            <li><a href="life-at-iDigital.html">Linux & Unix</a></li>
+            <li><a href="exchange-repair.html">Exchange Server</a></li>
+            <li><a href="sql-server.html">SQL Server</a></li>
+            <li><a href="virtual-machine.html">Virtual Machine</a></li>
+            <li><a href="voip-system.html">VoIP System</a></li>
+            <li><a href="password.html">Password</a></li>
+            <li><a href="Bitcoin.html">Bitcoin</a></li>
+            <li><a href="Tape.html">Tape</a></li>
+            <li><a href="CD-DVD-Bluray.html">CD - DVD - BLURAY</a></li>
+          </ul>
+        </li>
+        <li class="submenu-item"><img class="img-fluid" src="img/start_repair/service.png" alt="">Repair
+          Service
+          <ul class="submenu-list">
+            <li><a href="smartphone.html">Smartphone</a></li>
+            <li><a href="SmartWatch.html">Smart Watches</a></li>
+            <li><a href="tablet.html">Tablet</a></li>
+            <li><a href="computer.html">Computer</a></li>
+            <li><a href="laptop.html">Laptop</a></li>
+            <li><a href="game-console-repair.html">Game Consoles</a></li>
+            <li><a href="Drone-Automation.html">Drone & Automation</a></li>
+            <li><a href="Portable-music-playery.html">Portable Music Player</a></li>
+            <li><a href="Virtual-Reality.html">Virtual Reality</a></li>
+            <li><a href="sound-system.html">Sound System</a></li>
+            <li><a href="motherBoard-repair.html">Logic Boards</a></li>
+            <li><a href="Medical-devices.html">Medical Devices</a></li>
+            <li><a href="appliances.html">Appliances</a></li>
+          </ul>
+
+        </li>
+        <li class="submenu-item"><img class="img-fluid" src="img/start_repair/home.png" alt="">Home Services
+          <ul class="submenu-list">
+            <li><a href="solar-panel.html">Solar Panel</a></li>
+            <li><a href="smart-home.html">Smarthome</a></li>
+            <li><a href="home-security.html">Home Security</a></li>
+            <li><a href="tv-sound.html">TV Sound System</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li>
+      Support
+      <ul class="submenu supportSubmenu">
+        <li><a href="about-us.html">About Us</a></li>
+        <li><a href="contact-us.html">Contact Us</a></li>
+        <li><a href="partners.html">Partners</a></li>
+        <li><a href="franchising.html">Franchising</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="Policies.html">Policies</a></li>
+        <li><a href="go-green.html">Go Green life at iDigtal</a></li>
+        <li><a href="iDigital-careers.html">iDigital Career</a></li>
+        <li><a href="work-at-iDigital.html">Work at iDigital</a></li>
+        <li><a href="life-at-iDigital.html">life at iDigital</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="discussion.html">discussion</a></li>
+        <li><a href="faq.html">faq</a></li>
+
+      </ul>
+    </li>
+    <li>
+      <a href="contact-us.html">Contact</a>
+    </li>
+    <li>
+      <a href="covid19.html">Covid 19</a>
+    </li>
+    <li>
+      Search
+      <ul class="submenu">
+        <li>
+          <form class="" action="index.html" method="post">
+            <input type="text" class="form-control" placeholder="Search iDigital.com">
+          </form>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="sign-in.html">Sign In</a>
+    </li>
+    <li>
+      Language
+      <ul class="submenu language_dropdown">
+        <li><a data-lang-code="en-GB" class="dropdown-item selected" href="#"><img
+              src="img/flags/usa.png" /><span>en</span></a></li>
+        <li><a data-lang-code="fr-FR" class="dropdown-item" href="#"><img src="img/flags/fr.png" /><span>fr</span></a>
+        </li>
+        <li><a data-lang-code="es-ES" class="dropdown-item" href="#"><img src="img/flags/es.png" /><span>es</span></a>
+        </li>
+        <li><a data-lang-code="ar-AR" class="dropdown-item" href="#"><img src="img/flags/ar.png" /><span>ar</span></a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <img class="icon-mode-mobile" onclick="MobileMode()" src="img/icons/moon.png" />
+    </li>
+  </ul>
+  <!-- Mobile Menu End -->
+  <div class="overlay"></div>
+  <!-- secondaryNav start -->
+  <div class="secondaryNav">
+    <nav class="navbar" aria-label="Secondary Navigation">
+      <div class="container-md">
+        <ul class="nav m-auto justify-content-center">
+          <li class="nav-item dropdown" data-menu-slug="iphones">
+            <a href="/buy/iphones" class="nav-link dropdown-toggle" title="iPhone">
+              <i class="far fa-apple" aria-hidden="true"></i>
+              iPhones
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="/buy/unlocked/iphones" class="dropdown-item"><i aria-hidden="true"
+                    class="fa-fw far fa-unlock-alt"></i> Unlocked</a></li>
+              <li><a href="/buy/apple-iphone-xr" class="dropdown-item">iPhone Xr</a></li>
+              <li><a href="/buy/apple-iphone-11" class="dropdown-item">iPhone 11</a></li>
+              <li><a href="/buy/apple-iphone-11-pro-max" class="dropdown-item">iPhone 11 Pro Max</a>
+              </li>
+              <li><a href="/buy/apple-iphone-12" class="dropdown-item">iPhone 12</a></li>
+              <li><a href="/buy/apple-iphone-13" class="dropdown-item">iPhone 13</a></li>
+              <li><a href="/buy/apple-iphone-se-2nd-gen" class="dropdown-item">iPhone SE 2nd Gen</a>
+              </li>
+              <li><a href="/buy/apple-iphone-8" class="dropdown-item">iPhone 8</a></li>
+              <li><a href="/guide/iphones" class="dropdown-item"><i aria-hidden="true"
+                    class="fa-fw fal fa-info-circle"></i> Buyer's Guide</a></li>
+              <li><a href="/buy/iphones" class="dropdown-item"><i aria-hidden="true"
+                    class="fa-fw fas fa-arrow-right"></i> All iPhones</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown" data-menu-slug="phones">
+            <a href="/buy/phones" class="nav-link dropdown-toggle" title="Phones">
+              <i class="far fa-mobile" aria-hidden="true"></i>
+              Phones
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="/buy/unlocked" class="dropdown-item"><i aria-hidden="true"
+                    class="fa-fw far fa-unlock-alt"></i> Unlocked</a></li>
+              <li><a href="/buy/iphones" class="dropdown-item"><i aria-hidden="true" class="fa-fw fab fa-apple"></i>
+                  Apple</a></li>
+              <li><a href="/buy/phones/samsung" class="dropdown-item"><i aria-hidden="true"
+                    class="fa-fw fab fa-android"></i> Samsung</a></li>
+              <li><a href="/buy/phones/google" class="dropdown-item"><i aria-hidden="true"
+                    class="fa-fw fab fa-google"></i> Google</a></li>
+              <li><a href="/mobile/verizon" class="dropdown-item">Verizon</a></li>
+              <li><a href="/mobile/t-mobile" class="dropdown-item">T-Mobile</a></li>
+              <li><a href="/mobile/att" class="dropdown-item">AT&amp;T</a></li>
+              <li><a href="/buy/phones" class="dropdown-item"><i aria-hidden="true"
+                    class="fa-fw fas fa-arrow-right"></i> All Phones</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown" data-menu-slug="laptops">
+            <a href="/laptops" class="nav-link dropdown-toggle" title="Laptops">
+              <i class="far fa-laptop" aria-hidden="true"></i>
+              Laptops
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="/buy/macbooks" class="dropdown-item"><i aria-hidden="true" class="fa-fw fab fa-apple"></i>
+                  MacBooks</a></li>
+              <li><a href="/buy/macbooks/macbook-pro" class="dropdown-item"><i aria-hidden="true"
+                    class="fa-fw fab fa-apple"></i> MacBook Pro</a></li>
+              <li><a href="/buy/macbooks/macbook-air" class="dropdown-item"><i aria-hidden="true"
+                    class="fa-fw fab fa-apple"></i> MacBook Air</a></li>
+              <li><a href="/laptops/chromebooks" class="dropdown-item"><i aria-hidden="true"
+                    class="fa-fw fab fa-chrome"></i> Chromebooks</a></li>
+              <li><a href="/laptops/windows" class="dropdown-item"><i aria-hidden="true"
+                    class="fa-fw fab fa-windows"></i> Windows</a></li>
+              <li><a href="/guide/macbook" class="dropdown-item"><i aria-hidden="true"
+                    class="fa-fw fal fa-info-circle"></i> MacBook Guide</a></li>
+              <li><a href="/laptops" class="dropdown-item"><i aria-hidden="true" class="fa-fw fas fa-arrow-right"></i>
+                  All Laptops</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown" data-menu-slug="computers">
+            <a href="/computers" class="nav-link dropdown-toggle" title="Computers">
+              <i class="far fa-laptop" aria-hidden="true"></i>
+              Computers
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="/laptops" class="dropdown-item"><i aria-hidden="true" class="fa-fw fas fa-laptop"></i>
+                  Laptops</a></li>
+              <li><a href="/buy/macbooks" class="dropdown-item"><i aria-hidden="true" class="fa-fw fab fa-apple"></i>
+                  MacBooks</a></li>
+              <li><a href="/computers/mini-pc" class="dropdown-item"><i aria-hidden="true"
+                    class="fa-fw fab fa-apple"></i> Mac minis</a></li>
+              <li><a href="/computers/all-in-one" class="dropdown-item"><i aria-hidden="true"
+                    class="fa-fw fab fa-apple"></i> iMacs</a></li>
+              <li><a href="/computers/graphics-card" class="dropdown-item"><i aria-hidden="true"
+                    class="fa-fw fas fa-microchip"></i> Graphics Cards</a></li>
+              <li><a href="/laptops/chromebooks" class="dropdown-item"><i aria-hidden="true"
+                    class="fa-fw fab fa-chrome"></i> Chromebooks</a></li>
+              <li><a href="/laptops/windows" class="dropdown-item"><i aria-hidden="true"
+                    class="fa-fw fab fa-windows"></i> Windows</a></li>
+              <li><a href="/computers" class="dropdown-item"><i aria-hidden="true" class="fa-fw fas fa-arrow-right"></i>
+                  All Computers</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown" data-menu-slug="wearables">
+            <a href="/buy/smartwatch" class="nav-link dropdown-toggle" title="Smart Watches">
+              Watches
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="/buy/apple/watch" class="dropdown-item"><i aria-hidden="true" class="fa-fw fab fa-apple"></i>
+                  Apple Watches</a></li>
+              <li><a href="/buy/smartwatch/samsung" class="dropdown-item"><i aria-hidden="true"
+                    class="fa-fw far fab fa-watch"></i> Samsung Smartwatch</a></li>
+              <li><a href="/buy/smartwatch/android" class="dropdown-item"><i aria-hidden="true"
+                    class="fa-fw fab fa-android"></i> Android Smartwatch</a></li>
+              <li><a href="/wearables" class="dropdown-item"><i aria-hidden="true" class="fa-fw fas fa-arrow-right"></i>
+                  All Wearables</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown" data-menu-slug="tablets">
+            <a href="#" class="nav-link dropdown-toggle" title="Tablets">
+              <i class="far fa-tablet" aria-hidden="true"></i>
+              Tablets
+            </a>
+
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <!-- secondaryNav end -->
+  <!-- Shopping Cart Section -->
+  <section class="shopping-cart CheckOut-section">
+    <div class="container-fluid">
+      <div class="row d-flex justify-content-center my-2">
+        <div class="col-md-8">
+          <div class="accordion faq-accordion" id="faq-accordion">
+            <div class="accordion-item shadow rounded">
+              <div class="accordion-header" id="faq-head_1">
+                <button class="accordion-button checkout-accordion-btn" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#faq_1" aria-expanded="true" aria-controls="faq_1">
+                  1. Address Details </button>
+              </div>
+              <div id="faq_1" class="accordion-collapse collapse show" aria-labelledby="faq-head_1"
+                data-bs-parent="#faq-accordion">
+                <div class="accordion-body my-4">
+                  <!-- Form -->
+                  <form class="form checkout-form mx-4 needs-validation" novalidate method="post" action="#">
+                    <div class="row">
+                      <div class="col-lg-6 col-md-6 col-12">
+                        <div class="form-group">
+                          <label for="validationCustom01" class="form-label">First
+                            name</label>
+                          <input type="text" name="Fname" id="validationCustom01" value="" required>
+                          <div class="valid-feedback">
+                            Looks good!
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-6 col-md-6 col-12">
+                        <div class="form-group">
+                          <label for="validationCustom02" class="form-label">Last name</label>
+                          <input type="text" name="Lname" id="validationCustom02" value="" required>
+                          <div class="valid-feedback">
+                            Looks good!
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-6 col-md-6 col-12">
+                        <div class="form-group ">
+                          <label for="validationCustom03" class="form-label">Email</label>
+                          <div class="input-group flex-nowrap">
+                            <span class="input-group-text" id="addon-wrapping"><i class="fas fa-envelope"></i></span>
+                            <input type="email" class="form-control" id="validationCustom03"
+                              placeholder="user.name@gmail.com" aria-label="email" value=""
+                              aria-describedby="addon-wrapping" name="email" required>
+                            <div class="invalid-feedback">
+                              Please choose a real email.
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-6 col-md-6 col-12">
+                        <div class="form-group">
+                          <label for="validationCustom04" class="form-label">Phone
+                            number</label>
+                          <input id="validationCustom04" type="tel" value="" name="tel"
+                            class="form-control jquery-intl-phone" required>
+                          <div class="invalid-feedback">
+                            Please choose a vaild number.
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-6 col-md-6 col-12">
+                        <div class="form-group">
+                          <label for="validationCustom05">State/Province</label>
+                          <select class="form-select" id="inputGroupSelect05" name="state-province" required>
+                            <option value="Los Angeles">Los Angeles</option>
+                            <option value="Chicago">Chicago</option>
+                            <option value="Houston">Houston</option>
+                            <option value="San Diego">San Diego</option>
+                            <option value="Dallas">Dallas</option>
+                            <option value="Charlotte">Charlotte</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-lg-6 col-md-6 col-12">
+                        <div class="form-group">
+                          <label for="validationCustom06" class="form-label">City</label>
+                          <select name="country_name" class="form-select" id="inputGroupSelect06" required>
+                            <option value="AL">Alabama</option>
+                            <option value="AL">Alaska</option>
+                            <option value="AR">Arizona</option>
+                            <option value="CA">California</option>
+                            <option value="GE">Georgia</option>
+                            <option value="MO">Montana</option>
+                            <option value="NY">New York</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-lg-6 col-md-6 col-12">
+                        <div class="form-group">
+                          <label for="validationCustom07" class="form-label">Postal
+                            Code</label>
+                          <input type="text" name="PostalCode" class="form-control" id="inputGroupSelect07" required
+                            value="">
+                        </div>
+                      </div>
+                      <div class="col-lg-6 col-md-6 col-12">
+                        <div class="form-group">
+                          <label for="validationCustom08" class="form-label">Street
+                            Address</label>
+                          <input type="text" name="StAddress" class="form-control" id="inputGroupSelect08" required
+                            value="">
+
+                        </div>
+                      </div>
+                      <div class="d-flex align-items-center justify-content-center">
+                        <button class="btn CheckOut-btn head-btn wow animate__animated animate__fadeInUp" type="button"
+                          data-bs-toggle="collapse" data-bs-target="#faq_2" aria-expanded="false" aria-controls="faq_2"
+                          data-wow-duration="1000ms" data-wow-delay="800ms" type="submit" value="Submit">
+                          Next &nbsp;<i class="fa fa-arrow-right"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </form>
+                  <!--/ End Form -->
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item shadow rounded">
+              <div class="accordion-header" id="faq-head_2">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#faq_2" aria-expanded="false" aria-controls="faq_2">
+                  2. Shippping Method </button>
+              </div>
+              <div id="faq_2" class="accordion-collapse collapse" aria-labelledby="faq-head_2"
+                data-bs-parent="#faq-accordion">
+                <div class="accordion-body my-4">
+                  <div class="form-check">
+                    <div class="d-flex justify-content-center">
+                      <ul class="check-box-list">
+                        <li class="d-flex justify-content-start">
+                          <label class="checkbox-inline" for="optionShipp1"><input name="UPSoption" id="optionShipp1"
+                              type="radio" value=""><span>$3.99 UPS</span>
+                            <p>USPS
+                              1st Class With Tracking<br>(5 - 13 days)</p>
+                          </label>
+                        </li>
+                        <li class="d-flex justify-content-start">
+                          <label class="checkbox-inline" for="optionShipp1"><input name="DHLoption" id="optionShipp1"
+                              type="radio" value=""><span>$4.99 DHL</span><br>Business Parcell with
+                            Tracking<br>(1-3 days)</label>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="d-flex align-items-center justify-content-center">
+                    <button class="btn CheckOut-btn head-btn wow animate__animated animate__fadeInUp" type="button"
+                      data-bs-toggle="collapse" data-bs-target="#faq_3" aria-expanded="false" aria-controls="faq_3"
+                      data-wow-duration="1000ms" data-wow-delay="800ms" type="submit" value="Submit">
+                      Next &nbsp;<i class="fa fa-arrow-right"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--- /End Shipping Method -->
+            <!--- Payment Method -->
+            <div class="payment_method accordion-item shadow rounded">
+              <div class="accordion-header" id="faq-head_3">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#faq_3" aria-expanded="false" aria-controls="faq_3">
+                  3. Payment Method
+                </button>
+              </div>
+              <div id="faq_3" class="accordion-collapse collapse" aria-labelledby="faq-head_3"
+                data-bs-parent="#faq-accordion">
+                <div class="accordion-body my-4">
+                  <div class="card mx-5">
+                    <div class="accordion" id="accordionExample">
+                      <div class="card payment-card-type my-3 rounded-3">
+                        <div class="card-header payment-method-btn p-0">
+                          <h2 class="mb-0">
+                            <button class="btn btn-block text-left p-3 rounded-0" data-toggle="collapse"
+                              data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                              <div class="d-flex align-items-end">
+                                <div class="col-md-9 col-sm-12">
+                                  <span> <input type="radio" name="color" id="color-1" class="right-mark-input"
+                                      value="color-1">
+                                    <label for="color-1">
+                                      <span class="right-mark-button">
+                                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/check-icn.svg"
+                                          class="checked-icon" alt="Checked Icon" />
+                                      </span>
+                                    </label> Pay with Credit Card</span>
+                                </div>
+                                <div class="col-md-3 col-sm-12">
+                                  <div class="icons d-flex justify-content-md-end">
+                                    <img src="./img/icons/Visa.png" width="30">
+                                    <img src="./img/icons/stripe.png" width="30">
+                                    <img src="./img/icons/master-card.png" width="30">
+                                  </div>
+                                </div>
+                              </div>
+                            </button>
+                          </h2>
+                        </div>
+                        <div id="collapseOne" class="collapse payment-accordionCard-body" aria-labelledby="headingOne"
+                          data-parent="#accordionExample">
+                          <div class="card-body payment-card-body">
+                            <div class="row mt-3 mb-3">
+                              <div class="col-md-8">
+                                <span class="font-weight-normal card-text">
+                                  Name on Card</span>
+                                <div class="input">
+                                  <input type="text" class="form-control" placeholder="">
+                                </div>
+                              </div>
+                              <div class="col-md-4">
+                                <span class="font-weight-normal card-text">Expiry
+                                </span>
+                                <div class="input">
+                                  <i class="fa fa-calendar"></i>
+                                  <input type="text" class="form-control" placeholder="MM/YY">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row mt-3 mb-3">
+                              <div class="col-md-8">
+                                <span class="font-weight-normal card-text">Card
+                                  Number</span>
+                                <div class="input">
+                                  <i class="fa fa-credit-card"></i>
+                                  <input type="text" class="form-control" placeholder="0000 0000 0000 0000">
+                                </div>
+                              </div>
+                              <div class="col-md-4">
+                                <span class="font-weight-normal card-text">CVC/CVV</span>
+                                <div class="input">
+                                  <i class="fa fa-lock"></i>
+                                  <input type="text" class="form-control" placeholder="000">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card payment-card-type my-3 rounded-3">
+                        <div class="card-header payment-method-btn p-0" id="headingTwo">
+                          <h2 class="mb-0">
+                            <button class="btn btn-block text-left collapsed p-3 rounded-0 border-bottom-custom"
+                              type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
+                              aria-controls="collapseTwo">
+                              <div class="d-flex align-items-center justify-content-between">
+                                <span> <input type="radio" id="color-2" name="color" class="right-mark-input"
+                                    value="color-2">
+                                  <label for="color-2">
+                                    <span class="right-mark-button">
+                                      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/check-icn.svg"
+                                        class="checked-icon" alt="Checked Icon" />
+                                    </span>
+                                  </label> Paypal</span>
+                                <img src="./img/icons/PayPal.png" width="30">
+
+                              </div>
+                            </button>
+                          </h2>
+                        </div>
+                        <div id="collapseTwo" class="collapse  payment-accordionCard-body" aria-labelledby="headingTwo"
+                          data-parent="#accordionExample">
+                          <div class="card-body payment-card-body">
+                            <form action="javascript:void(0);" class="EmailPaypal" method="post">
+                              <div class="input-group mb-3">
+                                <input type="email" class="form-control" placeholder="Paypal email"
+                                  aria-label="Paypal email" aria-describedby="button-addon2" required />
+                                <button class="btn btn-primary" type="submit" id="button-addon2"
+                                  data-mdb-ripple-color="dark">
+                                  Submit
+                                </button>
+                              </div>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card payment-card-type my-3 rounded-3">
+                        <div class="card-header payment-method-btn p-0" id="headingThree">
+                          <h2 class="mb-0">
+                            <button class="btn btn-block text-left collapsed p-3 rounded-0 border-bottom-custom"
+                              type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false"
+                              aria-controls="collapseThree">
+                              <div class="d-flex align-items-center justify-content-between">
+                                <span> <input type="radio" id="color-2" name="color" class="right-mark-input"
+                                    value="color-2">
+                                  <label for="color-2">
+                                    <span class="right-mark-button">
+                                      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/check-icn.svg"
+                                        class="checked-icon" alt="Checked Icon" />
+                                    </span>
+                                  </label>Net Banking</span>
+                                <img src="./img/icons/bank.png" width="30">
+
+                              </div>
+                            </button>
+                          </h2>
+                        </div>
+                        <div id="collapseThree" class="collapse  payment-accordionCard-body"
+                          aria-labelledby="headingThree" data-parent="#accordionExample">
+                          <div class="card-body payment-card-body">
+                            <div class="row mt-3 mb-3">
+                              <div class="col-md-12">
+                                <span class="font-weight-normal card-text">
+                                  Bank Name</span>
+                                <div class="input">
+                                  <i class="fa fa-bank"></i>
+                                  <input type="text" class="form-control" placeholder="">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row mt-3 mb-3">
+                              <div class="col-md-8">
+                                <span class="font-weight-normal card-text">Beneficiary
+                                  Name</span>
+                                <div class="input">
+                                  <input type="text" class="form-control" placeholder="">
+                                </div>
+                              </div>
+                              <div class="col-md-4">
+                                <span class="font-weight-normal card-text">Swift
+                                  Code</span>
+                                <div class="input">
+                                  <i class="fa fa-lock"></i>
+                                  <input type="text" class="form-control" placeholder="">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <p class="text-muted certificate-text"><i class="fa fa-lock"></i> &nbsp; We
+                        protect your payment
+                        information using encryption to provide bank-level security.</p>
+                    </div>
+                  </div>
+                  <div class="d-flex align-items-center justify-content-center">
+                    <button class="btn CheckOut-btn head-btn wow animate__animated animate__fadeInUp" type="button"
+                      data-wow-duration="1000ms" data-wow-delay="800ms" type="submit" value="Submit">
+                      Next &nbsp;<i class="fa fa-arrow-right"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--- / End Payment Method -->
+          </div>
+        </div>
+        <!-- Cart Summary -->
+        <div class="col-md-4 cart-order">
+          <div class="card shadow rounded mb-4 pt-2 border border-light">
+            <div class="card-header">
+              <h5 class="mb-0">Your Order (3 items)</h5>
+              <hr class="my-3" />
+            </div>
+
+            <div class="card-body">
+              <div class="cart-items">
+                <!-- Single item -->
+                <div class="row align-items-center">
+                  <div class="col-lg-4">
+                    <!-- Image -->
+                    <div class="bg-image hover-overlay hover-zoom ripple rounded" data-mdb-ripple-color="light">
+                      <img src="./img/iDigital-store/iPhones.png" class="w-100" alt="Blue Jeans Jacket" />
+                      <a href="#!">
+                        <div class="mask" style="background-color: rgba(251, 251, 251, 0.2)">
+                        </div>
+                      </a>
+                    </div>
+                    <!-- Image -->
+                  </div>
+
+                  <div class="col-lg-5">
+                    <!-- Data -->
+                    <p><strong>Apple iPhone 13 Pro Max</strong></p>
+                    <p><i class="fas fa-circle me-2"
+                        style="color: silver; border: 2px solid black;border-radius: 50%;"></i>
+                    </p>
+                    <!-- Data -->
+                  </div>
+                  <div class="col-lg-3 text-start align-items-center">
+                    <!-- Price -->
+                    <p class="">
+                      <strong>$888</strong>
+                    </p>
+                    <!-- Price -->
+                  </div>
+                </div>
+                <!-- Single item -->
+                <hr class="my-3" />
+                <!-- Single item -->
+                <div class="row align-items-center">
+                  <div class="col-lg-4">
+                    <!-- Image -->
+                    <div class="bg-image hover-overlay hover-zoom ripple rounded" data-mdb-ripple-color="light">
+                      <img src="./img/iDigital-store/iPhones.png" class="w-100" alt="Blue Jeans Jacket" />
+                      <a href="#!">
+                        <div class="mask" style="background-color: rgba(251, 251, 251, 0.2)">
+                        </div>
+                      </a>
+                    </div>
+                    <!-- Image -->
+                  </div>
+
+                  <div class="col-lg-5">
+                    <!-- Data -->
+                    <p><strong>Apple iPhone 13 Pro Max</strong></p>
+                    <p><i class="fas fa-circle me-2"
+                        style="color: silver; border: 2px solid black;border-radius: 50%;"></i>
+                    </p>
+                    <!-- Data -->
+                  </div>
+                  <div class="col-lg-3 text-start align-items-center">
+                    <!-- Price -->
+                    <p class="">
+                      <strong>$888</strong>
+                    </p>
+                    <!-- Price -->
+                  </div>
+                </div>
+                <!-- Single item -->
+                <hr class="my-4" />
+                <!-- Single item -->
+                <div class="row align-items-center">
+                  <div class="col-lg-4">
+                    <!-- Image -->
+                    <div class="bg-image hover-overlay hover-zoom ripple rounded" data-mdb-ripple-color="light">
+                      <img src="./img/iDigital-store/iPhones.png" class="w-100" alt="Blue Jeans Jacket" />
+                      <a href="#!">
+                        <div class="mask" style="background-color: rgba(251, 251, 251, 0.2)">
+                        </div>
+                      </a>
+                    </div>
+                    <!-- Image -->
+                  </div>
+
+                  <div class="col-lg-5">
+                    <!-- Data -->
+                    <p><strong>Apple iPhone 13 Pro Max</strong></p>
+                    <p><i class="fas fa-circle me-2"
+                        style="color: silver; border: 2px solid black;border-radius: 50%;"></i>
+                    </p>
+                    <!-- Data -->
+                  </div>
+                  <div class="col-lg-3 text-start align-items-center">
+                    <!-- Price -->
+                    <p class="">
+                      <strong>$888</strong>
+                    </p>
+                    <!-- Price -->
+                  </div>
+                </div>
+                <!-- Single item -->
+              </div>
+              <hr class="my-4" />
+              <div
+                class="d-flex justify-content-between align-items-center rounded my-1 px-2 pt-3 pb-1 w-100 total-cost">
+                <h5>Total</h5>
+                <h4 class="price">$2448,00</h4>
+              </div>
+              <button type="submit" class="btn btn-outline-primary w-100" value="submit">Modify
+                Cart</button>
+            </div>
+          </div>
+        </div>
+        <!-- / End Cart Summary -->
+      </div>
+    </div>
+  </section>
+  <!-- /End Shopping Cart Section -->
+  <!-- Subscribe section start-->
+  <section class="subscribe home-page">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <h2>Subscribe</h2>
+          <h3>for our best deals</h3>
+          <p class="mb-4 mb-lg-0">Get the latest information about new products, special deals, news,
+            top-rated items,
+            promotions and more!</p>
+        </div>
+        <div class="col-lg-6">
+          <form action="javascript:void(0);" class="EmailFormYellow" method="post">
+            <div class="input-group">
+              <input type="email" class="form-control" placeholder="Enter email address" required>
+              <div class="input-group-append">
+                <button class="btn btn-primary head-btn wow animate__animated animate__fadeInUp"
+                  data-wow-duration="1000ms" data-wow-delay="800ms" type="submit" value="Submit">Subscribe<i
+                    class="fa fa-angle-right"></i></button>
+                <!-- Modal -->
+                <div class="modal fade" id="verificationModalYellow" tabindex="-1" role="dialog"
+                  aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Verification</h5>
+                        <button type="button" class="close HideVerification" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        Your Subscribe done successfully!
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-warninig HideVerification"
+                          data-dismiss="modal">Submit</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Footer start -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 info-col mb-5 mb-md-0">
+          <h2 class="textLogo">iDigital</h2>
+          <form action="javascript:void(0);" class="EmailFormBlue" method="post">
+            <div class="input-group">
+              <input type="email" class="form-control" placeholder="Enter email address" required>
+              <div class="input-group-append">
+                <button class="btn btn-primary" type="submit" value="submit">Send</button>
+                <!-- Modal -->
+                <div class="modal fade" id="verificationModalBlue" tabindex="-1" role="dialog"
+                  aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Verification</h5>
+                        <button type="button" class="close HideVerification" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        Your Subscribe done successfully!
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-primary HideVerification"
+                          data-dismiss="modal">Submit</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+          <ul class="list-unstyled">
+            <li><i class="fas fa-phone-alt"></i>+1(504)342-9109</li>
+            <hr>
+            <li><i class="far fa-map"></i><span>1851 Rousseau st New Orleans<br> LA 70130 USA</span>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-3 offset-md-1 mb-5 mb-md-0 list-col">
+          <h3>Start your Repair</h3>
+          <ul class="list-unstyled">
+            <li><a href="#">Phone/Tablet Repair</a></li>
+            <li><a href="#">Computer Repair</a></li>
+            <li><a href="#">Game Console Repair</a></li>
+            <li><a href="#">Smart Watch Repair</a></li>
+            <li><a href="#">Drone/Automation Repair</a></li>
+            <li><a href="#">VR Repair</a></li>
+          </ul>
+        </div>
+        <div class="col-md-2 list-col mb-5 mb-md-0">
+          <h3>Company</h3>
+          <ul class="list-unstyled">
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Partnership</a></li>
+          </ul>
+        </div>
+        <div class="col-md-2 list-col mb-5 mb-md-0">
+          <h3>Social</h3>
+          <ul class="list-unstyled">
+            <li><a href="#"><i class="fab fa-linkedin-in"></i>LinkedIn</a></li>
+            <li><a href="#"><i class="fab fa-twitter"></i>Twitter</a></li>
+            <li><a href="#"><i class="fab fa-facebook-f"></i>Facebook</a></li>
+            <li><a href="#"><i class="fab fa-instagram"></i>Instagram</a></li>
+            <li><a href="#"><i class="fab fa-google"></i>Google</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="row copyright">
+        <div class="col-md-6 mb-md-0 mb-2">
+          <a href="#">Privacy Policy / Terms of Use</a>
+        </div>
+        <div class="col-md-6 d-flex justify-content-md-end justify-content-start">
+          <p>Â©2020 All Rights Reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Footer end -->
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.min.js"
+    integrity="sha256-8lykApyIgj9dWMIK4VPvhLQQ1pOLjP12j4zZnHHMCws=" crossorigin="anonymous""></script>
+    <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css"
+    integrity="sha256-0i4Y8gKVhpq2EcKC3r4FFCPIIwQWGOWqzQAJpYKdKyQ=" crossorigin="anonymous"">
+    <script src=" https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous""></script>
+    <script src=" https://code.jquery.com/ui/1.14.1/jquery-ui.min.js"
+    integrity="sha256-8lykApyIgj9dWMIK4VPvhLQQ1pOLjP12j4zZnHHMCws=" crossorigin="anonymous""></script>
+    <script src=" https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
+    </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js""></script>
+    <script src=" https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"
+    integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous"
+    async></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/8.4.7/js/intlTelInput.js"></script>
+  <script>
+    $(".jquery-intl-phone").intlTelInput({
+      utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/8.4.6/js/utils.js"
+    });
+  </script>
+  <script src="js/jquery.slicknav.js"></script>
+  <script src="js/wow.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

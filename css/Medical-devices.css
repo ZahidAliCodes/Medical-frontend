@@ -1,0 +1,593 @@
+
+/* ====== */
+.swiper-navigation-icon{
+	display: none;
+}
+.support-swiper-button{
+	width: fit-content;
+}
+header{
+	min-height: 70px;
+}
+/*hero section
+=============================================================*/
+.medical_devices_hero{
+	position: relative;
+	z-index: 1;
+	padding:165px 0px 100px 0px;
+	overflow: hidden;
+	margin-top: -5px;
+}
+.banner_video{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	z-index: -2;
+    height: 100%;
+    object-fit: cover;
+}
+.medical_devices_hero::before{
+	content: "";
+	left: 0;
+	top: 0;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 82, 163, 0.75);
+	z-index: -1;
+}
+.medical_devices_hero h1{
+	font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    color: white;
+    text-shadow: 2px 2px 3px black;
+}
+.medical_devices_hero p{
+	font-size: 1.2rem;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 2px black;
+    color: white;
+}
+.hero_btns a{
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+	transition: all 0.3s ease;
+}
+.hero_btns a:hover{
+	transform: translateY(-8px) !important;
+}
+
+/*service section css
+=============================================================*/
+.service_wrapper{
+	background: #f8faff;
+	padding: 80px 0px;
+}
+.section_heading h2{
+	font-size: 40px;
+    margin-bottom: 10px;
+}
+.section_heading p{
+	color: #6c757d;
+}
+.service_card{
+	border-radius: 10px;
+	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+	position: relative;
+	overflow: hidden;
+	transition: all 0.3s ease;
+}
+.service_card:hover{
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+	transform: translateY(-8px);
+}
+.service_card:hover .service_card_image{
+	transform: scale(1.02);
+}
+.service_card_image{
+	min-height: 380px;
+	object-fit: cover;
+	object-position: center;
+	border-radius: 10px;
+	transition: 0.35s;
+}
+.service_card_body{
+	position: absolute;
+	bottom: -2px;
+	left: px;
+	width: 100%;
+	min-height: 185px;
+	border-radius: 0px 0px 10px 10px;
+	background: white;
+	backdrop-filter: blur(10px);
+	padding: 20px 30px 30px 30px;
+}
+.service_card_body h3{
+	color: black;
+	letter-spacing: 1px;
+	font-size: 30px;
+}
+.service_card_body p{
+	font-size: 18px;
+	letter-spacing: 0.5;
+}
+.service_box_main{
+	padding-top: 40px;
+}
+
+
+/* 3 easy step wrapper
+=================================================================*/
+.easy_step_wrapper{
+	background: #f8faff;
+	padding: 80px 0px;
+	position: relative;
+
+}
+.easy_step_heading{
+	position: sticky;
+	padding-top: 20px;
+	top: 125px;
+}
+.easy_step_heading h2{
+	font-size: 40px;
+    margin-bottom: 10px;
+}
+.easy_step_heading p{
+	color: #6c757d;
+	max-width: 400px;
+}
+
+.easy_step_card{
+	background: white;
+	padding: 30px ;
+	border-radius: 32px;
+	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+	transition: all 0.3s ease;
+}
+.easy_step_card:hover{
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+	transform: translateY(-8px);
+}
+.easy_step_card i{
+	font-size: 35px;
+}
+.easy_step_card h3{
+	font-size: 24px;
+	margin-top: 20px;
+}
+/*Find Your Medical Device
+==============================================================*/
+.table_wrapper{
+	background: #f8faff;
+	padding: 80px 0px;
+}
+.table_box{
+	padding-top: 40px;
+}
+.directory-container {
+      background: white;
+      border-radius: 12;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+      overflow: hidden;
+      border: 1px solid #e9ecef;
+    }
+.directory-filters {
+      padding: 20px 30px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      background: #f8faff;
+      border-bottom: 1px solid #e9ecef;
+    }
+    
+    .custom-select {
+      position: relative;
+      width: 280px;
+    }
+    
+    .custom-select select {
+      width: 100%;
+      padding: 14px 20px;
+      border-radius: 8px;
+      border: 1px solid #e9ecef;
+      font-size: 1rem;
+      appearance: none;
+      background: #ffffff;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      cursor: pointer;
+    }
+    
+    .custom-select::after {
+      content: "\f078";
+      font-family: "Font Awesome 6 Free";
+      font-weight: 900;
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #0052a3;
+    }
+    
+    .table-container {
+      width: 100%;
+      overflow-x: auto;
+    }
+    
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    
+    th, td {
+      padding: 18px 25px;
+      text-align: left;
+      border-bottom: 1px solid #e9ecef;
+    }
+    
+    th {
+      background: #f8faff;
+      color: #1f1f1f;
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    
+    tbody tr:last-child td {
+      border-bottom: none;
+    }
+    
+    tbody tr:hover {
+      background: #e6f2ff;
+    }
+    
+    .availability-instock { color: #28a745; font-weight: 600; }
+    .availability-limited { color: #fd7e14; font-weight: 600; }
+    .availability-preorder { color: #dc3545; font-weight: 600; }
+
+/*Testimonial section css
+==============================================================*/
+.Testimonial_wrapper{
+	background: #f8faff;
+	padding: 80px 0px;
+}
+.Testimonia_row{
+	padding-top: 40px;
+}
+.Testimonial_card{
+	padding: 30px;
+	border-radius: 10px;
+	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+	transition: all 0.3s ease;
+}
+.Testimonial_card:hover{
+	transform: translateY(-8px);
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.Testimonial_card_body h3{
+	font-size: 20px;
+}
+.Testimonial_card_body p{
+	font-size: 16px;
+}
+.Testimonial_card_profile{
+	margin-bottom: 20px;
+}
+
+
+
+.Testimonial_style_white{
+	background: white;
+}
+.Testimonial_style_white .Testimonial_card_profile_name p{
+	color: black;
+}
+.Testimonial_style_white .Testimonial_card_profile_name span{
+	color: black;
+}
+.Testimonial_style_white .Testimonial_card_body h3{
+	color: black;
+}
+.Testimonial_style_white .Testimonial_card_body p{
+	color: black;
+}
+
+
+
+/*CTA section css
+======================================================*/
+.cta_wrapper{
+	background: url(https://capasee.com/wp-content/uploads/2025/03/top-surgical-instruments-and-medical-equipment-in-pakistan-cautery-machines-ot-lights-and-more.jpg);
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	z-index: 1;
+}
+.cta_wrapper::before{
+	content: "";
+	left: 0;
+	top: 0;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 82, 163, 0.75);
+	z-index: -1;
+}
+.cta_wrapper h2{
+	font-size: 48px;
+	text-shadow: 2px 2px 3px black;
+}
+.cta_wrapper p{
+	font-size: 18px;
+	text-shadow: 1px 1px 2px black;
+}
+.cta_button button{
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+	transition: all 0.3s ease;
+}
+.cta_button button:hover{
+	transform: translateY(-8px) !important;
+
+}
+
+
+
+/*responsive for medium screen
+============================================================*/
+@media screen and (max-width: 991px){
+	/*hero*/
+	.medical_devices_hero{
+		padding: 60px 0px;
+	}
+	.medical_devices_hero h1{
+		font-size: 36px;
+	}
+	/*service*/
+	.service_wrapper{
+		padding: 60px 0px;
+	}
+	.service_box_main{
+		padding-top: 20px;
+		gap: 30px 0px;
+	}
+	.section_heading h2{
+		font-size: 32px;
+	}
+	/*easy step*/
+	.easy_step_wrapper{
+		padding: 60px 0px;
+	}
+	.easy_step_card{
+		padding: 20px;
+	}
+	.easy_step_heading{
+		padding-bottom: 30px;
+	}
+	.mobile_x_0{
+		--bs-gutter-x: 1rem;
+	}
+	.easy_step_heading h2{
+		font-size: 32px;
+	}
+	.easy_step_card{
+		text-align: ce;
+	}
+	.easy_step_card i{
+		font-size: 30px;
+	}
+	/*table_wrapper*/
+	.table_wrapper{
+		padding: 60px 0px;
+	}
+	/*Testimonial*/
+	.Testimonial_wrapper{
+		padding: 60px 0px;
+	}
+	.Testimonia_row{
+		padding-top: 20px;
+	}
+	/*cta secton*/
+	.cta_wrapper{
+		padding: 60px 0px;
+	}
+	.cta_wrapper h2{
+		font-size: 40px;
+	}
+}
+
+
+/*responsive for medium screen
+============================================================*/
+@media screen and (max-width: 767px){
+	/*hero*/
+	.medical_devices_hero{
+		padding: 50px 0px;
+	}
+	.medical_devices_hero h1{
+		font-size: 32px;
+	}
+	.hero_btns{
+		flex-direction: column;
+	}
+	/*service*/
+	.service_wrapper{
+		padding: 40px 0px;
+	}
+	.service_card_body{
+		padding: 24px;
+	}
+	.service_card_body h3{
+		font-size: 22px;
+	}
+	.service_card_body p{
+		font-size: 16px;
+	}
+	.service_box_main{
+		padding-top: 10px;
+		gap: 30px 0px;
+	}
+	.section_heading h2{
+		font-size: 26px;
+	}
+	/*easy step*/
+	.easy_step_wrapper{
+		padding: 40px 0px;
+	}
+	.easy_step_card{
+		padding: 20px;
+		text-align: center;
+	}
+	.easy_step_heading{
+		padding-bottom: 10px;
+	}
+	.easy_step_heading h2{
+		font-size: 26px;
+	}
+	.easy_step_card i{
+		font-size: 30px;
+	}
+	.service_card_body{
+		min-height: auto;
+	}
+	/*table_wrapper*/
+	.table_wrapper{
+		padding: 40px 0px;
+	}
+	.table_box{
+		padding-top: 20px;
+	}
+
+	/*Testimonial*/
+	.Testimonial_wrapper{
+		padding: 40px 0px;
+	}
+	.Testimonia_row{
+		padding-top: 10px;
+	}
+	.Testimonial_card{
+		padding: 20px;
+		--bs-gutter-x: 0;
+	}
+	.Testimonial_card h3{
+		font-size: 18px;
+	}
+	.Testimonial_card p{
+		font-size: 16px;
+	}
+	.mobile_padding_hidden{
+		padding: 0px;
+	}
+	/*cta secton*/
+	.cta_wrapper{
+		padding: 40px 0px;
+	}
+	.cta_wrapper h2{
+		font-size: 30px;
+	}
+}
+
+
+@media screen and (max-width: 355px) {
+    .container {
+        padding-left: 10px;
+		padding-right: 10px;
+    }
+}
+
+/*dark theme css
+==========================================================================*/
+
+.dark-theme section{
+	background: black;
+}
+.dark-theme section .section_heading h2{
+	color: white !important;
+}
+.dark-theme section .section_heading p{
+	color: white;
+}
+.dark-theme .service_card_body{
+	background: rgba(0, 0, 0, 1);
+	box-shadow: rgba(0, 0, 0, 0.2) 0px 7px 29px 0px;
+	backdrop-filter: blur(5px);
+}
+.dark-theme .service_card{
+	border:1px solid #303841;
+	overflow: hidden;
+}
+.dark-theme .service_card:hover{
+	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px !important;
+}
+.dark-theme .service_card_body h3{
+	color: white !important;
+}
+.dark-theme .service_card_body p{
+	color: white !important;
+}
+
+.dark-theme .easy_step_heading h2{
+	color: white !important;
+}
+.dark-theme .easy_step_heading p{
+	color: white !important;
+}
+.dark-theme .easy_step_card{
+	background: #000;
+	border: 1px solid #303841;
+}
+.dark-theme .easy_step_card h3{
+	color: white !important;
+}
+.dark-theme .easy_step_card p{
+	color: white !important;
+}
+.dark-theme .directory-container {
+      background: black;
+      border: 1px solid #303841;
+    }
+.dark-theme .directory-filters {
+      background: #000;
+      border-bottom: 1px solid #303841;
+    }
+    
+ .dark-theme .custom-select select {
+      background: #000;
+      color: white;
+    }
+    
+  .dark-theme  th, td {
+      border-bottom: 1px solid #303841;
+    }
+    
+  .dark-theme  th {
+      background: #000;
+      color: #fff;
+    }
+  .dark-theme  tbody tr:hover {
+      background: #303841;
+    }
+.dark-theme .Testimonial_style_white{
+	background: #000;
+	border:1px solid #303841;
+}
+.dark-theme .Testimonial_style_white .Testimonial_card_profile_name p{
+	color: white;
+}
+.dark-theme .Testimonial_style_white .Testimonial_card_profile_name span{
+	color: white;
+}
+.dark-theme .Testimonial_style_white .Testimonial_card_body h3{
+	color: white;
+}
+.dark-theme .Testimonial_style_white .Testimonial_card_body p{
+	color: white;
+}
+.dark-theme .cta_wrapper{
+	background: url(https://capasee.com/wp-content/uploads/2025/03/top-surgical-instruments-and-medical-equipment-in-pakistan-cautery-machines-ot-lights-and-more.jpg) !important;
+}
+
+
+

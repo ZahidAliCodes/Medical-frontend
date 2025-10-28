@@ -1,0 +1,67 @@
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active{
+    color: rgb(160, 159, 159);
+    background-color:transparent;
+    border: none ;
+    border-bottom: 1px blue solid !important;
+}
+.nav-tabs{
+    border: none !important;
+    padding-left: 1px !important;
+}
+.nav-tabs .nav-link{
+    border: none ;
+}
+.edit{
+    padding: 13px 20px !important;
+    line-height: 0px !important;
+}
+.checkborder{
+    border: 2px solid #0dcaf0 !important;
+}
+.checkborder:checked {
+    background-color: #0dcaf0 !important;
+    border-color: #0dcaf0 !important;
+}
+@media only screen and (max-width:600px) {
+    .innerheader{
+        margin: 0 !important;
+    }
+    .dgrid{
+        display: grid !important;
+        padding-left: 5px !important;
+    }
+    .careermargin{
+        margin-right: 3px !important;
+        margin-left: 13px !important;
+        width: max-content;
+    }
+    .idigital{
+        margin-left: 13px !important;
+        margin-bottom: 25px !important;
+
+    }
+    .content{
+        padding: 0px !important;
+        padding-bottom: 40px !important;
+    }
+    .dr-seb{
+        padding: 20px;
+    }
+    .nav-tabs{
+        font-size: 14px
+    }
+    .attach{
+        width: 100% !important;
+    }
+    .profileTitle{
+        font-size: 1rem !important;
+        font-weight: bold ;
+    }
+    .phonecol{
+        width: 50%;
+    }
+    .lang{
+    width: 100%;
+    }
+}

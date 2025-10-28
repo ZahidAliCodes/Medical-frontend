@@ -1,0 +1,2432 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1,user-scalable=no">
+
+    <!-- Meta tags -->
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+
+    <!-- Title -->
+    <title>iDigital - Buy Back</title>
+
+    <!-- Shortcut icon -->
+    <link rel="shortcut icon" href="" type="image/x-icon">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Syne:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link href="fonts/fontawesome/css/all.css" rel="stylesheet">
+
+    <!-- Styles -->
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"" />
+    <link rel=" stylesheet" href="css/animate.min.css" />
+    <link rel="stylesheet" href="css/slicknav.css">
+    <link rel="stylesheet" href="css/style.css" class="StyleLink">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous""></script>
+    <script src=" https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous""></script>
+    <script src=" https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+        integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+        crossorigin="anonymous""></script>
+    <script src=" https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.7.0/jquery.lettering.min.js"></script>
+</head>
+
+<body class="buyBack_page">
+    <!-- Header section start -->
+    <!-- Preloader -->
+    <div class="loader">
+        <div class="word">iDigital...</div>
+        <div class="loadOverlay"></div>
+    </div>
+
+    <script type="text/javascript">
+        function Ticker(elem) {
+            elem.lettering();
+            this.done = false;
+            this.cycleCount = 5;
+            this.cycleCurrent = 0;
+            this.chars = 'iDigital...'.split('');
+            this.charsCount = this.chars.length;
+            this.letters = elem.find('span');
+            this.letterCount = this.letters.length;
+            this.letterCurrent = 0;
+
+            this.letters.each(function () {
+                var $this = $(this);
+                $this.attr('data-orig', $this.text());
+                $this.text('-');
+            });
+        }
+
+        Ticker.prototype.getChar = function () {
+            return this.chars[Math.floor(Math.random() * this.charsCount)];
+        };
+
+        Ticker.prototype.reset = function () {
+            this.done = false;
+            this.cycleCurrent = 0;
+            this.letterCurrent = 0;
+            this.letters.each(function () {
+                var $this = $(this);
+                $this.text($this.attr('data-orig'));
+                $this.removeClass('done');
+            });
+            this.loop();
+        };
+
+        Ticker.prototype.loop = function () {
+            var self = this;
+
+            this.letters.each(function (index, elem) {
+                var $elem = $(elem);
+                if (index >= self.letterCurrent) {
+                    if ($elem.text() !== ' ') {
+                        $elem.text(self.getChar());
+                        $elem.css('opacity', Math.random());
+                    }
+                }
+            });
+
+            if (this.cycleCurrent < this.cycleCount) {
+                this.cycleCurrent++;
+            } else if (this.letterCurrent < this.letterCount) {
+                var currLetter = this.letters.eq(this.letterCurrent);
+                this.cycleCurrent = 0;
+                currLetter.text(currLetter.attr('data-orig')).css('opacity', 1).addClass('done');
+                this.letterCurrent++;
+            } else {
+                this.done = true;
+            }
+
+            if (!this.done) {
+                requestAnimationFrame(function () {
+                    self.loop();
+                });
+            } else {
+                setTimeout(function () {
+                    self.reset();
+                }, 750);
+            }
+        };
+
+        $words = $(".word");
+
+        $words.each(function () {
+            var $this = $(this),
+                ticker = new Ticker($this).reset();
+            $this.data('ticker', ticker);
+        });
+    </script>
+    <!--Ended Preloading -->
+    <!-- ScrollBar -->
+    <div class="scrollbar" id="style-7">
+        <div class="force-overflow"></div>
+    </div>
+    <!-- Back to Top -->
+    <div class="BackTop-wrap">
+        <svg class="BackTop-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
+    </div>
+    <!-- Navbar -->
+    <nav class="navbar primaryNav navbar-expand-xl navbar-dark p-0 wow animate__animated animate__slideInDown"
+        data-wow-duration="1000ms" data-wow-delay="400ms">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand textLogo p-0" href="index.html">
+                    iDigital
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav desktop-nav ms-auto mb-2 mb-lg-0 align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link " aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown service_dropDownMenu">
+                        <a class="nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Services
+                        </a>
+                        <div class="dropdown-menu services-dropdown" data-wow-duration="300ms" data-wow-delay="0ms"
+                            aria-labelledby="navbarDropdown">
+                            <ul class="nav nav-tabs services-dropdown_wrap" id="services-dropdown_wrap" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <a class="services-dropdown_item" id="home-tab" data-bs-toggle="tab" type="button"
+                                        data-bs-target="#home" role="tab" aria-controls="home" aria-selected="true">
+                                        <img class="start-repair_services-img" src="img/start_repair/recovery.png"
+                                            alt="">
+                                        <h4 class="start-repair_services-text">Data Recovery</h4>
+                                    </a>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <a class="services-dropdown_item" id="profile-tab" data-bs-toggle="tab"
+                                        type="button" data-bs-target="#profile" role="tab" aria-controls="profile"
+                                        aria-selected="false">
+                                        <img class="start-repair_services-img" src="img/start_repair/service.png"
+                                            alt="">
+                                        <h4 class="start-repair_services-text">Repair Service</h4>
+                                    </a>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <a class="services-dropdown_item" id="contact-tab" data-bs-toggle="tab"
+                                        type="button" data-bs-target="#contact" role="tab" aria-controls="contact"
+                                        aria-selected="false">
+                                        <img class="start-repair_services-img" src="img/start_repair/home.png" alt="">
+                                        <h4 class="start-repair_services-text">Home Services</h4>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="nav-item dropdown support_dropDownMenu" onmouseover="supportMenu()">
+                        <a class="nav-link" id="support-tab" data-bs-toggle="tab" type="button"
+                            data-bs-target="#support" role="tab" aria-controls="support" aria-selected="true">
+                            Support
+
+                        </a>
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a class="nav-link link-search" href="#"><i class="fas fa-search"></i></a>
+                    </li>
+                    <li class="nav-item ">
+                        <!--<a class="nav-link find-your-store" href="#"><img src="img/icons/map-pin.png" />Find Your Store</a>-->
+                        <div class="locationbar">
+                            <input type="text" class="input LocationInput" placeholder="location">
+                            <div class="btn btnLocation"><img src="img/icons/map-pin.png" /><a
+                                    class="btnTextLocation">Find Your
+                                    Store</a></div>
+                        </div>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link sign-in btn-primary" href="sign-in.html"><i
+                                class="fa fa-arrow-right"></i>Sign In</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link language dropdown-toggle_custom" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <img width="36px" height="24px" class="lang-selected-img" src="img/flags/usa.png" />
+                        </a>
+
+                        <ul class="dropdown-menu dropdown-menu-end language_dropdown" data-wow-duration="300ms"
+                            data-wow-delay="0ms" aria-labelledby="navbarDropdown">
+                            <li><a data-lang-code="en-GB" class="dropdown-item selected" href="#"><img
+                                        src="img/flags/usa.png" /><span>en</span></a></li>
+                            <li><a data-lang-code="fr-FR" class="dropdown-item" href="#"><img
+                                        src="img/flags/fr.png" /><span>fr</span></a></li>
+                            <li><a data-lang-code="es-ES" class="dropdown-item" href="#"><img
+                                        src="img/flags/es.png" /><span>es</span></a></li>
+                            <li><a data-lang-code="ar-AR" class="dropdown-item" href="#"><img
+                                        src="img/flags/pal.jpg" /><span>ar</span></a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <img src="img/icons/moon.png" id="icon-mode" class="icon-mode" />
+            </div>
+        </div>
+    </nav>
+
+    <!-- Search icon -->
+    <div class="search-container hide">
+        <div class="link-search"><i class="fas fa-search" style="color:#fff"></i>
+        </div>
+        <div class="search-bar">
+            <form action="" class="ui-widget">
+                <input type="text" class="inputSearch" placeholder="Search iDigital.com" id="inputSearch">
+            </form>
+        </div>
+        <div class="link-close"></div>
+
+        <div class="quick-links">
+            <h2>Quick Links</h2>
+            <ul>
+                <li>
+                    <a href="#">Covid -19 information</a>
+                </li>
+                <li>
+                    <a href="#">Most popular Questions</a>
+                </li>
+                <li>
+                    <a href="#">Amet minim mollit non deserunt</a>
+                </li>
+                <li>
+                    <a href="#">Velit officia consequat duis en</a>
+                </li>
+                <li>
+                    <a href="#">Exercitation veniam consequat sunt</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="tab-content services-dropdown_menu hide" id="services-dropdown_tab">
+        <div class="tab-pane fade" id="home" role="tabpanel" aria-labelledby="home-tab">
+            <div class="container">
+                <div class="services-swiper_wrap">
+                    <!-- Swiper -->
+                    <div class="swiper-container services-swiper services-swiper1">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide box">
+                                <a href="Single-hard-drive.html" class="services-swiper_item">
+                                    <img src="img/services/single_hard.png" alt="">
+                                    <h5>Single Hard Drive</h5>
+                                </a>
+                            </div>
+                            <div class="swiper-slide box">
+                                <a href="raid-hard.html" class="services-swiper_item">
+                                    <img src="img/services/raid_hard.png" alt="">
+                                    <h5>Raid Hard Drive</h5>
+                                </a>
+                            </div>
+                            <div class="swiper-slide box">
+                                <a href="solid-state.html" class="services-swiper_item">
+                                    <img src="img/services/solid_state.png" alt="">
+                                    <h5>Solid State</h5>
+                                </a>
+                            </div>
+                            <div class="swiper-slide box">
+                                <a href="smartphone.html" class="services-swiper_item">
+                                    <img src="img/services/smartphone.png" alt="">
+                                    <h5>Smartphone</h5>
+                                </a>
+                            </div>
+                            <div class="swiper-slide box">
+                                <a href="Nand&Chip.html" class="services-swiper_item">
+                                    <img src="img/services/nand.png" alt="">
+                                    <h5>Nand & Chip Off</h5>
+                                </a>
+                            </div>
+                            <div class="swiper-slide box">
+                                <a href="USB-flash.html" class="services-swiper_item">
+                                    <img src="img/services/flash.png" alt="">
+                                    <h5>USB Flash</h5>
+                                </a>
+                            </div>
+                            <div class="swiper-slide box">
+                                <a href="file-system.html" class="services-swiper_item">
+                                    <img src="img/services/file.png" alt="">
+                                    <h5>File System</h5>
+                                </a>
+                            </div>
+                            <div class="swiper-slide box">
+                                <a href="Mac-OS.html" class="services-swiper_item">
+                                    <img src="img/services/mac.png" alt="">
+                                    <h5>Mac OS</h5>
+                                </a>
+                            </div>
+                            <div class="swiper-slide box">
+                                <a href="windows-repair.html" class="services-swiper_item">
+                                    <img src="img/services/windows.png" alt="">
+                                    <h5>Windows</h5>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="Linux&Unix.html" class="services-swiper_item">
+                                    <img src="img/services/linux.png" alt="">
+                                    <h5>Linux & Unix</h5>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="exchange-repair.html" class="services-swiper_item">
+                                    <img src="img/services/exchange.png" alt="">
+                                    <h5>Exchange Server</h5>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="sql-server.html" class="services-swiper_item">
+                                    <img src="img/services/sql.png" alt="">
+                                    <h5>SQL Server</h5>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="virtual-machine.html" class="services-swiper_item">
+                                    <img src="img/services/virtual.png" alt="">
+                                    <h5>Virtual Machine</h5>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="voip-system.html" class="services-swiper_item">
+                                    <img src="img/services/voip.png" alt="">
+                                    <h5>VoIP System</h5>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="password.html" class="services-swiper_item">
+                                    <img src="img/services/pass.png" alt="">
+                                    <h5>Password</h5>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="Bitcoin.html" class="services-swiper_item">
+                                    <img src="img/services/bitcoin.png" alt="">
+                                    <h5>Bitcoin</h5>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="Tape.html" class="services-swiper_item">
+                                    <img src="img/services/tape.png" alt="">
+                                    <h5>Tape</h5>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="CD-DVD-Bluray.html" class="services-swiper_item">
+                                    <img src="img/services/cd.png" alt="">
+                                    <h5>CD - DVD - BLURAY</h5>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="swiper-button-next services-swiper-button services-swiper1-button"><img
+                            src="img/icons/chevron-right.png" /></div>
+                    <div class="swiper-button-prev services-swiper-button services-swiper1-button"><img
+                            src="img/icons/chevron-left.png" /></div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+            <div class="container">
+                <div class="services-swiper_wrap">
+                    <!-- Swiper -->
+                    <div class="swiper-container services-swiper services-swiper2">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="smartphone.html" class="services-swiper_item">
+                                    <img src="img/services/smartphone.png" alt="">
+                                    <h5>Smartphone</h5>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="SmartWatch.html" class="services-swiper_item">
+                                    <img src="img/services/watch.png" alt="">
+                                    <h5>Smart Watches</h5>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="tablet.html" class="services-swiper_item">
+                                    <img src="img/services/tablet.png" alt="">
+                                    <h5>Tablet</h5>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="computer.html" class="services-swiper_item">
+                                    <img src="img/services/computer.png" alt="">
+                                    <h5>Computer</h5>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="laptop.html" class="services-swiper_item">
+                                    <img src="img/services/laptop.png" alt="">
+                                    <h5>Laptop</h5>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="game-console-repair.html" class="services-swiper_item">
+                                    <img src="img/services/console.png" alt="">
+                                    <h5>Game Consoles</h5>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="Drone-Automation.html" class="services-swiper_item">
+                                    <img src="img/services/drone.png" alt="">
+                                    <h5>Drone & Automation</h5>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="Portable-music-playery.html" class="services-swiper_item">
+                                    <img src="img/services/player.png" alt="">
+                                    <h5>Portable Music Player</h5>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="Virtual-Reality.html" class="services-swiper_item">
+                                    <img src="img/services/vr.png" alt="">
+                                    <h5>Virtual Reality</h5>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="sound-system.html" class="services-swiper_item">
+                                    <img src="img/services/sound.png" alt="">
+                                    <h5>Sound System</h5>
+                                </a>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <a href="motherBoard-repair.html" class="services-swiper_item">
+                                    <img src="img/services/logic.png" alt="">
+                                    <h5>Logic Boards</h5>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="Medical-devices.html" class="services-swiper_item">
+                                    <img src="img/services/med.png" alt="">
+                                    <h5>Medical Devices</h5>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="home-appliances.html" class="services-swiper_item">
+                                    <img src="https://i.postimg.cc/tJ0WCVxV/electric-appliance.png" alt="">
+                                    <h5>Appliances</h5>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next services-swiper-button services-swiper2-button"><img
+                            src="img/icons/chevron-right.png" /></div>
+                    <div class="swiper-button-prev services-swiper-button services-swiper2-button"><img
+                            src="img/icons/chevron-left.png" /></div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+            <div class="container">
+                <div class="services-swiper_wrap">
+                    <!-- Swiper -->
+                    <div class="swiper-container services-swiper services-swiper3">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="solar-panel.html" class="services-swiper_item">
+                                    <img src="img/services/solar.png" alt="">
+                                    <h5>Solar Panel</h5>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="smart-home.html" class="services-swiper_item">
+                                    <img src="img/services/smarthome.png" alt="">
+                                    <h5>Smarthome</h5>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="home-security.html" class="services-swiper_item">
+                                    <img src="img/services/security.png" alt="">
+                                    <h5>Home Security</h5>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="tv-sound.html" class="services-swiper_item">
+                                    <img src="img/services/tv_sound.png" alt="">
+                                    <h5>TV Sound System</h5>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next services-swiper-button services-swiper3-button"><img
+                            src="img/icons/chevron-right.png" /></div>
+                    <div class="swiper-button-prev services-swiper-button services-swiper3-button"><img
+                            src="img/icons/chevron-left.png" /></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="tab-content support-dropdown_menu hide" id="support-dropdown_tab">
+        <div id="support" role="tabpanel" aria-labelledby="support-tab">
+            <div class="container">
+                <div class="services-swiper_wrap">
+                    <!-- Swiper -->
+                    <div class="swiper-container services-swiper support-swiper1">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide box">
+                                <a href="about-us.html" class="services-swiper_item">
+                                    <img src="https://i.postimg.cc/DyshNTMx/team.png" alt="">
+                                    <h5>About Us</h5>
+                                </a>
+                            </div>
+                            <div class="swiper-slide box">
+                                <a href="contact-us.html" class="services-swiper_item">
+                                    <img src="https://i.postimg.cc/MG276kMh/contact-Us.png" alt="">
+                                    <h5>Contact Us</h5>
+                                </a>
+                            </div>
+                            <div class="swiper-slide box">
+                                <a href="partners.html" class="services-swiper_item">
+                                    <img src="https://i.postimg.cc/43t474nc/team-1.png" alt="">
+                                    <h5>Partners</h5>
+                                </a>
+                            </div>
+                            <div class="swiper-slide box">
+                                <a href="franchising.html" class="services-swiper_item">
+                                    <img src="https://i.postimg.cc/nhLzM1Yy/franchise.png" alt="">
+                                    <h5>Franchising</h5>
+                                </a>
+                            </div>
+                            <div class="swiper-slide box">
+                                <a href="pricing.html" class="services-swiper_item">
+                                    <img src="https://i.postimg.cc/tgNnxgnf/price-tag.png" alt="">
+                                    <h5>Pricing</h5>
+                                </a>
+                            </div>
+                            <div class="swiper-slide box">
+                                <a href="Policies.html" class="services-swiper_item">
+                                    <img src="https://i.postimg.cc/hvp0brJk/privacy-policy.png" alt="">
+                                    <h5>Policies</h5>
+                                </a>
+                            </div>
+                            <div class="swiper-slide box">
+                                <a href="go-green.html" class="services-swiper_item">
+                                    <img src="https://i.postimg.cc/Zq7D4JKk/353727633-979064989956272-7164428973325253639-n.png"
+                                        alt="">
+                                    <h5>Go Green life at iDigital</h5>
+                                </a>
+                            </div>
+                            <div class="swiper-slide box">
+                                <a href="iDigital-careers.html" class="services-swiper_item">
+                                    <img src="https://i.postimg.cc/HWvznTM3/career-choice.png" alt="">
+                                    <h5>iDigital Career</h5>
+                                </a>
+                            </div>
+                            <div class="swiper-slide box">
+                                <a href="work-at-iDigital.html" class="services-swiper_item">
+                                    <img src="https://i.postimg.cc/tJcsjSYt/work.png" alt="">
+                                    <h5>Work at iDigital</h5>
+                                </a>
+                            </div>
+                            <div class="swiper-slide box">
+                                <a href="life-at-iDigital.html" class="services-swiper_item">
+                                    <img src="https://i.postimg.cc/4NtWSrK5/working-at-home.png" alt="">
+                                    <h5>life at iDigital</h5>
+                                </a>
+                            </div>
+                            <div class="swiper-slide box">
+                                <a href="blog.html" class="services-swiper_item">
+                                    <img src="https://i.postimg.cc/kMvzRgL3/blog.png" alt="">
+                                    <h5>Blog</h5>
+                                </a>
+                            </div>
+                            <div class="swiper-slide box">
+                                <a href="solid-state.html" class="services-swiper_item">
+                                    <img src="https://i.postimg.cc/sDBbTQck/a86e5695-6268-441b-bf2a-8fd4473969ba.png"
+                                        alt="">
+                                    <h5>Discussion</h5>
+                                </a>
+                            </div>
+                            <div class="swiper-slide box">
+                                <a href="faq.html" class="services-swiper_item">
+                                    <img src="https://i.postimg.cc/T1ryqYpB/question.png" alt="">
+                                    <h5>FAQ</h5>
+                                </a>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="swiper-button-next support-swiper-button support-swiper1-button"><img
+                            src="img/icons/chevron-right.png" /></div>
+                    <div class="swiper-button-prev support-swiper-button support-swiper1-button"><img
+                            src="img/icons/chevron-left.png" /></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Mobile Menu Start -->
+    <ul class="mobile-menu">
+        <li>
+            <a href="index.html">Home</a>
+        </li>
+        <li>Services
+            <ul class="submenu">
+                <li class="submenu-item"><img class="img-fluid" src="img/start_repair/recovery.png" alt="">Data
+                    Recovery
+                    <ul class="submenu-list">
+                        <li><a href="Single-hard-drive.html">Single Hard Drive</a></li>
+                        <li><a href="raid-hard.html">Raid Hard Drive</a></li>
+                        <li><a href="solid-state.html">Solid State</a></li>
+                        <li><a href="smartphone.html">Smartphone</a></li>
+                        <li><a href="Nand&Chip.html">Nand & Chip Off</a></li>
+                        <li><a href="USB-flash.html">USB Flash</a></li>
+                        <li><a href="file-system.html">File System</a></li>
+                        <li><a href="Mac-OS.html">Mac OS</a></li>
+                        <li><a href="windows-repair.html">Windows</a></li>
+                        <li><a href="life-at-iDigital.html">Linux & Unix</a></li>
+                        <li><a href="exchange-repair.html">Exchange Server</a></li>
+                        <li><a href="sql-server.html">SQL Server</a></li>
+                        <li><a href="virtual-machine.html">Virtual Machine</a></li>
+                        <li><a href="voip-system.html">VoIP System</a></li>
+                        <li><a href="password.html">Password</a></li>
+                        <li><a href="Bitcoin.html">Bitcoin</a></li>
+                        <li><a href="Tape.html">Tape</a></li>
+                        <li><a href="CD-DVD-Bluray.html">CD - DVD - BLURAY</a></li>
+                    </ul>
+                </li>
+                <li class="submenu-item"><img class="img-fluid" src="img/start_repair/service.png" alt="">Repair
+                    Service
+                    <ul class="submenu-list">
+                        <li><a href="smartphone.html">Smartphone</a></li>
+                        <li><a href="SmartWatch.html">Smart Watches</a></li>
+                        <li><a href="tablet.html">Tablet</a></li>
+                        <li><a href="computer.html">Computer</a></li>
+                        <li><a href="laptop.html">Laptop</a></li>
+                        <li><a href="game-console-repair.html">Game Consoles</a></li>
+                        <li><a href="Drone-Automation.html">Drone & Automation</a></li>
+                        <li><a href="Portable-music-playery.html">Portable Music Player</a></li>
+                        <li><a href="Virtual-Reality.html">Virtual Reality</a></li>
+                        <li><a href="sound-system.html">Sound System</a></li>
+                        <li><a href="motherBoard-repair.html">Logic Boards</a></li>
+                        <li><a href="Medical-devices.html">Medical Devices</a></li>
+                        <li><a href="appliances.html">Appliances</a></li>
+                    </ul>
+
+                </li>
+                <li class="submenu-item"><img class="img-fluid" src="img/start_repair/home.png" alt="">Home Services
+                    <ul class="submenu-list">
+                        <li><a href="solar-panel.html">Solar Panel</a></li>
+                        <li><a href="smart-home.html">Smarthome</a></li>
+                        <li><a href="home-security.html">Home Security</a></li>
+                        <li><a href="tv-sound.html">TV Sound System</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>
+            Support
+            <ul class="submenu supportSubmenu">
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="contact-us.html">Contact Us</a></li>
+                <li><a href="partners.html">Partners</a></li>
+                <li><a href="franchising.html">Franchising</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="Policies.html">Policies</a></li>
+                <li><a href="go-green.html">Go Green life at iDigtal</a></li>
+                <li><a href="iDigital-careers.html">iDigital Career</a></li>
+                <li><a href="work-at-iDigital.html">Work at iDigital</a></li>
+                <li><a href="life-at-iDigital.html">life at iDigital</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="discussion.html">discussion</a></li>
+                <li><a href="faq.html">faq</a></li>
+
+            </ul>
+        </li>
+        <li>
+            <a href="contact-us.html">Contact</a>
+        </li>
+        <li>
+            <a href="covid19.html">Covid 19</a>
+        </li>
+        <li>
+            Search
+            <ul class="submenu">
+                <li>
+                    <form class="" action="index.html" method="post">
+                        <input type="text" class="form-control" placeholder="Search iDigital.com">
+                    </form>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="sign-in.html">Sign In</a>
+        </li>
+        <li>
+            Language
+            <ul class="submenu language_dropdown">
+                <li><a data-lang-code="en-GB" class="dropdown-item selected" href="#"><img
+                            src="img/flags/usa.png" /><span>en</span></a></li>
+                <li><a data-lang-code="fr-FR" class="dropdown-item" href="#"><img
+                            src="img/flags/fr.png" /><span>fr</span></a>
+                </li>
+                <li><a data-lang-code="es-ES" class="dropdown-item" href="#"><img
+                            src="img/flags/es.png" /><span>es</span></a>
+                </li>
+                <li><a data-lang-code="ar-AR" class="dropdown-item" href="#"><img
+                            src="img/flags/ar.png" /><span>ar</span></a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <img class="icon-mode-mobile" onclick="MobileMode()" src="img/icons/moon.png" />
+        </li>
+    </ul>
+    <!-- Mobile Menu End -->
+    <div class="overlay"></div>
+    <!-- Buy Back Section -->
+    <section class="pb-0 wow animate__animated animate__fadeIn start-repair-section" data-wow-duration="1000ms"
+        data-wow-delay="300ms" id="BuyBackSection">
+        <div class="container">
+            <!-- Sell device section start -->
+            <!-- What would you like to sell? -->
+            <div class="">
+                <div class="row">
+                    <div class="col-lg-10 offset-lg-1 p-lg-0">
+                        <h2 class="buyBack_main-title text-center">What Would You Like To Sell Today?</h2>
+                        <h4 class="buyBack_main-subtitle text-center">Choose a device you wish to sell at Buy Back
+                            Pros
+                        </h4>
+                        <div class="row mt-5 d-flex justify-content-xl-between justify-content-md-around progressBar">
+                            <div class="col-12">
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="5" aria-valuemin="0"
+                                        aria-valuemax="100"></div>
+                                </div>
+                                <div class="row progress-wrap">
+                                    <div class="col-1 progress-item status" progress-val="p1" id="progress-item1">
+                                        <p>1</p>
+                                        <span>Device</span><br>
+                                        <span class="device_details">Mac</span>
+                                    </div>
+                                    <div class="col-1 progress-item" progress-val="p2" id="progress-item2">
+                                        <p>2</p>
+                                        <span>Model</span><br>
+                                        <span class="device_details">MacBook Pro</span>
+                                    </div>
+                                    <div class="col-1 progress-item" progress-val="p3" id="progress-item3">
+                                        <p>3</p>
+                                        <span>Condition</span><br>
+                                        <span class="device_details"> Mac MacBook Pro</span>
+                                    </div>
+                                    <div class="col-1 progress-item" progress-val="p4" id="progress-item4">
+                                        <p>4</p>
+                                        <span> Get Paid</span>
+                                        <span class="device_details"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Floating Shopping Cart start -->
+                        <div class="col-md-8 offset-md-2 mb-2 floatCart" id="FloatCart-accordion">
+                            <div class="accordion-item border-0">
+                                <div class="accordion-header" id="FloatCart-head_0">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#FloatCart_0" aria-expanded="true" aria-controls="FloatCart_0">
+                                        <div class="w-100 d-flex justify-content-between">
+                                            <div>In Your Cart : <strong>(1)</strong> item</div>
+                                            <div class="mx-2"><strong>Total: $2200</strong> &nbsp;<a
+                                                    class="btn btn-primary py-2">Pay</a></div>
+                                        </div>
+                                    </button>
+                                </div>
+                                <div id="FloatCart_0" class="accordion-collapse" aria-labelledby="FloatCart-head_0"
+                                    data-bs-parent="#FloatCart-accordion">
+                                    <div class="accordion-body">
+                                        <div class="row align-items-center">
+                                            <div class="col-lg-2">
+                                                <!-- Image -->
+                                                <div class="bg-image hover-overlay hover-zoom ripple rounded"
+                                                    data-mdb-ripple-color="light">
+                                                    <img src="./img/buy-back-imgs/MacBook-pro.png" class="w-100"
+                                                        alt="Blue Jeans Jacket" />
+                                                    <a href="#!">
+                                                        <div class="mask"
+                                                            style="background-color: rgba(251, 251, 251, 0.2)"></div>
+                                                    </a>
+                                                </div>
+                                                <!-- Image -->
+                                            </div>
+
+                                            <div class="col-lg-4">
+                                                <!-- Data -->
+                                                <p><strong>MacBook Pro</strong></p>
+                                                <p>Normal
+                                                <p>
+                                                    <!-- Data -->
+                                            </div>
+                                            <div class="col-lg-2 text-start">
+                                                <!-- Price -->
+                                                <p class="">
+                                                    <strong>$2200</strong>
+                                                </p>
+                                                <!-- Price -->
+                                            </div>
+                                            <div class="col-lg-3">
+                                                <!-- Quantity -->
+                                                <div class="input-group item-qty">
+                                                    <div class="button minus">
+                                                        <button type="button" class="btn btn-primary btn-number-minus"
+                                                            data-type="minus" data-field="quant[1]">
+                                                            <i class="fas fa-minus"></i>
+                                                        </button>
+                                                    </div>
+                                                    <input type="text" name="quant[1]" class="input-number" data-min="1"
+                                                        data-max="100" value="1">
+                                                    <div class="button plus">
+                                                        <button type="button" class="btn btn-primary btn-number-plus"
+                                                            data-type="plus" data-field="quant[1]">
+                                                            <i class="fas fa-plus"></i>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <!-- Quantity -->
+                                            </div>
+                                            <div class="col-lg-1 p-2 text-end remove-item">
+                                                <!-- delete -->
+                                                <a href="#!" class="remove"><i class="fas fa-times"></i></a>
+                                                <!-- delete -->
+                                            </div>
+                                        </div>
+                                        <!-- Single item -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- // Floating Card Ended -->
+
+                        <div class="row">
+                            <div class="col-lg-12 p-lg-0">
+                                <img src="./img/icons/left-arrow.png" class="arrowBackSteps_img">
+                                <h2 class="start-repair_main-title " style="display:inline-block">
+                                    <span class="step-title active"><span>Please select</span><span
+                                            class="product_title"> Device</span></span>
+                                    <span class="step-title"><span>Please select the </span><span
+                                            class="product_title">Mac</span> model you want to sell</span>
+                                    <span class="step-title"><span>The </span><span class="product_title">
+                                            MacBook Pro</span> you want to sell</span>
+                                    <span class="step-title"><span></span> Would you like to add another
+                                        device?</span>
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="buy-back-section active">
+                    <div class="form-group has-search col-lg-10 offset-lg-1">
+                        <span class="fa fa-search form-control-feedback"></span>
+                        <input type="text" class="form-control" placeholder="Search for your device here...">
+                    </div>
+                    <!-- Choose Device -->
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12">
+                            <div
+                                class="row start-repair_services-wrap displaying_products d-flex justify-content-center px-md-5">
+
+                                <div class="col-lg-auto col-md-4 col-12 d-flex justify-content-center"
+                                    onclick="addingSwitch('B1');">
+                                    <a id="Curbside" href="#buyBackBrandSection" class="buying-device">
+                                        <svg width="90" height="76" viewBox="0 0 90 76" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg" class="buy-Back-icon">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M5.46875 0.625H84.5312C85.8652 0.626474 87.144 1.15702 88.0873 2.10025C89.0305 3.04347 89.561 4.32233 89.5625 5.65625V58.8438C89.561 60.1777 89.0305 61.4565 88.0873 62.3998C87.144 63.343 85.8652 63.8735 84.5312 63.875H55.3788L56.2412 68.1875H62.25C62.6313 68.1875 62.9969 68.339 63.2665 68.6085C63.536 68.8781 63.6875 69.2438 63.6875 69.625V73.9375C63.6875 74.3187 63.536 74.6844 63.2665 74.954C62.9969 75.2235 62.6313 75.375 62.25 75.375H27.75C27.3688 75.375 27.0031 75.2235 26.7335 74.954C26.4639 74.6844 26.3125 74.3187 26.3125 73.9375V69.625C26.3125 69.2438 26.4639 68.8781 26.7335 68.6085C27.0031 68.339 27.3688 68.1875 27.75 68.1875H33.7588L34.6213 63.875H5.46875C4.13483 63.8735 2.85597 63.343 1.91275 62.3998C0.969525 61.4565 0.438974 60.1777 0.4375 58.8438V5.65625C0.438974 4.32233 0.969525 3.04347 1.91275 2.10025C2.85597 1.15702 4.13483 0.626474 5.46875 0.625ZM60.8125 72.5V71.0625H29.1875V72.5H60.8125ZM37.5537 63.875L36.6912 68.1875H53.3088L52.4463 63.875H37.5537ZM3.3125 52.375H86.6875V5.65625C86.687 5.08452 86.4597 4.53635 86.0554 4.13208C85.6512 3.72781 85.103 3.50048 84.5312 3.5H5.46875C4.89702 3.50048 4.34885 3.72781 3.94458 4.13208C3.5403 4.53635 3.31298 5.08452 3.3125 5.65625V52.375ZM43.5625 56.6875H46.4375C46.8187 56.6875 47.1844 56.839 47.454 57.1085C47.7235 57.3781 47.875 57.7438 47.875 58.125C47.875 58.5062 47.7235 58.8719 47.454 59.1415C47.1844 59.411 46.8187 59.5625 46.4375 59.5625H43.5625C43.1813 59.5625 42.8156 59.411 42.546 59.1415C42.2765 58.8719 42.125 58.5062 42.125 58.125C42.125 57.7438 42.2765 57.3781 42.546 57.1085C42.8156 56.839 43.1813 56.6875 43.5625 56.6875Z" />
+                                        </svg>
+                                        <h4 class="start-repair_services-text">Sell Mac</h4>
+                                    </a>
+                                </div>
+                                <div class="col-lg-auto col-md-4 col-12  d-flex justify-content-center"
+                                    onclick="addingSwitch('B1');">
+                                    <a id="ComeToYou" href="#buyBackBrandSection" class="buying-device">
+                                        <svg class="buy-Back-icon" width="44" height="75" viewBox="0 0 44 75"
+                                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M39.2177 0H5.78056C2.99484 0 0.714844 2.27786 0.714844 5.06571V69.9321C0.714844 72.72 2.99484 75 5.78056 75H39.2177C42.0034 75 44.2834 72.7243 44.2834 69.9343V5.06571C44.2834 2.27786 42.0034 0 39.2177 0ZM17.1506 3.65143H27.8477C28.1863 3.65143 28.4606 3.92571 28.4606 4.26643C28.4606 4.605 28.1863 4.87929 27.8477 4.87929H17.1506C16.812 4.87929 16.5377 4.605 16.5377 4.26643C16.5377 3.92571 16.812 3.65143 17.1506 3.65143ZM22.4991 72.4671C21.0998 72.4671 19.9663 71.3336 19.9663 69.9321C19.9663 68.5307 21.0998 67.3993 22.4991 67.3993C23.8984 67.3993 25.032 68.5307 25.032 69.9321C25.032 71.3336 23.8984 72.4671 22.4991 72.4671ZM40.7584 65.625H4.23984V8.03357H40.7584V65.625Z" />
+                                        </svg>
+
+                                        <h4 class="start-repair_services-text">Sell iPhone</h4>
+                                    </a>
+                                </div>
+                                <div class="col-lg-auto col-md-4 col-12 d-flex justify-content-center"
+                                    onclick="addingSwitch('B1');">
+                                    <a id="MailRepair" href="#buyBackBrandSection" class="buying-device">
+                                        <svg class="buy-Back-icon" width="55" height="76" viewBox="0 0 55 76"
+                                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M49.8446 0H5.14991C2.3325 0 0.0644531 2.28986 0.0644531 5.11838V70.2386C0.0644531 73.0582 2.3325 75.3547 5.14991 75.3547H49.8446C52.6531 75.3547 54.9322 73.0604 54.9322 70.2386V5.11838C54.9366 2.28986 52.6553 0 49.8446 0ZM27.4994 73.4373C25.8271 73.4373 24.4746 72.0784 24.4746 70.4004C24.4746 68.7201 25.8271 67.3591 27.4994 67.3591C29.1674 67.3591 30.5242 68.7201 30.5242 70.4004C30.5242 72.0784 29.1674 73.4373 27.4994 73.4373ZM49.785 64.6968H5.21389V6.14915H49.785V64.6968V64.6968Z" />
+                                        </svg>
+                                        <h4 class="start-repair_services-text">Sell iPad</h4>
+                                    </a>
+                                </div>
+                                <div class="col-lg-auto col-md-4 col-12 d-flex justify-content-center"
+                                    onclick="addingSwitch('B1');">
+                                    <a id="MailRepair" href="#buyBackBrandSection" class="buying-device">
+                                        <svg class="buy-Back-icon" width="41" height="75" viewBox="0 0 41 75"
+                                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M35.2456 0H5.75327C2.76596 0 0.34375 2.42221 0.34375 5.40952V69.5905C0.34375 72.5786 2.76516 75 5.75327 75H35.2456C38.2346 75 40.6568 72.5786 40.6568 69.5905V5.40952C40.656 2.42221 38.2346 0 35.2456 0ZM16.8806 3.19822H24.1183C24.3783 3.19822 24.59 3.40993 24.59 3.67075C24.59 3.93076 24.3783 4.14247 24.1183 4.14247H16.8806C16.6198 4.14247 16.4089 3.93076 16.4089 3.67075C16.4089 3.40993 16.6206 3.19822 16.8806 3.19822ZM9.66632 2.06319C10.0833 2.06319 10.4214 2.40128 10.4214 2.81827C10.4214 3.23525 10.0841 3.57335 9.66632 3.57335C9.24854 3.57335 8.91125 3.23525 8.91125 2.81827C8.91125 2.40128 9.24934 2.06319 9.66632 2.06319ZM6.24512 1.61078C6.91246 1.61078 7.45261 2.15174 7.45261 2.81827C7.45261 3.4848 6.91246 4.02575 6.24512 4.02575C5.57779 4.02575 5.03764 3.4848 5.03764 2.81827C5.03764 2.15174 5.57779 1.61078 6.24512 1.61078ZM22.3884 72.2542H18.6122C17.4143 72.2542 16.4443 71.2842 16.4443 70.088C16.4443 68.8909 17.4143 67.9209 18.6122 67.9209H22.3884C23.5862 67.9209 24.5562 68.8909 24.5562 70.088C24.5562 71.2842 23.5862 72.2542 22.3884 72.2542ZM38.365 66.2087H2.63475V8.79048H38.365V66.2087Z" />
+                                        </svg>
+                                        <h4 class="start-repair_services-text">Sell Galaxy</h4>
+                                    </a>
+                                </div>
+
+
+                                <div class="col-lg-auto col-md-4 col-12 d-flex justify-content-center"
+                                    onclick="addingSwitch('B1');">
+                                    <a id="Curbside" href="#buyBackBrandSection" class="buying-device">
+                                        <svg width="41" height="75" viewBox="0 0 41 75" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg" class="buy-Back-icon">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M35.2456 0H5.75327C2.76596 0 0.34375 2.42221 0.34375 5.40952V69.5905C0.34375 72.5786 2.76516 75 5.75327 75H35.2456C38.2346 75 40.6568 72.5786 40.6568 69.5905V5.40952C40.656 2.42221 38.2346 0 35.2456 0ZM16.8806 3.19822H24.1183C24.3783 3.19822 24.59 3.40993 24.59 3.67075C24.59 3.93076 24.3783 4.14247 24.1183 4.14247H16.8806C16.6198 4.14247 16.4089 3.93076 16.4089 3.67075C16.4089 3.40993 16.6206 3.19822 16.8806 3.19822ZM9.66632 2.06319C10.0833 2.06319 10.4214 2.40128 10.4214 2.81827C10.4214 3.23525 10.0841 3.57335 9.66632 3.57335C9.24854 3.57335 8.91125 3.23525 8.91125 2.81827C8.91125 2.40128 9.24934 2.06319 9.66632 2.06319ZM6.24512 1.61078C6.91246 1.61078 7.45261 2.15174 7.45261 2.81827C7.45261 3.4848 6.91246 4.02575 6.24512 4.02575C5.57779 4.02575 5.03764 3.4848 5.03764 2.81827C5.03764 2.15174 5.57779 1.61078 6.24512 1.61078ZM22.3884 72.2542H18.6122C17.4143 72.2542 16.4443 71.2842 16.4443 70.088C16.4443 68.8909 17.4143 67.9209 18.6122 67.9209H22.3884C23.5862 67.9209 24.5562 68.8909 24.5562 70.088C24.5562 71.2842 23.5862 72.2542 22.3884 72.2542ZM38.365 66.2087H2.63475V8.79048H38.365V66.2087Z" />
+                                        </svg>
+                                        <h4 class="start-repair_services-text">Sell Pixel</h4>
+                                    </a>
+                                </div>
+                                <div class="col-lg-auto col-md-4 col-12 d-flex justify-content-center"
+                                    onclick="addingSwitch('B1');">
+                                    <a id="ComeToYou" href="#buyBackBrandSection" class="buying-device">
+                                        <svg class="buy-Back-icon" width="75" height="75" viewBox="0 0 75 75"
+                                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M16.7098 6.3627C16.6719 6.39185 16.6427 6.42391 16.6078 6.45305C16.8205 6.22863 17.1266 5.98671 17.3277 5.85555C23.1978 2.04026 29.9802 0 37.5059 0C44.5448 0 51.1377 1.94408 56.7659 5.32508C57.174 5.567 58.2874 6.33064 58.8616 7.02433V7.02724C53.4316 1.04053 37.4709 13.8854 37.4709 13.8854C31.9505 9.63003 26.8732 6.72995 23.0929 5.69816C19.9334 4.8325 17.7474 5.55534 16.7098 6.3627ZM65.0115 12.023C64.8454 11.8393 64.6646 11.6674 64.4985 11.4779C63.1257 9.97105 61.4381 9.60672 59.9167 9.70581C58.5322 10.1401 52.1345 12.4456 44.2504 19.8896C44.2504 19.8896 53.1255 28.5199 58.5613 37.3426C63.9914 46.1653 67.2383 53.0993 65.2418 62.7235C71.3013 56.0635 74.9971 47.2146 74.9971 37.4971C74.9971 27.663 71.211 18.7121 65.0115 12.023ZM51.4642 41.1113C49.0566 38.4094 45.4745 34.5387 40.744 29.8344C39.7093 28.8056 38.6163 27.733 37.468 26.6225C37.468 26.6225 35.7396 28.3509 33.4895 30.6243V30.6214C30.6098 33.5302 26.8761 37.3251 24.8038 39.5403C21.1138 43.478 10.5424 55.8449 9.94776 62.7788C9.94776 62.7788 7.59563 57.2789 12.7575 44.5943C16.1298 36.3021 26.3194 23.8507 30.5748 19.7934C30.5748 19.7934 26.6866 15.5147 21.8075 12.5593L21.7784 12.5505C21.7784 12.5505 21.723 12.5068 21.6355 12.4514C19.2892 11.0524 16.7273 9.97396 14.2615 9.83114C11.7432 10.0089 10.1489 11.851 10.1489 11.851C3.85612 18.5605 0.00585938 27.5785 0.00585938 37.5C0.00585938 58.2087 16.7943 75 37.5059 75C48.497 75 58.3865 70.2608 65.2476 62.7264C65.2447 62.7147 64.4577 57.7715 59.4124 50.6801C58.2262 49.0187 53.8921 43.8336 51.4642 41.1113Z" />
+                                        </svg>
+                                        <h4 class="start-repair_services-text">Sell Xbox</h4>
+                                    </a>
+                                </div>
+                                <div class="col-lg-auto col-md-4 col-12 d-flex justify-content-center"
+                                    onclick="addingSwitch('B1');">
+                                    <a id="MailRepair" href="#buyBackBrandSection" class="buying-device">
+                                        <svg class="buy-Back-icon" width="51" height="75" viewBox="0 0 51 75"
+                                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M44.5244 13.2867C44.4398 13.2355 39.2276 11.2339 39.2276 11.2339L37.6658 1.4335C37.5345 0.60767 36.8222 0 35.9858 0H12.8977C12.0613 0 11.3491 0.60767 11.2174 1.4335L9.65558 11.2339C9.65558 11.2339 4.44341 13.2355 4.35821 13.2867C1.8779 14.1637 0.0292969 16.1262 0.0292969 18.7963V56.2649C0.0292969 59.0211 2.2028 60.973 4.59759 61.8326C4.60727 61.8366 4.61663 61.8422 4.62662 61.8463L9.65558 63.7657L11.2174 73.5662C11.3491 74.3917 12.0613 74.9997 12.8977 74.9997H35.9858C36.8222 74.9997 37.5344 74.392 37.6662 73.5662L39.2279 63.7657C39.2279 63.7657 44.2753 61.8363 44.2853 61.8326C46.47 61.1906 48.8536 59.0211 48.8536 56.2649V45.9289H50.9712V39.4789H48.8536V32.7452H50.9712V26.2952H48.8536V18.7966C48.8536 16.1262 47.0421 14.365 44.5244 13.2867ZM43.3655 53.127C43.3655 54.9625 41.8733 56.4547 40.0378 56.4547H8.84536C7.00986 56.4547 5.51768 54.9625 5.51768 53.127V21.9345C5.51768 20.099 7.00986 18.6068 8.84536 18.6068H40.0375C41.873 18.6068 43.3652 20.099 43.3652 21.9345L43.3655 53.127ZM31.9515 40.5051C31.097 43.0987 29.0711 45.6389 26.7084 45.6389C25.985 45.6389 25.2962 45.4542 24.6585 45.1421C24.0228 45.4542 23.3327 45.6389 22.6092 45.6389C19.4735 45.6389 16.9317 41.1665 16.9317 38.0307C16.9317 32.5336 22.3405 32.5336 24.6588 34.5629C25.8383 33.5299 27.8183 33.0252 29.4781 33.5002C28.7324 34.2455 28.2705 35.2752 28.2705 36.4131C28.2702 38.5388 29.8825 40.2879 31.9515 40.5051ZM21.3783 31.9359C20.3621 30.9197 19.908 29.5549 20.0097 28.2262C21.3393 28.1239 22.7035 28.578 23.7197 29.5942C24.7372 30.6117 25.19 31.9759 25.0883 33.3045C23.7593 33.4069 22.3945 32.9528 21.3783 31.9359Z" />
+                                        </svg>
+                                        <h4 class="start-repair_services-text">Simple Apple Watch</h4>
+                                    </a>
+                                </div>
+                                <div class="col-lg-auto col-md-4 col-12 d-flex justify-content-center"
+                                    onclick="addingSwitch('B1');">
+                                    <a id="MailRepair" href="#buyBackBrandSection" class="buying-device">
+                                        <svg class="buy-Back-icon" width="75" height="75" viewBox="0 0 75 75"
+                                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M18.457 63.8672C19.6705 63.8672 20.6543 62.8834 20.6543 61.6699C20.6543 60.4564 19.6705 59.4727 18.457 59.4727C17.2435 59.4727 16.2598 60.4564 16.2598 61.6699C16.2598 62.8834 17.2435 63.8672 18.457 63.8672Z" />
+                                            <path
+                                                d="M56.543 63.8672C57.7565 63.8672 58.7402 62.8834 58.7402 61.6699C58.7402 60.4564 57.7565 59.4727 56.543 59.4727C55.3295 59.4727 54.3457 60.4564 54.3457 61.6699C54.3457 62.8834 55.3295 63.8672 56.543 63.8672Z" />
+                                            <path
+                                                d="M37.5 63.8672C38.7135 63.8672 39.6973 62.8834 39.6973 61.6699C39.6973 60.4564 38.7135 59.4727 37.5 59.4727C36.2865 59.4727 35.3027 60.4564 35.3027 61.6699C35.3027 62.8834 36.2865 63.8672 37.5 63.8672Z" />
+                                            <path
+                                                d="M66.9434 0H8.05664C3.61421 0 0 3.61421 0 8.05664V66.9434C0 71.3858 3.61421 75 8.05664 75H66.9434C71.3858 75 75 71.3858 75 66.9434V8.05664C75 3.61421 71.3858 0 66.9434 0ZM18.457 68.2617C14.8223 68.2617 11.8652 65.3046 11.8652 61.6699C11.8652 58.0352 14.8223 55.0781 18.457 55.0781C22.0917 55.0781 25.0488 58.0352 25.0488 61.6699C25.0488 65.3046 22.0917 68.2617 18.457 68.2617ZM37.5 68.2617C33.8653 68.2617 30.9082 65.3046 30.9082 61.6699C30.9082 58.0352 33.8653 55.0781 37.5 55.0781C41.1347 55.0781 44.0918 58.0352 44.0918 61.6699C44.0918 65.3046 41.1347 68.2617 37.5 68.2617ZM56.543 68.2617C52.9083 68.2617 49.9512 65.3046 49.9512 61.6699C49.9512 58.0352 52.9083 55.0781 56.543 55.0781C60.1777 55.0781 63.1348 58.0352 63.1348 61.6699C63.1348 65.3046 60.1777 68.2617 56.543 68.2617ZM66.0645 46.2891C66.0645 47.5025 65.0807 48.4863 63.8672 48.4863H11.1328C9.91934 48.4863 8.93555 47.5025 8.93555 46.2891V11.1328C8.93555 9.91934 9.91934 8.93555 11.1328 8.93555H63.8672C65.0807 8.93555 66.0645 9.91934 66.0645 11.1328V46.2891Z" />
+                                            <path
+                                                d="M54.3457 22.2657C55.5592 22.2657 56.543 21.282 56.543 20.0685C56.543 18.855 55.5592 17.8712 54.3457 17.8712C53.1322 17.8712 52.1484 18.855 52.1484 20.0685C52.1484 21.282 53.1322 22.2657 54.3457 22.2657Z" />
+                                            <path
+                                                d="M20.2311 25.7811C21.4222 26.0149 22.5768 25.2393 22.8107 24.0485C23.0136 23.0155 23.9274 22.2658 24.9835 22.2658C26.1655 22.2658 27.1342 23.1967 27.1949 24.3639L27.1459 24.7469C26.9373 25.5582 26.4311 26.5522 25.6768 27.6299C22.9489 31.5275 21.3213 33.6587 20.4469 34.8037C19.349 36.2413 18.7979 36.9628 19.1679 38.1658C19.3871 38.8781 19.9256 39.4244 20.6454 39.6643C20.935 39.7608 21.1954 39.8479 24.5927 39.8479C25.9117 39.8479 27.7039 39.8347 30.1535 39.8039C31.367 39.7887 32.3384 38.7926 32.3231 37.5791C32.3079 36.3658 31.3098 35.3985 30.0983 35.4095C28.5394 35.4291 26.8924 35.4428 25.4666 35.4475C26.3992 34.1933 27.6459 32.4801 29.2771 30.1496C30.3969 28.55 31.128 27.0337 31.4504 25.6433C31.5071 25.3356 31.5828 24.792 31.5923 24.4799C31.5923 20.8358 28.6276 17.8711 24.9835 17.8711C21.8326 17.8711 19.1054 20.1127 18.4987 23.2014C18.2647 24.3923 19.0404 25.5472 20.2311 25.7811Z" />
+                                            <path
+                                                d="M37.0261 25.7811C38.2171 26.0149 39.3717 25.2393 39.6056 24.0485C39.8085 23.0155 40.7223 22.2658 41.7784 22.2658C42.9604 22.2658 43.9291 23.1967 43.9898 24.3639L43.9408 24.7469C43.7323 25.5582 43.226 26.5522 42.4718 27.6299C39.7438 31.5275 38.1162 33.6587 37.2418 34.8037C36.1439 36.2413 35.5929 36.9628 35.9629 38.1658C36.182 38.8781 36.7205 39.4244 37.4403 39.6643C37.7299 39.7608 37.9904 39.8479 41.3876 39.8479C42.7066 39.8479 44.4988 39.8347 46.9485 39.8039C48.1619 39.7887 49.1333 38.7926 49.118 37.5791C49.1028 36.3658 48.1096 35.3985 46.8932 35.4095C45.3344 35.4291 43.6873 35.4428 42.2616 35.4475C43.1941 34.1933 44.4408 32.4801 46.0721 30.1496C47.1918 28.55 47.9229 27.0337 48.2453 25.6433C48.302 25.3356 48.3777 24.792 48.3872 24.4799C48.3872 20.8358 45.4225 17.8711 41.7784 17.8711C38.6276 17.8711 35.9003 20.1127 35.2936 23.2014C35.0596 24.3923 35.8353 25.5472 37.0261 25.7811Z" />
+                                        </svg>
+                                        <h4 class="start-repair_services-text">Sell Home Automation</h4>
+                                    </a>
+                                </div>
+
+
+                                <div class="col-lg-auto col-md-4 col-12 d-flex justify-content-center"
+                                    onclick="addingSwitch('B1');">
+                                    <a id="Curbside" href="#buyBackBrandSection" class="buying-device">
+                                        <svg width="82" height="88" viewBox="0 0 82 88" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg" class="buy-Back-icon">
+                                            <path
+                                                d="M30.75 66H41V22.3543C41 14.6058 32.6292 8.33147 24.2242 8.33147C19.0145 8.30998 14.0017 10.327 10.25 13.9543V30.8572C10.25 30.8572 18.6208 39.2572 27.0258 36.48L30.75 35.1429V66ZM19.0992 21.4286C18.8221 21.4286 18.5513 21.3462 18.3209 21.1917C18.0905 21.0372 17.911 20.8177 17.805 20.5608C17.6989 20.304 17.6712 20.0213 17.7253 19.7487C17.7793 19.476 17.9127 19.2255 18.1086 19.0289C18.3045 18.8323 18.5541 18.6984 18.8259 18.6442C19.0976 18.59 19.3793 18.6178 19.6352 18.7242C19.8912 18.8306 20.11 19.0108 20.2639 19.2419C20.4178 19.4731 20.5 19.7449 20.5 20.0229C20.5 20.3957 20.3524 20.7533 20.0897 21.0169C19.827 21.2805 19.4707 21.4286 19.0992 21.4286ZM29.0417 18C28.5886 18 28.1541 17.8194 27.8337 17.4979C27.5133 17.1764 27.3333 16.7404 27.3333 16.2858C27.3333 15.8311 27.5133 15.3951 27.8337 15.0736C28.1541 14.7521 28.5886 14.5715 29.0417 14.5715C30.854 14.5715 32.5921 15.2939 33.8736 16.5799C35.1551 17.8658 35.875 19.61 35.875 21.4286C35.875 21.8833 35.695 22.3193 35.3746 22.6408C35.0543 22.9623 34.6197 23.1429 34.1667 23.1429C33.7136 23.1429 33.2791 22.9623 32.9587 22.6408C32.6383 22.3193 32.4583 21.8833 32.4583 21.4286C32.4583 20.5193 32.0984 19.6472 31.4576 19.0042C30.8169 18.3613 29.9478 18 29.0417 18Z" />
+                                            <path
+                                                d="M30.75 71.1429C30.8687 72.0102 31.2668 72.8148 31.8837 73.4338C32.5006 74.0528 33.3024 74.4524 34.1667 74.5714H37.5833C38.4476 74.4524 39.2494 74.0528 39.8663 73.4338C40.4832 72.8148 40.8813 72.0102 41 71.1429V69.4286H30.75V71.1429Z" />
+                                            <path
+                                                d="M47.834 71.1429C47.9526 72.0102 48.3508 72.8148 48.9677 73.4338C49.5846 74.0528 50.3863 74.4524 51.2507 74.5714H54.6673C55.5316 74.4524 56.3334 74.0528 56.9503 73.4338C57.5672 72.8148 57.9653 72.0102 58.084 71.1429V69.4286H47.834V71.1429Z" />
+                                            <path
+                                                d="M61.5007 7.71429C57.8192 8.01982 54.3822 9.68703 51.8568 12.3923C49.3314 15.0976 47.8977 18.648 47.834 22.3543V66H58.084V35.1429C58.084 35.1429 71.7507 45.4286 71.7507 21.4286C71.7507 14.5714 68.334 7.71429 61.5007 7.71429ZM64.9173 26.5714C64.9173 27.0261 64.7373 27.4621 64.417 27.7836C64.0966 28.1051 63.6621 28.2857 63.209 28.2857C62.7559 28.2857 62.3214 28.1051 62.001 27.7836C61.6806 27.4621 61.5007 27.0261 61.5007 26.5714V19.7143C61.5007 19.2596 61.6806 18.8236 62.001 18.5021C62.3214 18.1806 62.7559 18 63.209 18C63.6621 18 64.0966 18.1806 64.417 18.5021C64.7373 18.8236 64.9173 19.2596 64.9173 19.7143V26.5714Z" />
+                                        </svg>
+                                        <h4 class="start-repair_services-text">Sell Airpods</h4>
+                                    </a>
+                                </div>
+                                <div class="col-lg-auto col-md-4 col-12 d-flex justify-content-center"
+                                    onclick="addingSwitch('B1');">
+                                    <a id="ComeToYou" href="#buyBackBrandSection" class="buying-device">
+                                        <svg class="buy-Back-icon" width="69" height="65" viewBox="0 0 69 65"
+                                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M7.84272 0.717711C8.758 -0.19757 10.242 -0.19757 11.1573 0.717711L18.875 8.43543L26.5927 0.717711C27.508 -0.19757 28.9919 -0.19757 29.9072 0.717711C30.8225 1.63299 30.8225 3.11699 29.9072 4.03227L24.5333 9.40624H59.5C64.2463 9.40624 68.0938 13.2538 68.0938 18V55.5C68.0938 60.2462 64.2463 64.0937 59.5 64.0937H9.5C4.75381 64.0937 0.90625 60.2462 0.90625 55.5V18C0.90625 13.2538 4.75381 9.40624 9.5 9.40624H13.2167L7.84272 4.03227C6.92744 3.11699 6.92744 1.63299 7.84272 0.717711ZM9.5 14.0937H59.5C61.6575 14.0937 63.4063 15.8426 63.4063 18V55.5C63.4063 57.6575 61.6575 59.4062 59.5 59.4062H9.5C7.34263 59.4062 5.59375 57.6575 5.59375 55.5V18C5.59375 15.8426 7.34263 14.0937 9.5 14.0937Z" />
+                                            <path
+                                                d="M38.1864 22C36.8536 22.0922 35.2958 22.9453 34.388 24.0562C33.5599 25.064 32.8786 26.5609 33.1443 28.0156C34.6005 28.0609 36.1052 27.1875 36.977 26.0578C37.7927 25.0062 38.4098 23.5187 38.1864 22Z" />
+                                            <path
+                                                d="M43.4528 30.3875C42.1731 28.7828 40.3747 27.8515 38.6763 27.8515C36.4341 27.8515 35.4857 28.925 33.9279 28.925C32.3216 28.925 31.1013 27.8547 29.1623 27.8547C27.2576 27.8547 25.2295 29.0187 23.9435 31.0093C22.1357 33.8124 22.4451 39.0827 25.3748 43.5718C26.4232 45.178 27.8232 46.9842 29.6545 46.9999C31.2841 47.0155 31.7435 45.9546 33.9513 45.9436C36.1591 45.9311 36.5779 47.0139 38.2044 46.9967C40.0372 46.9827 41.5138 44.9811 42.5622 43.3749C43.3137 42.2233 43.5934 41.6436 44.1762 40.3436C39.9372 38.7296 39.2575 32.7015 43.4528 30.3875Z" />
+                                        </svg>
+
+                                        <h4 class="start-repair_services-text">Sell Apple TV</h4>
+                                    </a>
+                                </div>
+                                <div class="col-lg-auto col-md-4 col-12 d-flex justify-content-center"
+                                    onclick="addingSwitch('B1');">
+                                    <a id="MailRepair" href="#buyBackBrandSection" class="buying-device">
+                                        <svg class="buy-Back-icon" width="75" height="75" viewBox="0 0 75 75"
+                                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M58.1543 0H41.1621V75H58.1543C67.443 75 75 67.443 75 58.1543V16.8457C75 7.55698 67.443 0 58.1543 0ZM58.0811 48.6328C53.1945 48.6328 49.2188 44.6571 49.2188 39.7705C49.2188 34.8839 53.1945 30.9082 58.0811 30.9082C62.9676 30.9082 66.9434 34.8839 66.9434 39.7705C66.9434 44.6571 62.9676 48.6328 58.0811 48.6328Z" />
+                                            <path
+                                                d="M36.7676 75H16.8457C7.55698 75 0 67.443 0 58.1543V16.8457C0 7.55698 7.55698 0 16.8457 0H36.7676V75ZM16.8457 4.39453C9.98013 4.39453 4.39453 9.98013 4.39453 16.8457V58.1543C4.39453 65.0199 9.98013 70.6055 16.8457 70.6055H32.373V4.39453H16.8457Z" />
+                                            <path
+                                                d="M18.3838 30.9082C13.4972 30.9082 9.52148 26.9325 9.52148 22.0459C9.52148 17.1593 13.4972 13.1836 18.3838 13.1836C23.2704 13.1836 27.2461 17.1593 27.2461 22.0459C27.2461 26.9325 23.2704 30.9082 18.3838 30.9082Z" />
+                                        </svg>
+                                        <h4 class="start-repair_services-text">Sell Switch</h4>
+                                    </a>
+                                </div>
+                                <div class="col-lg-auto col-md-4 col-12 d-flex justify-content-center"
+                                    onclick="addingSwitch('B1');">
+                                    <a id="MailRepair" href="#buyBackBrandSection" class="buying-device">
+                                        <svg class="buy-Back-icon" width="41" height="77" viewBox="0 0 41 77"
+                                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M39.999 19.9157C40.1868 19.9148 40.3385 19.7616 40.3381 19.5738L40.3155 14.6952C40.3145 14.5074 40.1613 14.3557 39.9736 14.3562L39.7935 14.3571C39.465 1.42799 39.0088 1.99369 39.0088 1.99369C39.0045 1.05389 38.239 0.295135 37.2992 0.299457L3.03506 0.456491C2.09526 0.460813 1.3365 1.22629 1.34082 2.1661C1.34082 2.1661 0.425514 0.468495 0.600316 38.5903C0.775598 76.7121 1.67554 75.0063 1.67554 75.0063C1.67986 75.9461 2.44534 76.7049 3.38515 76.7005L37.6497 76.543C38.5896 76.5387 39.3483 75.7732 39.344 74.8334C39.344 74.8334 40.2675 75.9639 40.0951 38.4092C40.0951 38.3699 40.0946 38.3329 40.0946 38.2935C40.2775 38.2868 40.4235 38.1379 40.4226 37.954L40.3803 28.7639C40.3794 28.5761 40.2262 28.4244 40.0384 28.4249H40.024C39.9918 25.2165 39.9539 22.3932 39.9107 19.9157H39.999ZM27.3259 2.72796C27.8896 2.72556 28.3492 3.18033 28.3516 3.7446C28.354 4.30886 27.8992 4.76796 27.335 4.77036C26.7712 4.77276 26.3116 4.31799 26.3092 3.75372C26.3068 3.18946 26.7621 2.73036 27.3259 2.72796ZM16.8334 3.2298L23.9811 3.19714C24.1376 3.19666 24.2654 3.32296 24.2659 3.47951C24.2668 3.63607 24.14 3.76381 23.9835 3.76429L16.8358 3.79694C16.6792 3.79742 16.5515 3.67112 16.551 3.51457C16.5501 3.35802 16.6764 3.23076 16.8334 3.2298ZM37.7285 67.8063L3.23724 67.9648L2.95775 7.15132L37.449 6.99285L37.7285 67.8063Z" />
+                                        </svg>
+                                        <h4 class="start-repair_services-text">Sell Smartphones</h4>
+                                    </a>
+                                </div>
+
+
+                                <div class="col-lg-auto col-md-4 col-12 d-flex justify-content-center"
+                                    onclick="addingSwitch('B1');">
+                                    <a id="Curbside" href="#buyBackBrandSection" class="buying-device">
+                                        <svg width="81" height="65" viewBox="0 0 81 65" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg" class="buy-Back-icon">
+                                            <path
+                                                d="M76.5655 1.02492e-10H4.41821C3.83663 -3.93368e-06 3.26077 0.113229 2.72366 0.333202C2.18655 0.553176 1.69877 0.875561 1.28829 1.28187C0.877806 1.68817 0.552706 2.1704 0.331636 2.70089C0.110567 3.23139 -0.00212371 3.7997 3.03057e-05 4.37324V50.849C2.23178e-05 52.0061 0.464985 53.116 1.29309 53.9357C2.12119 54.7554 3.24493 55.218 4.41821 55.2223H76.5655C77.7404 55.2184 78.8661 54.7565 79.6969 53.9371C80.5277 53.1178 80.9961 52.0077 81 50.849V4.37324C80.9991 3.21365 80.5316 2.1018 79.7002 1.28184C78.8687 0.461882 77.7413 0.000854843 76.5655 1.02492e-10Z" />
+                                            <path
+                                                d="M53.9044 62.5745H49.4518V56.8651H31.55V62.5794H27.0827C26.7572 62.5794 26.4451 62.7069 26.2149 62.9339C25.9848 63.1609 25.8555 63.4687 25.8555 63.7897C25.8555 64.1107 25.9848 64.4185 26.2149 64.6455C26.4451 64.8725 26.7572 65 27.0827 65H53.9044C54.2298 65 54.542 64.8725 54.7722 64.6455C55.0023 64.4185 55.1316 64.1107 55.1316 63.7897C55.1316 63.4687 55.0023 63.1609 54.7722 62.9339C54.542 62.7069 54.2298 62.5794 53.9044 62.5794V62.5745Z" />
+                                        </svg>
+                                        <h4 class="start-repair_services-text">Sell Apple Display</h4>
+                                    </a>
+                                </div>
+                                <div class="col-lg-auto col-md-4 col-12 d-flex justify-content-center"
+                                    onclick="addingSwitch('B1');">
+                                    <a id="ComeToYou" href="#buyBackBrandSection" class="buying-device">
+                                        <svg class="buy-Back-icon" width="75" height="59" viewBox="0 0 75 59"
+                                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M8.22381 39.4788L5.69396 40.4627C1.8992 42.0789 -0.0684549 43.7655 0.0018185 45.2412C0.212639 47.4197 2.67221 49.036 7.16971 50.2307C13.0024 51.7767 18.9054 52.128 25.0192 51.2145V45.1007L20.1703 46.9278C15.1106 48.6846 12.5105 47.2089 12.5105 47.2089C11.7375 46.717 11.3861 45.5223 13.4943 44.7493L16.1647 43.7655L25.0192 40.6032V33.5056L22.7704 34.2786L8.22381 39.4788Z" />
+                                            <path
+                                                d="M45.1881 14.8129V33.0137C48.9829 34.8408 52.356 34.9813 54.8858 33.0839C57.486 31.2568 58.8914 28.0945 58.8914 23.3159C58.8914 18.3265 57.9076 14.5318 55.7291 12.0019C53.7615 9.33153 50.2478 7.08278 45.0476 5.32595C38.5824 3.21774 33.1011 1.39064 28.7441 0.477081V54.939L40.4798 58.5229V13.2668C40.4095 10.5262 45.1881 10.737 45.1881 14.8129Z" />
+                                            <path
+                                                d="M74.9844 42.9222C74.9141 41.0248 72.6654 39.5491 68.6598 38.2139C64.1623 36.7382 60.2973 36.0354 56.0809 36.176C52.2158 36.2462 47.5778 37.5112 43.4316 38.8464V45.8034L54.8159 41.7978C54.8159 41.7978 58.2593 40.5329 61.2108 41.3059C63.4596 41.8681 63.319 43.133 61.0703 43.906L58.4702 44.9601L43.4316 50.3712V57.4688L50.459 54.939L67.3246 48.9657L69.2923 48.0522C73.3681 46.5764 75.1952 44.9601 74.9844 42.9222Z" />
+                                        </svg>
+
+                                        <h4 class="start-repair_services-text">Sell PlayStation</h4>
+                                    </a>
+                                </div>
+                                <div class="col-lg-auto col-md-4 col-12 d-flex justify-content-center"
+                                    onclick="addingSwitch('B1');">
+                                    <a id="MailRepair" href="#buyBackBrandSection" class="buying-device">
+                                        <svg class="buy-Back-icon" width="47" height="87" viewBox="0 0 47 87"
+                                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M41.0728 0H5.92752C2.94109 0 0.521484 2.42101 0.521484 5.40688V81.5931C0.521484 84.579 2.94249 87 5.92752 87H41.0697C44.057 87 46.4766 84.579 46.4766 81.5931V5.40688C46.478 2.42101 44.057 0 41.0728 0ZM7.2202 9.45797C7.2202 7.59033 9.58456 6.07495 12.5009 6.07495H34.5025C37.4186 6.07495 39.7829 7.58892 39.7829 9.45797V33.9219C39.7829 35.7895 37.4186 37.3049 34.5025 37.3049H12.4992C9.58287 37.3049 7.21796 35.7909 7.21796 33.9219V9.45797H7.2202ZM23.4997 79.8534C13.9198 79.8534 6.15358 72.0863 6.15358 62.5069C6.15358 52.9261 13.9195 45.1605 23.4997 45.1605C33.0791 45.1605 40.8462 52.9261 40.8462 62.5069C40.8459 72.0863 33.0791 79.8534 23.4997 79.8534Z" />
+                                            <path
+                                                d="M23.5003 52.5341C29.0075 52.5341 33.4734 56.9986 33.4734 62.5073C33.4734 68.0143 29.0075 72.4788 23.5003 72.4788C17.9924 72.4788 13.5273 68.0143 13.5273 62.5073C13.5273 56.9986 17.9924 52.5341 23.5003 52.5341Z" />
+                                            <path
+                                                d="M22.1012 32.2648C23.3313 31.0355 23.9958 29.5202 24.0867 28.1128H24.1091V27.5364V27.4913V15.2432H31.6801V9.09727H22.7985C22.076 9.09727 21.4884 9.69327 21.4884 10.4284V24.1534C19.75 23.6685 17.5296 24.3298 15.8476 26.0123C13.5915 28.2679 13.163 31.4969 14.8898 33.2229C16.6167 34.9509 19.8451 34.5209 22.1012 32.2648Z" />
+
+                                        </svg>
+                                        <h4 class="start-repair_services-text">Sell iPod</h4>
+                                    </a>
+                                </div>
+                                <div class="col-lg-auto col-md-4 col-12 d-flex justify-content-center"
+                                    onclick="addingSwitch('B1');">
+                                    <a id="MailRepair" class="buying-device">
+                                        <svg class="buy-Back-icon" width="75" height="75" viewBox="0 0 75 75"
+                                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M41.517 40.1786H73.6599C74.3995 40.1786 74.9992 39.5789 74.9992 38.8393V37.5H40.1777V38.8393C40.1777 39.5789 40.7774 40.1786 41.517 40.1786Z" />
+                                            <path d="M12.2461 64.2857H17.2213V68.3036H12.2461V64.2857Z" />
+                                            <path
+                                                d="M29.4643 58.9286H0V66.9643C0.00457765 70.6611 2.99966 73.6561 6.69643 73.6607H22.7679C26.4646 73.6561 29.4597 70.6611 29.4643 66.9643V58.9286ZM19.8977 68.3036C19.8977 69.7828 18.6983 70.9821 17.2191 70.9821H12.2452C10.7659 70.9821 9.56661 69.7828 9.56661 68.3036V64.2857C9.56661 62.8065 10.7659 61.6071 12.2452 61.6071H17.2191C18.6983 61.6071 19.8977 62.8065 19.8977 64.2857V68.3036Z" />
+                                            <path d="M40.1777 20.0893H74.9992V34.8214H40.1777V20.0893Z" />
+                                            <path
+                                                d="M74.9992 16.0714C74.9992 15.3318 74.3995 14.7321 73.6599 14.7321H41.517C40.7774 14.7321 40.1777 15.3318 40.1777 16.0714V17.4107H74.9992V16.0714Z" />
+                                            <path d="M32.1426 22.7679H37.4997V30.8036H32.1426V22.7679Z" />
+                                            <path
+                                                d="M14.7319 9.375C8.81429 9.375 4.01758 14.1717 4.01758 20.0893C4.01758 26.0069 8.81429 30.8036 14.7319 30.8036C20.6494 30.8036 25.4461 26.0069 25.4461 20.0893C25.4396 14.175 20.6462 9.38154 14.7319 9.375ZM14.7319 29.4643C9.5539 29.4643 5.35686 25.2672 5.35686 20.0893C5.35686 14.9113 9.5539 10.7143 14.7319 10.7143C19.9098 10.7143 24.1069 14.9113 24.1069 20.0893C24.1003 25.264 19.9066 29.4577 14.7319 29.4643Z" />
+                                            <path
+                                                d="M29.4643 8.03571C29.4597 4.33894 26.4646 1.34386 22.7679 1.33928H6.69643C2.99966 1.34386 0.00457765 4.33894 0 8.03571V56.25H29.4643V8.03571ZM14.7321 33.4821C7.33534 33.4821 1.33929 27.4861 1.33929 20.0893C1.33929 12.6925 7.33534 6.69642 14.7321 6.69642C22.129 6.69642 28.125 12.6925 28.125 20.0893C28.1172 27.4828 22.1257 33.4743 14.7321 33.4821Z" />
+                                            <path
+                                                d="M21.428 20.0893C21.428 23.7874 18.4297 26.7857 14.7316 26.7857C11.0335 26.7857 8.03516 23.7874 8.03516 20.0893C8.03516 16.3912 11.0335 13.3929 14.7316 13.3929C18.4297 13.3929 21.428 16.3912 21.428 20.0893Z" />
+                                        </svg>
+                                        <h4 class="start-repair_services-text">Sell Video Camera</h4>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row text-center">
+                        <a class="partners-section_block-link viewMore_buyingDeviceDetails"
+                            href="#buyBackBrandSection">View
+                            more<i class="fas fa-arrow-down"></i></a>
+                    </div>
+                    <!-- Sell device section end -->
+                    <!--Start Select Repair Brand -->
+                    <div class="buy-back-brands-section" id="buyBackBrandSection">
+                        <div class="row">
+                            <div class="col-md-10 offset-md-1 px-md-5">
+                                <h4 class="buy-back-brand-title">By Brand
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="row d-flex justify-content-center buy-back-brand-items px-md-5">
+                            <div class="col-lg-auto col-md-4 buying-brand-device col-12 d-flex justify-content-center">
+                                <a href="#buyBackToolSection">
+                                    <label class="start-repair_brand-item All-start-repair_services-item"
+                                        service-val="s3">
+                                        <img src="img/brand/xbox.png" alt="">
+                                    </label>
+                                </a>
+                            </div>
+                            <div class="col-lg-auto col-md-4 col-12 d-flex justify-content-center  buying-brand-device">
+                                <a href="#BuyBackSection">
+                                    <label class="start-repair_brand-item All-start-repair_services-item"
+                                        service-val="s3">
+                                        <img src="img/brand/intel.png" alt="">
+                                    </label>
+                                </a>
+                            </div>
+                            <div class="col-lg-auto col-md-4 col-12 d-flex justify-content-center buying-brand-device">
+                                <a href="#BuyBackSection">
+                                    <label class="start-repair_brand-item All-start-repair_services-item"
+                                        service-val="s3">
+                                        <img src="img/brand/alcatel.png" alt="">
+                                    </label>
+                                </a>
+                            </div>
+                            <div class="col-lg-auto col-md-4 col-12 d-flex justify-content-center buying-brand-device">
+                                <a href="#BuyBackSection">
+                                    <label class="start-repair_brand-item All-start-repair_services-item"
+                                        service-val="s3">
+                                        <img src="img/brand/asus.png" alt="">
+                                    </label>
+                                </a>
+                            </div>
+                            <div class="col-lg-auto col-md-4 col-12 d-flex justify-content-center buying-brand-device">
+                                <a href="#BuyBackSection">
+                                    <label class="start-repair_brand-item All-start-repair_services-item"
+                                        service-val="s3">
+                                        <img src="img/brand/hp.png" alt="">
+                                    </label>
+                                </a>
+                            </div>
+                            <div class="col-lg-auto col-md-4 col-12 d-flex justify-content-center buying-brand-device">
+                                <a href="#BuyBackSection">
+                                    <label class="start-repair_brand-item All-start-repair_services-item"
+                                        service-val="s3">
+                                        <img src="img/brand/acer.png" alt="">
+                                    </label>
+                                </a>
+                            </div>
+                            <div class="col-lg-auto col-md-4 col-12 d-flex justify-content-center buying-brand-device ">
+                                <a href="#BuyBackSection">
+                                    <label class="start-repair_brand-item All-start-repair_services-item"
+                                        service-val="s3">
+                                        <img src="img/brand/lg.png" alt="">
+                                    </label>
+                                </a>
+                            </div>
+                            <div class="col-lg-auto col-md-4 col-12 d-flex justify-content-center  buying-brand-device">
+                                <a href="#BuyBackSection">
+                                    <label class="start-repair_brand-item All-start-repair_services-item"
+                                        service-val="s3">
+                                        <img src="img/brand/apple.png" alt="">
+                                    </label>
+                                </a>
+                            </div>
+                            <div class="col-lg-auto col-md-4 col-12 d-flex justify-content-center buying-brand-device">
+                                <a href="#BuyBackSection">
+                                    <label class="start-repair_brand-item All-start-repair_services-item">
+                                        <img src="img/brand/nintendo.png" alt="">
+                                    </label>
+                                </a>
+                            </div>
+                            <div class="col-lg-auto col-md-4 col-12 d-flex justify-content-center buying-brand-device">
+                                <a href="#BuyBackSection">
+                                    <label class="start-repair_brand-item All-start-repair_services-item"
+                                        service-val="s3">
+                                        <img src="img/brand/xiaomi.png" alt="">
+                                    </label>
+                                </a>
+                            </div>
+                            <div class="col-lg-auto col-md-4 buying-brand-device col-12 d-flex justify-content-center">
+                                <a href="#BuyBackSection">
+                                    <label class="start-repair_brand-item All-start-repair_services-item"
+                                        service-val="s3">
+                                        <img src="img/brand/microsoft.png" alt="">
+                                    </label>
+                                </a>
+                            </div>
+                            <div class="col-lg-auto col-md-4 col-12 d-flex justify-content-center buying-brand-device">
+                                <a href="#BuyBackSection">
+                                    <label class="start-repair_brand-item All-start-repair_services-item"
+                                        service-val="s3">
+                                        <img src="img/brand/samsung.png" alt="">
+                                    </label>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row text-center">
+                            <a class="partners-section_block-link viewMore_buyingBrandDevice"
+                                href="#buyBackToolSection">View more<i class="fas fa-arrow-down"></i></a>
+                        </div>
+                    </div>
+                    <!--End Select Repair Brand -->
+                    <!--Start Select Tool start -->
+                    <div class="buy-back-tools-section" id="buyBackToolSection">
+                        <div class="row">
+                            <div class="col-md-10 offset-md-1 px-md-5">
+                                <h4 class="buy-back-brand-title">Selling Tools
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="row start-repair_brand-wrap d-flex justify-content-center buy-back-tools px-md-5">
+                            <div class="buy-back-tool col-lg-auto col-md-4 col-12  d-flex justify-content-center">
+                                <a href="#BuyBackSection" class="buying-device-tool">
+                                    <svg class="buy-Back-icon" width="63" height="75" viewBox="0 0 63 75" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M23.2614 13.799C24.4751 13.799 25.459 12.8151 25.459 11.6014V2.18601C25.3428 -0.72977 21.1788 -0.727572 21.0638 2.18601V11.6016C21.0638 12.8152 22.0477 13.799 23.2614 13.799Z" />
+                                        <path
+                                            d="M12.2919 13.1551C13.1499 14.0132 14.5416 14.0135 15.3998 13.1551C16.258 12.2969 16.258 10.9055 15.3998 10.0473L13.046 7.69348C12.1879 6.83525 10.7964 6.83525 9.93816 7.69348C9.07992 8.55172 9.07992 9.9431 9.93816 10.8013L12.2919 13.1551Z" />
+                                        <path
+                                            d="M34.2308 13.1551L36.5846 10.8013C37.4428 9.9431 37.4428 8.55172 36.5846 7.69348C35.7265 6.83525 34.335 6.83525 33.4767 7.69348L31.123 10.0473C30.2647 10.9055 30.2647 12.2969 31.123 13.1551C31.9809 14.0132 33.3726 14.0135 34.2308 13.1551Z" />
+                                        <path
+                                            d="M49.791 33.5557C51.046 32.3009 51.0478 30.2677 49.791 29.0112C48.5359 27.7561 46.5031 27.7546 45.2464 29.0112L37.5939 36.6637C36.3409 37.9166 36.3409 39.9554 37.5939 41.2084C38.8472 42.4607 40.8862 42.4608 42.1387 41.2084L49.7906 33.5565C49.7907 33.556 49.7909 33.5559 49.791 33.5557Z" />
+                                        <path
+                                            d="M49.791 48.8609L55.5306 43.1214H55.5307C56.7857 41.8664 56.7875 39.8333 55.5307 38.5767C54.2759 37.3217 52.2428 37.3198 50.9862 38.5767L45.2464 44.3164C43.9937 45.5691 43.994 47.6078 45.2468 48.8615C46.5015 50.1159 48.5344 50.1174 49.791 48.8609Z" />
+                                        <path
+                                            d="M61.2701 48.1421C60.0264 46.8984 57.9925 46.8745 56.7258 48.141L52.8997 51.9672C51.6429 53.2243 51.6448 55.2572 52.899 56.5114C54.1692 57.7834 56.2065 57.75 57.4426 56.5124L61.2691 52.6858L61.2703 52.6847C62.5082 51.4483 62.5402 49.4105 61.2701 48.1421Z" />
+                                        <path
+                                            d="M47.5632 54.2401C47.5632 54.2253 47.5643 54.2107 47.5643 54.1959C45.5173 54.2111 43.5854 53.4153 42.1385 51.9685C40.6433 50.4724 39.9028 48.5038 39.9153 46.5392C37.9484 46.5542 35.9829 45.8104 34.4865 44.3164C31.5194 41.3494 31.5194 36.5223 34.486 33.5557L55.5307 12.5123C56.7305 11.3109 56.8308 9.26597 55.5392 7.97436C54.464 6.8993 52.4239 6.52981 50.9862 7.96763L23.8442 35.1095L24.2031 35.4684C30.3343 41.5996 30.3343 51.5757 24.2031 57.7069C23.3449 58.5653 21.9532 58.565 21.0953 57.7069C20.237 56.8488 20.237 55.4573 21.0953 54.599C25.5126 50.1816 25.5126 42.9938 21.0953 38.5763C21.0953 38.5763 19.1816 36.6616 19.1815 36.661C18.8961 36.375 18.6892 36.0117 18.5951 35.6041L16.0803 24.7072C15.3061 21.3515 11.7537 19.4063 8.49567 20.6019C7.62938 20.9199 7.05419 21.7456 7.05507 22.6683L7.0851 53.761L1.43286 59.4108C0.574625 60.269 0.574625 61.6604 1.43286 62.5186L13.2706 74.3564C13.6828 74.7685 14.2417 75 14.8246 75H36.5053C38.0851 75 39.5713 74.3839 40.6898 73.2655L52.5642 61.3915C51.5333 61.0165 50.5882 60.4177 49.7901 59.6185C48.3544 58.1829 47.5632 56.2724 47.5632 54.2401Z" />
+                                    </svg>
+                                    <h4 class="start-repair_services-text">Easy Quote</h4>
+                                </a>
+                            </div>
+                            <div class="buy-back-tool col-lg-auto col-md-4 col-12 d-flex justify-content-center">
+                                <a href="#BuyBackSection" class="buying-device-tool">
+                                    <svg class="buy-Back-icon" width="82" height="83" viewBox="0 0 82 83" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M48.0313 32.7969H43.8125C43.0363 32.7969 42.4062 33.4218 42.4062 34.1888V50.8915C42.4062 51.6598 43.0363 52.2834 43.8125 52.2834H50.8438H56.4688H60.6917L54.088 39.7563H48.0313V32.7969Z" />
+                                        <path
+                                            d="M31.1562 55.0674C30.38 55.0674 29.75 55.691 29.75 56.4593V73.162C29.75 73.9303 30.38 74.5539 31.1562 74.5539H50.8438C51.62 74.5539 52.25 73.9303 52.25 73.162V56.4593C52.25 55.691 51.62 55.0674 50.8438 55.0674H45.2188V62.0268H36.7812V55.0674H31.1562Z" />
+                                        <path
+                                            d="M50.8438 77.3369H31.1562H25.5312H5.84375H1.625C0.84875 77.3369 0.21875 77.9605 0.21875 78.7288V81.5126C0.21875 82.2809 0.84875 82.9045 1.625 82.9045H73.3438V77.3369H56.4688H50.8438Z" />
+                                        <path
+                                            d="M64.9062 50.8915V34.1888C64.9062 33.4218 64.2762 32.7969 63.5 32.7969H56.4688V38.2545L63.8291 52.2166C64.4422 52.0676 64.9062 51.5443 64.9062 50.8915Z" />
+                                        <path
+                                            d="M77.5625 73.162V56.4593C77.5625 55.691 76.9325 55.0674 76.1563 55.0674H70.5313V62.0268H68.9998L75.6036 74.5539H76.1563C76.9325 74.5539 77.5625 73.9303 77.5625 73.162Z" />
+                                        <path
+                                            d="M18.5 52.2834H25.5312H31.1562H38.1875C38.9638 52.2834 39.5938 51.6598 39.5938 50.8915V34.1888C39.5938 33.4218 38.9638 32.7969 38.1875 32.7969H32.5625V39.7563H24.125V32.7969H18.5C17.7237 32.7969 17.0938 33.4218 17.0938 34.1888V50.8915C17.0938 51.6598 17.7237 52.2834 18.5 52.2834Z" />
+                                        <path
+                                            d="M56.4688 55.0674C55.6925 55.0674 55.0625 55.691 55.0625 56.4593V73.162C55.0625 73.9303 55.6925 74.5539 56.4688 74.5539H72.4297L65.8259 62.0268H62.0938V55.0674H56.4688Z" />
+                                        <path
+                                            d="M5.84375 74.5539H25.5312C26.3075 74.5539 26.9375 73.9303 26.9375 73.162V56.4593C26.9375 55.691 26.3075 55.0674 25.5312 55.0674H19.9062V62.0268H11.4688V55.0674H5.84375C5.0675 55.0674 4.4375 55.691 4.4375 56.4593V73.162C4.4375 73.9303 5.0675 74.5539 5.84375 74.5539Z" />
+                                        <path
+                                            d="M80.375 77.3369H76.1562V82.9045H80.375C81.1512 82.9045 81.7812 82.2809 81.7812 81.5126V78.7288C81.7812 77.9605 81.1512 77.3369 80.375 77.3369Z" />
+                                        <path d="M62.0938 54.9443V55.0668H62.1584L62.0938 54.9443Z" />
+                                        <path
+                                            d="M32.6652 30.0129L40.9747 14.8803L48.9523 30.0129H52.1248L42.5863 11.9183H43.8125V0.783203H38.1875V11.9183H39.3997L29.4645 30.0129H32.6652Z" />
+                                    </svg>
+
+                                    <h4 class="start-repair_services-text">Sell in Bulk</h4>
+                                </a>
+                            </div>
+                            <div class="buy-back-tool col-lg-auto col-md-4 col-12 d-flex justify-content-center">
+                                <a href="#BuyBackSection" class="buying-device-tool">
+                                    <svg class="buy-Back-icon" width="57" height="75" viewBox="0 0 57 75" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M41.0155 5.68352H35.5279C34.8431 5.66233 34.2547 5.19152 34.0837 4.52832C33.5637 1.82671 31.1533 -0.093588 28.4037 0.00352339C25.6376 -0.0449402 23.239 1.9065 22.7237 4.6247C22.5457 5.26965 21.9481 5.70785 21.2796 5.68371H15.9846V15.311H41.0155V5.68352Z" />
+                                        <path
+                                            d="M56.4192 70.5713V15.4071C56.4251 13.2272 54.6625 11.4552 52.4826 11.4493C52.3827 11.4491 52.2828 11.4526 52.1831 11.4598H43.9036V16.3697C43.9036 17.14 43.4223 18.199 42.652 18.199H14.2517C13.4814 18.199 13.0965 17.14 13.0965 16.3697V11.46H4.81694C2.64289 11.3004 0.750972 12.9336 0.591577 15.1078C0.584206 15.2075 0.580705 15.3074 0.581074 15.4073V70.5715C0.527266 72.9635 2.42287 74.9463 4.81491 74.9999C4.81565 74.9999 4.81638 74.9999 4.81712 74.9999H52.1833C54.5754 74.9474 56.4719 72.9656 56.4194 70.5735C56.4192 70.5728 56.4192 70.5721 56.4192 70.5713ZM20.7019 57.8634L13.1927 64.8913C12.9525 65.1786 12.6037 65.3529 12.23 65.3726C11.8277 65.3568 11.4476 65.1839 11.171 64.8913L7.2239 60.8478C6.69927 60.2604 6.74221 59.3609 7.32009 58.8262C7.88156 58.2758 8.78026 58.2758 9.34173 58.8262L12.2298 61.9068L18.7765 55.7453C19.4328 55.2924 20.3323 55.4571 20.7852 56.1135C21.1549 56.649 21.1206 57.3655 20.7019 57.8634ZM20.7019 42.4597L13.1927 49.4877C12.9525 49.7749 12.6037 49.9493 12.23 49.969C11.8277 49.9531 11.4476 49.7803 11.171 49.4877L7.2239 45.4442C6.69927 44.8567 6.74221 43.9573 7.32009 43.4225C7.88156 42.8721 8.78026 42.8721 9.34173 43.4225L12.2298 46.5032L18.7765 40.3417C19.4328 39.8887 20.3323 40.0535 20.7852 40.7099C21.1549 41.2453 21.1206 41.9618 20.7019 42.4597ZM20.7019 27.056L13.1927 34.084C12.9525 34.3713 12.6037 34.5456 12.23 34.5653C11.8277 34.5495 11.4476 34.3766 11.171 34.084L7.2239 30.0405C6.69927 29.453 6.74221 28.5536 7.32009 28.0189C7.88156 27.4684 8.78026 27.4684 9.34173 28.0189L12.2298 31.0995L18.7765 24.938C19.4328 24.4851 20.3323 24.6498 20.7852 25.3062C21.1549 25.8417 21.1206 26.5581 20.7019 27.056ZM48.7173 63.4472H26.5745C25.777 63.4472 25.1303 62.8006 25.1303 62.003C25.1303 61.2055 25.777 60.5589 26.5745 60.5589H48.7172C49.5147 60.5589 50.1613 61.2055 50.1613 62.003C50.1613 62.8006 49.5149 63.4472 48.7173 63.4472ZM48.7173 48.0435H26.5745C25.777 48.0435 25.1303 47.3969 25.1303 46.5994C25.1303 45.8018 25.777 45.1552 26.5745 45.1552H48.7172C49.5147 45.1552 50.1613 45.8018 50.1613 46.5994C50.1613 47.3969 49.5149 48.0435 48.7173 48.0435ZM48.7173 32.6398H26.5745C25.777 32.6398 25.1303 31.9932 25.1303 31.1957C25.1303 30.3982 25.777 29.7516 26.5745 29.7516H48.7172C49.5147 29.7516 50.1613 30.3982 50.1613 31.1957C50.1613 31.9934 49.5149 32.6398 48.7173 32.6398Z" />
+                                    </svg>
+
+                                    <h4 class="start-repair_services-text">Custom Quote</h4>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- /End what would you like to sell?-->
+                <!-- /End what would you like to sell?-->
+                <!-- Start Type -->
+                <div class="buy-back-section" id="buyBackSpecification">
+                    <div class="row">
+                        <div class="col-lg-10 offset-lg-1 p-lg-0">
+                            <div class="form-group has-search">
+                                <span class="fa fa-search form-control-feedback"></span>
+                                <input type="text" class="form-control" placeholder="Search for your device here...">
+                            </div>
+                            <div class="form-group has-search">
+                                <span class="fa fa-search form-control-feedback"></span>
+                                <input type="text" class="form-control" placeholder="Search by serial number...">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 ">
+                            <div
+                                class="row start-repair_services-wrap device-models d-flex justify-content-center px-md-5">
+                                <div class="col-lg-auto col-md-4 col-12 d-flex justify-content-center"
+                                    onclick="addingSwitch('B2');">
+                                    <a href="#" class="device-type">
+                                        <img src="./img/buy-back-imgs/MacBook.png" alt="">
+                                        <h4 class="start-repair_services-text">MacBook</h4>
+                                    </a>
+                                </div>
+                                <div class="col-lg-auto col-md-4 buy-back-items col-12 d-flex justify-content-center"
+                                    buy-back-val="B2" onclick="addingSwitch('B2');">
+                                    <a href="#" class="device-type">
+                                        <img src="./img/buy-back-imgs/MacBook-pro.png" alt="">
+                                        <h4 class="start-repair_services-text">MacBook Pro</h4>
+                                    </a>
+                                </div>
+                                <div class="col-lg-auto col-md-4 buy-back-items col-12 d-flex justify-content-center"
+                                    buy-back-val="B2" onclick="addingSwitch('B2');">
+                                    <a href="#" class="device-type">
+                                        <img src="./img/buy-back-imgs/MacBook-Air.png" alt="">
+                                        <h4 class="start-repair_services-text">MacBook Air</h4>
+                                    </a>
+                                </div>
+                                <div class="col-lg-auto col-md-4 buy-back-items col-12 d-flex justify-content-center"
+                                    buy-back-val="B2" onclick="addingSwitch('B2');">
+                                    <a href="#" class="device-type">
+                                        <img src="./img/buy-back-imgs/iMac.png" alt="">
+                                        <h4 class="start-repair_services-text">iMac</h4>
+                                    </a>
+                                </div>
+
+
+                                <div class="col-lg-auto col-md-4 buy-back-items col-12 d-flex justify-content-center"
+                                    buy-back-val="B2" onclick="addingSwitch('B2');">
+                                    <a href="#" class="device-type">
+                                        <img src="./img/buy-back-imgs/Mac-Mini.png" alt="">
+                                        <h4 class="start-repair_services-text">Mac Mini</h4>
+                                    </a>
+                                </div>
+                                <div class="col-lg-auto col-md-4 buy-back-items col-12 d-flex justify-content-center"
+                                    buy-back-val="B2" onclick="addingSwitch('B2');">
+                                    <a href="#" class="device-type">
+                                        <img src="./img/buy-back-imgs/Mac-Pro.png" alt="">
+                                        <h4 class="start-repair_services-text">Mac Pro</h4>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row text-center device-type-text">
+                        <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit
+                            officia
+                            consequat
+                            duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.Amet
+                            minim mollit
+                            non
+                            deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis
+                            enim velit
+                            mollit. Exercitation veniam consequat sunt nostrud amet.Amet minim mollit non
+                            deserunt
+                            ullamco
+                            est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit
+                            mollit.
+                            Exercitation
+                            veniam consequat sunt nostrud amet.</p>
+                    </div>
+                </div>
+                <!-- Sell device section end -->
+                <!-- /End Type -->
+                <!-- Start speed Type -->
+                <div class="buy-back-section mb-2">
+                    <div class="row">
+                        <div class="col-lg-10 offset-lg-1">
+                            <div class="product-details product_conditions item_condition py-1" id="faq-accordion">
+                                <div class="accordion-item current">
+                                    <div class="accordion-header collapsed" id="faq-head_0">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#faq_0" aria-expanded="false" aria-controls="faq_0">
+                                            Color
+                                        </button>
+                                    </div>
+                                    <div id="faq_0" class="accordion-collapse collapse" aria-labelledby="faq-head_0"
+                                        data-bs-parent="#faq-accordion">
+                                        <div class="accordion-body">
+                                            <p>Please select the color of your device:</p>
+                                            <input type=color value="#5B637C">
+                                            <div class="col-lg-auto d-flex buy-back-items">
+                                                <button class="btn-primary" data-bs-toggle="collapse"
+                                                    data-bs-target="#faq_1" aria-expanded="false" aria-controls="faq_1"
+                                                    style="border-radius: .2rem; padding-top:.2rem"
+                                                    onclick="addCurrent(0);">
+                                                    Ok
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <div class="accordion-header" id="faq-head_1">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#faq_1" aria-expanded="false"
+                                            aria-controls="faq_1">
+                                            Display Size
+                                        </button>
+                                    </div>
+                                    <div id="faq_1" class="accordion-collapse collapse" aria-labelledby="faq-head_1"
+                                        data-bs-parent="#faq-accordion">
+                                        <div class="accordion-body">
+                                            <div class="row d-flex">
+                                                <div
+                                                    class="col-lg-auto col-md-4 d-flex buy-back-items  justify-content-center">
+                                                    <a class="device_item" onclick="addCurrent(1);"
+                                                        data-bs-toggle="collapse" data-bs-target="#faq_2"
+                                                        aria-expanded="false" aria-controls="faq_2">
+                                                        12-inch
+                                                    </a>
+                                                </div>
+                                                <div
+                                                    class="col-lg-auto col-md-4 d-flex buy-back-items  justify-content-center">
+                                                    <a class="device_item" onclick="addCurrent(1);"
+                                                        data-bs-toggle="collapse" data-bs-target="#faq_2"
+                                                        aria-expanded="false" aria-controls="faq_2">
+                                                        13-inch
+                                                    </a>
+                                                </div>
+                                                <div
+                                                    class="col-lg-auto col-md-4 d-flex buy-back-items  justify-content-center">
+                                                    <a class="device_item" onclick="addCurrent(1);"
+                                                        data-bs-toggle="collapse" data-bs-target="#faq_2"
+                                                        aria-expanded="false" aria-controls="faq_2">
+                                                        14-inch
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <div class="accordion-header" id="faq-head_2">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#faq_2" aria-expanded="false"
+                                            aria-controls="faq_2">
+                                            Year
+                                        </button>
+                                    </div>
+                                    <div id="faq_2" class="accordion-collapse collapse" aria-labelledby="faq-head_2"
+                                        data-bs-parent="#faq-accordion">
+                                        <div class="accordion-body">
+                                            <div class="row d-flex">
+                                                <div
+                                                    class="col-lg-auto col-md-4 d-flex buy-back-items  justify-content-center">
+                                                    <a class="device_item" onclick="addCurrent(2);"
+                                                        data-bs-toggle="collapse" data-bs-target="#faq_3"
+                                                        aria-expanded="false" aria-controls="faq_3">
+                                                        2019
+                                                    </a>
+                                                </div>
+                                                <div
+                                                    class="col-lg-auto col-md-4 d-flex buy-back-items  justify-content-center">
+                                                    <a class="device_item" onclick="addCurrent(2);"
+                                                        data-bs-toggle="collapse" data-bs-target="#faq_3"
+                                                        aria-expanded="false" aria-controls="faq_3">
+                                                        Early 2016
+                                                    </a>
+                                                </div>
+                                                <div
+                                                    class="col-lg-auto col-md-4 d-flex buy-back-items  justify-content-center">
+                                                    <a class="device_item" onclick="addCurrent(2);"
+                                                        data-bs-toggle="collapse" data-bs-target="#faq_3"
+                                                        aria-expanded="false" aria-controls="faq_3">
+                                                        Early 2015
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <div class="accordion-header" id="faq-head_3">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#faq_3" aria-expanded="false"
+                                            aria-controls="faq_3">
+                                            Processor
+                                        </button>
+                                    </div>
+                                    <div id="faq_3" class="accordion-collapse collapse" aria-labelledby="faq-head_3"
+                                        data-bs-parent="#faq-accordion">
+                                        <div class="accordion-body">
+                                            <div class="row d-flex">
+                                                <div
+                                                    class="col-lg-auto col-md-4 d-flex buy-back-items  justify-content-center">
+                                                    <a class="device_item" onclick="addCurrent(3);"
+                                                        data-bs-toggle="collapse" data-bs-target="#faq_4"
+                                                        aria-expanded="false" aria-controls="faq_4">
+                                                        2.5GHz Xeon 28-Core
+                                                    </a>
+                                                </div>
+                                                <div
+                                                    class="col-lg-auto col-md-4 d-flex buy-back-items  justify-content-center">
+                                                    <a class="device_item" onclick="addCurrent(3);"
+                                                        data-bs-toggle="collapse" data-bs-target="#faq_4"
+                                                        aria-expanded="false" aria-controls="faq_4">
+                                                        1.2GHz Core m3
+                                                    </a>
+                                                </div>
+                                                <div
+                                                    class="col-lg-auto col-md-4 d-flex buy-back-items  justify-content-center">
+                                                    <a class="device_item" onclick="addCurrent(3);"
+                                                        data-bs-toggle="collapse" data-bs-target="#faq_4"
+                                                        aria-expanded="false" aria-controls="faq_4">
+                                                        1.3GHz i5
+                                                    </a>
+                                                </div>
+                                                <div
+                                                    class="col-lg-auto col-md-4 d-flex buy-back-items  justify-content-center">
+                                                    <a class="device_item" onclick="addCurrent(3);"
+                                                        data-bs-toggle="collapse" data-bs-target="#faq_4"
+                                                        aria-expanded="false" aria-controls="faq_4">
+                                                        1.4GHz i7
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <div class="accordion-header" id="faq-head_4">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#faq_4" aria-expanded="false"
+                                            aria-controls="faq_4">
+                                            Storage
+                                        </button>
+                                    </div>
+                                    <div id="faq_4" class="accordion-collapse collapse" aria-labelledby="faq-head_4"
+                                        data-bs-parent="#faq-accordion">
+                                        <div class="accordion-body">
+                                            <div class="row d-flex">
+                                                <div
+                                                    class="col-lg-auto col-md-4 d-flex buy-back-items  justify-content-center">
+                                                    <a class="device_item" onclick="addCurrent(4);"
+                                                        data-bs-toggle="collapse" data-bs-target="#faq_5"
+                                                        aria-expanded="false" aria-controls="faq_5">
+                                                        256GB Flash Storage
+                                                    </a>
+                                                </div>
+                                                <div
+                                                    class="col-lg-auto col-md-4 d-flex buy-back-items  justify-content-center">
+                                                    <a class="device_item" onclick="addCurrent(4);"
+                                                        data-bs-toggle="collapse" data-bs-target="#faq_5"
+                                                        aria-expanded="false" aria-controls="faq_5">
+                                                        512GB Flash Storage
+                                                    </a>
+                                                </div>
+                                                <div
+                                                    class="col-lg-auto col-md-4 d-flex buy-back-items  justify-content-center">
+                                                    <a class="device_item" onclick="addCurrent(4);"
+                                                        data-bs-toggle="collapse" data-bs-target="#faq_5"
+                                                        aria-expanded="false" aria-controls="faq_5">
+                                                        2TB SSD Flash Storage
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <div class="accordion-header" id="faq-head_5">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#faq_5" aria-expanded="false"
+                                            aria-controls="faq_5">
+                                            Memory
+                                        </button>
+                                    </div>
+                                    <div id="faq_5" class="accordion-collapse collapse" aria-labelledby="faq-head_5"
+                                        data-bs-parent="#faq-accordion">
+                                        <div class="accordion-body">
+                                            <div class="row d-flex">
+                                                <div
+                                                    class="col-lg-auto col-md-4 d-flex buy-back-items  justify-content-center">
+                                                    <a class="device_item" onclick="addCurrent(5);"
+                                                        data-bs-toggle="collapse" data-bs-target="#faq_6"
+                                                        aria-expanded="false" aria-controls="faq_6">
+                                                        325GB RAM
+                                                    </a>
+                                                </div>
+                                                <div
+                                                    class="col-lg-auto col-md-4 d-flex buy-back-items  justify-content-center">
+                                                    <a class="device_item" onclick="addCurrent(5);"
+                                                        data-bs-toggle="collapse" data-bs-target="#faq_6"
+                                                        aria-expanded="false" aria-controls="faq_6">
+                                                        48GB RAM
+                                                    </a>
+                                                </div>
+                                                <div
+                                                    class="col-lg-auto col-md-4 d-flex buy-back-items  justify-content-center">
+                                                    <a class="device_item" onclick="addCurrent(5);"
+                                                        data-bs-toggle="collapse" data-bs-target="#faq_6"
+                                                        aria-expanded="false" aria-controls="faq_6">
+                                                        192GB RAM
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <div class="accordion-header" id="faq-head_6">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#faq_6" aria-expanded="false"
+                                            aria-controls="faq_6">
+                                            Graphics Cards
+                                        </button>
+                                    </div>
+                                    <div id="faq_6" class="accordion-collapse collapse" aria-labelledby="faq-head_6"
+                                        data-bs-parent="#faq-accordion">
+                                        <div class="accordion-body">
+                                            <div class="row d-flex">
+                                                <div class="col-lg-auto d-flex buy-back-items  justify-content-center">
+                                                    <a class="device_item" onclick="addCurrent(6);"
+                                                        data-bs-toggle="collapse" data-bs-target="#faq_7"
+                                                        aria-expanded="false" aria-controls="faq_7">
+                                                        Intel HD Graphics 615
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <div class="accordion-header" id="faq-head_7">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#faq_7" aria-expanded="false"
+                                            aria-controls="faq_7">
+                                            Original accessories and box included?
+                                        </button>
+                                    </div>
+                                    <div id="faq_7" class="accordion-collapse collapse" aria-labelledby="faq-head_7"
+                                        data-bs-parent="#faq-accordion">
+                                        <div class="accordion-body">
+                                            <div class="d-flex ">
+                                                <div class="d-flex buy-back-items justify-content-center"
+                                                    onclick="addCurrent(7);">
+                                                    <a class="have_accessories " data-bs-toggle="collapse"
+                                                        data-bs-target="#faq_8" aria-expanded="false"
+                                                        aria-controls="faq_8">
+                                                        Yes
+                                                    </a>
+                                                </div>
+                                                <div class="d-flex buy-back-items  justify-content-center mx-2"
+                                                    onclick="addCurrent(7);">
+                                                    <a class="have_accessories " data-bs-toggle="collapse"
+                                                        data-bs-target="#faq_8" aria-expanded="false"
+                                                        aria-controls="faq_8">
+                                                        No
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <div class="accordion-header" id="faq-head_8">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#faq_8" aria-expanded="false"
+                                            aria-controls="faq_8">
+                                            The Condition of your device
+                                        </button>
+                                    </div>
+                                    <div id="faq_8" class="accordion-collapse collapse" aria-labelledby="faq-head_8"
+                                        data-bs-parent="#faq-accordion">
+                                        <div class="accordion-body">
+                                            <div class="row">
+                                                <div class="col-lg-12 col-md-12">
+                                                    <div class="row start-repair_services-wrap d-flex">
+                                                        <div
+                                                            class="col-lg-auto col-md-4 col-12 d-flex justify-content-center">
+                                                            <a class="device-speed processor">
+                                                                <h4 class="start-repair_services-text">
+                                                                    Broken</h4>
+                                                                <h5>$600.00</h5>
+                                                            </a>
+                                                        </div>
+                                                        <div
+                                                            class="col-lg-auto col-md-4 col-12 d-flex justify-content-center">
+                                                            <a class="device-speed processor">
+                                                                <h4 class="start-repair_services-text">
+                                                                    Damaged</h4>
+                                                                <h5>$800.00</h5>
+                                                            </a>
+                                                        </div>
+                                                        <div
+                                                            class="col-lg-auto col-md-4 col-12 d-flex justify-content-center">
+                                                            <a class="device-speed processor">
+                                                                <h4 class="start-repair_services-text">Fair
+                                                                </h4>
+                                                                <h5>$3,400.00</h5>
+                                                            </a>
+                                                        </div>
+                                                        <div
+                                                            class="col-lg-auto col-md-4 col-12 d-flex justify-content-center">
+                                                            <a class="device-speed processor">
+                                                                <h4 class="start-repair_services-text">
+                                                                    Normal</h4>
+                                                                <h5>$4,000.00</h5>
+                                                            </a>
+                                                        </div>
+                                                        <div
+                                                            class="col-lg-auto col-md-4 col-12 d-flex justify-content-center">
+                                                            <a class="device-speed processor">
+                                                                <h4 class="start-repair_services-text">New
+                                                                </h4>
+                                                                <h5>$4,200.00</h5>
+                                                            </a>
+                                                        </div>
+                                                        <hr class="my-4" />
+                                                        <div class="row d-flex justify-content-between">
+                                                            <div class="col-8">
+                                                                <ul class="check-box-list verification">
+                                                                    <li>
+                                                                        <label class="checkbox-inline" for="1"><input
+                                                                                name="news" id="1" type="checkbox">100%
+                                                                            Full Functional with no
+                                                                            operational
+                                                                            defects.</label>
+                                                                    </li>
+                                                                    <li>
+                                                                        <label class="checkbox-inline" for="2"><input
+                                                                                name="news" id="2"
+                                                                                type="checkbox">Normal wear
+                                                                            and tear but
+                                                                            no heavy cosmetic
+                                                                            damage.</label>
+                                                                    </li>
+                                                                    <li>
+                                                                        <label class="checkbox-inline" for="4"><input
+                                                                                name="news" id="4" type="checkbox">Use
+                                                                            keyboard layout.</label>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="col-4 my-4 verifyToCheckOut">
+                                                                <h3>The current value is:</h3>
+                                                                <h4>$4,000.00</h4>
+                                                            </div>
+                                                        </div>
+                                                        <div class="d-flex justify-content-center">
+                                                            <a href="#Payment_part"
+                                                                class="btn btn-primary w-50 head-btn wow animate__animated animate__fadeInUp py-3"
+                                                                onclick="addingSwitch('B3');" id="GetPaid"
+                                                                data-wow-duration="1000ms" data-wow-delay="800ms"
+                                                                type="submit" value="Submit"><i
+                                                                    class="fa fa-angle-right"></i> <i
+                                                                    class="fa fa-angle-right"></i>
+                                                                &nbsp; Get
+                                                                Paid</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Sell device section end -->
+
+                <!-- Start speed Type -->
+                <div class="buy-back-section" id="Payment_part">
+                    <div class="container-fluid">
+                        <div class="row d-flex justify-content-center my-2">
+                            <div class="col-lg-7">
+                                <div class="accordion faq-accordion" id="faq-accordion">
+                                    <div class="accordion-item rounded">
+                                        <div class="accordion-header" id="faq-headCheck_1">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#faqCheck_1"
+                                                aria-expanded="false" aria-controls="faqCheck_1">
+                                                1. How would you like to get paid? </button>
+                                        </div>
+                                        <div id="faqCheck_1" class="accordion-collapse collapse"
+                                            aria-labelledby="faq-headCheck_1" data-bs-parent="#faq-accordion">
+                                            <div class="accordion-body my-1">
+                                                <!-- -->
+                                                <div class="row d-flex justify-content-center">
+                                                    <div class="col-md-4 col-12 d-flex buy-back-items  justify-content-center"
+                                                        buy-back-val="B3">
+                                                        <a href="#" class="device-speed">
+                                                            <img src="./img/imgs/paypal.png" width="100">
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-md-4 col-12 buy-back-items d-flex justify-content-center"
+                                                        buy-back-val="B3">
+                                                        <a href="#" class="device-speed">
+                                                            <h4 class="start-repair_services-text">Paper
+                                                                Check
+                                                            </h4>
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-md-4 col-12 buy-back-items d-flex justify-content-center"
+                                                        buy-back-val="B3">
+                                                        <a href="#" class="device-speed">
+                                                            <img src="./img/imgs/venmo.png" width="100">
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <!---->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Account -->
+                                    <div class="accordion-item rounded">
+                                        <div class="accordion-header" id="faq-headCheck_2">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#faqCheck_2"
+                                                aria-expanded="false" aria-controls="faqCheck_2">
+                                                2. Account </button>
+                                        </div>
+                                        <div id="faqCheck_2" class="accordion-collapse collapse"
+                                            aria-labelledby="faq-headCheck_2" data-bs-parent="#faq-accordion">
+                                            <div class="accordion-body my-2">
+                                                <form action="javascript:void(0);" class="EmailAcc" method="post">
+                                                    <label for="email-acc" class="text-muted">Email
+                                                        Address</label>
+                                                    <div class="input-group ">
+                                                        <input type="email" class="form-control"
+                                                            placeholder="example@rfj.tu" id="email-acc"
+                                                            aria-label="Acc email" aria-describedby="button-addon2"
+                                                            required />
+                                                        <button class="btn btn-primary acc-email-btn" type="submit"
+                                                            id="button-addon2" data-mdb-ripple-color="dark">
+                                                            continue as a guest </button>
+                                                    </div>
+                                                </form>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--- /End Account -->
+                                    <!--- Payment Method -->
+                                    <div class="payment_method accordion-item rounded">
+                                        <div class="accordion-header" id="faq-headCheck_3">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#faqCheck_3"
+                                                aria-expanded="false" aria-controls="faqCheck_3">
+                                                3. Payment
+                                            </button>
+                                        </div>
+                                        <div id="faqCheck_3" class="accordion-collapse collapse"
+                                            aria-labelledby="faq-headCheck_3" data-bs-parent="#faq-accordion">
+                                            <div class="accordion-body">
+                                                <!-- Form -->
+                                                <form class="form checkout-form needs-validation" method="post"
+                                                    action="#">
+                                                    <div class="row">
+                                                        <div class="col-lg-6 col-md-6 col-12">
+                                                            <div class="form-group">
+                                                                <label for="validationCustom01"
+                                                                    class="form-label text-muted">First
+                                                                    name</label>
+                                                                <input type="text" name="Fname" id="validationCustom01"
+                                                                    value="" required>
+                                                                <div class="valid-feedback">
+                                                                    Looks good!
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-6 col-md-6 col-12">
+                                                            <div class="form-group">
+                                                                <label for="validationCustom02"
+                                                                    class="form-label text-muted">Last
+                                                                    name</label>
+                                                                <input type="text" name="Lname" id="validationCustom02"
+                                                                    value="" required>
+                                                                <div class="valid-feedback">
+                                                                    Looks good!
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 mb-2">
+                                                            <div class="form-check">
+                                                                <input class="form-check-input" type="checkbox" value=""
+                                                                    id="flexCheckChecked">
+                                                                <label class="form-check-label text-muted"
+                                                                    for="flexCheckChecked">
+                                                                    Use the Company name in the check
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12">
+                                                            <div class="form-group">
+                                                                <label for="validationCustom08"
+                                                                    class="form-label text-muted">Street
+                                                                    Address</label>
+                                                                <input type="text" name="StAddress" class="form-control"
+                                                                    id="inputGroupSelect08" required value="">
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12">
+                                                            <div class="form-group">
+                                                                <label for="validationCustom09"
+                                                                    class="form-label text-muted">Apartment
+                                                                    /
+                                                                    suit /
+                                                                    unit</label>
+                                                                <input type="text" name="Apartment" class="form-control"
+                                                                    id="inputGroupSelect09" required value="">
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-6 col-md-6 col-12">
+                                                            <div class="form-group">
+                                                                <label for="validationCustom05"
+                                                                    class="text-muted">State</label>
+                                                                <select class="form-select" id="inputGroupSelect05"
+                                                                    name="state-province" required>
+                                                                    <option value="Los Angeles">Los Angeles
+                                                                    </option>
+                                                                    <option value="Chicago">Chicago</option>
+                                                                    <option value="Houston">Houston</option>
+                                                                    <option value="San Diego">San Diego
+                                                                    </option>
+                                                                    <option value="Dallas">Dallas</option>
+                                                                    <option value="Charlotte">Charlotte
+                                                                    </option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-6 col-md-6 col-12">
+                                                            <div class="form-group">
+                                                                <label for="validationCustom06"
+                                                                    class="form-label text-muted">City</label>
+                                                                <select name="country_name" class="form-select"
+                                                                    id="inputGroupSelect06" required>
+                                                                    <option value="AL">Alabama</option>
+                                                                    <option value="AL">Alaska</option>
+                                                                    <option value="AR">Arizona</option>
+                                                                    <option value="CA">California</option>
+                                                                    <option value="GE">Georgia</option>
+                                                                    <option value="MO">Montana</option>
+                                                                    <option value="NY">New York</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-6 col-md-6 col-12">
+                                                            <div class="form-group">
+                                                                <label for="validationCustom07"
+                                                                    class="form-label text-muted">Zip
+                                                                    Code</label>
+                                                                <input type="text" name="PostalCode"
+                                                                    class="form-control" id="inputGroupSelect07"
+                                                                    required value="">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-6 col-md-6 col-12">
+                                                            <div class="form-group">
+                                                                <label for="validationCustom04"
+                                                                    class="form-label text-muted">Phone
+                                                                    number</label>
+                                                                <input id="validationCustom04" type="tel" value=""
+                                                                    name="tel" class="form-control jquery-intl-phone"
+                                                                    required>
+                                                                <div class="invalid-feedback">
+                                                                    Please choose a vaild number.
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="d-flex align-items-center">
+                                                            <button
+                                                                class="btn submitCont_btn wow animate__animated animate__fadeInUp w-50"
+                                                                type="submit" data-wow-duration="1000ms"
+                                                                data-wow-delay="800ms" type="submit" value="Submit">
+                                                                continue
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                                <!--/ End Form -->
+
+                                            </div>
+                                        </div>
+                                        <!--- / End Payment Method -->
+
+                                    </div>
+                                    <!-- Shipping -->
+                                    <div class="accordion-item rounded">
+                                        <div class="accordion-header" id="faq-headCheck_4">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#faqCheck_4"
+                                                aria-expanded="false" aria-controls="faqCheck_4">
+                                                4. Shipping </button>
+                                        </div>
+                                        <div id="faqCheck_4" class="accordion-collapse collapse"
+                                            aria-labelledby="faq-headCheck_4" data-bs-parent="#faq-accordion">
+                                            <div class="accordion-body my-1">
+                                                <div class="form-check">
+                                                    <div class="d-flex justify-content-center">
+                                                        <ul class="check-box-list">
+                                                            <li class="d-flex justify-content-start">
+                                                                <label class="checkbox-inline" for="optionShipp1"><input
+                                                                        name="UPSoption" id="optionShipp1" type="radio"
+                                                                        value=""><span>$3.99
+                                                                        UPS</span>
+                                                                    <p>USPS
+                                                                        1st Class With Tracking<br>(5 - 13
+                                                                        days)
+                                                                    </p>
+                                                                </label>
+                                                            </li>
+                                                            <li class="d-flex justify-content-start">
+                                                                <label class="checkbox-inline" for="optionShipp1"><input
+                                                                        name="DHLoption" id="optionShipp1" type="radio"
+                                                                        value=""><span>$4.99
+                                                                        DHL</span><br>Business
+                                                                    Parcell with
+                                                                    Tracking<br>(1-3 days)</label>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex align-items-center justify-content-center">
+                                                    <button
+                                                        class="btn submitCont_btn wow animate__animated animate__fadeInUp"
+                                                        type="button" data-wow-duration="1000ms" data-wow-delay="800ms"
+                                                        type="submit" value="Submit">
+                                                        Continue
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--- /End Shipping -->
+                                </div>
+                            </div>
+                            <!-- Cart Summary -->
+                            <div class="col-lg-5 cart-order">
+                                <div class="card card_summary rounded border border-light shadow pt-2 mb-4">
+                                    <div class="card-header">
+                                        <h5 class="mb-0">You're Selling</h5>
+                                        <hr class="my-3" />
+                                    </div>
+
+                                    <div class="card-body">
+                                        <div class="cart-items">
+                                            <!-- Headline -->
+                                            <div class="row">
+                                                <div class="col-5">
+                                                    <p class="text-muted">
+                                                        Selling Details
+                                                    </p>
+                                                </div>
+                                                <div class="col-4 d-flex justify-content-center">
+                                                    <p class="text-muted">
+                                                        Qty
+                                                    </p>
+                                                </div>
+                                                <div class="col-3 d-flex justify-content-center">
+                                                    <p class="text-muted">
+                                                        Price
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <!-- Single item -->
+                                            <div class="row my-2">
+                                                <div class="col-md-5 col-12">
+                                                    <!-- Title & Desc -->
+                                                    <h5 class=" mb-0">
+                                                        MacBook Early 2015
+                                                    </h5>
+                                                    <p class="text-muted">
+                                                        12-inch Retina, 1.2GHz Core M, 8GB RAM, 250GB SSD
+                                                        Flash
+                                                        Storage
+                                                    </p>
+                                                    <!-- /Title & Desc -->
+                                                </div>
+
+                                                <div class="col-md-4 col-6">
+                                                    <!-- Quantity -->
+                                                    <div class="input-group item-qty d-flex justify-content-center">
+                                                        <div class="button minus">
+                                                            <button type="button"
+                                                                class="btn btn-primary btn-number-minus"
+                                                                data-type="minus" data-field="quant[1]">
+                                                                <i class="fas fa-minus"></i>
+                                                            </button>
+                                                        </div>
+                                                        <input type="text" name="quant[1]" class="input-number"
+                                                            data-min="1" data-max="100" value="1">
+                                                        <div class="button plus">
+                                                            <button type="button"
+                                                                class="btn btn-primary btn-number-plus" data-type="plus"
+                                                                data-field="quant[1]">
+                                                                <i class="fas fa-plus"></i>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-flex justify-content-center">
+                                                        <p class="delete_item">Delete</p>
+                                                    </div>
+                                                    <!-- Quantity -->
+                                                </div>
+                                                <div class="col-md-3 col-6 d-flex justify-content-center">
+                                                    <!-- Price -->
+                                                    <p class="">
+                                                        <strong>$264.00</strong>
+                                                    </p>
+                                                    <!-- Price -->
+                                                </div>
+                                            </div>
+                                            <!-- Single item -->
+
+                                        </div>
+                                        <hr class="my-4" />
+                                        <form action="javascript:void(0);" class="EmailFormBlue" method="post">
+                                            <label for="discount_code" class="text-muted">Discount
+                                                Code</label>
+                                            <div class="input-group">
+                                                <input type="email" class="form-control" placeholder=""
+                                                    id="discount_code" required>
+                                                <div class="input-group-append">
+                                                    <button class="btn btn-primary discount_btn" type="submit"
+                                                        value="submit">Apply</button>
+
+                                                </div>
+                                            </div>
+                                        </form>
+                                        <div
+                                            class="d-flex justify-content-between align-items-center rounded my-2 px-2 pt-3 pb-1 w-100 total-cost">
+                                            <h5>Total offer</h5>
+                                            <h4 class="price">$4,264.00</h4>
+                                        </div>
+                                        <button type="submit" class="btn btn-outline-primary w-100 addingDevice_btn"
+                                            value="submit">
+                                            Add another device</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- / End Cart Summary -->
+                        </div>
+                    </div>
+                </div>
+                <!-- Sell device section end -->
+                <!-- /End Type -->
+            </div>
+        </div>
+    </section>
+    <!-- Subscribe section start-->
+    <section class="subscribe home-page">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h2>Subscribe</h2>
+                    <h3>for our best deals</h3>
+                    <p class="mb-4 mb-lg-0">Get the latest information about new products, special deals, news,
+                        top-rated items,
+                        promotions and more!</p>
+                </div>
+                <div class="col-lg-6">
+                    <form action="javascript:void(0);" class="EmailFormYellow" method="post">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Enter email address" required>
+                            <div class="input-group-append">
+                                <button class="btn btn-primary head-btn wow animate__animated animate__fadeInUp"
+                                    data-wow-duration="1000ms" data-wow-delay="800ms" type="submit"
+                                    value="Submit">Subscribe<i class="fa fa-angle-right"></i></button>
+                                <!-- Modal -->
+                                <div class="modal fade" id="verificationModalYellow" tabindex="-1" role="dialog"
+                                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Verification</h5>
+                                                <button type="button" class="close HideVerification"
+                                                    data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                Your Subscribe done successfully!
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-warninig HideVerification"
+                                                    data-dismiss="modal">Submit</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Modal Mobile -->
+                                <div class="modal popup-modal fade popup-porblem-style" id="popup-privacyServices-modal"
+                                    tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+                                    aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                            <div class="container">
+                                                <h2>Your device has been added</h2>
+                                                <p>
+                                                    How would you like to proceed?
+                                                </p>
+                                            </div>
+                                            <div class="container container2">
+                                                <button type="button" class="btn btn-outline-secondary"
+                                                    id="cancelPrivacyPolicyModal" data-dismiss="modal"
+                                                    aria-label="Close">Cancel</button>
+                                                <button type="button" class="btn btn-warning "
+                                                    id="submitAgreeModal">Agree</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer start -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 info-col mb-5 mb-md-0">
+                    <h2 class="textLogo">iDigital</h2>
+                    <form action="javascript:void(0);" class="EmailFormBlue" method="post">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Enter email address" required>
+                            <div class="input-group-append">
+                                <button class="btn btn-primary" type="submit" value="submit">Send</button>
+                                <!-- Modal -->
+                                <div class="modal fade" id="verificationModalBlue" tabindex="-1" role="dialog"
+                                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Verification</h5>
+                                                <button type="button" class="close HideVerification"
+                                                    data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                Your Subscribe done successfully!
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-primary HideVerification head-btn"
+                                                    data-dismiss="modal">Submit</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-phone-alt"></i>+1(504)342-9109</li>
+                        <hr>
+                        <li><i class="far fa-map"></i><span>1851 Rousseau st New Orleans<br> LA 70130 USA</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-3 offset-md-1 mb-5 mb-md-0 list-col">
+                    <h3>Start your Repair</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Phone/Tablet Repair</a></li>
+                        <li><a href="#">Computer Repair</a></li>
+                        <li><a href="#">Game Console Repair</a></li>
+                        <li><a href="#">Smart Watch Repair</a></li>
+                        <li><a href="#">Drone/Automation Repair</a></li>
+                        <li><a href="#">VR Repair</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2 list-col mb-5 mb-md-0">
+                    <h3>Company</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Partnership</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2 list-col mb-5 mb-md-0">
+                    <h3>Social</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="#"><i class="fab fa-linkedin-in"></i>LinkedIn</a></li>
+                        <li><a href="#"><i class="fab fa-twitter"></i>Twitter</a></li>
+                        <li><a href="#"><i class="fab fa-facebook-f"></i>Facebook</a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i>Instagram</a></li>
+                        <li><a href="#"><i class="fab fa-google"></i>Google</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row copyright">
+                <div class="col-md-6 mb-md-0 mb-2">
+                    <a href="#">Privacy Policy / Terms of Use</a>
+                </div>
+                <div class="col-md-6 d-flex justify-content-md-end justify-content-start">
+                    <p>Â©2020 All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer end -->
+    <!-- Modal Mobile 2 -->
+    <div class="modal fade popup-modal popup-style2" id="popup-modal2" tabindex="-1" aria-labelledby="exampleModalLabel"
+        displayed="false" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content justify-content-center">
+                <div class="popup-modal_border"></div>
+                <div class="popup-modal_background"></div>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <div class="row">
+                    <div class="col-lg-7 offset-lg-5 d-flex flex-column align-items-center align-items-lg-end">
+                        <p class="popup-title"><span class="popup-val">$</span>0<span
+                                class="popup-text">screen<br />repairs</span>
+                        </p>
+                        <p class="popup-with"><img src="./img/icons/line_bl.png" width="25%" height="3%">&nbsp; with
+                            &nbsp;<img src="./img/icons/line_bl.png" width="25%" height="3%"></p>
+                        <p class="popup-subtitle">THE CELLERS BUNDLE</p>
+                        <p class="popup-available">Available at this location</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal Mobile -->
+    <div class="modal popup-modal" id="popup-AddedDevice-modal" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="container">
+                    <h2>Your device has been added</h2>
+                    <p>How would you like to proceed?</p>
+                </div>
+                <div class="container container2">
+                    <button type="button" class="btn btn-outline-secondary buy-back-items" buy-back-val="B7"
+                        id="addAnotherDevice">Add another
+                        Device</button>
+                    <button type="button" class="btn continueToPayment" id="continueToPayment" data-dismiss="modal"
+                        aria-label="Close">Continue to Payment</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.min.js"
+        integrity="sha256-8lykApyIgj9dWMIK4VPvhLQQ1pOLjP12j4zZnHHMCws=" crossorigin="anonymous""></script>
+    <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css"
+        integrity="sha256-0i4Y8gKVhpq2EcKC3r4FFCPIIwQWGOWqzQAJpYKdKyQ=" crossorigin="anonymous"">
+    <script src=" https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous""></script>
+    <script src=" https://code.jquery.com/ui/1.14.1/jquery-ui.min.js"
+        integrity="sha256-8lykApyIgj9dWMIK4VPvhLQQ1pOLjP12j4zZnHHMCws=" crossorigin="anonymous""></script>
+    <script src=" https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
+        </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js""></script>
+    <script src=" https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"
+        integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous"
+        async></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/wow.js"></script>
+    <script src="js/buyBack.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

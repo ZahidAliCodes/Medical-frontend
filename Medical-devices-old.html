@@ -1,0 +1,1969 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1,user-scalable=no">
+  
+  <!-- Meta tags -->
+  <meta name="keywords" content="">
+  <meta name="author" content="">
+  
+  <!-- Title -->
+  <title>iDigital - Medical Devices</title>
+  
+  <!-- Shortcut icon -->
+  <link rel="shortcut icon" href="" type="image/x-icon">
+  
+  <!-- Fonts -->
+  <link href="fonts/fontawesome/css/all.css" rel="stylesheet">
+  
+  <!-- Styles -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="css/slicknav.css">
+  <link rel="stylesheet" href="css/style.css" class="StyleLink">
+  
+  <!-- Custom Medical Devices Styles -->
+    <style>
+    :root {
+      --primary-color: #2563eb;
+      --secondary-color: #1e40af;
+      --accent-color: #3b82f6;
+      --success-color: #059669;
+      --warning-color: #d97706;
+      --danger-color: #dc2626;
+      --dark-color: #1f2937;
+      --light-color: #f8fafc;
+      --medical-blue: #1e40af;
+      --medical-light-blue: #3b82f6;
+      --medical-dark-blue: #1e3a8a;
+      --medical-green: #059669;
+      --medical-light-green: #10b981;
+      --professional-gray: #6b7280;
+      --light-gray: #f3f4f6;
+      --white: #ffffff;
+      --gradient-primary: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+      --gradient-secondary: linear-gradient(135deg, #059669 0%, #10b981 100%);
+      --gradient-accent: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
+      --shadow-soft: 0 4px 6px rgba(0, 0, 0, 0.05);
+      --shadow-medium: 0 10px 15px rgba(0, 0, 0, 0.1);
+      --shadow-strong: 0 20px 25px rgba(0, 0, 0, 0.15);
+      --border-radius: 8px;
+      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* Dark mode variables */
+    [data-theme="dark"] {
+      --primary-color: #3b82f6;
+      --secondary-color: #2563eb;
+      --accent-color: #60a5fa;
+      --success-color: #10b981;
+      --warning-color: #f59e0b;
+      --danger-color: #ef4444;
+      --dark-color: #f8fafc;
+      --light-color: #1f2937;
+      --medical-blue: #3b82f6;
+      --medical-light-blue: #60a5fa;
+      --medical-dark-blue: #dbeafe;
+      --medical-green: #10b981;
+      --medical-light-green: #34d399;
+      --professional-gray: #9ca3af;
+      --light-gray: #374151;
+      --white: #1f2937;
+      --gradient-primary: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+      --gradient-secondary: linear-gradient(135deg, #059669 0%, #10b981 100%);
+      --gradient-accent: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
+      --shadow-soft: 0 4px 6px rgba(0, 0, 0, 0.3);
+      --shadow-medium: 0 10px 15px rgba(0, 0, 0, 0.4);
+      --shadow-strong: 0 20px 25px rgba(0, 0, 0, 0.5);
+        }
+
+        body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      background: var(--light-color);
+      color: var(--dark-color);
+            min-height: 100vh;
+      overflow-x: hidden;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    /* Cross-browser compatibility */
+    * {
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+
+    /* Video background support */
+    .video-background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    .video-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(30, 64, 175, 0.7);
+      z-index: 1;
+    }
+
+    .medical-devices-hero {
+      background: var(--gradient-primary);
+      padding: 80px 0 60px;
+      position: relative;
+            overflow: hidden;
+      min-height: 70vh;
+      display: flex;
+      align-items: center;
+    }
+
+    .medical-devices-hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+      opacity: 0.2;
+      z-index: 2;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 3;
+            text-align: center;
+      color: white;
+      width: 100%;
+    }
+
+    .hero-title {
+      font-size: 3.5rem;
+      font-weight: 800;
+      margin-bottom: 1.5rem;
+      background: linear-gradient(45deg, #ffffff, #e0e7ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: fadeInUp 1s ease-out;
+      margin-top: 2rem;
+    }
+
+    .hero-subtitle {
+      font-size: 1.25rem;
+      font-weight: 400;
+      margin-bottom: 2rem;
+            opacity: 0.9;
+      animation: fadeInUp 1s ease-out 0.2s both;
+    }
+
+    .hero-description {
+      font-size: 1.1rem;
+      margin-bottom: 3rem;
+      opacity: 0.8;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      animation: fadeInUp 1s ease-out 0.4s both;
+    }
+
+    .services-section {
+      background: var(--white);
+      padding: 4rem 0;
+      margin: 2rem 0;
+    }
+
+    .services-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .services-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--medical-dark-blue);
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    .services-subtitle {
+      font-size: 1.2rem;
+      color: var(--professional-gray);
+      text-align: center;
+      margin-bottom: 3rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .service-card {
+      background: var(--white);
+      border: 1px solid var(--light-gray);
+      border-radius: var(--border-radius);
+      padding: 2rem;
+      text-align: center;
+      transition: var(--transition);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-medium);
+      border-color: var(--medical-light-blue);
+    }
+
+    .service-icon {
+      width: 60px;
+      height: 60px;
+      background: var(--gradient-primary);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.5rem;
+      color: var(--white);
+      font-size: 1.5rem;
+    }
+
+    .service-title {
+      font-size: 1.25rem;
+            font-weight: 600;
+      color: var(--medical-dark-blue);
+      margin-bottom: 1rem;
+    }
+
+    .service-description {
+      color: var(--professional-gray);
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+    }
+
+    .service-link {
+      color: var(--medical-light-blue);
+      text-decoration: none;
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: var(--transition);
+    }
+
+    .service-link:hover {
+      color: var(--medical-dark-blue);
+      gap: 0.75rem;
+    }
+
+    .device-selector-container {
+      background: var(--white);
+      border-radius: var(--border-radius);
+      padding: 3rem;
+      margin: 2rem 0;
+      box-shadow: var(--shadow-medium);
+      border: 1px solid var(--light-gray);
+      animation: fadeInUp 1s ease-out 0.6s both;
+    }
+
+    .selector-title {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--medical-dark-blue);
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    .selector-subtitle {
+      color: var(--professional-gray);
+      text-align: center;
+      margin-bottom: 2.5rem;
+      font-size: 1.1rem;
+    }
+
+    .dropdown-container {
+            display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .dropdown-group {
+            position: relative;
+    }
+
+    .dropdown-label {
+      font-weight: 600;
+      color: var(--medical-dark-blue);
+      margin-bottom: 0.75rem;
+            display: block;
+      font-size: 1.1rem;
+    }
+
+    .custom-dropdown {
+      position: relative;
+      width: 100%;
+    }
+
+    .dropdown-select {
+      width: 100%;
+      padding: 1rem 1.5rem;
+      border: 2px solid var(--light-gray);
+      border-radius: var(--border-radius);
+      background: var(--white);
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--medical-dark-blue);
+      cursor: pointer;
+      transition: var(--transition);
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+      background-position: right 1rem center;
+      background-repeat: no-repeat;
+      background-size: 1.5em;
+      padding-right: 3rem;
+    }
+
+    .dropdown-select:focus {
+      outline: none;
+      border-color: var(--medical-light-blue);
+      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+    }
+
+    .dropdown-select:hover {
+      border-color: var(--medical-light-blue);
+    }
+
+    .dropdown-search {
+      width: 100%;
+      padding: 1rem 1.5rem;
+      border: 2px solid var(--light-gray);
+      border-radius: var(--border-radius);
+      background: var(--white);
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--medical-dark-blue);
+      transition: var(--transition);
+      margin-bottom: 0.5rem;
+    }
+
+    .dropdown-search:focus {
+      outline: none;
+      border-color: var(--medical-light-blue);
+      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+    }
+
+    .dropdown-search:hover {
+      border-color: var(--medical-light-blue);
+    }
+
+    .device-details-card {
+      background: var(--white);
+      border-radius: var(--border-radius);
+      padding: 2.5rem;
+      box-shadow: var(--shadow-medium);
+      border: 1px solid var(--light-gray);
+      margin-top: 2rem;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: var(--transition);
+    }
+
+    .device-details-card.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .device-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 2rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 2px solid var(--light-gray);
+    }
+
+    .device-icon {
+      width: 60px;
+      height: 60px;
+      background: var(--gradient-primary);
+      border-radius: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 1.5rem;
+      color: var(--white);
+      font-size: 1.5rem;
+    }
+
+    .device-info h3 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: var(--medical-dark-blue);
+      margin-bottom: 0.5rem;
+    }
+
+    .device-info p {
+      color: var(--professional-gray);
+      font-size: 1.1rem;
+      margin: 0;
+        }
+
+        .details-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+        }
+
+        .detail-item {
+      background: var(--light-gray);
+      border-radius: var(--border-radius);
+      padding: 1.5rem;
+      border-left: 4px solid var(--medical-light-blue);
+        }
+
+        .detail-label {
+            font-weight: 600;
+      color: var(--medical-dark-blue);
+      margin-bottom: 0.5rem;
+      font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .detail-value {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--medical-light-blue);
+    }
+
+    .detail-description {
+      color: var(--professional-gray);
+      font-size: 0.9rem;
+      margin-top: 0.5rem;
+    }
+
+    .regulatory-notes {
+      background: #f0f9ff;
+      border: 1px solid var(--medical-light-blue);
+      border-radius: var(--border-radius);
+      padding: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .regulatory-notes h4 {
+      color: var(--medical-dark-blue);
+            font-weight: 600;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+    }
+
+    .regulatory-notes h4 i {
+      margin-right: 0.5rem;
+    }
+
+    .regulatory-notes p {
+      color: var(--medical-dark-blue);
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    .cta-section {
+      background: var(--gradient-primary);
+      padding: 4rem 0;
+            text-align: center;
+      color: var(--white);
+    }
+
+    .cta-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .cta-description {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      opacity: 0.9;
+    }
+
+    .btn-modern {
+      background: var(--white);
+      color: var(--medical-dark-blue);
+      border: none;
+      padding: 1rem 2.5rem;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 1.1rem;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: var(--transition);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .btn-modern:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-medium);
+      color: var(--medical-dark-blue);
+    }
+
+    .btn-modern i {
+      transition: var(--transition);
+    }
+
+    .btn-modern:hover i {
+      transform: translateX(3px);
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.05);
+      }
+    }
+
+    .loading {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+      border: 3px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+      border-top-color: white;
+            animation: spin 1s ease-in-out infinite;
+        }
+
+        @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .fade-in {
+      animation: fadeInUp 0.6s ease-out;
+    }
+
+    /* Theme toggle button */
+    .theme-toggle-btn {
+      background: transparent;
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      color: white;
+      padding: 0.5rem;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: var(--transition);
+      margin-left: 1rem;
+    }
+
+    .theme-toggle-btn:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.5);
+      color: white;
+    }
+
+    /* Cross-browser compatibility improvements */
+    .dropdown-select {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+    }
+
+    .dropdown-select::-ms-expand {
+      display: none;
+    }
+
+    /* Video fallback for older browsers */
+    .video-background {
+      display: block;
+    }
+
+    @supports not (object-fit: cover) {
+      .video-background {
+        width: 100%;
+        height: auto;
+        min-height: 100%;
+      }
+    }
+
+    /* Flexbox fallbacks */
+    .services-grid {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+    }
+
+    .service-card {
+      -webkit-box-flex: 1;
+      -webkit-flex: 1;
+      -ms-flex: 1;
+      flex: 1;
+      min-width: 300px;
+        }
+
+        @media (max-width: 768px) {
+      .hero-title {
+        font-size: 2.5rem;
+            }
+            
+      .dropdown-container {
+                grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+      
+      .device-selector-container {
+        padding: 2rem;
+        margin: 2rem 0;
+            }
+            
+            .details-grid {
+                grid-template-columns: 1fr;
+            }
+            
+      .theme-toggle-btn {
+        width: 35px;
+        height: 35px;
+        margin-left: 0.5rem;
+      }
+    }
+
+    /* Print styles */
+    @media print {
+      .video-background,
+      .floating-elements,
+      .theme-toggle-btn {
+        display: none !important;
+      }
+      
+      .medical-devices-hero {
+        background: #1e40af !important;
+        color: white !important;
+      }
+    }
+
+    /* Medical Animation Background */
+    .medical-animation-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: 1;
+    }
+
+    /* Medical Icons Animation */
+    .medical-icon {
+      position: absolute;
+      color: rgba(255, 255, 255, 0.15);
+      font-size: 2rem;
+      animation: medicalFloat 8s ease-in-out infinite;
+    }
+
+    .medical-icon.stethoscope {
+      top: 15%;
+      left: 8%;
+      animation-delay: 0s;
+    }
+
+    .medical-icon.heartbeat {
+      top: 25%;
+      right: 12%;
+      animation-delay: 1s;
+      color: rgba(255, 100, 100, 0.2);
+    }
+
+    .medical-icon.microscope {
+      top: 45%;
+      left: 5%;
+      animation-delay: 2s;
+    }
+
+    .medical-icon.x-ray {
+      top: 35%;
+      right: 8%;
+      animation-delay: 3s;
+    }
+
+    .medical-icon.syringe {
+      top: 65%;
+      left: 15%;
+      animation-delay: 4s;
+    }
+
+    .medical-icon.pill {
+      top: 55%;
+      right: 20%;
+      animation-delay: 5s;
+    }
+
+    .medical-icon.shield {
+      top: 75%;
+      left: 25%;
+      animation-delay: 6s;
+    }
+
+    .medical-icon.cross {
+      top: 85%;
+      right: 15%;
+      animation-delay: 7s;
+    }
+
+    /* Repair Tools Animation */
+    .repair-tool {
+      position: absolute;
+      color: rgba(255, 255, 255, 0.1);
+      font-size: 1.5rem;
+      animation: toolFloat 6s ease-in-out infinite;
+    }
+
+    .repair-tool.tool-1 {
+      top: 20%;
+      left: 20%;
+      animation-delay: 0.5s;
+    }
+
+    .repair-tool.tool-2 {
+      top: 40%;
+      right: 25%;
+      animation-delay: 1.5s;
+    }
+
+    .repair-tool.tool-3 {
+      top: 60%;
+      left: 30%;
+      animation-delay: 2.5s;
+    }
+
+    .repair-tool.tool-4 {
+      top: 80%;
+      right: 30%;
+      animation-delay: 3.5s;
+    }
+
+    /* Circuit Patterns */
+    .circuit-pattern {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      border: 2px solid rgba(255, 255, 255, 0.05);
+      border-radius: 50%;
+      animation: circuitRotate 20s linear infinite;
+    }
+
+    .circuit-pattern::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100px;
+      height: 100px;
+      border: 1px solid rgba(255, 255, 255, 0.03);
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .circuit-pattern::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 50px;
+      height: 50px;
+      border: 1px solid rgba(255, 255, 255, 0.02);
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .circuit-1 {
+      top: 10%;
+      left: 10%;
+      animation-delay: 0s;
+    }
+
+    .circuit-2 {
+      top: 30%;
+      right: 10%;
+      animation-delay: 7s;
+    }
+
+    .circuit-3 {
+      bottom: 20%;
+      left: 20%;
+      animation-delay: 14s;
+    }
+
+    /* Data Streams */
+    .data-stream {
+      position: absolute;
+      width: 2px;
+      height: 100px;
+      background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.1), transparent);
+      animation: dataFlow 4s ease-in-out infinite;
+    }
+
+    .stream-1 {
+      top: 20%;
+      left: 15%;
+      animation-delay: 0s;
+    }
+
+    .stream-2 {
+      top: 50%;
+      right: 20%;
+      animation-delay: 1.5s;
+    }
+
+    .stream-3 {
+      bottom: 30%;
+      left: 40%;
+      animation-delay: 3s;
+    }
+
+    /* Animations */
+    @keyframes medicalFloat {
+      0%, 100% {
+        transform: translateY(0px) rotate(0deg) scale(1);
+        opacity: 0.15;
+      }
+      25% {
+        transform: translateY(-15px) rotate(5deg) scale(1.1);
+        opacity: 0.25;
+      }
+      50% {
+        transform: translateY(-25px) rotate(0deg) scale(1.2);
+        opacity: 0.2;
+      }
+      75% {
+        transform: translateY(-10px) rotate(-5deg) scale(1.1);
+        opacity: 0.3;
+      }
+    }
+
+    @keyframes toolFloat {
+      0%, 100% {
+        transform: translateY(0px) rotate(0deg);
+        opacity: 0.1;
+      }
+      50% {
+        transform: translateY(-20px) rotate(180deg);
+        opacity: 0.2;
+      }
+    }
+
+    @keyframes circuitRotate {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes dataFlow {
+      0%, 100% {
+        opacity: 0;
+        transform: translateY(0px);
+      }
+      50% {
+        opacity: 0.3;
+        transform: translateY(-50px);
+      }
+    }
+
+    /* Pulse animation for heartbeat */
+    .medical-icon.heartbeat {
+      animation: heartbeat 2s ease-in-out infinite;
+    }
+
+    @keyframes heartbeat {
+      0%, 100% {
+        transform: scale(1);
+        opacity: 0.2;
+      }
+      50% {
+        transform: scale(1.3);
+        opacity: 0.4;
+      }
+    }
+    </style>
+</head>
+
+<body class="medical-devices-page">
+  <!-- Header section start -->
+  <header class="MedicalDevices-header">
+    <!-- Preloader -->
+    <div class="loader">
+      <div class="word">iDigital...</div>
+      <div class="loadOverlay"></div>
+        </div>
+
+    <script type="text/javascript">
+      function Ticker(elem) {
+        elem.lettering();
+        this.done = false;
+        this.cycleCount = 5;
+        this.cycleCurrent = 0;
+        this.chars = 'iDigital...'.split('');
+        this.charsCount = this.chars.length;
+        this.letters = elem.find('span');
+        this.letterCount = this.letters.length;
+        this.letterCurrent = 0;
+
+        this.letters.each(function () {
+          var $this = $(this);
+          $this.attr('data-orig', $this.text());
+          $this.text('-');
+        });
+      }
+
+      Ticker.prototype.getChar = function () {
+        return this.chars[Math.floor(Math.random() * this.charsCount)];
+      };
+
+      Ticker.prototype.reset = function () {
+        this.done = false;
+        this.cycleCurrent = 0;
+        this.letterCurrent = 0;
+        this.letters.each(function () {
+          var $this = $(this);
+          $this.text($this.attr('data-orig'));
+          $this.removeClass('done');
+        });
+        this.loop();
+      };
+
+      Ticker.prototype.loop = function () {
+        var self = this;
+
+        this.letters.each(function (index, elem) {
+          var $elem = $(elem);
+          if (index >= self.letterCurrent) {
+            if ($elem.text() !== ' ') {
+              $elem.text(self.getChar());
+              $elem.css('opacity', Math.random());
+            }
+          }
+        });
+
+        if (this.cycleCurrent < this.cycleCount) {
+          this.cycleCurrent++;
+        } else if (this.letterCurrent < this.letterCount) {
+          var currLetter = this.letters.eq(this.letterCurrent);
+          this.cycleCurrent = 0;
+          currLetter.text(currLetter.attr('data-orig')).css('opacity', 1).addClass('done');
+          this.letterCurrent++;
+        } else {
+          this.done = true;
+        }
+
+        if (!this.done) {
+          requestAnimationFrame(function () {
+            self.loop();
+          });
+        } else {
+          setTimeout(function () {
+            self.reset();
+          }, 750);
+        }
+      };
+
+      $words = $(".word");
+
+      $words.each(function () {
+        var $this = $(this),
+          ticker = new Ticker($this).reset();
+        $this.data('ticker', ticker);
+      });
+    </script>
+    <!--Ended Preloading -->
+    <!-- ScrollBar -->
+    <div class="scrollbar" id="style-7">
+      <div class="force-overflow"></div>
+            </div>
+    <!-- Back to Top -->
+    <div class="BackTop-wrap">
+      <svg class="BackTop-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+      </svg>
+            </div>
+    <!-- Navbar -->
+    <nav class="navbar primaryNav navbar-expand-xl navbar-dark p-0 wow animate__animated animate__slideInDown"
+      data-wow-duration="1000ms" data-wow-delay="400ms">
+    <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand textLogo p-0" href="index.html">
+            iDigital
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav desktop-nav ms-auto mb-2 mb-lg-0 align-items-center">
+            <li class="nav-item">
+              <a class="nav-link " aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item dropdown service_dropDownMenu">
+              <a class="nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Services
+              </a>
+              <div class="dropdown-menu services-dropdown" data-wow-duration="300ms" data-wow-delay="0ms"
+                aria-labelledby="navbarDropdown">
+                <ul class="nav nav-tabs services-dropdown_wrap" id="services-dropdown_wrap" role="tablist">
+                  <li class="nav-item" role="presentation">
+                    <a class="services-dropdown_item" id="home-tab" data-bs-toggle="tab" type="button"
+                      data-bs-target="#home" role="tab" aria-controls="home" aria-selected="true">
+                      <img class="start-repair_services-img" src="img/start_repair/recovery.png" alt="">
+                      <h4 class="start-repair_services-text">Data Recovery</h4>
+                    </a>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <a class="services-dropdown_item" id="profile-tab" data-bs-toggle="tab" type="button"
+                      data-bs-target="#profile" role="tab" aria-controls="profile" aria-selected="false">
+                      <img class="start-repair_services-img" src="img/start_repair/service.png" alt="">
+                      <h4 class="start-repair_services-text">Repair Service</h4>
+                    </a>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <a class="services-dropdown_item" id="contact-tab" data-bs-toggle="tab" type="button"
+                      data-bs-target="#contact" role="tab" aria-controls="contact" aria-selected="false">
+                      <img class="start-repair_services-img" src="img/start_repair/home.png" alt="">
+                      <h4 class="start-repair_services-text">Home Services</h4>
+                    </a>
+                  </li>
+                </ul>
+        </div>
+            </li>
+
+            <li class="nav-item dropdown support_dropDownMenu" onmouseover="supportMenu()">
+              <a class="nav-link" id="support-tab" data-bs-toggle="tab" type="button" data-bs-target="#support"
+                role="tab" aria-controls="support" aria-selected="true">
+                Support
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link link-search" href="#"><i class="fas fa-search"></i></a>
+            </li>
+            <li class="nav-item ">
+              <div class="locationbar">
+                <input type="text" class="input LocationInput" placeholder="location">
+                <div class="btn btnLocation"><img src="img/icons/map-pin.png" /><a class="btnTextLocation">Find Your
+                    Store</a></div>
+        </div>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link sign-in btn-primary" href="sign-in.html"><i class="fa fa-arrow-right"></i>Sign In</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link language dropdown-toggle_custom" href="#" id="navbarDropdown" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                <img width="36px" height="24px" class="lang-selected-img" src="img/flags/usa.png" />
+              </a>
+
+              <ul class="dropdown-menu dropdown-menu-end language_dropdown" data-wow-duration="300ms"
+                data-wow-delay="0ms" aria-labelledby="navbarDropdown">
+                <li><a data-lang-code="en-GB" class="dropdown-item selected" href="#"><img
+                      src="img/flags/usa.png" /><span>en</span></a></li>
+                <li><a data-lang-code="fr-FR" class="dropdown-item" href="#"><img
+                      src="img/flags/fr.png" /><span>fr</span></a></li>
+                <li><a data-lang-code="es-ES" class="dropdown-item" href="#"><img
+                      src="img/flags/es.png" /><span>es</span></a></li>
+                <li><a data-lang-code="ar-AR" class="dropdown-item" href="#"><img
+                      src="img/flags/pal.jpg" /><span>ar</span></a></li>
+              </ul>
+            </li>
+          </ul>
+          <button id="theme-toggle" class="btn btn-outline-light theme-toggle-btn" type="button">
+            <i id="theme-toggle-icon" class="fas fa-moon"></i>
+          </button>
+            </div>
+            </div>
+    </nav>
+
+    <!-- Search icon -->
+    <div class="search-container hide">
+      <div class="link-search"><i class="fas fa-search" style="color:#fff"></i>
+        </div>
+      <div class="search-bar">
+        <form action="" class="ui-widget">
+          <input type="text" class="inputSearch" placeholder="Search iDigital.com" id="inputSearch">
+        </form>
+    </div>
+      <div class="link-close"></div>
+
+      <div class="quick-links">
+        <h2>Quick Links</h2>
+        <ul>
+          <li>
+            <a href="#">Covid -19 information</a>
+          </li>
+          <li>
+            <a href="#">Most popular Questions</a>
+          </li>
+          <li>
+            <a href="#">Amet minim mollit non deserunt</a>
+          </li>
+          <li>
+            <a href="#">Velit officia consequat duis en</a>
+          </li>
+          <li>
+            <a href="#">Exercitation veniam consequat sunt</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Mobile Menu Start -->
+    <ul class="mobile-menu">
+      <li>
+        <a href="index.html">Home</a>
+      </li>
+      <li>Services
+        <ul class="submenu">
+          <li class="submenu-item"><img class="img-fluid" src="img/start_repair/recovery.png" alt="">Data
+            Recovery
+            <ul class="submenu-list">
+              <li><a href="Single-hard-drive.html">Single Hard Drive</a></li>
+              <li><a href="raid-hard.html">Raid Hard Drive</a></li>
+              <li><a href="solid-state.html">Solid State</a></li>
+              <li><a href="smartphone.html">Smartphone</a></li>
+              <li><a href="Nand&Chip.html">Nand & Chip Off</a></li>
+              <li><a href="USB-flash.html">USB Flash</a></li>
+              <li><a href="file-system.html">File System</a></li>
+              <li><a href="Mac-OS.html">Mac OS</a></li>
+              <li><a href="windows-repair.html">Windows</a></li>
+              <li><a href="life-at-iDigital.html">Linux & Unix</a></li>
+              <li><a href="exchange-repair.html">Exchange Server</a></li>
+              <li><a href="sql-server.html">SQL Server</a></li>
+              <li><a href="virtual-machine.html">Virtual Machine</a></li>
+              <li><a href="voip-system.html">VoIP System</a></li>
+              <li><a href="password.html">Password</a></li>
+              <li><a href="Bitcoin.html">Bitcoin</a></li>
+              <li><a href="Tape.html">Tape</a></li>
+              <li><a href="CD-DVD-Bluray.html">CD - DVD - BLURAY</a></li>
+            </ul>
+          </li>
+          <li class="submenu-item"><img class="img-fluid" src="img/start_repair/service.png" alt="">Repair
+            Service
+            <ul class="submenu-list">
+              <li><a href="smartphone.html">Smartphone</a></li>
+              <li><a href="SmartWatch.html">Smart Watches</a></li>
+              <li><a href="tablet.html">Tablet</a></li>
+              <li><a href="computer.html">Computer</a></li>
+              <li><a href="laptop.html">Laptop</a></li>
+              <li><a href="game-console-repair.html">Game Consoles</a></li>
+              <li><a href="Drone-Automation.html">Drone & Automation</a></li>
+              <li><a href="Portable-music-playery.html">Portable Music Player</a></li>
+              <li><a href="Virtual-Reality.html">Virtual Reality</a></li>
+              <li><a href="sound-system.html">Sound System</a></li>
+              <li><a href="motherBoard-repair.html">Logic Boards</a></li>
+              <li><a href="Medical-devices.html">Medical Devices</a></li>
+              <li><a href="appliances.html">Appliances</a></li>
+            </ul>
+          </li>
+          <li class="submenu-item"><img class="img-fluid" src="img/start_repair/home.png" alt="">Home Services
+            <ul class="submenu-list">
+              <li><a href="solar-panel.html">Solar Panel</a></li>
+              <li><a href="smart-home.html">Smarthome</a></li>
+              <li><a href="home-security.html">Home Security</a></li>
+              <li><a href="tv-sound.html">TV Sound System</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        Support
+        <ul class="submenu supportSubmenu">
+          <li><a href="about-us.html">About Us</a></li>
+          <li><a href="contact-us.html">Contact Us</a></li>
+          <li><a href="partners.html">Partners</a></li>
+          <li><a href="franchising.html">Franchising</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="Policies.html">Policies</a></li>
+          <li><a href="go-green.html">Go Green life at iDigtal</a></li>
+          <li><a href="iDigital-careers.html">iDigital Career</a></li>
+          <li><a href="work-at-iDigital.html">Work at iDigital</a></li>
+          <li><a href="life-at-iDigital.html">life at iDigital</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="discussion.html">discussion</a></li>
+          <li><a href="faq.html">faq</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="contact-us.html">Contact</a>
+      </li>
+      <li>
+        <a href="covid19.html">Covid 19</a>
+      </li>
+      <li>
+        Search
+        <ul class="submenu">
+          <li>
+            <form class="" action="index.html" method="post">
+              <input type="text" class="form-control" placeholder="Search iDigital.com">
+            </form>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="sign-in.html">Sign In</a>
+      </li>
+      <li>
+        Language
+        <ul class="submenu language_dropdown">
+          <li><a data-lang-code="en-GB" class="dropdown-item selected" href="#"><img
+                src="img/flags/usa.png" /><span>en</span></a></li>
+          <li><a data-lang-code="fr-FR" class="dropdown-item" href="#"><img src="img/flags/fr.png" /><span>fr</span></a>
+          </li>
+          <li><a data-lang-code="es-ES" class="dropdown-item" href="#"><img src="img/flags/es.png" /><span>es</span></a>
+          </li>
+          <li><a data-lang-code="ar-AR" class="dropdown-item" href="#"><img src="img/flags/ar.png" /><span>ar</span></a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <img class="icon-mode-mobile" onclick="MobileMode()" src="img/icons/moon.png" />
+      </li>
+    </ul>
+    <!-- Mobile Menu End -->
+    <div class="overlay"></div>
+
+    <!-- Hero Section -->
+    <div class="medical-devices-hero">
+      <!-- CSS Animated Medical Background -->
+      <div class="medical-animation-bg">
+        <!-- Animated Medical Icons -->
+        <div class="medical-icon stethoscope">
+          <i class="fas fa-stethoscope"></i>
+        </div>
+        <div class="medical-icon heartbeat">
+          <i class="fas fa-heartbeat"></i>
+        </div>
+        <div class="medical-icon microscope">
+          <i class="fas fa-microscope"></i>
+        </div>
+        <div class="medical-icon x-ray">
+          <i class="fas fa-x-ray"></i>
+        </div>
+        <div class="medical-icon syringe">
+          <i class="fas fa-syringe"></i>
+        </div>
+        <div class="medical-icon pill">
+          <i class="fas fa-pills"></i>
+        </div>
+        <div class="medical-icon shield">
+          <i class="fas fa-shield-alt"></i>
+        </div>
+        <div class="medical-icon cross">
+          <i class="fas fa-plus"></i>
+        </div>
+        
+        <!-- Floating Repair Tools -->
+        <div class="repair-tool tool-1">
+          <i class="fas fa-wrench"></i>
+        </div>
+        <div class="repair-tool tool-2">
+          <i class="fas fa-screwdriver"></i>
+        </div>
+        <div class="repair-tool tool-3">
+          <i class="fas fa-tools"></i>
+        </div>
+        <div class="repair-tool tool-4">
+          <i class="fas fa-hammer"></i>
+        </div>
+        
+        <!-- Circuit Patterns -->
+        <div class="circuit-pattern circuit-1"></div>
+        <div class="circuit-pattern circuit-2"></div>
+        <div class="circuit-pattern circuit-3"></div>
+        
+        <!-- Data Streams -->
+        <div class="data-stream stream-1"></div>
+        <div class="data-stream stream-2"></div>
+        <div class="data-stream stream-3"></div>
+      </div>
+      
+      <div class="video-overlay"></div>
+      
+      <div class="container">
+        <div class="hero-content">
+          <h1 class="hero-title">Medical Device Solutions</h1>
+          <p class="hero-subtitle">Advanced Repair & Maintenance Services</p>
+          <p class="hero-description">
+            Discover comprehensive medical device repair solutions tailored to your healthcare facility. 
+            Get instant pricing and regulatory compliance information for your specific equipment needs.
+          </p>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- Header section end -->
+
+  <!-- Services Section -->
+  <section class="services-section">
+    <div class="services-container">
+      <h2 class="services-title">Our Medical Device Services</h2>
+      <p class="services-subtitle">Comprehensive repair and maintenance solutions for all your medical equipment needs</p>
+      
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-tools"></i>
+          </div>
+          <h3 class="service-title">Repair & Maintenance</h3>
+          <p class="service-description">Support for the Biomedical Field. We have the skilled professionals you require for all of your maintenance and repair work. Get a free estimate on the cost of repairing your medical device when you call us now for phone-based technical help!</p>
+          <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+        </div>
+        
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-cogs"></i>
+          </div>
+          <h3 class="service-title">Accessories and Replacement Parts for Machines</h3>
+          <p class="service-description">Get new parts or upgrades for your medical tools so that you can fix broken ones or make your current medical practices better. Keep up with the most recent advances in healthcare technology and medical tools.</p>
+          <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+        </div>
+        
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-certificate"></i>
+                </div>
+          <h3 class="service-title">Certify & Contract</h3>
+          <p class="service-description">All professional staff follows DOH, TJC, NFPA, HIPPA, and other regulatory agencies, ensuring they meet maintenance standards recommended by the manufacturer.</p>
+          <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+        </div>
+        
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-star"></i>
+          </div>
+          <h3 class="service-title">Why Us?</h3>
+          <p class="service-description">Reduce expenditures and maximize the usefulness of medical gear. With a clinical engineering program that coordinates services across your institution or IDN, you might be able to get back millions of dollars in lost service costs.</p>
+          <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Device Selector Section -->
+  <section class="device-selector-section">
+    <div class="container">
+      <div class="device-selector-container">
+        <h2 class="selector-title">Find Your Medical Device</h2>
+        <p class="selector-subtitle">Select your facility type and medical device to get detailed information</p>
+        
+        <div class="dropdown-container">
+          <div class="dropdown-group">
+            <label class="dropdown-label" for="entityType">
+              <i class="fas fa-hospital"></i> Facility Type
+            </label>
+            <div class="custom-dropdown">
+              <input type="text" id="entitySearch" class="dropdown-search" placeholder="Search facility types..." style="display: none;">
+              <select id="entityType" class="dropdown-select">
+                <option value="">Select your facility type...</option>
+                <!-- Options will be populated by JavaScript -->
+                </select>
+            </div>
+            <small class="search-hint" style="display: none; color: var(--professional-gray); margin-top: 0.5rem;">
+              Type to search through facility types
+            </small>
+        </div>
+
+          <div class="dropdown-group">
+            <label class="dropdown-label" for="medicalDevice">
+              <i class="fas fa-stethoscope"></i> Medical Device
+            </label>
+            <div class="custom-dropdown">
+              <select id="medicalDevice" class="dropdown-select" disabled>
+                <option value="">Select a facility type first...</option>
+              </select>
+            </div>
+            </div>
+        </div>
+
+        <div id="deviceDetails" class="device-details-card">
+            <!-- Device details will be populated here -->
+        </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="container">
+      <h2 class="cta-title">Ready to Get Started?</h2>
+      <p class="cta-description">Get a free quote for your medical device repair needs</p>
+      <a href="#" class="btn-modern">
+        <i class="fas fa-phone"></i>
+        Get Free Quote
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer start -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 info-col mb-5 mb-md-0">
+          <h2 class="textLogo">iDigital</h2>
+          <form action="javascript:void(0);" class="EmailFormBlue" method="post">
+            <div class="input-group">
+              <input type="email" class="form-control" placeholder="Enter email address" required>
+              <div class="input-group-append">
+                <button class="btn btn-primary" type="submit" value="submit">Send</button>
+                <!-- Modal -->
+                <div class="modal fade" id="verificationModalBlue" tabindex="-1" role="dialog"
+                  aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Verification</h5>
+                        <button type="button" class="close HideVerification" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        Your Subscribe done successfully!
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-primary HideVerification"
+                          data-dismiss="modal">Submit</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+          <ul class="list-unstyled">
+            <li><i class="fas fa-phone-alt"></i>+1(504)342-9109</li>
+            <hr>
+            <li><i class="far fa-map"></i><span>1851 Rousseau st New Orleans<br> LA 70130 USA</span></li>
+          </ul>
+        </div>
+        <div class="col-md-3 offset-md-1 mb-5 mb-md-0 list-col">
+          <h3>Start your Repair</h3>
+          <ul class="list-unstyled">
+            <li><a href="#">Phone/Tablet Repair</a></li>
+            <li><a href="#">Computer Repair</a></li>
+            <li><a href="#">Game Console Repair</a></li>
+            <li><a href="#">Smart Watch Repair</a></li>
+            <li><a href="#">Drone/Automation Repair</a></li>
+            <li><a href="#">VR Repair</a></li>
+          </ul>
+        </div>
+        <div class="col-md-2 list-col mb-5 mb-md-0">
+          <h3>Company</h3>
+          <ul class="list-unstyled">
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Partnership</a></li>
+          </ul>
+        </div>
+        <div class="col-md-2 list-col mb-5 mb-md-0">
+          <h3>Social</h3>
+          <ul class="list-unstyled">
+            <li><a href="#"><i class="fab fa-linkedin-in"></i>LinkedIn</a></li>
+            <li><a href="#"><i class="fab fa-twitter"></i>Twitter</a></li>
+            <li><a href="#"><i class="fab fa-facebook-f"></i>Facebook</a></li>
+            <li><a href="#"><i class="fab fa-instagram"></i>Instagram</a></li>
+            <li><a href="#"><i class="fab fa-google"></i>Google</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="row copyright">
+        <div class="col-md-6 mb-md-0 mb-2">
+          <a href="#">Privacy Policy / Terms of Use</a>
+        </div>
+        <div class="col-md-6 d-flex justify-content-md-end justify-content-start">
+          <p>©2020 All Rights Reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Footer end -->
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.min.js"
+    integrity="sha256-8lykApyIgj9dWMIK4VPvhLQQ1pOLjP12j4zZnHHMCws=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="js/jquery.slicknav.js"></script>
+  <script src="js/wow.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- Medical Devices JavaScript -->
+    <script>
+    // Medical device data structure
+    let medicalDeviceData = {};
+    let currentEntityType = '';
+    let currentMedicalDevice = '';
+
+    // Dark/Light mode functionality
+    function toggleTheme() {
+      const body = document.body;
+      const currentTheme = body.getAttribute('data-theme');
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      
+      body.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+      
+      // Update theme toggle icon
+      const themeIcon = document.getElementById('theme-toggle-icon');
+      if (themeIcon) {
+        themeIcon.className = newTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+      }
+    }
+
+    // Initialize theme
+    function initializeTheme() {
+      const savedTheme = localStorage.getItem('theme') || 'light';
+      document.body.setAttribute('data-theme', savedTheme);
+      
+      const themeIcon = document.getElementById('theme-toggle-icon');
+      if (themeIcon) {
+        themeIcon.className = savedTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+      }
+    }
+
+    // Proper CSV parsing function
+    function parseCSVLine(line) {
+      const result = [];
+      let current = '';
+      let inQuotes = false;
+      
+      for (let i = 0; i < line.length; i++) {
+        const char = line[i];
+        
+        if (char === '"') {
+          inQuotes = !inQuotes;
+        } else if (char === ',' && !inQuotes) {
+          result.push(current.trim());
+          current = '';
+        } else {
+          current += char;
+        }
+      }
+      
+      result.push(current.trim());
+      return result;
+    }
+
+    // Load CSV data
+    async function loadMedicalDeviceData() {
+      try {
+        console.log('Attempting to load CSV from: templates/1.csv');
+        const response = await fetch('templates/1.csv');
+        
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        
+        const csvText = await response.text();
+        const lines = csvText.split('\n');
+        
+        console.log('CSV loaded successfully!');
+        console.log('Total lines in CSV:', lines.length);
+        console.log('First few lines:', lines.slice(0, 3));
+        console.log('Processing CSV data...');
+        
+        let processedRows = 0;
+        let skippedRows = 0;
+        
+        // Skip header
+        for (let i = 1; i < lines.length; i++) {
+          const line = lines[i].trim();
+          if (!line) {
+            skippedRows++;
+            continue;
+          }
+          
+          const columns = parseCSVLine(line);
+          if (columns.length < 10) {
+            skippedRows++;
+            continue;
+          }
+          
+          const entityType = columns[0].trim();
+          const medicalDevice = columns[1].trim();
+          
+          if (!entityType || entityType === 'Entity Type' || !medicalDevice) {
+            skippedRows++;
+            continue;
+          }
+          
+          if (!medicalDeviceData[entityType]) {
+            medicalDeviceData[entityType] = [];
+          }
+          
+          medicalDeviceData[entityType].push({
+            device: medicalDevice,
+            regulatoryNotes: columns[2].trim(),
+            contextMultiplier: parseFloat(columns[3]) || 0,
+            estimateRepairPrice: parseFloat(columns[4]) || 0,
+            adjustedEstimateRepairPrice: parseFloat(columns[5]) || 0,
+            finalEstimatedRepairPrice: parseFloat(columns[6]) || 0,
+            estimatePurchasePrice: parseFloat(columns[7]) || 0,
+            annualMaintenanceCost: parseFloat(columns[8]) || 0,
+            totalCostOfOwnership: parseFloat(columns[9]) || 0
+          });
+          
+          processedRows++;
+          
+          // Log progress every 5000 rows
+          if (processedRows % 5000 === 0) {
+            console.log(`Processed ${processedRows} rows...`);
+          }
+        }
+        
+        console.log(`Processing complete!`);
+        console.log(`- Processed rows: ${processedRows}`);
+        console.log(`- Skipped rows: ${skippedRows}`);
+        console.log(`- Unique entity types: ${Object.keys(medicalDeviceData).length}`);
+        console.log(`- Sample entity types:`, Object.keys(medicalDeviceData).slice(0, 20));
+        
+        // Show some statistics
+        const entityStats = Object.entries(medicalDeviceData).map(([entity, devices]) => ({
+          entity,
+          deviceCount: devices.length
+        })).sort((a, b) => b.deviceCount - a.deviceCount);
+        
+        console.log('Top 10 entities by device count:', entityStats.slice(0, 10));
+        
+        populateEntityTypes();
+            } catch (error) {
+        console.error('Error loading medical device data:', error);
+        console.log('Using fallback data...');
+        
+        // Fallback data for demo - expanded with many more entity types
+        medicalDeviceData = {
+          'Chiropractic clinic': [
+            { device: 'Examination table', regulatoryNotes: 'CMS Conditions of Participation; The Joint Commission (TJC); HIPAA; OSHA', estimateRepairPrice: 2200, finalEstimatedRepairPrice: 2575, estimatePurchasePrice: 18750, annualMaintenanceCost: 1220.85, totalCostOfOwnership: 31250 },
+            { device: 'Autoclave', regulatoryNotes: 'CMS Conditions of Participation; The Joint Commission (TJC); HIPAA; OSHA', estimateRepairPrice: 2200, finalEstimatedRepairPrice: 1525, estimatePurchasePrice: 7250, annualMaintenanceCost: 680.33, totalCostOfOwnership: 14500 },
+            { device: 'ECG/EKG', regulatoryNotes: 'CMS Conditions of Participation; The Joint Commission (TJC); HIPAA; OSHA', estimateRepairPrice: 2200, finalEstimatedRepairPrice: 500, estimatePurchasePrice: 3600, annualMaintenanceCost: 310.93, totalCostOfOwnership: 6500 }
+          ],
+          'Acupuncture clinic': [
+            { device: 'Examination table', regulatoryNotes: 'CMS Conditions of Participation; The Joint Commission (TJC); HIPAA; OSHA', estimateRepairPrice: 2200, finalEstimatedRepairPrice: 2500, estimatePurchasePrice: 17750, annualMaintenanceCost: 1350.49, totalCostOfOwnership: 30750 },
+            { device: 'Autoclave', regulatoryNotes: 'CMS Conditions of Participation; The Joint Commission (TJC); HIPAA; OSHA', estimateRepairPrice: 2200, finalEstimatedRepairPrice: 1575, estimatePurchasePrice: 7500, annualMaintenanceCost: 630.85, totalCostOfOwnership: 14500 }
+          ],
+          'Naturopathy center': [
+            { device: 'Anesthesia machine', regulatoryNotes: 'CMS Conditions of Participation; The Joint Commission (TJC); HIPAA; OSHA', estimateRepairPrice: 2200, finalEstimatedRepairPrice: 2525, estimatePurchasePrice: 18250, annualMaintenanceCost: 1407.18, totalCostOfOwnership: 31500 },
+            { device: 'Operating table', regulatoryNotes: 'CMS Conditions of Participation; The Joint Commission (TJC); HIPAA; OSHA', estimateRepairPrice: 2200, finalEstimatedRepairPrice: 1600, estimatePurchasePrice: 7750, annualMaintenanceCost: 691.4, totalCostOfOwnership: 15250 }
+          ],
+          'Emergency department': [
+            { device: 'Patient monitor', regulatoryNotes: 'CMS Conditions of Participation; The Joint Commission (TJC); HIPAA; OSHA', estimateRepairPrice: 2200, finalEstimatedRepairPrice: 2500, estimatePurchasePrice: 17500, annualMaintenanceCost: 1328.75, totalCostOfOwnership: 30500 },
+            { device: 'Defibrillator', regulatoryNotes: 'CMS Conditions of Participation; The Joint Commission (TJC); HIPAA; OSHA', estimateRepairPrice: 2200, finalEstimatedRepairPrice: 960, estimatePurchasePrice: 4700, annualMaintenanceCost: 364.55, totalCostOfOwnership: 9000 }
+          ],
+          'Surgery center': [
+            { device: 'Surgical lights', regulatoryNotes: 'CMS Conditions of Participation; The Joint Commission (TJC); HIPAA; OSHA', estimateRepairPrice: 2200, finalEstimatedRepairPrice: 1000, estimatePurchasePrice: 5250, annualMaintenanceCost: 454.19, totalCostOfOwnership: 10000 },
+            { device: 'Infusion pumps', regulatoryNotes: 'CMS Conditions of Participation; The Joint Commission (TJC); HIPAA; OSHA', estimateRepairPrice: 2200, finalEstimatedRepairPrice: 2450, estimatePurchasePrice: 17250, annualMaintenanceCost: 1113.5, totalCostOfOwnership: 29000 }
+          ],
+          'Cardiology clinic': [
+            { device: 'ECG machine', regulatoryNotes: 'CMS Conditions of Participation; The Joint Commission (TJC); HIPAA; OSHA', estimateRepairPrice: 2200, finalEstimatedRepairPrice: 2500, estimatePurchasePrice: 15000, annualMaintenanceCost: 1200, totalCostOfOwnership: 25000 },
+            { device: 'Echocardiogram', regulatoryNotes: 'CMS Conditions of Participation; The Joint Commission (TJC); HIPAA; OSHA', estimateRepairPrice: 2200, finalEstimatedRepairPrice: 5000, estimatePurchasePrice: 50000, annualMaintenanceCost: 2500, totalCostOfOwnership: 75000 }
+          ],
+          'Dermatology clinic': [
+            { device: 'Dermatoscope', regulatoryNotes: 'CMS Conditions of Participation; The Joint Commission (TJC); HIPAA; OSHA', estimateRepairPrice: 2200, finalEstimatedRepairPrice: 800, estimatePurchasePrice: 5000, annualMaintenanceCost: 300, totalCostOfOwnership: 8000 },
+            { device: 'Cryotherapy unit', regulatoryNotes: 'CMS Conditions of Participation; The Joint Commission (TJC); HIPAA; OSHA', estimateRepairPrice: 2200, finalEstimatedRepairPrice: 1200, estimatePurchasePrice: 8000, annualMaintenanceCost: 400, totalCostOfOwnership: 12000 }
+          ],
+          'Ophthalmology clinic': [
+            { device: 'Slit lamp', regulatoryNotes: 'CMS Conditions of Participation; The Joint Commission (TJC); HIPAA; OSHA', estimateRepairPrice: 2200, finalEstimatedRepairPrice: 3000, estimatePurchasePrice: 25000, annualMaintenanceCost: 1500, totalCostOfOwnership: 40000 },
+            { device: 'Retinoscope', regulatoryNotes: 'CMS Conditions of Participation; The Joint Commission (TJC); HIPAA; OSHA', estimateRepairPrice: 2200, finalEstimatedRepairPrice: 500, estimatePurchasePrice: 3000, annualMaintenanceCost: 200, totalCostOfOwnership: 5000 }
+          ],
+          'Pediatrics clinic': [
+            { device: 'Pediatric scale', regulatoryNotes: 'CMS Conditions of Participation; The Joint Commission (TJC); HIPAA; OSHA', estimateRepairPrice: 2200, finalEstimatedRepairPrice: 800, estimatePurchasePrice: 5000, annualMaintenanceCost: 300, totalCostOfOwnership: 8000 },
+            { device: 'Infant warmer', regulatoryNotes: 'CMS Conditions of Participation; The Joint Commission (TJC); HIPAA; OSHA', estimateRepairPrice: 2200, finalEstimatedRepairPrice: 2000, estimatePurchasePrice: 15000, annualMaintenanceCost: 800, totalCostOfOwnership: 25000 }
+          ],
+          'Orthopedic clinic': [
+            { device: 'X-ray machine', regulatoryNotes: 'CMS Conditions of Participation; The Joint Commission (TJC); HIPAA; OSHA', estimateRepairPrice: 2200, finalEstimatedRepairPrice: 5000, estimatePurchasePrice: 80000, annualMaintenanceCost: 4000, totalCostOfOwnership: 120000 },
+            { device: 'Bone densitometer', regulatoryNotes: 'CMS Conditions of Participation; The Joint Commission (TJC); HIPAA; OSHA', estimateRepairPrice: 2200, finalEstimatedRepairPrice: 3000, estimatePurchasePrice: 40000, annualMaintenanceCost: 2000, totalCostOfOwnership: 60000 }
+          ],
+          'Neurology clinic': [
+            { device: 'EEG machine', regulatoryNotes: 'CMS Conditions of Participation; The Joint Commission (TJC); HIPAA; OSHA', estimateRepairPrice: 2200, finalEstimatedRepairPrice: 4000, estimatePurchasePrice: 60000, annualMaintenanceCost: 3000, totalCostOfOwnership: 90000 },
+            { device: 'EMG machine', regulatoryNotes: 'CMS Conditions of Participation; The Joint Commission (TJC); HIPAA; OSHA', estimateRepairPrice: 2200, finalEstimatedRepairPrice: 3500, estimatePurchasePrice: 50000, annualMaintenanceCost: 2500, totalCostOfOwnership: 75000 }
+          ],
+          'Oncology clinic': [
+            { device: 'Chemotherapy pump', regulatoryNotes: 'CMS Conditions of Participation; The Joint Commission (TJC); HIPAA; OSHA', estimateRepairPrice: 2200, finalEstimatedRepairPrice: 2000, estimatePurchasePrice: 20000, annualMaintenanceCost: 1000, totalCostOfOwnership: 30000 },
+            { device: 'Radiation monitor', regulatoryNotes: 'CMS Conditions of Participation; The Joint Commission (TJC); HIPAA; OSHA', estimateRepairPrice: 2200, finalEstimatedRepairPrice: 1500, estimatePurchasePrice: 15000, annualMaintenanceCost: 750, totalCostOfOwnership: 22500 }
+          ],
+          'Radiology department': [
+            { device: 'CT scanner', regulatoryNotes: 'CMS Conditions of Participation; The Joint Commission (TJC); HIPAA; OSHA', estimateRepairPrice: 2200, finalEstimatedRepairPrice: 10000, estimatePurchasePrice: 500000, annualMaintenanceCost: 25000, totalCostOfOwnership: 750000 },
+            { device: 'MRI machine', regulatoryNotes: 'CMS Conditions of Participation; The Joint Commission (TJC); HIPAA; OSHA', estimateRepairPrice: 2200, finalEstimatedRepairPrice: 15000, estimatePurchasePrice: 1000000, annualMaintenanceCost: 50000, totalCostOfOwnership: 1500000 }
+          ],
+          'Laboratory': [
+            { device: 'Microscope', regulatoryNotes: 'CMS Conditions of Participation; The Joint Commission (TJC); HIPAA; OSHA', estimateRepairPrice: 2200, finalEstimatedRepairPrice: 2000, estimatePurchasePrice: 15000, annualMaintenanceCost: 1000, totalCostOfOwnership: 25000 },
+            { device: 'Centrifuge', regulatoryNotes: 'CMS Conditions of Participation; The Joint Commission (TJC); HIPAA; OSHA', estimateRepairPrice: 2200, finalEstimatedRepairPrice: 800, estimatePurchasePrice: 5000, annualMaintenanceCost: 300, totalCostOfOwnership: 8000 }
+          ],
+          'Physical therapy clinic': [
+            { device: 'Ultrasound therapy', regulatoryNotes: 'CMS Conditions of Participation; The Joint Commission (TJC); HIPAA; OSHA', estimateRepairPrice: 2200, finalEstimatedRepairPrice: 1500, estimatePurchasePrice: 10000, annualMaintenanceCost: 500, totalCostOfOwnership: 15000 },
+            { device: 'TENS unit', regulatoryNotes: 'CMS Conditions of Participation; The Joint Commission (TJC); HIPAA; OSHA', estimateRepairPrice: 2200, finalEstimatedRepairPrice: 500, estimatePurchasePrice: 3000, annualMaintenanceCost: 200, totalCostOfOwnership: 5000 }
+          ],
+          'Dental clinic': [
+            { device: 'Dental chair', regulatoryNotes: 'CMS Conditions of Participation; The Joint Commission (TJC); HIPAA; OSHA', estimateRepairPrice: 2200, finalEstimatedRepairPrice: 3000, estimatePurchasePrice: 25000, annualMaintenanceCost: 1500, totalCostOfOwnership: 40000 },
+            { device: 'X-ray unit', regulatoryNotes: 'CMS Conditions of Participation; The Joint Commission (TJC); HIPAA; OSHA', estimateRepairPrice: 2200, finalEstimatedRepairPrice: 2000, estimatePurchasePrice: 15000, annualMaintenanceCost: 800, totalCostOfOwnership: 25000 }
+          ],
+          'Veterinary clinic': [
+            { device: 'Animal scale', regulatoryNotes: 'CMS Conditions of Participation; The Joint Commission (TJC); HIPAA; OSHA', estimateRepairPrice: 2200, finalEstimatedRepairPrice: 1000, estimatePurchasePrice: 8000, annualMaintenanceCost: 400, totalCostOfOwnership: 12000 },
+            { device: 'Anesthesia machine', regulatoryNotes: 'CMS Conditions of Participation; The Joint Commission (TJC); HIPAA; OSHA', estimateRepairPrice: 2200, finalEstimatedRepairPrice: 2500, estimatePurchasePrice: 20000, annualMaintenanceCost: 1000, totalCostOfOwnership: 30000 }
+          ]
+        };
+        populateEntityTypes();
+      }
+    }
+
+    function populateEntityTypes() {
+      const entitySelect = document.getElementById('entityType');
+      const entitySearch = document.getElementById('entitySearch');
+      const searchHint = document.querySelector('.search-hint');
+      
+      if (!entitySelect) {
+        console.error('Entity select element not found');
+                return;
+            }
+            
+      entitySelect.innerHTML = '<option value="">Select your facility type...</option>';
+      
+      // Get unique entity types and sort them alphabetically
+      const entityTypes = [...new Set(Object.keys(medicalDeviceData))].sort();
+      console.log('Unique entity types found:', entityTypes.length);
+      console.log('Sample entity types:', entityTypes.slice(0, 20));
+      
+      // Store all entity types for search functionality
+      window.allEntityTypes = entityTypes;
+      
+      entityTypes.forEach(entityType => {
+        if (entityType && entityType !== 'Entity Type' && entityType.trim() !== '') {
+          const option = document.createElement('option');
+          option.value = entityType;
+          option.textContent = entityType;
+          entitySelect.appendChild(option);
+        }
+      });
+      
+      console.log('Total unique options added:', entitySelect.options.length - 1);
+      
+      // Show search functionality if there are many options
+      if (entityTypes.length > 20) {
+        if (entitySearch) entitySearch.style.display = 'block';
+        if (searchHint) searchHint.style.display = 'block';
+        
+        // Add search functionality
+        if (entitySearch) {
+          entitySearch.addEventListener('input', function() {
+            const searchTerm = this.value.toLowerCase();
+            const options = entitySelect.querySelectorAll('option');
+            
+            options.forEach(option => {
+              if (option.value === '') return; // Keep the placeholder
+              
+              const text = option.textContent.toLowerCase();
+              if (text.includes(searchTerm)) {
+                option.style.display = 'block';
+              } else {
+                option.style.display = 'none';
+              }
+            });
+          });
+        }
+      }
+    }
+
+    function populateMedicalDevices(entityType) {
+      const deviceSelect = document.getElementById('medicalDevice');
+      deviceSelect.innerHTML = '<option value="">Select a medical device...</option>';
+      deviceSelect.disabled = false;
+      
+      if (medicalDeviceData[entityType]) {
+        medicalDeviceData[entityType].forEach(device => {
+          const option = document.createElement('option');
+          option.value = device.device;
+          option.textContent = device.device;
+          deviceSelect.appendChild(option);
+        });
+      }
+    }
+
+    function displayDeviceDetails(entityType, deviceName) {
+      const deviceData = medicalDeviceData[entityType]?.find(d => d.device === deviceName);
+      if (!deviceData) return;
+      
+      const detailsContainer = document.getElementById('deviceDetails');
+      const deviceIcon = getDeviceIcon(deviceName);
+      
+      detailsContainer.innerHTML = `
+        <div class="device-header">
+          <div class="device-icon">
+            <i class="${deviceIcon}"></i>
+                </div>
+          <div class="device-info">
+            <h3>${deviceName}</h3>
+            <p>${entityType}</p>
+          </div>
+        </div>
+        
+                <div class="details-grid">
+          <div class="detail-item">
+            <div class="detail-label">Repair Price</div>
+            <div class="detail-value">$${deviceData.finalEstimatedRepairPrice.toLocaleString()}</div>
+            <div class="detail-description">Final estimated repair cost</div>
+          </div>
+          
+          <div class="detail-item">
+            <div class="detail-label">Purchase Price</div>
+            <div class="detail-value">$${deviceData.estimatePurchasePrice.toLocaleString()}</div>
+            <div class="detail-description">New device cost</div>
+          </div>
+          
+                        <div class="detail-item">
+            <div class="detail-label">Annual Maintenance</div>
+            <div class="detail-value">$${deviceData.annualMaintenanceCost.toLocaleString()}</div>
+            <div class="detail-description">Yearly maintenance cost</div>
+          </div>
+          
+          <div class="detail-item">
+            <div class="detail-label">5-Year TCO</div>
+            <div class="detail-value">$${deviceData.totalCostOfOwnership.toLocaleString()}</div>
+            <div class="detail-description">Total cost of ownership</div>
+          </div>
+        </div>
+        
+        <div class="regulatory-notes">
+          <h4><i class="fas fa-shield-alt"></i> Regulatory Compliance</h4>
+          <p>${deviceData.regulatoryNotes}</p>
+                        </div>
+                    `;
+      
+      detailsContainer.classList.add('show');
+    }
+
+    function getDeviceIcon(deviceName) {
+      const iconMap = {
+        'Examination table': 'fas fa-bed',
+        'Autoclave': 'fas fa-thermometer-half',
+        'ECG/EKG': 'fas fa-heartbeat',
+        'Vital signs monitor': 'fas fa-heartbeat',
+        'Defibrillator': 'fas fa-heartbeat',
+        'Microscope': 'fas fa-microscope',
+        'Endoscope': 'fas fa-camera',
+        'Spirometer': 'fas fa-lungs',
+        'Thermometer': 'fas fa-thermometer-half',
+        'Pulse oximeter': 'fas fa-fingerprint'
+      };
+      
+      for (const [key, icon] of Object.entries(iconMap)) {
+        if (deviceName.toLowerCase().includes(key.toLowerCase())) {
+          return icon;
+        }
+      }
+      
+      return 'fas fa-stethoscope';
+    }
+
+    // Event listeners
+    document.getElementById('entityType').addEventListener('change', function() {
+      const entityType = this.value;
+      currentEntityType = entityType;
+      
+      if (entityType) {
+        populateMedicalDevices(entityType);
+        document.getElementById('deviceDetails').classList.remove('show');
+      } else {
+        document.getElementById('medicalDevice').innerHTML = '<option value="">Select a facility type first...</option>';
+        document.getElementById('medicalDevice').disabled = true;
+        document.getElementById('deviceDetails').classList.remove('show');
+      }
+    });
+
+    document.getElementById('medicalDevice').addEventListener('change', function() {
+      const deviceName = this.value;
+      currentMedicalDevice = deviceName;
+      
+      if (deviceName && currentEntityType) {
+        displayDeviceDetails(currentEntityType, deviceName);
+      } else {
+        document.getElementById('deviceDetails').classList.remove('show');
+      }
+    });
+
+    // Show loading state
+    function showLoading() {
+      const entitySelect = document.getElementById('entityType');
+      if (entitySelect) {
+        entitySelect.innerHTML = '<option value="">Loading facility types...</option>';
+        entitySelect.disabled = true;
+      }
+    }
+
+    // Hide loading state
+    function hideLoading() {
+      const entitySelect = document.getElementById('entityType');
+      if (entitySelect) {
+        entitySelect.disabled = false;
+      }
+    }
+
+    // Initialize on page load
+    document.addEventListener('DOMContentLoaded', function() {
+      initializeTheme();
+      showLoading();
+      loadMedicalDeviceData().finally(() => {
+        hideLoading();
+      });
+      
+      // Add theme toggle event listener
+      const themeToggle = document.getElementById('theme-toggle');
+      if (themeToggle) {
+        themeToggle.addEventListener('click', toggleTheme);
+      }
+    });
+    </script>
+</body>
+
+</html>

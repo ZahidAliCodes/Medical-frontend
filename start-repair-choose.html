@@ -1,0 +1,2377 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1,user-scalable=no">
+
+  <!-- Meta tags -->
+  <meta name="keywords" content="">
+  <meta name="author" content="">
+
+  <!-- Title -->
+  <title>iDigital - Start Repair</title>
+
+  <!-- Shortcut icon -->
+  <link rel="shortcut icon" href="" type="image/x-icon">
+  <!-- Fonts -->
+  <link href="fonts/fontawesome/css/all.css" rel="stylesheet">
+
+  <style>
+    footer {
+      min-height: 55vh;
+    }
+
+    /* Interaction states
+----------------------------------*/
+    .ui-state-default,
+    .ui-widget-content .ui-state-default,
+    .ui-widget-header .ui-state-default,
+    .ui-button,
+
+    /* We use html here because we need a greater specificity to make sure disabled
+works properly when clicked or hovered */
+    html .ui-button.ui-state-disabled:hover,
+    html .ui-button.ui-state-disabled:active {
+      border: 1px solid #c5c5c5;
+      background: #f6f6f6;
+      font-weight: normal;
+      color: #454545;
+    }
+
+    .ui-state-default a,
+    .ui-state-default a:link,
+    .ui-state-default a:visited,
+    a.ui-button,
+    a:link.ui-button,
+    a:visited.ui-button,
+    .ui-button {
+      color: #454545;
+      text-decoration: none;
+    }
+
+    .ui-state-hover,
+    .ui-widget-content .ui-state-hover,
+    .ui-widget-header .ui-state-hover,
+    .ui-state-focus,
+    .ui-widget-content .ui-state-focus,
+    .ui-widget-header .ui-state-focus,
+    .ui-button:hover,
+    .ui-button:focus {
+      border: 1px solid #cccccc;
+      background: #ededed;
+      font-weight: normal;
+      color: #2b2b2b;
+    }
+
+    .ui-state-hover a,
+    .ui-state-hover a:hover,
+    .ui-state-hover a:link,
+    .ui-state-hover a:visited,
+    .ui-state-focus a,
+    .ui-state-focus a:hover,
+    .ui-state-focus a:link,
+    .ui-state-focus a:visited,
+    a.ui-button:hover,
+    a.ui-button:focus {
+      color: #2b2b2b;
+      text-decoration: none;
+    }
+
+    .ui-visual-focus {
+      box-shadow: 0 0 3px 1px rgb(94, 158, 214);
+    }
+
+    .ui-state-active,
+    .ui-widget-content .ui-state-active,
+    .ui-widget-header .ui-state-active,
+    a.ui-button:active,
+    .ui-button:active,
+    .ui-button.ui-state-active:hover {
+      border: 1px solid #003eff;
+      background: #007fff;
+      font-weight: normal;
+      color: #ffffff;
+    }
+
+    .ui-icon-background,
+    .ui-state-active .ui-icon-background {
+      border: #003eff;
+      background-color: #ffffff;
+    }
+
+    .ui-state-active a,
+    .ui-state-active a:link,
+    .ui-state-active a:visited {
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    .ui-datepicker {
+      width: 17em;
+      padding: .2em .2em 0;
+      display: none;
+    }
+
+    .ui-datepicker .ui-datepicker-header {
+      position: relative;
+      padding: .2em 0;
+    }
+
+    .ui-datepicker .ui-datepicker-prev,
+    .ui-datepicker .ui-datepicker-next {
+      position: absolute;
+      top: 2px;
+      width: 1.8em;
+      height: 1.8em;
+    }
+
+    .ui-datepicker .ui-datepicker-prev-hover,
+    .ui-datepicker .ui-datepicker-next-hover {
+      top: 1px;
+    }
+
+    .ui-datepicker .ui-datepicker-prev {
+      left: 2px;
+    }
+
+    .ui-datepicker .ui-datepicker-next {
+      right: 2px;
+    }
+
+    .ui-datepicker .ui-datepicker-prev-hover {
+      left: 1px;
+    }
+
+    .ui-datepicker .ui-datepicker-next-hover {
+      right: 1px;
+    }
+
+    .ui-datepicker .ui-datepicker-prev span,
+    .ui-datepicker .ui-datepicker-next span {
+      display: block;
+      position: absolute;
+      left: 50%;
+      margin-left: -8px;
+      top: 50%;
+      margin-top: -8px;
+    }
+
+    .ui-datepicker .ui-datepicker-title {
+      margin: 0 2.3em;
+      line-height: 1.8em;
+      text-align: center;
+    }
+
+    .ui-datepicker .ui-datepicker-title select {
+      font-size: 1em;
+      margin: 1px 0;
+    }
+
+    .ui-datepicker select.ui-datepicker-month,
+    .ui-datepicker select.ui-datepicker-year {
+      width: 45%;
+    }
+
+    .ui-datepicker table {
+      width: 100%;
+      font-size: .9em;
+      border-collapse: collapse;
+      margin: 0 0 .4em;
+    }
+
+    .ui-datepicker th {
+      padding: .7em .3em;
+      text-align: center;
+      font-weight: bold;
+      border: 0;
+    }
+
+    .ui-datepicker td {
+      border: 0;
+      padding: 1px;
+    }
+
+    .ui-datepicker td span,
+    .ui-datepicker td a {
+      display: block;
+      padding: .2em;
+      text-align: right;
+      text-decoration: none;
+    }
+
+    .ui-datepicker .ui-datepicker-buttonpane {
+      background-image: none;
+      margin: .7em 0 0 0;
+      padding: 0 .2em;
+      border-left: 0;
+      border-right: 0;
+      border-bottom: 0;
+    }
+
+    .ui-datepicker .ui-datepicker-buttonpane button {
+      float: right;
+      margin: .5em .2em .4em;
+      cursor: pointer;
+      padding: .2em .6em .3em .6em;
+      width: auto;
+      overflow: visible;
+    }
+
+    .ui-datepicker .ui-datepicker-buttonpane button.ui-datepicker-current {
+      float: left;
+    }
+
+    /* with multiple calendars */
+    .ui-datepicker.ui-datepicker-multi {
+      width: auto;
+    }
+
+    .ui-datepicker-multi .ui-datepicker-group {
+      float: left;
+    }
+
+    .ui-datepicker-multi .ui-datepicker-group table {
+      width: 95%;
+      margin: 0 auto .4em;
+    }
+
+    .ui-datepicker-multi-2 .ui-datepicker-group {
+      width: 50%;
+    }
+
+    .ui-datepicker-multi-3 .ui-datepicker-group {
+      width: 33.3%;
+    }
+
+    .ui-datepicker-multi-4 .ui-datepicker-group {
+      width: 25%;
+    }
+
+    .ui-datepicker-multi .ui-datepicker-group-last .ui-datepicker-header,
+    .ui-datepicker-multi .ui-datepicker-group-middle .ui-datepicker-header {
+      border-left-width: 0;
+    }
+
+    .ui-datepicker-multi .ui-datepicker-buttonpane {
+      clear: left;
+    }
+
+    .ui-datepicker-row-break {
+      clear: both;
+      width: 100%;
+      font-size: 0;
+    }
+
+    /* RTL support */
+    .ui-datepicker-rtl {
+      direction: rtl;
+    }
+
+    .ui-datepicker-rtl .ui-datepicker-prev {
+      right: 2px;
+      left: auto;
+    }
+
+    .ui-datepicker-rtl .ui-datepicker-next {
+      left: 2px;
+      right: auto;
+    }
+
+    .ui-datepicker-rtl .ui-datepicker-prev:hover {
+      right: 1px;
+      left: auto;
+    }
+
+    .ui-datepicker-rtl .ui-datepicker-next:hover {
+      left: 1px;
+      right: auto;
+    }
+
+    .ui-datepicker-rtl .ui-datepicker-buttonpane {
+      clear: right;
+    }
+
+    .ui-datepicker-rtl .ui-datepicker-buttonpane button {
+      float: left;
+    }
+
+    .ui-datepicker-rtl .ui-datepicker-buttonpane button.ui-datepicker-current,
+    .ui-datepicker-rtl .ui-datepicker-group {
+      float: right;
+    }
+
+    .ui-datepicker-rtl .ui-datepicker-group-last .ui-datepicker-header,
+    .ui-datepicker-rtl .ui-datepicker-group-middle .ui-datepicker-header {
+      border-right-width: 0;
+      border-left-width: 1px;
+    }
+  </style>
+  <!-- Styles -->
+
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"" />
+  <link rel=" stylesheet" href="css/slicknav.css">
+  <!-- <link rel="stylesheet" href="css/animate.min.css" /> -->
+  <link rel="stylesheet" href="css/style.css" class="StyleLink">
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous""></script>
+  <script src=" https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.7.0/jquery.lettering.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+  <script>
+    $(function () {
+      let currDate = new Date();
+      var dd = currDate.getDate();
+
+      var mm = currDate.getMonth() + 1;
+      var yyyy = currDate.getFullYear();
+      if (dd < 10) {
+        dd = '0' + dd;
+      }
+
+      if (mm < 10) {
+        mm = '0' + mm;
+      }
+      currDate = mm + '/' + dd + '/' + yyyy;
+      function noSundays(date) {
+        return [date.getDay() != 0, ''];
+      }
+      $("#datepicker").datepicker({
+        minDate: 0,
+        firstDay: 1,
+        beforeShowDay: noSundays,
+        // beforeShowDay: filterDays,
+        onSelect: function (date, datepicker) {
+          if (date != "") {
+            console.log(date);
+            if (date == currDate) {
+              document.querySelector(".available-hours.soon").classList.remove("active");
+              document.querySelector(".available-hours.now").classList.add("active");
+            } else {
+              document.querySelector(".available-hours.now").classList.remove("active");
+              document.querySelector(".available-hours.soon").classList.add("active");
+            }
+          }
+        }
+      });
+    });
+  </script>
+</head>
+
+<body class="start-repair">
+  <!-- Preloader -->
+  <div class="loader">
+    <div class="word">iDigital...</div>
+    <div class="loadOverlay"></div>
+  </div>
+
+  <script type="text/javascript">
+    function Ticker(elem) {
+      elem.lettering();
+      this.done = false;
+      this.cycleCount = 3;
+      this.cycleCurrent = 0;
+      this.chars = 'iDigital...'.split('');
+      this.charsCount = this.chars.length;
+      this.letters = elem.find('span');
+      this.letterCount = this.letters.length;
+      this.letterCurrent = 0;
+
+      this.letters.each(function () {
+        var $this = $(this);
+        $this.attr('data-orig', $this.text());
+        $this.text('-');
+      });
+    }
+
+    Ticker.prototype.getChar = function () {
+      return this.chars[Math.floor(Math.random() * this.charsCount)];
+    };
+
+    Ticker.prototype.reset = function () {
+      this.done = false;
+      this.cycleCurrent = 0;
+      this.letterCurrent = 0;
+      this.letters.each(function () {
+        var $this = $(this);
+        $this.text($this.attr('data-orig'));
+        $this.removeClass('done');
+      });
+      this.loop();
+    };
+
+    Ticker.prototype.loop = function () {
+      var self = this;
+
+      this.letters.each(function (index, elem) {
+        var $elem = $(elem);
+        if (index >= self.letterCurrent) {
+          if ($elem.text() !== ' ') {
+            $elem.text(self.getChar());
+            $elem.css('opacity', Math.random());
+          }
+        }
+      });
+
+      if (this.cycleCurrent < this.cycleCount) {
+        this.cycleCurrent++;
+      } else if (this.letterCurrent < this.letterCount) {
+        var currLetter = this.letters.eq(this.letterCurrent);
+        this.cycleCurrent = 0;
+        currLetter.text(currLetter.attr('data-orig')).css('opacity', 1).addClass('done');
+        this.letterCurrent++;
+      } else {
+        this.done = true;
+      }
+
+      if (!this.done) {
+        requestAnimationFrame(function () {
+          self.loop();
+        });
+      } else {
+        setTimeout(function () {
+          self.reset();
+        }, 750);
+      }
+    };
+
+    $words = $(".word");
+
+    $words.each(function () {
+      var $this = $(this),
+        ticker = new Ticker($this).reset();
+      $this.data('ticker', ticker);
+    });
+  </script>
+  <!--Ended Preloading -->
+  <!-- ScrollBar -->
+  <div class="scrollbar" id="style-7">
+    <div class="force-overflow"></div>
+  </div>
+  <!-- Back to Top -->
+  <div class="BackTop-wrap">
+    <svg class="BackTop-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+      <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+    </svg>
+  </div>
+  <!-- Navbar -->
+  <nav class="navbar primaryNav navbar-expand-xl navbar-dark p-0 wow animate__animated animate__slideInDown"
+    data-wow-duration="1000ms" data-wow-delay="400ms">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand textLogo p-0" href="index.html">
+          iDigital
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav desktop-nav ms-auto mb-2 mb-lg-0 align-items-center">
+          <li class="nav-item">
+            <a class="nav-link " aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item dropdown service_dropDownMenu">
+            <a class="nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Services
+            </a>
+            <div class="dropdown-menu services-dropdown" data-wow-duration="300ms" data-wow-delay="0ms"
+              aria-labelledby="navbarDropdown">
+              <ul class="nav nav-tabs services-dropdown_wrap" id="services-dropdown_wrap" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <a class="services-dropdown_item" id="home-tab" data-bs-toggle="tab" type="button"
+                    data-bs-target="#home" role="tab" aria-controls="home" aria-selected="true">
+                    <img class="start-repair_services-img" src="img/start_repair/recovery.png" alt="">
+                    <h4 class="start-repair_services-text">Data Recovery</h4>
+                  </a>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <a class="services-dropdown_item" id="profile-tab" data-bs-toggle="tab" type="button"
+                    data-bs-target="#profile" role="tab" aria-controls="profile" aria-selected="false">
+                    <img class="start-repair_services-img" src="img/start_repair/service.png" alt="">
+                    <h4 class="start-repair_services-text">Repair Service</h4>
+                  </a>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <a class="services-dropdown_item" id="contact-tab" data-bs-toggle="tab" type="button"
+                    data-bs-target="#contact" role="tab" aria-controls="contact" aria-selected="false">
+                    <img class="start-repair_services-img" src="img/start_repair/home.png" alt="">
+                    <h4 class="start-repair_services-text">Home Services</h4>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="nav-item dropdown support_dropDownMenu" onmouseover="supportMenu()">
+            <a class="nav-link" id="support-tab" data-bs-toggle="tab" type="button" data-bs-target="#support" role="tab"
+              aria-controls="support" aria-selected="true">
+              Support
+
+            </a>
+          </li>
+
+
+          <li class="nav-item">
+            <a class="nav-link link-search" href="#"><i class="fas fa-search"></i></a>
+          </li>
+          <li class="nav-item ">
+            <!--<a class="nav-link find-your-store" href="#"><img src="img/icons/map-pin.png" />Find Your Store</a>-->
+            <div class="locationbar">
+              <input type="text" class="input LocationInput" placeholder="location">
+              <div class="btn btnLocation"><img src="img/icons/map-pin.png" /><a class="btnTextLocation">Find Your
+                  Store</a></div>
+            </div>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link sign-in btn-primary" href="sign-in.html"><i class="fa fa-arrow-right"></i>Sign In</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link language dropdown-toggle_custom" href="#" id="navbarDropdown" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              <img width="36px" height="24px" class="lang-selected-img" src="img/flags/usa.png" />
+            </a>
+
+            <ul class="dropdown-menu dropdown-menu-end language_dropdown" data-wow-duration="300ms" data-wow-delay="0ms"
+              aria-labelledby="navbarDropdown">
+              <li><a data-lang-code="en-GB" class="dropdown-item selected" href="#"><img
+                    src="img/flags/usa.png" /><span>en</span></a></li>
+              <li><a data-lang-code="fr-FR" class="dropdown-item" href="#"><img
+                    src="img/flags/fr.png" /><span>fr</span></a></li>
+              <li><a data-lang-code="es-ES" class="dropdown-item" href="#"><img
+                    src="img/flags/es.png" /><span>es</span></a></li>
+              <li><a data-lang-code="ar-AR" class="dropdown-item" href="#"><img
+                    src="img/flags/pal.jpg" /><span>ar</span></a></li>
+            </ul>
+          </li>
+        </ul>
+        <img src="img/icons/moon.png" id="icon-mode" class="icon-mode" />
+      </div>
+    </div>
+  </nav>
+
+  <!-- Search icon -->
+  <div class="search-container hide">
+    <div class="link-search"><i class="fas fa-search" style="color:#fff"></i>
+    </div>
+    <div class="search-bar">
+      <form action="" class="ui-widget">
+        <input type="text" class="inputSearch" placeholder="Search iDigital.com" id="inputSearch">
+      </form>
+    </div>
+    <div class="link-close"></div>
+
+    <div class="quick-links">
+      <h2>Quick Links</h2>
+      <ul>
+        <li>
+          <a href="#">Covid -19 information</a>
+        </li>
+        <li>
+          <a href="#">Most popular Questions</a>
+        </li>
+        <li>
+          <a href="#">Amet minim mollit non deserunt</a>
+        </li>
+        <li>
+          <a href="#">Velit officia consequat duis en</a>
+        </li>
+        <li>
+          <a href="#">Exercitation veniam consequat sunt</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="tab-content services-dropdown_menu hide" id="services-dropdown_tab">
+    <div class="tab-pane fade" id="home" role="tabpanel" aria-labelledby="home-tab">
+      <div class="container">
+        <div class="services-swiper_wrap">
+          <!-- Swiper -->
+          <div class="swiper-container services-swiper services-swiper1">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide box">
+                <a href="Single-hard-drive.html" class="services-swiper_item">
+                  <img src="img/services/single_hard.png" alt="">
+                  <h5>Single Hard Drive</h5>
+                </a>
+              </div>
+              <div class="swiper-slide box">
+                <a href="raid-hard.html" class="services-swiper_item">
+                  <img src="img/services/raid_hard.png" alt="">
+                  <h5>Raid Hard Drive</h5>
+                </a>
+              </div>
+              <div class="swiper-slide box">
+                <a href="solid-state.html" class="services-swiper_item">
+                  <img src="img/services/solid_state.png" alt="">
+                  <h5>Solid State</h5>
+                </a>
+              </div>
+              <div class="swiper-slide box">
+                <a href="smartphone.html" class="services-swiper_item">
+                  <img src="img/services/smartphone.png" alt="">
+                  <h5>Smartphone</h5>
+                </a>
+              </div>
+              <div class="swiper-slide box">
+                <a href="Nand&Chip.html" class="services-swiper_item">
+                  <img src="img/services/nand.png" alt="">
+                  <h5>Nand & Chip Off</h5>
+                </a>
+              </div>
+              <div class="swiper-slide box">
+                <a href="USB-flash.html" class="services-swiper_item">
+                  <img src="img/services/flash.png" alt="">
+                  <h5>USB Flash</h5>
+                </a>
+              </div>
+              <div class="swiper-slide box">
+                <a href="file-system.html" class="services-swiper_item">
+                  <img src="img/services/file.png" alt="">
+                  <h5>File System</h5>
+                </a>
+              </div>
+              <div class="swiper-slide box">
+                <a href="Mac-OS.html" class="services-swiper_item">
+                  <img src="img/services/mac.png" alt="">
+                  <h5>Mac OS</h5>
+                </a>
+              </div>
+              <div class="swiper-slide box">
+                <a href="windows-repair.html" class="services-swiper_item">
+                  <img src="img/services/windows.png" alt="">
+                  <h5>Windows</h5>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="Linux&Unix.html" class="services-swiper_item">
+                  <img src="img/services/linux.png" alt="">
+                  <h5>Linux & Unix</h5>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="exchange-repair.html" class="services-swiper_item">
+                  <img src="img/services/exchange.png" alt="">
+                  <h5>Exchange Server</h5>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="sql-server.html" class="services-swiper_item">
+                  <img src="img/services/sql.png" alt="">
+                  <h5>SQL Server</h5>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="virtual-machine.html" class="services-swiper_item">
+                  <img src="img/services/virtual.png" alt="">
+                  <h5>Virtual Machine</h5>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="voip-system.html" class="services-swiper_item">
+                  <img src="img/services/voip.png" alt="">
+                  <h5>VoIP System</h5>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="password.html" class="services-swiper_item">
+                  <img src="img/services/pass.png" alt="">
+                  <h5>Password</h5>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="Bitcoin.html" class="services-swiper_item">
+                  <img src="img/services/bitcoin.png" alt="">
+                  <h5>Bitcoin</h5>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="Tape.html" class="services-swiper_item">
+                  <img src="img/services/tape.png" alt="">
+                  <h5>Tape</h5>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="CD-DVD-Bluray.html" class="services-swiper_item">
+                  <img src="img/services/cd.png" alt="">
+                  <h5>CD - DVD - BLURAY</h5>
+                </a>
+              </div>
+            </div>
+
+          </div>
+          <div class="swiper-button-next services-swiper-button services-swiper1-button"><img
+              src="img/icons/chevron-right.png" /></div>
+          <div class="swiper-button-prev services-swiper-button services-swiper1-button"><img
+              src="img/icons/chevron-left.png" /></div>
+        </div>
+      </div>
+    </div>
+    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+      <div class="container">
+        <div class="services-swiper_wrap">
+          <!-- Swiper -->
+          <div class="swiper-container services-swiper services-swiper2">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <a href="smartphone.html" class="services-swiper_item">
+                  <img src="img/services/smartphone.png" alt="">
+                  <h5>Smartphone</h5>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="SmartWatch.html" class="services-swiper_item">
+                  <img src="img/services/watch.png" alt="">
+                  <h5>Smart Watches</h5>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="tablet.html" class="services-swiper_item">
+                  <img src="img/services/tablet.png" alt="">
+                  <h5>Tablet</h5>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="computer.html" class="services-swiper_item">
+                  <img src="img/services/computer.png" alt="">
+                  <h5>Computer</h5>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="laptop.html" class="services-swiper_item">
+                  <img src="img/services/laptop.png" alt="">
+                  <h5>Laptop</h5>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="game-console-repair.html" class="services-swiper_item">
+                  <img src="img/services/console.png" alt="">
+                  <h5>Game Consoles</h5>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="Drone-Automation.html" class="services-swiper_item">
+                  <img src="img/services/drone.png" alt="">
+                  <h5>Drone & Automation</h5>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="Portable-music-playery.html" class="services-swiper_item">
+                  <img src="img/services/player.png" alt="">
+                  <h5>Portable Music Player</h5>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="Virtual-Reality.html" class="services-swiper_item">
+                  <img src="img/services/vr.png" alt="">
+                  <h5>Virtual Reality</h5>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="sound-system.html" class="services-swiper_item">
+                  <img src="img/services/sound.png" alt="">
+                  <h5>Sound System</h5>
+                </a>
+              </div>
+
+              <div class="swiper-slide">
+                <a href="motherBoard-repair.html" class="services-swiper_item">
+                  <img src="img/services/logic.png" alt="">
+                  <h5>Logic Boards</h5>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="Medical-devices.html" class="services-swiper_item">
+                  <img src="img/services/med.png" alt="">
+                  <h5>Medical Devices</h5>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="home-appliances.html" class="services-swiper_item">
+                  <img src="https://i.postimg.cc/tJ0WCVxV/electric-appliance.png" alt="">
+                  <h5>Appliances</h5>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button-next services-swiper-button services-swiper2-button"><img
+              src="img/icons/chevron-right.png" /></div>
+          <div class="swiper-button-prev services-swiper-button services-swiper2-button"><img
+              src="img/icons/chevron-left.png" /></div>
+        </div>
+      </div>
+    </div>
+    <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+      <div class="container">
+        <div class="services-swiper_wrap">
+          <!-- Swiper -->
+          <div class="swiper-container services-swiper services-swiper3">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <a href="solar-panel.html" class="services-swiper_item">
+                  <img src="img/services/solar.png" alt="">
+                  <h5>Solar Panel</h5>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="smart-home.html" class="services-swiper_item">
+                  <img src="img/services/smarthome.png" alt="">
+                  <h5>Smarthome</h5>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="home-security.html" class="services-swiper_item">
+                  <img src="img/services/security.png" alt="">
+                  <h5>Home Security</h5>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="tv-sound.html" class="services-swiper_item">
+                  <img src="img/services/tv_sound.png" alt="">
+                  <h5>TV Sound System</h5>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button-next services-swiper-button services-swiper3-button"><img
+              src="img/icons/chevron-right.png" /></div>
+          <div class="swiper-button-prev services-swiper-button services-swiper3-button"><img
+              src="img/icons/chevron-left.png" /></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-content support-dropdown_menu hide" id="support-dropdown_tab">
+    <div id="support" role="tabpanel" aria-labelledby="support-tab">
+      <div class="container">
+        <div class="services-swiper_wrap">
+          <!-- Swiper -->
+          <div class="swiper-container services-swiper support-swiper1">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide box">
+                <a href="about-us.html" class="services-swiper_item">
+                  <img src="https://i.postimg.cc/DyshNTMx/team.png" alt="">
+                  <h5>About Us</h5>
+                </a>
+              </div>
+              <div class="swiper-slide box">
+                <a href="contact-us.html" class="services-swiper_item">
+                  <img src="https://i.postimg.cc/MG276kMh/contact-Us.png" alt="">
+                  <h5>Contact Us</h5>
+                </a>
+              </div>
+              <div class="swiper-slide box">
+                <a href="partners.html" class="services-swiper_item">
+                  <img src="https://i.postimg.cc/43t474nc/team-1.png" alt="">
+                  <h5>Partners</h5>
+                </a>
+              </div>
+              <div class="swiper-slide box">
+                <a href="franchising.html" class="services-swiper_item">
+                  <img src="https://i.postimg.cc/nhLzM1Yy/franchise.png" alt="">
+                  <h5>Franchising</h5>
+                </a>
+              </div>
+              <div class="swiper-slide box">
+                <a href="pricing.html" class="services-swiper_item">
+                  <img src="https://i.postimg.cc/tgNnxgnf/price-tag.png" alt="">
+                  <h5>Pricing</h5>
+                </a>
+              </div>
+              <div class="swiper-slide box">
+                <a href="Policies.html" class="services-swiper_item">
+                  <img src="https://i.postimg.cc/hvp0brJk/privacy-policy.png" alt="">
+                  <h5>Policies</h5>
+                </a>
+              </div>
+              <div class="swiper-slide box">
+                <a href="go-green.html" class="services-swiper_item">
+                  <img src="https://i.postimg.cc/Zq7D4JKk/353727633-979064989956272-7164428973325253639-n.png" alt="">
+                  <h5>Go Green life at iDigital</h5>
+                </a>
+              </div>
+              <div class="swiper-slide box">
+                <a href="iDigital-careers.html" class="services-swiper_item">
+                  <img src="https://i.postimg.cc/HWvznTM3/career-choice.png" alt="">
+                  <h5>iDigital Career</h5>
+                </a>
+              </div>
+              <div class="swiper-slide box">
+                <a href="work-at-iDigital.html" class="services-swiper_item">
+                  <img src="https://i.postimg.cc/tJcsjSYt/work.png" alt="">
+                  <h5>Work at iDigital</h5>
+                </a>
+              </div>
+              <div class="swiper-slide box">
+                <a href="life-at-iDigital.html" class="services-swiper_item">
+                  <img src="https://i.postimg.cc/4NtWSrK5/working-at-home.png" alt="">
+                  <h5>life at iDigital</h5>
+                </a>
+              </div>
+              <div class="swiper-slide box">
+                <a href="blog.html" class="services-swiper_item">
+                  <img src="https://i.postimg.cc/kMvzRgL3/blog.png" alt="">
+                  <h5>Blog</h5>
+                </a>
+              </div>
+              <div class="swiper-slide box">
+                <a href="solid-state.html" class="services-swiper_item">
+                  <img src="https://i.postimg.cc/sDBbTQck/a86e5695-6268-441b-bf2a-8fd4473969ba.png" alt="">
+                  <h5>Discussion</h5>
+                </a>
+              </div>
+              <div class="swiper-slide box">
+                <a href="faq.html" class="services-swiper_item">
+                  <img src="https://i.postimg.cc/T1ryqYpB/question.png" alt="">
+                  <h5>FAQ</h5>
+                </a>
+              </div>
+
+            </div>
+
+          </div>
+          <div class="swiper-button-next support-swiper-button support-swiper1-button"><img
+              src="img/icons/chevron-right.png" /></div>
+          <div class="swiper-button-prev support-swiper-button support-swiper1-button"><img
+              src="img/icons/chevron-left.png" /></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Mobile Menu Start -->
+  <ul class="mobile-menu">
+    <li>
+      <a href="index.html">Home</a>
+    </li>
+    <li>Services
+      <ul class="submenu">
+        <li class="submenu-item"><img class="img-fluid" src="img/start_repair/recovery.png" alt="">Data
+          Recovery
+          <ul class="submenu-list">
+            <li><a href="Single-hard-drive.html">Single Hard Drive</a></li>
+            <li><a href="raid-hard.html">Raid Hard Drive</a></li>
+            <li><a href="solid-state.html">Solid State</a></li>
+            <li><a href="smartphone.html">Smartphone</a></li>
+            <li><a href="Nand&Chip.html">Nand & Chip Off</a></li>
+            <li><a href="USB-flash.html">USB Flash</a></li>
+            <li><a href="file-system.html">File System</a></li>
+            <li><a href="Mac-OS.html">Mac OS</a></li>
+            <li><a href="windows-repair.html">Windows</a></li>
+            <li><a href="life-at-iDigital.html">Linux & Unix</a></li>
+            <li><a href="exchange-repair.html">Exchange Server</a></li>
+            <li><a href="sql-server.html">SQL Server</a></li>
+            <li><a href="virtual-machine.html">Virtual Machine</a></li>
+            <li><a href="voip-system.html">VoIP System</a></li>
+            <li><a href="password.html">Password</a></li>
+            <li><a href="Bitcoin.html">Bitcoin</a></li>
+            <li><a href="Tape.html">Tape</a></li>
+            <li><a href="CD-DVD-Bluray.html">CD - DVD - BLURAY</a></li>
+          </ul>
+        </li>
+        <li class="submenu-item"><img class="img-fluid" src="img/start_repair/service.png" alt="">Repair
+          Service
+          <ul class="submenu-list">
+            <li><a href="smartphone.html">Smartphone</a></li>
+            <li><a href="SmartWatch.html">Smart Watches</a></li>
+            <li><a href="tablet.html">Tablet</a></li>
+            <li><a href="computer.html">Computer</a></li>
+            <li><a href="laptop.html">Laptop</a></li>
+            <li><a href="game-console-repair.html">Game Consoles</a></li>
+            <li><a href="Drone-Automation.html">Drone & Automation</a></li>
+            <li><a href="Portable-music-playery.html">Portable Music Player</a></li>
+            <li><a href="Virtual-Reality.html">Virtual Reality</a></li>
+            <li><a href="sound-system.html">Sound System</a></li>
+            <li><a href="motherBoard-repair.html">Logic Boards</a></li>
+            <li><a href="Medical-devices.html">Medical Devices</a></li>
+            <li><a href="appliances.html">Appliances</a></li>
+          </ul>
+
+        </li>
+        <li class="submenu-item"><img class="img-fluid" src="img/start_repair/home.png" alt="">Home Services
+          <ul class="submenu-list">
+            <li><a href="solar-panel.html">Solar Panel</a></li>
+            <li><a href="smart-home.html">Smarthome</a></li>
+            <li><a href="home-security.html">Home Security</a></li>
+            <li><a href="tv-sound.html">TV Sound System</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li>
+      Support
+      <ul class="submenu supportSubmenu">
+        <li><a href="about-us.html">About Us</a></li>
+        <li><a href="contact-us.html">Contact Us</a></li>
+        <li><a href="partners.html">Partners</a></li>
+        <li><a href="franchising.html">Franchising</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="Policies.html">Policies</a></li>
+        <li><a href="go-green.html">Go Green life at iDigtal</a></li>
+        <li><a href="iDigital-careers.html">iDigital Career</a></li>
+        <li><a href="work-at-iDigital.html">Work at iDigital</a></li>
+        <li><a href="life-at-iDigital.html">life at iDigital</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="discussion.html">discussion</a></li>
+        <li><a href="faq.html">faq</a></li>
+
+      </ul>
+    </li>
+    <li>
+      <a href="contact-us.html">Contact</a>
+    </li>
+    <li>
+      <a href="covid19.html">Covid 19</a>
+    </li>
+    <li>
+      Search
+      <ul class="submenu">
+        <li>
+          <form class="" action="index.html" method="post">
+            <input type="text" class="form-control" placeholder="Search iDigital.com">
+          </form>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="sign-in.html">Sign In</a>
+    </li>
+    <li>
+      Language
+      <ul class="submenu language_dropdown">
+        <li><a data-lang-code="en-GB" class="dropdown-item selected" href="#"><img
+              src="img/flags/usa.png" /><span>en</span></a></li>
+        <li><a data-lang-code="fr-FR" class="dropdown-item" href="#"><img src="img/flags/fr.png" /><span>fr</span></a>
+        </li>
+        <li><a data-lang-code="es-ES" class="dropdown-item" href="#"><img src="img/flags/es.png" /><span>es</span></a>
+        </li>
+        <li><a data-lang-code="ar-AR" class="dropdown-item" href="#"><img src="img/flags/ar.png" /><span>ar</span></a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <img class="icon-mode-mobile" onclick="MobileMode()" src="img/icons/moon.png" />
+    </li>
+  </ul>
+  <!-- Mobile Menu End -->
+  <div class="overlay"></div>
+
+
+  <section class="pb-0 wow animate__animated animate__fadeIn start-repair-section" data-wow-duration="1000ms"
+    data-wow-delay="300ms">
+    <div class="container">
+      <div class="row d-flex justify-content-xl-between justify-content-md-around progressBar">
+        <div class="col-10 offset-1">
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+          <div class="row progress-wrap">
+            <div class="col-1 progress-item status" progress-val="p1" id="progress-item1">
+              <p>1</p>
+              <span>Select Repair Type</span>
+            </div>
+            <div class="col-1 progress-item" progress-val="p2" id="progress-item2">
+              <p>2</p>
+              <span>Select Repair Category</span>
+            </div>
+            <div class="col-1 progress-item" progress-val="p3" id="progress-item3">
+              <p>3</p>
+              <span>Select Manu-<br>facturer</span>
+            </div>
+            <div class="col-1 progress-item" progress-val="p4" id="progress-item4">
+              <p>4</p>
+              <span> Select Model</span>
+            </div>
+            <div class="col-1 progress-item" progress-val="p5" id="progress-item5">
+              <p>5</p>
+              <span>Select Problem</span>
+            </div>
+            <div class="col-1 progress-item " progress-val="p6" id="progress-item6">
+              <p>6</p>
+              <span> Select Type</span>
+            </div>
+            <div class="col-1 progress-item" progress-val="p7" id="progress-item7">
+              <p>7</p>
+              <span>Select Date& Time</span>
+            </div>
+            <div class="col-1 progress-item" progress-val="p8" id="progress-item8">
+              <p>8</p>
+              <span> Select Details</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-8 offset-lg-2 p-lg-0">
+          <h2 class="start-repair_main-title text-center">
+            <span class="step-title active"><span>Please Select</span> Repair Type</span>
+            <span class="step-title"><span>Please Choose Device</span> Category</span>
+            <span class="step-title"><span>Please Choose Device</span> Manufacturer</span>
+            <span class="step-title"><span>Please Choose Device</span> Model</span>
+            <span class="step-title"><span>Please Choose Device</span> Problem</span>
+            <span class="step-title"><span>Please Select</span> Type</span>
+            <span class="step-title"><span>Select Appointment</span> Date&Time</span>
+            <span class="step-title"><span>Enter</span> your details</span>
+          </h2>
+        </div>
+      </div>
+      <div class="row">
+        <!-- <div class="col-xl-8 offset-xl-2 col-md-12"> -->
+        <div class="col-xl-12 col-md-12"></div>
+        <!-- Start Select Repair Type -->
+        <div id="start-repair_services-Repairtype" class="start-repair_services active">
+          <div class="row start-repair_services-wrap d-flex justify-content-center px-md-5  ">
+            <div class="col-lg-auto col-md-5 col-12 d-flex justify-content-center">
+              <div class="start-repair_services-item All-start-repair_services-item start-repair_services-item-type"
+                service-val="s1">
+                <img class="start-repair_services-img" src="https://i.postimg.cc/VsXCsqVn/repair-tools.png" alt="">
+                <h4 class="start-repair_services-text">Repair</h4>
+              </div>
+            </div>
+            <div class="col-lg-auto col-md-5 col-12 d-flex justify-content-center">
+              <div class="start-repair_services-item All-start-repair_services-item start-repair_services-item-type"
+                service-val="s1">
+                <img class="start-repair_services-img" src="https://i.postimg.cc/wTKQ0xSc/claim.png" alt="">
+                <h4 class="start-repair_services-text">Claim Warranty</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--End Select Repair Type -->
+        <!--Start Select Repair Category -->
+        <div id="start-repair_services-category" class="start-repair_services">
+          <div class="row start-repair_services-wrap justify-content-center ">
+            <div class="col-lg-2 col-md-4 col-12 d-flex justify-content-center">
+              <a href="#SubDataRecovery"
+                class="start-repair_services-item All-start-repair_services-item start-repair_services-choose"
+                service-val="s2">
+                <img class="start-repair_services-img" src="https://i.postimg.cc/6pMRJB1P/Mobile.png" alt="">
+                <h4 class="start-repair_services-text">Mobile Repair</h4>
+              </a>
+            </div>
+            <div class="col-lg-2 col-md-4 col-12 d-flex justify-content-center">
+              <a href="#SubDataRecovery"
+                class="start-repair_services-item All-start-repair_services-item start-repair_services-choose"
+                service-val="s2">
+                <img class="start-repair_services-img" src="https://i.postimg.cc/TYqg0Vjf/mac.png" alt="">
+                <h4 class="start-repair_services-text">Mac Repair</h4>
+              </a>
+            </div>
+            <div class="col-lg-2 col-md-4 col-12 d-flex justify-content-center">
+              <a href="#SubDataRecovery"
+                class="start-repair_services-item All-start-repair_services-item start-repair_services-choose"
+                service-val="s2">
+                <img class="start-repair_services-img" src="https://i.postimg.cc/N0yK3mXy/tablet.png" alt="">
+                <h4 class="start-repair_services-text">Tablet Repair</h4>
+              </a>
+            </div>
+            <div class="col-lg-2 col-md-4 col-12 d-flex justify-content-center">
+              <a id="DataRecoveryChoice" href="#SubDataRecovery"
+                class="start-repair_services-item All-start-repair_services-item start-repair_services-choose"
+                service-val="s2">
+                <img class="start-repair_services-img" src="https://i.postimg.cc/MTQjQVKk/recovery.png" alt="">
+                <h4 class="start-repair_services-text">Data Recovery</h4>
+              </a>
+            </div>
+            <div class="col-lg-2 col-md-4 col-12 d-flex justify-content-center">
+              <a id="RepairServiceChoice" href="#SubRepairServices"
+                class="start-repair_services-item All-start-repair_services-item start-repair_services-choose"
+                service-val="s2">
+                <img class="start-repair_services-img" src="https://i.postimg.cc/sfWnsB7L/service.png" alt="">
+                <h4 class="start-repair_services-text">Repair Service</h4>
+              </a>
+            </div>
+            <div class="col-lg-2 col-md-4 col-12 d-flex justify-content-center">
+              <a id="HomeSecurityChoice" href="#SubHomeServices"
+                class="start-repair_services-item All-start-repair_services-item start-repair_services-choose"
+                service-val="s2">
+                <img class="start-repair_services-img" src="https://i.postimg.cc/0QTDWZH2/home.png" alt="">
+                <h4 class="start-repair_services-text">Home Services</h4>
+              </a>
+            </div>
+            <div class="col-lg-2 col-md-4 col-12 d-flex justify-content-center">
+              <a href="#SubDataRecovery"
+                class="start-repair_services-item All-start-repair_services-item start-repair_services-choose"
+                service-val="s2">
+                <img class="start-repair_services-img" src="https://i.postimg.cc/RV9nWWk8/PC.png" alt="">
+                <h4 class="start-repair_services-text">Laptop/PC Devices Repair</h4>
+              </a>
+            </div>
+            <div class="col-lg-2 col-md-4 col-12 d-flex justify-content-center">
+              <a href="#SubDataRecovery"
+                class="start-repair_services-item All-start-repair_services-item start-repair_services-choose"
+                service-val="s2">
+                <img class="start-repair_services-img" src="https://i.postimg.cc/Wz7zG7By/watch.png" alt="">
+                <h4 class="start-repair_services-text">Smart Watch</h4>
+              </a>
+            </div>
+            <div class="col-lg-2 col-md-4 col-12 d-flex justify-content-center">
+              <a href="#SubDataRecovery"
+                class="start-repair_services-item All-start-repair_services-item start-repair_services-choose"
+                service-val="s2">
+                <img class="start-repair_services-img" src="https://i.postimg.cc/SQ9W2FJX/game.png" alt="">
+                <h4 class="start-repair_services-text">Game Console</h4>
+              </a>
+            </div>
+            <div class="col-lg-2 col-md-4 col-12 d-flex justify-content-center">
+              <a href="#SubDataRecovery"
+                class="start-repair_services-item All-start-repair_services-item start-repair_services-choose"
+                service-val="s2">
+                <img class="start-repair_services-img" src="https://i.postimg.cc/fLtYf1Cr/drone.png" alt="">
+                <h4 class="start-repair_services-text">Drone</h4>
+              </a>
+            </div>
+            <div class="col-lg-2 col-md-4 col-12 d-flex justify-content-center">
+              <a href="#SubDataRecovery"
+                class="start-repair_services-item All-start-repair_services-item start-repair_services-choose"
+                service-val="s2">
+                <img class="start-repair_services-img" src="https://i.postimg.cc/pdgmRrQs/tv.png" alt="">
+                <h4 class="start-repair_services-text">TV</h4>
+              </a>
+            </div>
+            <div class="col-lg-2 col-md-4 col-12 d-flex justify-content-center">
+              <a href="#SubDataRecovery"
+                class="start-repair_services-item All-start-repair_services-item start-repair_services-choose"
+                service-val="s2">
+                <img class="start-repair_services-img" src="https://i.postimg.cc/R0qtv2kZ/music.png" alt="">
+                <h4 class="start-repair_services-text">Music Players</h4>
+              </a>
+            </div>
+            <div class="col-lg-2 col-md-4 col-12 d-flex justify-content-center">
+              <a href="#SubDataRecovery"
+                class="start-repair_services-item All-start-repair_services-item start-repair_services-choose"
+                service-val="s2">
+                <img class="start-repair_services-img" src="https://i.postimg.cc/vTyDxKN9/vr.png" alt="">
+                <h4 class="start-repair_services-text">VR Devices</h4>
+              </a>
+            </div>
+            <div class="col-lg-2 col-md-4 col-12 d-flex justify-content-center">
+              <a href="#SubDataRecovery"
+                class="start-repair_services-item All-start-repair_services-item start-repair_services-choose"
+                service-val="s2">
+                <img class="start-repair_services-img" src="https://i.postimg.cc/zGzWcypW/medical.png" alt="">
+                <h4 class="start-repair_services-text">Medcial Devices</h4>
+              </a>
+            </div>
+            <div class="col-lg-2 col-md-4 col-12 d-flex justify-content-center">
+              <a href="#SubDataRecovery"
+                class="start-repair_services-item All-start-repair_services-item start-repair_services-choose"
+                service-val="s2">
+                <img class="start-repair_services-img" src="https://i.postimg.cc/6qV2HKvY/recorder.png" alt="">
+                <h4 class="start-repair_services-text">Sound Records</h4>
+              </a>
+            </div>
+            <div class="col-lg-2 col-md-4 col-12 d-flex justify-content-center">
+              <a href="#SubDataRecovery"
+                class="start-repair_services-item All-start-repair_services-item start-repair_services-choose"
+                service-val="s2">
+                <img class="start-repair_services-img" src="https://i.postimg.cc/L6MjjC1x/logic-Boards.png" alt="">
+                <h4 class="start-repair_services-text">Logic Boards</h4>
+              </a>
+            </div>
+            <div class="col-lg-2 col-md-4 col-12 d-flex justify-content-center">
+              <a href="#SubDataRecovery"
+                class="start-repair_services-item All-start-repair_services-item start-repair_services-choose"
+                service-val="s2">
+                <img class="start-repair_services-img" src="https://i.postimg.cc/kMRyQRhg/camera.png" alt="">
+                <h4 class="start-repair_services-text">Cameras</h4>
+              </a>
+            </div>
+            <div class="col-lg-2 col-md-4 col-12 d-flex justify-content-center">
+              <a href="#SubDataRecovery"
+                class="start-repair_services-item All-start-repair_services-item start-repair_services-choose"
+                service-val="s2">
+                <img class="start-repair_services-img" src="https://i.postimg.cc/x8VNy8cX/printer.png" alt="">
+                <h4 class="start-repair_services-text">Printers</h4>
+              </a>
+            </div>
+            <div class="col-lg-2 col-md-4 col-12 d-flex justify-content-center">
+              <a href="#SubDataRecovery"
+                class="start-repair_services-item All-start-repair_services-item start-repair_services-choose"
+                service-val="s2">
+                <img class="start-repair_services-img" src="https://i.postimg.cc/wj4t4018/support.png" alt="">
+                <h4 class="start-repair_services-text">IT Support</h4>
+              </a>
+            </div>
+            <div class="col-lg-2 col-md-4 col-12 d-flex justify-content-center">
+              <a href="#SubDataRecovery"
+                class="start-repair_services-item All-start-repair_services-item start-repair_services-choose"
+                service-val="s2">
+                <img class="start-repair_services-img" src="https://i.postimg.cc/XYYGgT7k/security-support.png" alt="">
+                <h4 class="start-repair_services-text">Cyber Security Support</h4>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--End Select Repair Category -->
+      <!--Start Select Repair Brand -->
+      <div id="start-repair_services-brand" class="start-repair_services justify-content-sm-between">
+        <div class="row start-repair_brand-wrap justify-content-center ">
+          <div class="col-lg-3 col-md-4 p-md-0">
+            <label class="start-repair_brand-item All-start-repair_services-item" service-val="s3">
+              <img src="https://i.postimg.cc/9FysfCG1/xbox.png" alt="">
+              <input aria-label="an appropriate label" type="checkbox"
+                class="start-repair_brand-checkbox form-check-input" name="" value="">
+            </label>
+          </div>
+          <div class="col-lg-3 col-md-4 p-md-0">
+            <label class="start-repair_brand-item All-start-repair_services-item" service-val="s3">
+              <img src="https://i.postimg.cc/13Qh0f9L/intel.png" alt="">
+              <input aria-label="an appropriate label" type="checkbox"
+                class="start-repair_brand-checkbox form-check-input" name="" value="">
+            </label>
+          </div>
+          <div class="col-lg-3 col-md-4 p-md-0">
+            <label class="start-repair_brand-item All-start-repair_services-item" service-val="s3">
+              <img src="https://i.postimg.cc/x8wg2JxY/alcatel.png" alt="">
+              <input aria-label="an appropriate label" type="checkbox"
+                class="start-repair_brand-checkbox form-check-input" name="" value="">
+            </label>
+          </div>
+          <div class="col-lg-3 col-md-4 p-md-0">
+            <label class="start-repair_brand-item All-start-repair_services-item" service-val="s3">
+              <img src="https://i.postimg.cc/mrjdHrDN/asus.png" alt="">
+              <input aria-label="an appropriate label" type="checkbox"
+                class="start-repair_brand-checkbox form-check-input" name="" value="">
+            </label>
+          </div>
+          <div class="col-lg-3 col-md-4 p-md-0">
+            <label class="start-repair_brand-item All-start-repair_services-item" service-val="s3">
+              <img src="https://i.postimg.cc/Hnc3R4tB/coolpad.png" alt="">
+              <input aria-label="an appropriate label" type="checkbox"
+                class="start-repair_brand-checkbox form-check-input" name="" value="">
+            </label>
+          </div>
+          <div class="col-lg-3 col-md-4 p-md-0">
+            <label class="start-repair_brand-item All-start-repair_services-item" service-val="s3">
+              <img src="https://i.postimg.cc/PrZn8mkW/hp.png" alt="">
+              <input aria-label="an appropriate label" type="checkbox"
+                class="start-repair_brand-checkbox form-check-input" name="" value="">
+            </label>
+          </div>
+          <div class="col-lg-3 col-md-4 p-md-0">
+            <label class="start-repair_brand-item All-start-repair_services-item" service-val="s3">
+              <img src="https://i.postimg.cc/cJ09C3sL/acer.png" alt="">
+              <input aria-label="an appropriate label" type="checkbox"
+                class="start-repair_brand-checkbox form-check-input" name="" value="">
+            </label>
+          </div>
+          <div class="col-lg-3 col-md-4 p-md-0">
+            <label class="start-repair_brand-item All-start-repair_services-item" service-val="s3">
+              <img src="https://i.postimg.cc/xdfw7hN5/lg.png" alt="">
+              <input aria-label="an appropriate label" type="checkbox"
+                class="start-repair_brand-checkbox form-check-input" name="" value="">
+            </label>
+          </div>
+          <div class="col-lg-3 col-md-4 p-md-0">
+            <label class="start-repair_brand-item All-start-repair_services-item" service-val="s3">
+              <img src="https://i.postimg.cc/B6wMmw2j/apple.png" alt="">
+              <input aria-label="an appropriate label" type="checkbox"
+                class="start-repair_brand-checkbox form-check-input" name="" value="">
+            </label>
+          </div>
+          <div class="col-lg-3 col-md-4 p-md-0">
+            <label class="start-repair_brand-item All-start-repair_services-item">
+              <img src="https://i.postimg.cc/d1Xgh0HN/nintendo.png" alt="">
+              <input aria-label="an appropriate label" type="checkbox"
+                class="start-repair_brand-checkbox form-check-input" name="" value="">
+            </label>
+          </div>
+          <div class="col-lg-3 col-md-4 p-md-0">
+            <label class="start-repair_brand-item All-start-repair_services-item" service-val="s3">
+              <img src="https://i.postimg.cc/L8RwYwDS/xiaomi.png" alt="">
+              <input aria-label="an appropriate label" type="checkbox"
+                class="start-repair_brand-checkbox form-check-input" name="" value="">
+            </label>
+          </div>
+          <div class="col-lg-3 col-md-4 p-md-0">
+            <label class="start-repair_brand-item All-start-repair_services-item" service-val="s3">
+              <img src="https://i.postimg.cc/fb8GhCxN/microsoft.png" alt="">
+              <input aria-label="an appropriate label" type="checkbox"
+                class="start-repair_brand-checkbox form-check-input" name="" value="">
+            </label>
+          </div>
+          <div class="col-lg-3 col-md-4 p-md-0">
+            <label class="start-repair_brand-item All-start-repair_services-item" service-val="s3">
+              <img src="https://i.postimg.cc/TwPtqX58/blackberry.png" alt="">
+              <input aria-label="an appropriate label" type="checkbox"
+                class="start-repair_brand-checkbox form-check-input" name="" value="">
+            </label>
+          </div>
+          <div class="col-lg-3 col-md-4 p-md-0">
+            <label class="start-repair_brand-item All-start-repair_services-item" service-val="s3">
+              <img src="https://i.postimg.cc/wxndvwnx/google.png" alt="">
+              <input aria-label="an appropriate label" type="checkbox"
+                class="start-repair_brand-checkbox form-check-input" name="" value="">
+            </label>
+          </div>
+          <div class="col-lg-3 col-md-4 p-md-0">
+            <label class="start-repair_brand-item All-start-repair_services-item" service-val="s3">
+              <img src="https://i.postimg.cc/D0XHLKRv/samsung.png" alt="">
+              <input aria-label="an appropriate label" type="checkbox"
+                class="start-repair_brand-checkbox form-check-input" name="" value="">
+            </label>
+          </div>
+          <div class="col-lg-3 col-md-4 p-md-0">
+            <label class="start-repair_brand-item All-start-repair_services-item" service-val="s3">
+              <img src="https://i.postimg.cc/CxsycS5d/lenovo.png" alt="">
+              <input aria-label="an appropriate label" type="checkbox"
+                class="start-repair_brand-checkbox form-check-input" name="" value="">
+            </label>
+          </div>
+          <div class="col-lg-3 col-md-4 p-md-0">
+            <label class="start-repair_brand-item All-start-repair_services-item" service-val="s3">
+              <img src="https://i.postimg.cc/662DDdqk/sonim.png" alt="">
+              <input aria-label="an appropriate label" type="checkbox"
+                class="start-repair_brand-checkbox form-check-input" name="" value="">
+            </label>
+          </div>
+          <div class="col-lg-3 col-md-4 p-md-0">
+            <label class="start-repair_brand-item All-start-repair_services-item" service-val="s3">
+              <img src="https://i.postimg.cc/Kc12x6qs/dell.png" alt="">
+              <input aria-label="an appropriate label" type="checkbox"
+                class="start-repair_brand-checkbox form-check-input" name="" value="">
+            </label>
+          </div>
+          <div class="col-lg-3 col-md-4 p-md-0">
+            <label class="start-repair_brand-item All-start-repair_services-item" service-val="s3">
+              <img src="https://i.postimg.cc/2jsPmVBV/verizon.png" alt="">
+              <input aria-label="an appropriate label" type="checkbox"
+                class="start-repair_brand-checkbox form-check-input" name="" value="">
+            </label>
+          </div>
+          <div class="col-lg-3 col-md-4 p-md-0">
+            <label class="start-repair_brand-item All-start-repair_services-item" service-val="s3">
+              <img src="https://i.postimg.cc/XJXTN58y/motorola.png" alt="">
+              <input aria-label="an appropriate label" type="checkbox"
+                class="start-repair_brand-checkbox form-check-input" name="" value="">
+            </label>
+          </div>
+        </div>
+      </div>
+      <!--End Select Repair Brand -->
+      <!--Start Select Repair Device -->
+      <div id="start-repair_services-device" class="start-repair_services">
+        <div class="row start-repair_model-wrap">
+          <div class="col-lg-4">
+            <div class="start-repair_model-big All-start-repair_services-item" service-val="s4">
+              <img class="img-fluid" src="https://i.postimg.cc/tgg3Ysxy/device-model.png" alt="">
+              <p>iPhone 12 Pro Max</p>
+            </div>
+            <a href="#start-repair_problem-section" class="start-repair_model-item All-start-repair_services-item"
+              service-val="s4">
+              <p class="start-repair_model-title">iPhone 12</p>
+              <img class="start-repair_model-image" src="https://i.postimg.cc/jdcqGgjd/iPhoneSE.png" alt="">
+            </a>
+            <a href="#start-repair_problem-section" class="start-repair_model-item All-start-repair_services-item"
+              service-val="s4">
+              <p class="start-repair_model-title">iPhone 11</p>
+              <img class="start-repair_model-image" src="https://i.postimg.cc/MpGZx7c0/Google-Pixel7.png" alt="">
+            </a>
+          </div>
+          <div class="col-lg-4">
+            <a href="#start-repair_problem-section" class="start-repair_model-item All-start-repair_services-item"
+              service-val="s4">
+              <p class="start-repair_model-title">iPhone 12S</p>
+              <img class="start-repair_model-image" src="https://i.postimg.cc/MpGZx7c0/Google-Pixel7.png" alt="">
+            </a>
+            <a href="#start-repair_problem-section" class="start-repair_model-item All-start-repair_services-item"
+              service-val="s4">
+              <p class="start-repair_model-title">iPhone XR</p>
+              <img class="start-repair_model-image" src="https://i.postimg.cc/5NbNKdbR/One-Plus8-Pro.png" alt="">
+            </a>
+            <a href="#start-repair_problem-section" class="start-repair_model-item All-start-repair_services-item"
+              service-val="s4">
+              <p class="start-repair_model-title">iPhone 7</p>
+              <img class="start-repair_model-image" src="https://i.postimg.cc/0NM8K90b/Samsung-Galaxy-S205-G.png"
+                alt="">
+            </a>
+            <a href="#start-repair_problem-section" class="start-repair_model-item All-start-repair_services-item"
+              service-val="s4">
+              <p class="start-repair_model-title">iPhone 8 PLUS</p>
+              <img class="start-repair_model-image" src="https://i.postimg.cc/mg6LrPMv/Samsung-Galaxy-Note205-G.png"
+                alt="">
+            </a>
+            <a href="#start-repair_problem-section" class="start-repair_model-item All-start-repair_services-item"
+              service-val="s4">
+              <p class="start-repair_model-title">iPhone 12S</p>
+              <img class="start-repair_model-image" src="https://i.postimg.cc/jdcqGgjd/iPhoneSE.png" alt="">
+            </a>
+          </div>
+          <div class="col-lg-4">
+            <a href="#start-repair_problem-section" class="start-repair_model-item All-start-repair_services-item"
+              service-val="s4">
+              <p class="start-repair_model-title">iPhone 12</p>
+              <img class="start-repair_model-image" src="https://i.postimg.cc/0NM8K90b/Samsung-Galaxy-S205-G.png"
+                alt="">
+            </a>
+            <a href="#start-repair_problem-section" class="start-repair_model-item All-start-repair_services-item"
+              service-val="s4">
+              <p class="start-repair_model-title">iPhone XS MAX</p>
+              <img class="start-repair_model-image" src="https://i.postimg.cc/mg6LrPMv/Samsung-Galaxy-Note205-G.png"
+                alt="">
+            </a>
+            <a href="#start-repair_problem-section" class="start-repair_model-item All-start-repair_services-item"
+              service-val="s4">
+              <p class="start-repair_model-title">iPhone 11</p>
+              <img class="start-repair_model-image" src="https://i.postimg.cc/MpGZx7c0/Google-Pixel7.png" alt="">
+            </a>
+            <a href="#start-repair_problem-section" class="start-repair_model-item All-start-repair_services-item"
+              service-val="s4">
+              <p class="start-repair_model-title">iPhone X</p>
+              <img class="start-repair_model-image" src="https://i.postimg.cc/5NbNKdbR/One-Plus8-Pro.png" alt="">
+            </a>
+            <a href="#start-repair_problem-section" class="start-repair_model-item All-start-repair_services-item"
+              service-val="s4">
+              <p class="start-repair_model-title">iPhone 7</p>
+              <img class="start-repair_model-image" src="https://i.postimg.cc/0NM8K90b/Samsung-Galaxy-S205-G.png"
+                alt="">
+            </a>
+          </div>
+        </div>
+      </div>
+      <!--End Select Repair Device -->
+      <!--Start Select Repair Problem -->
+      <div id="start-repair_services-problem" class="start-repair_services">
+        <div class="start-repair_problem-wrap ">
+          <div class="row justify-content-center">
+            <!-- <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 col-md-10 offset-md-1 col-12"> -->
+            <div class="col-xl-12 col-lg-12 col-md-12 col-12"></div>
+            <div class="row justify-content-center">
+              <div class="col-lg-2 col-md-6">
+                <div class="start-repair_problem-item All-start-repair_services-item" service-val="s5">
+                  <a href="#start-repair_info-section" class="start-repair_problem-item-link">
+                    <div class="text-center">
+                      <img class="start-repair_problem-image" src="https://i.postimg.cc/FsFxkCc0/broken.png" alt="">
+                      <h4 class="start-repair_problem-title">Broken Screen</h4>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="col-lg-2 col-md-6">
+                <div class="start-repair_problem-item All-start-repair_services-item" service-val="s5">
+                  <a href="#start-repair_info-section" class="start-repair_problem-item-link">
+                    <div class="text-center">
+                      <img class="start-repair_problem-image" src="https://i.postimg.cc/FzNVZD65/battery.png" alt="">
+                      <h4 class="start-repair_problem-title">Short Battery Life</h4>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="col-lg-2 col-md-6">
+                <div class="start-repair_problem-item All-start-repair_services-item" service-val="s5">
+                  <a href="#start-repair_info-section" class="start-repair_problem-item-link">
+                    <div class="text-center">
+                      <img class="start-repair_problem-image" src="https://i.postimg.cc/vHPtr7Lk/cover.png" alt="">
+                      <h4 class="start-repair_problem-title">Back / Housing Cover</h4>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="col-lg-2 col-md-6">
+                <div class="start-repair_problem-item All-start-repair_services-item" service-val="s5">
+                  <a href="#start-repair_info-section" class="start-repair_problem-item-link">
+                    <div class="text-center">
+                      <img class="start-repair_problem-image" src="https://i.postimg.cc/KzFTS4Dt/water.png" alt="">
+                      <h4 class="start-repair_problem-title">Water Damage</h4>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="col-lg-2 col-md-6">
+                <div class="start-repair_problem-item All-start-repair_services-item" service-val="s5">
+                  <a href="#start-repair_info-section" class="start-repair_problem-item-link">
+                    <div class="text-center">
+                      <img class="start-repair_problem-image" src="https://i.postimg.cc/2SVF2q06/charge.png" alt="">
+                      <h4 class="start-repair_problem-title">Wonâ€™t Charge</h4>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <!---->
+              <div class="col-lg-2 col-md-6">
+                <div class="start-repair_problem-item All-start-repair_services-item" service-val="s5">
+                  <a href="#start-repair_info-section" class="start-repair_problem-item-link">
+                    <div class="text-center">
+                      <img class="start-repair_problem-image" src="https://i.postimg.cc/HkR0KpNt/Ear-Speaker.png"
+                        alt="">
+                      <h4 class="start-repair_problem-title">Ear Speaker</h4>
+                    </div>
+                  </a>
+                </div>
+              </div>
+
+              <div class="col-lg-2 col-md-6">
+                <div class="start-repair_problem-item All-start-repair_services-item" service-val="s5">
+                  <a href="#start-repair_info-section" class="start-repair_problem-item-link">
+                    <div class="text-center">
+                      <img class="start-repair_problem-image" src="https://i.postimg.cc/LsPkFcKF/Facial-Detection.png"
+                        alt="">
+                      <h4 class="start-repair_problem-title">Facial Detection</h4>
+                    </div>
+                  </a>
+                </div>
+              </div>
+
+              <div class="col-lg-2 col-md-6">
+                <div class="start-repair_problem-item All-start-repair_services-item" service-val="s5">
+                  <a href="#start-repair_info-section" class="start-repair_problem-item-link">
+                    <div class="text-center">
+                      <img class="start-repair_problem-image" src="https://i.postimg.cc/MZmDTJcW/board.png" alt="">
+                      <h4 class="start-repair_problem-title">Board Repair</h4>
+                    </div>
+                  </a>
+                </div>
+              </div>
+
+              <div class="col-lg-2 col-md-6">
+                <div class="start-repair_problem-item All-start-repair_services-item" service-val="s5">
+                  <a href="#start-repair_info-section" class="start-repair_problem-item-link">
+                    <div class="text-center">
+                      <img class="start-repair_problem-image" src="https://i.postimg.cc/sxm905FB/bluetooth.png" alt="">
+                      <h4 class="start-repair_problem-title">Bluetooth Repair</h4>
+                    </div>
+                  </a>
+                </div>
+              </div>
+
+              <div class="col-lg-2 col-md-6">
+                <div class="start-repair_problem-item All-start-repair_services-item" service-val="s5">
+                  <a href="#start-repair_info-section" class="start-repair_problem-item-link">
+                    <div class="text-center">
+                      <img class="start-repair_problem-image" src="https://i.postimg.cc/T1dnmhyT/HomeBtn.png" alt="">
+                      <h4 class="start-repair_problem-title">Home Button</h4>
+                    </div>
+                  </a>
+                </div>
+              </div>
+
+              <div class="col-lg-2 col-md-6">
+                <div class="start-repair_problem-item All-start-repair_services-item" service-val="s5">
+                  <a href="#start-repair_info-section" class="start-repair_problem-item-link">
+                    <div class="text-center">
+                      <img class="start-repair_problem-image" src="https://i.postimg.cc/W3nk2j5C/wifi.png" alt="">
+                      <h4 class="start-repair_problem-title">Wifi Repair</h4>
+                    </div>
+                  </a>
+                </div>
+              </div>
+
+              <div class="col-lg-2 col-md-6">
+                <div class="start-repair_problem-item All-start-repair_services-item" service-val="s5">
+                  <a href="#start-repair_info-section" class="start-repair_problem-item-link">
+                    <div class="text-center">
+                      <img class="start-repair_problem-image" src="https://i.postimg.cc/W3PGN5TF/fingerprint.png"
+                        alt="">
+                      <h4 class="start-repair_problem-title">Finger Print</h4>
+                    </div>
+                  </a>
+                </div>
+              </div>
+
+              <div class="col-lg-2 col-md-6">
+                <div class="start-repair_problem-item All-start-repair_services-item" service-val="s5">
+                  <a href="#start-repair_info-section" class="start-repair_problem-item-link">
+                    <div class="text-center">
+                      <img class="start-repair_problem-image" src="https://i.postimg.cc/bJHQs1w6/front-Camera.png"
+                        alt="">
+                      <h4 class="start-repair_problem-title">Front Camera Damage</h4>
+                    </div>
+                  </a>
+                </div>
+              </div>
+
+              <div class="col-lg-2 col-md-6">
+                <div class="start-repair_problem-item All-start-repair_services-item" service-val="s5">
+                  <a href="#start-repair_info-section" class="start-repair_problem-item-link">
+                    <div class="text-center">
+                      <img class="start-repair_problem-image" src="https://i.postimg.cc/1XvwKP6w/mic.png" alt="">
+                      <h4 class="start-repair_problem-title">Front Microphone</h4>
+                    </div>
+                  </a>
+                </div>
+              </div>
+
+              <div class="col-lg-2 col-md-6">
+                <div class="start-repair_problem-item All-start-repair_services-item" service-val="s5">
+                  <a href="#start-repair_info-section" class="start-repair_problem-item-link">
+                    <div class="text-center">
+                      <img class="start-repair_problem-image" src="https://i.postimg.cc/dt08VkPB/PowerBtn.png" alt="">
+                      <h4 class="start-repair_problem-title">Power Button</h4>
+                    </div>
+                  </a>
+                </div>
+              </div>
+
+              <div class="col-lg-2 col-md-6">
+                <div class="start-repair_problem-item All-start-repair_services-item" service-val="s5">
+                  <a href="#start-repair_info-section" class="start-repair_problem-item-link">
+                    <div class="text-center">
+                      <img class="start-repair_problem-image" src="https://i.postimg.cc/GhSv8Lb1/Rear-Camera.png"
+                        alt="">
+                      <h4 class="start-repair_problem-title">Rear Camera</h4>
+                    </div>
+                  </a>
+                </div>
+              </div>
+
+              <div class="col-lg-2 col-md-6">
+                <div class="start-repair_problem-item All-start-repair_services-item" service-val="s5">
+                  <a href="#start-repair_info-section" class="start-repair_problem-item-link">
+                    <div class="text-center">
+                      <img class="start-repair_problem-image" src="https://i.postimg.cc/L8YLjcsg/Sim-Card-Tray.png"
+                        alt="">
+                      <h4 class="start-repair_problem-title">Sim Card Tray</h4>
+                    </div>
+                  </a>
+                </div>
+              </div>
+
+              <div class="col-lg-2 col-md-6">
+                <div class="start-repair_problem-item All-start-repair_services-item" service-val="s5">
+                  <a href="#start-repair_info-section" class="start-repair_problem-item-link">
+                    <div class="text-center">
+                      <img class="start-repair_problem-image" src="https://i.postimg.cc/BnrDpm8Y/speaker.png" alt="">
+                      <h4 class="start-repair_problem-title">Speaker</h4>
+                    </div>
+                  </a>
+                </div>
+              </div>
+
+              <div class="col-lg-2 col-md-6">
+                <div class="start-repair_problem-item All-start-repair_services-item" service-val="s5">
+                  <a href="#start-repair_info-section" class="start-repair_problem-item-link">
+                    <div class="text-center">
+                      <img class="start-repair_problem-image" src="https://i.postimg.cc/q72K52yk/Volume-Btn.png" alt="">
+                      <h4 class="start-repair_problem-title">Volume Buttons</h4>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <!---->
+              <div class="col-lg-2 col-md-6">
+                <div class="start-repair_problem-item " id="UnkownProblem">
+                  <a href="#start-repair_info-section" class="start-repair_problem-item-link">
+                    <div class="text-center">
+                      <img class="start-repair_problem-image" src="https://i.postimg.cc/zD7CNwMv/other.png" alt="">
+                      <h4 class="start-repair_problem-title">Donâ€™t know / Other</h4>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--End Select Repair Problem -->
+    <!--Start Select Repair Type -->
+    <div id="start-repair_services-type" class="start-repair_services">
+      <div class="row start-repair_services-wrap d-flex justify-content-center">
+        <div class="col-lg-auto col-md-4 col-12 d-flex justify-content-center">
+          <a href="#start-repair_choose" class="start-repair_services-item All-start-repair_services-item"
+            service-val="s6">
+            <img class="start-repair_services-img" src="https://i.postimg.cc/gjhqm16Z/box.png" alt="">
+            <h4 class="start-repair_services-text">Mail-in repair</h4>
+          </a>
+        </div>
+        <div class="col-lg-auto col-md-4 col-12 d-flex justify-content-center">
+          <a id="ComeToYou" href="#start-repair_choose"
+            class="start-repair_services-item All-start-repair_services-item" service-val="s6">
+            <img class="start-repair_services-img" src="https://i.postimg.cc/760f64mw/walking.png" alt="">
+            <h4 class="start-repair_services-text">Walk In</h4>
+          </a>
+        </div>
+        <div class="col-lg-auto col-md-4 col-12 d-flex justify-content-center">
+          <a id="ComeToYou" href="#start-repair_choose"
+            class="start-repair_services-item All-start-repair_services-item" service-val="s6">
+            <img class="start-repair_services-img" src="https://i.postimg.cc/qv4XHbBN/come.png" alt="">
+            <h4 class="start-repair_services-text">We come to You</h4>
+          </a>
+        </div>
+        <div class="col-lg-auto col-md-4 col-12 d-flex justify-content-center">
+          <a id="MailRepair" href="#start-repair_choose"
+            class="start-repair_services-item All-start-repair_services-item" service-val="s6">
+            <img class="start-repair_services-img" src="https://i.postimg.cc/760f64mw/walking.png" alt="">
+            <h4 class="start-repair_services-text">On Site</h4>
+          </a>
+        </div>
+        <div class="col-lg-auto col-md-4 col-12 d-flex justify-content-center">
+          <a id="Curbside" href="#start-repair_choose" class="start-repair_services-item All-start-repair_services-item"
+            service-val="s6">
+            <img class="start-repair_services-img" src="https://i.postimg.cc/Fsjgq5vt/carry.png" alt="">
+            <h4 class="start-repair_services-text">Carry-in or Curbside</h4>
+          </a>
+        </div>
+        <div class="col-lg-auto col-md-4 col-12 d-flex justify-content-center">
+          <a href="#start-repair_choose" class="start-repair_services-item All-start-repair_services-item"
+            service-val="s6">
+            <img class="start-repair_services-img" src="https://i.postimg.cc/wj25qX30/distance.png" alt="">
+            <h4 class="start-repair_services-text">Drop Off</h4>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!--End Select Repair Type -->
+    <!--Start Select Repair Date&Time -->
+    <div id="start-repair_services-date" service-val="s7"
+      class="start-repair_services col-xl-10 offset-xl-1 col-lg-10 offset-lg-1 col-md-10 offset-md-1 col-12">
+      <div class="col-lg-12">
+        <div class="start-repair_info-block start-repair_info-appointment_details">
+          <p class="appointment_details_subtitle">Making an appointment is optional, but can help speed up your
+            repair by letting us know when to expect you.</p>
+          <hr>
+          <div class="row">
+            <div class="calender col-xl-5 col-lg-5 col-md-12">
+              <!-- <div id="pick-inline"></div> -->
+              <div id="today"></div>
+              <div id="datepicker"></div>
+            </div>
+            <div class="time-calender col-xl-5 col-lg-5 col-md-8 offset-2">
+              <div class="available-hours now active">
+                <div class="available-hours-column" style="float: left;">
+                  <span class="available-hour now">09:00 - 09:30 </span><br><span class="available-hour now">09:30 -
+                    10:00 </span><br><span class="available-hour now">10:00 - 10:30
+                  </span><br><span class="available-hour now">10:30 - 11:00 </span><br><span
+                    class="available-hour now">11:00 -
+                    11:30 </span><br><span class="available-hour now">11:30 - 12:00 </span><br><span
+                    class="available-hour now">12:00 - 12:30 </span><br><span class="available-hour now">12:30 - 13:00
+                  </span><br><span class="available-hour now">13:00 - 13:30 </span><br><span
+                    class="available-hour now">13:30 -
+                    14:00 </span><br>
+                </div>
+
+                <div class="available-hours-column" style="float: left;">
+                  <span class="available-hour now">14:00 - 14:30 </span><br>
+                  <span class="available-hour now">14:30 - 15:00 </span><br><span class="available-hour now">15:00 -
+                    15:30 </span><br><span class="available-hour now">15:30 - 16:00
+                  </span><br><span class="available-hour now">16:00 - 16:30 </span><br><span
+                    class="available-hour now">16:30 -
+                    17:00 </span><br><span class="available-hour now">17:00 - 17:30 </span><br><span
+                    class="available-hour now">17:30 - 18:00 </span><br>
+                </div>
+              </div>
+              <div class="available-hours soon">
+                <div class="available-hours-column" style="float: left;">
+                  <span class="available-hour">09:00 - 09:30 </span><br><span class="available-hour">09:30 - 10:00
+                  </span><br><span class="available-hour">10:00 - 10:30
+                  </span><br><span class="available-hour">10:30 - 11:00 </span><br><span class="available-hour">11:00 -
+                    11:30 </span><br><span class="available-hour">11:30 - 12:00 </span><br><span
+                    class="available-hour">12:00 - 12:30 </span><br><span class="available-hour">12:30 - 13:00
+                  </span><br><span class="available-hour">13:00 - 13:30 </span><br><span class="available-hour">13:30 -
+                    14:00 </span><br>
+                </div>
+
+                <div class="available-hours-column" style="float: left;">
+                  <span class="available-hour">14:00 - 14:30 </span><br><span class="available-hour">15:00 - 15:30
+                  </span><br><span class="available-hour">15:30 - 16:00
+                  </span><br><span class="available-hour">16:00 - 16:30 </span><br><span class="available-hour">16:30 -
+                    17:00 </span><br><span class="available-hour">17:00 - 17:30 </span><br><span
+                    class="available-hour">17:30 - 18:00 </span><br>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="All-start-repair_services-item next" service-val="s7">Next &nbsp; <i
+              class="fa fa-arrow-right"></i></button>
+        </div>
+      </div>
+    </div>
+    <!--End Select Repair Date&Time -->
+    <!--Start Select Repair Details-->
+    <div id="start-repair_services-details" service-val="s8" class="start-repair_services container">
+      <div class="start-repair_info-wrap">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="start-repair_info-block p-0">
+              <form class="needs-validation details" novalidate action="repair-service.html" method="get">
+                <div class="white-section">
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <div class="form-group">
+                        <label for="">First Name*</label>
+                        <input type="text" class="form-control" id="" aria-describedby=""
+                          placeholder="Enter your First Name" minlength="3" required>
+                        <div class="invalid-feedback">
+                          Please provide your first name.
+                        </div>
+                        <div class="valid-feedback">
+                          Looks good!
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-6">
+                      <div class="form-group">
+                        <label for="">Last Name*</label>
+                        <input type="text" class="form-control" id="" aria-describedby=""
+                          placeholder="Enter your Last Name" minlength="3" required>
+                        <div class="invalid-feedback">
+                          Please provide your last name.
+                        </div>
+                        <div class="valid-feedback">
+                          Looks good!
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-6">
+                      <div class="form-group">
+                        <label for="">E-MAIL*</label>
+                        <input type="email" class="form-control" id="" aria-describedby=""
+                          placeholder="Enter your Email" required>
+                        <div class="invalid-feedback">
+                          Please provide a valid email.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-6">
+                      <div class="form-group">
+                        <label for="">Phone Number*</label>
+                        <input type="tel" class="form-control" id="" aria-describedby=""
+                          placeholder="Enter your Phone number" minlength="11" maxlength="13" required>
+                        <div class="invalid-feedback">
+                          Please provide a valid phone number.
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                      <div class="form-group">
+                        <label for="">Security Code*</label>
+                        <input type="text" class="form-control" id="" aria-describedby=""
+                          placeholder="Enter your Security Code" required>
+                        <div class="invalid-feedback">
+                          Please provide a valid Security Code.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-6">
+                      <div class="form-group">
+                        <label for="">Zip Code*</label>
+                        <input type="text" class="form-control" id="" aria-describedby=""
+                          placeholder="Enter your Zip Code" required>
+                        <div class="invalid-feedback">
+                          Please provide a valid zip code.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-6">
+                      <div class="form-group">
+                        <label for="">City*</label>
+                        <input type="text" class="form-control" id="" aria-describedby="" placeholder="Enter your City"
+                          minlength="5" required>
+                        <div class="invalid-feedback">
+                          Please provide a valid City.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-6">
+                      <div class="form-group">
+                        <label for="">Address*</label>
+                        <input type="text" class="form-control" id="" aria-describedby=""
+                          placeholder="Enter your Address" minlength="5 " required>
+                        <div class="invalid-feedback">
+                          Please provide a valid Address.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-12">
+                      <div class="form-group row">
+                        <div class="col-lg-2 col-md-4">
+                          <select class="form-select form-control" id="validationCustom04" required>
+                            <option selected value="IMEI">IMEI *</option>
+                            <option value="Serial">Serial *</option>
+                          </select>
+                        </div>
+                        <div class="col-lg-10 col-md-8">
+                          <input type="text" maxlength="15" minlength="15" class="form-control" id=""
+                            aria-describedby="" placeholder="Enter your Device IMEI/Serial" required>
+                          <div class="invalid-feedback">
+                            Please provide a valid Serial/IMEI, Please lengthen this text to 15.
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+                    <div class="col-lg-12">
+                      <div class="form-group">
+                        <label for="">Message*</label>
+                        <textarea class="form-control" name="message" rows="3"
+                          placeholder="Please provide us with a detailed description of the issue with your device"
+                          required></textarea>
+                        <div class="invalid-feedback">
+                          Please enter your message.
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-12">
+                      <div class="form-group">
+                        <label for="">How did you hear about us</label>
+                        <select class="form-select form-control js-example-basic-single"
+                          aria-label="Default select example" name="state" style="width:100%">
+                          <option selected disabled>Select an Option</option>
+                          <option value="Facebook">Facebook</option>
+                          <option value="Bing">Bing</option>
+                          <option value="SearchEngine">Search Engine</option>
+                          <option value="Referral">Referral</option>
+                          <option value="GoogleAds">Google Ads</option>
+                          <option value="Yelp">Yelp</option>
+
+                          <option value="Apple">Apple</option>
+                          <option value="AT&T">AT&T</option>
+                          <option value="UERIZON">UERIZON</option>
+                          <option value="T-MOBILE">T-MOBILE</option>
+                          <option value="LinkedIn">LinkedIn</option>
+                          <option value="FacebookAds">Facebook Ads</option>
+
+                          <option value="BusinessCardsFlyers">Business Cards Flyers</option>
+                          <option value="Instagram">Instagram</option>
+                          <option value="AffiliateCard">Affiliate Card</option>
+                          <option value="TVAds">TV Ads</option>
+                          <option value="GameStop">Game Stop</option>
+                          <option value="Banner">Banner</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-lg-6">
+                      <div class="form-group">
+                        <a class="btn-white choise" style="border:0; padding:0;" onclick="NewTab()"
+                          data-column="another" data-type="details" data-pay="0">
+                          <i class="fa fa-plus-circle" aria-hidden="true" style="color:green;"></i>
+                          <span class="vm">Add Another Device</span>
+                        </a>
+                      </div>
+                    </div>
+                    <button type="submit" class="btn btn-outline-secondary btn-lg btn-block"
+                      value="submit">Submit</button>
+                  </div>
+                </div>
+                <div class="black-section">
+                  <p>Prefered contact methods</p>
+                  <div class="row">
+                    <div class="col-auto">
+                      <div class="form-check form-switch mb-lg-0">
+                        <input class="form-check-input" type="checkbox" id="sms-check">
+                        <label class="form-check-label" for="sms-check">SMS</label>
+                      </div>
+                    </div>
+                    <div class="col-auto">
+                      <div class="form-check form-switch mb-lg-0">
+                        <input class="form-check-input" type="checkbox" id="email-check" checked>
+                        <label class="form-check-label" for="email-check">Email</label>
+                      </div>
+                    </div>
+                    <div class="col-auto">
+                      <div class="form-check form-switch mb-lg-0">
+                        <input class="form-check-input" type="checkbox" id="phone-check">
+                        <label class="form-check-label" for="phone-check">Phone call</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--End Select Repair Details -->
+    </div>
+    </div>
+  </section>
+
+  <section class="start-repair_choose-service bg-dark pt-0">
+    <div class="container">
+      <div class="start-repair_subservices-wrap">
+        <hr>
+        <h3 class="start-repair_subservices-title">Choose a sub service</h3>
+        <div class="row Sub-Services" id="SubDataRecovery">
+          <div class="col-lg-4 col-md-6">
+            <a href="javascript: void 0" class="start-repair_subservices-item"><i class="fa fa-check"></i>Single Hard
+              Driver</a>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <a href="javascript: void 0" class="start-repair_subservices-item"><i class="fa fa-check"></i>File
+              System</a>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <a href="javascript: void 0" class="start-repair_subservices-item"><i class="fa fa-check"></i>EQL Server
+            </a>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <a href="javascript: void 0" class="start-repair_subservices-item"><i class="fa fa-check"></i>Raid Hard
+              Driver</a>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <a href="javascript: void 0" class="start-repair_subservices-item"><i class="fa fa-check"></i>Mac OS</a>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <a href="javascript: void 0" class="start-repair_subservices-item"><i class="fa fa-check"></i>Virtual
+              Machine</a>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <a href="javascript: void 0" class="start-repair_subservices-item"><i class="fa fa-check"></i>Solid
+              State</a>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <a href="javascript: void 0" class="start-repair_subservices-item"><i class="fa fa-check"></i>Windows</a>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <a href="javascript: void 0" class="start-repair_subservices-item"><i class="fa fa-check"></i>VoIP
+              System</a>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <a href="javascript: void 0" class="start-repair_subservices-item"><i class="fa fa-check"></i>Nand & Chip
+              Off</a>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <a href="javascript: void 0" class="start-repair_subservices-item"><i class="fa fa-check"></i>Linux &
+              Unix</a>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <a href="javascript: void 0" class="start-repair_subservices-item"><i class="fa fa-check"></i>Password</a>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <a href="javascript: void 0" class="start-repair_subservices-item"><i class="fa fa-check"></i>USB Flash</a>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <a href="javascript: void 0" class="start-repair_subservices-item"><i class="fa fa-check"></i>Exchange
+              Server </a>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <a href="javascript: void 0" class="start-repair_subservices-item"><i class="fa fa-check"></i>Bitcoin</a>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <a href="javascript: void 0" class="start-repair_subservices-item"><i class="fa fa-check"></i>Tape</a>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <a href="javascript: void 0" class="start-repair_subservices-item"><i class="fa fa-check"></i>CD - DVD - BLU
+              RAY</a>
+          </div>
+        </div>
+        <div class="row Sub-Services" id="SubRepairServices">
+          <div class="col-lg-4 col-md-6">
+            <a href="javascript: void 0" class="start-repair_subservices-item"><i class="fa fa-check"></i>Smartphone</a>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <a href="javascript: void 0" class="start-repair_subservices-item"><i class="fa fa-check"></i>Smart
+              Watches</a>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <a href="javascript: void 0" class="start-repair_subservices-item"><i class="fa fa-check"></i>Tablet</a>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <a href="javascript: void 0" class="start-repair_subservices-item"><i class="fa fa-check"></i>Computer</a>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <a href="javascript: void 0" class="start-repair_subservices-item"><i class="fa fa-check"></i>Laptop</a>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <a href="javascript: void 0" class="start-repair_subservices-item"><i class="fa fa-check"></i>Game
+              Consoles</a>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <a href="javascript: void 0" class="start-repair_subservices-item"><i class="fa fa-check"></i>Drone &
+              Automation</a>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <a href="javascript: void 0" class="start-repair_subservices-item"><i class="fa fa-check"></i>Portable Music
+              Player</a>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <a href="javascript: void 0" class="start-repair_subservices-item"><i class="fa fa-check"></i>Virtual
+              Reality</a>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <a href="javascript: void 0" class="start-repair_subservices-item"><i class="fa fa-check"></i>Sound
+              System</a>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <a href="javascript: void 0" class="start-repair_subservices-item"><i class="fa fa-check"></i>Logic
+              Boards</a>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <a href="javascript: void 0" class="start-repair_subservices-item"><i class="fa fa-check"></i>Medical
+              Devices</a>
+          </div>
+        </div>
+        <div class="row Sub-Services" id="SubHomeServices">
+          <div class="col-lg-4 col-md-6">
+            <a href="javascript: void 0" class="start-repair_subservices-item"><i class="fa fa-check"></i>Solar
+              Panel</a>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <a href="javascript: void 0" class="start-repair_subservices-item"><i class="fa fa-check"></i>Smarthome</a>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <a href="javascript: void 0" class="start-repair_subservices-item"><i class="fa fa-check"></i>Home
+              Security</a>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <a href="javascript: void 0" class="start-repair_subservices-item"><i class="fa fa-check"></i>TV Sound
+              System</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer start -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 info-col mb-5 mb-md-0">
+          <h2 class="textLogo">iDigital</h2>
+          <form action="javascript:void(0);" class="EmailFormBlue" method="post">
+            <div class="input-group">
+              <input type="email" class="form-control" placeholder="Enter email address" required>
+              <div class="input-group-append">
+                <button class="btn btn-primary" type="submit" value="submit">Send</button>
+                <!-- Modal -->
+                <div class="modal fade" id="verificationModalBlue" tabindex="-1" role="dialog"
+                  aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Verification</h5>
+                        <button type="button" class="close HideVerification" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        Your Subscribe done successfully!
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-primary HideVerification head-btn"
+                          data-dismiss="modal">Submit</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+          <ul class="list-unstyled">
+            <li><i class="fas fa-phone-alt"></i>+1(504)342-9109</li>
+            <hr>
+            <li><i class="far fa-map"></i><span>1851 Rousseau st New Orleans<br> LA 70130 USA</span></li>
+          </ul>
+        </div>
+        <div class="col-md-3 offset-md-1 mb-5 mb-md-0 list-col">
+          <h3>Start your Repair</h3>
+          <ul class="list-unstyled">
+            <li><a href="#">Phone/Tablet Repair</a></li>
+            <li><a href="#">Computer Repair</a></li>
+            <li><a href="#">Game Console Repair</a></li>
+            <li><a href="#">Smart Watch Repair</a></li>
+            <li><a href="#">Drone/Automation Repair</a></li>
+            <li><a href="#">VR Repair</a></li>
+          </ul>
+        </div>
+        <div class="col-md-2 list-col mb-5 mb-md-0">
+          <h3>Company</h3>
+          <ul class="list-unstyled">
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Partnership</a></li>
+          </ul>
+        </div>
+        <div class="col-md-2 list-col mb-5 mb-md-0">
+          <h3>Social</h3>
+          <ul class="list-unstyled">
+            <li><a href="#"><i class="fab fa-linkedin-in"></i>LinkedIn</a></li>
+            <li><a href="#"><i class="fab fa-twitter"></i>Twitter</a></li>
+            <li><a href="#"><i class="fab fa-facebook-f"></i>Facebook</a></li>
+            <li><a href="#"><i class="fab fa-instagram"></i>Instagram</a></li>
+            <li><a href="#"><i class="fab fa-google"></i>Google</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="row copyright">
+        <div class="col-md-6 mb-md-0 mb-2">
+          <a href="#">Privacy Policy / Terms of Use</a>
+        </div>
+        <div class="col-md-6 d-flex justify-content-md-end justify-content-start">
+          <p>Â©2020 All Rights Reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Footer end -->
+
+  <!-- Modal Mobile -->
+  <div class="modal popup-modal fade popup-porblem-style" id="popup-problem-modal" tabindex="-1" role="dialog"
+    aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="container">
+          <h2>What seems to be the problem</h2>
+          <p>What seems to be the problem? If you don't know that's ok too.</p>
+        </div>
+        <div class="container container2">
+          <textarea class="form-control  shadow" name="the-textarea" id="the-textarea" maxlength="300" placeholder=""
+            autofocus required></textarea>
+          <button type="button" class="btn btn-outline-secondary" id="cancelUnknownProblemModal" data-dismiss="modal"
+            aria-label="Close">Cancel</button>
+          <button type="button" class="btn btn-warning All-start-repair_services-item" id="submitUnknownProblemModal"
+            service-val="s5">Send</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Scripts -->
+  <script type="text/javascript">
+    $(".js-example-basic-single").select2();
+
+    (function () {
+      'use strict'
+
+      // Fetch all the forms we want to apply custom Bootstrap validation styles to
+      var forms = document.querySelectorAll('.needs-validation')
+
+      // Loop over them and prevent submission
+      Array.prototype.slice.call(forms)
+        .forEach(function (form) {
+          form.addEventListener('submit', function (event) {
+            if (!form.checkValidity()) {
+              event.preventDefault()
+              event.stopPropagation()
+            }
+
+            form.classList.add('was-validated')
+          }, false)
+        })
+    })();
+
+  </script>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css"
+    integrity="sha256-0i4Y8gKVhpq2EcKC3r4FFCPIIwQWGOWqzQAJpYKdKyQ=" crossorigin="anonymous"">
+  <script src=" https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous""></script>
+  <script src=" https://code.jquery.com/ui/1.14.1/jquery-ui.min.js"
+    integrity="sha256-8lykApyIgj9dWMIK4VPvhLQQ1pOLjP12j4zZnHHMCws=" crossorigin="anonymous""></script>
+  <script src=" https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
+    </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js""></script>
+  <script src=" https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"
+    integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous"
+    async></script>
+  <script src="js/jquery.slicknav.js"></script>
+  <script src="js/wow.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/repair.js"></script>
+  <script defer src="js/datepicker.js"></script>
+</body>
+
+</html>

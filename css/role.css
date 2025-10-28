@@ -1,0 +1,265 @@
+.btnsearch {
+    padding: 19px 20px !important;
+    line-height: 0px !important;
+}
+
+#search-addon {
+    background-color: rgba(218, 218, 218, .1);
+    border-left: 1px #e2e2e2 solid !important;
+    border-top: 1px #e2e2e2 solid !important;
+    border-bottom: 1px #e2e2e2 solid !important;
+    border-right: 0px !important;
+}
+
+.searchinput {
+    border-left: 0px !important;
+    border-top-left-radius: 0% !important;
+}
+
+::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #6c757d !important;
+    opacity: 1;
+    /* Firefox */
+}
+
+input[type="checkbox"] {
+    border: 2px solid #e2e2e2 !important;
+}
+
+input[type="checkbox"]:checked {
+    background-color: #6c757d !important;
+    border-color: #6c757d !important;
+}
+
+
+.pagination_rounded,
+.pagination_square {
+    display: inline-block;
+
+}
+
+.pagination_rounded ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.pagination_rounded li:first-child {
+    margin-left: 0px;
+}
+
+.pagination_rounded ul li {
+    float: left;
+    margin-left: 20px;
+}
+
+.pagination_rounded ul li a:hover {
+    background: #4285f4;
+    color: #fff;
+    border: 1px solid #4285f4;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+
+
+.roleAtiDigital-page .result_accordion {
+    margin-bottom: 0rem;
+}
+
+.roleAtiDigital-page .result_accordion .accordion-item {
+    margin-bottom: 0rem;
+    border: none !important;
+    border-bottom: 1px solid gray;
+    border-radius: 0px;
+    background-color: transparent;
+}
+
+.roleAtiDigital-page .result_accordion .accordion-button {
+    color: var(--ex-black);
+}
+
+.roleAtiDigital-page .result_accordion .accordion-item:not(:first-of-type) {
+    border-top: inherit;
+}
+
+.roleAtiDigital-page .result_accordion .accordion-button {
+    background: transparent;
+    font-size: 1.1em;
+    font-weight: 400;
+    padding: 0px;
+}
+
+.roleAtiDigital-page .result_accordion .accordion-button:focus {
+    border-color:none;
+    box-shadow: none;
+}
+
+.roleAtiDigital-page .result_accordion .accordion-button:not(.collapsed) {
+    box-shadow: none;
+    color: #0f63dc;
+}
+
+.roleAtiDigital-page .result_accordion .accordion-body {
+    padding: 0px;
+    font-size: 18px;
+}
+
+.roleAtiDigital-page .result_accordion .accordion-button::after {
+    width: auto;
+    height: auto;
+    content: "+";
+    font-size: 40px;
+    background-image: none;
+    font-weight: 400;
+}
+
+.roleAtiDigital-page .result_accordion .accordion-button:not(.collapsed)::after {
+    width: auto;
+    height: auto;
+    background-image: none;
+    content: "-";
+    font-size: 40px;
+    color: #1b6ce5;
+}
+
+
+
+
+
+
+
+.pagination_rounded .prev {
+    margin-left: 0px;
+    border-radius: 35px;
+    width: 90px;
+    height: 34px;
+    line-height: 34px;
+}
+
+
+.pagination_rounded ul li a {
+    float: left;
+    color: #4285f4;
+    border-radius: 50%;
+    line-height: 30px;
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    margin-bottom: 40px;
+    border: 1px solid #e0e0e0;
+}
+
+.pagination_rounded .prev i {
+    margin-right: 10px;
+}
+
+.pagination_rounded .next {
+    border-radius: 35px;
+    width: 90px;
+    height: 34px;
+    line-height: 34px;
+}
+.GetDiscover_modalTitle{
+    color:black;
+}
+.visible-xs {
+    display: none !important;
+}
+
+@media only screen and (max-width:600px) {
+    .searchInput_role{
+        width:100% !important;
+    }
+    .leftside {
+        width: 100% !important;
+        border: none !important;
+    }
+
+    .col-11 {
+        width: 85% !important;
+    }
+
+    .rightside {
+        float: none !important;
+        border: none !important;
+        width: 100% !important;
+    }
+
+    .dgrid {
+        display: block;
+    }
+
+    .dgrid .col-4 {
+        width: 100% !important;
+    }
+
+    .dgrid .fa-star {
+        margin-left: 0% !important;
+    }
+
+    .main {
+        height: auto !important;
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+        padding-bottom: 0 !important;
+    }
+
+    .sort {
+        margin: 0 !important;
+        padding: 0;
+    }
+
+    .pagination {
+        width: 100% !important;
+    }
+
+    .foo {
+        width: 100% !important;
+    }
+
+    .dblock,
+    .careerapple {
+        display: block !important;
+    }
+
+    .privaciy .px-3 {
+        padding-right: .5rem !important;
+    }
+
+    .privaciy {
+        margin-top: 4% !important;
+    }
+
+    .pfooter {
+        padding: 1.5rem !important;
+    }
+
+    .careerapple {
+        display: block !important;
+    }
+
+    .btnsearch {
+        display: none;
+    }
+
+    .searchphone {
+        display: inline !important;
+        border-radius: 4px;
+        text-transform: uppercase;
+        font-size: 16px;
+        padding: 15px 20px !important;
+        line-height: 0px;
+        position: relative;
+        font-weight: 500;
+        float: right !important;
+    }
+
+    .carersearch {
+        margin-bottom: 10%;
+        align-items: center !important;
+    }
+}

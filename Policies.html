@@ -1,0 +1,2092 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1,user-scalable=no">
+
+  <!-- Meta tags -->
+  <meta name="keywords" content="">
+  <meta name="author" content="">
+
+  <!-- Title -->
+  <title>iDigital - Privacy Policy</title>
+
+  <!-- Shortcut icon -->
+  <link rel="shortcut icon" href="" type="image/x-icon">
+
+  <!-- Fonts -->
+  <link href="fonts/fontawesome/css/all.css" rel="stylesheet">
+
+  <!-- Styles -->
+
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"" />
+  <link rel=" stylesheet" href="css/slicknav.css">
+  <link rel="stylesheet" href="css/style.css" class="StyleLink">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous""></script>
+  <script src=" https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.7.0/jquery.lettering.min.js"></script>
+</head>
+
+<body class="contact-us">
+  <!-- Preloader -->
+  <div class="loader">
+    <div class="word">iDigital...</div>
+    <div class="loadOverlay"></div>
+  </div>
+
+  <script type="text/javascript">
+    function Ticker(elem) {
+      elem.lettering();
+      this.done = false;
+      this.cycleCount = 5;
+      this.cycleCurrent = 0;
+      this.chars = 'iDigital...'.split('');
+      this.charsCount = this.chars.length;
+      this.letters = elem.find('span');
+      this.letterCount = this.letters.length;
+      this.letterCurrent = 0;
+
+      this.letters.each(function () {
+        var $this = $(this);
+        $this.attr('data-orig', $this.text());
+        $this.text('-');
+      });
+    }
+
+    Ticker.prototype.getChar = function () {
+      return this.chars[Math.floor(Math.random() * this.charsCount)];
+    };
+
+    Ticker.prototype.reset = function () {
+      this.done = false;
+      this.cycleCurrent = 0;
+      this.letterCurrent = 0;
+      this.letters.each(function () {
+        var $this = $(this);
+        $this.text($this.attr('data-orig'));
+        $this.removeClass('done');
+      });
+      this.loop();
+    };
+
+    Ticker.prototype.loop = function () {
+      var self = this;
+
+      this.letters.each(function (index, elem) {
+        var $elem = $(elem);
+        if (index >= self.letterCurrent) {
+          if ($elem.text() !== ' ') {
+            $elem.text(self.getChar());
+            $elem.css('opacity', Math.random());
+          }
+        }
+      });
+
+      if (this.cycleCurrent < this.cycleCount) {
+        this.cycleCurrent++;
+      } else if (this.letterCurrent < this.letterCount) {
+        var currLetter = this.letters.eq(this.letterCurrent);
+        this.cycleCurrent = 0;
+        currLetter.text(currLetter.attr('data-orig')).css('opacity', 1).addClass('done');
+        this.letterCurrent++;
+      } else {
+        this.done = true;
+      }
+
+      if (!this.done) {
+        requestAnimationFrame(function () {
+          self.loop();
+        });
+      } else {
+        setTimeout(function () {
+          self.reset();
+        }, 750);
+      }
+    };
+
+    $words = $(".word");
+
+    $words.each(function () {
+      var $this = $(this),
+        ticker = new Ticker($this).reset();
+      $this.data('ticker', ticker);
+    });
+  </script>
+  <!--Ended Preloading -->
+  <!-- ScrollBar -->
+  <div class="scrollbar" id="style-7">
+    <div class="force-overflow"></div>
+  </div>
+  <!-- Back to Top -->
+  <div class="BackTop-wrap">
+    <svg class="BackTop-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+      <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+    </svg>
+  </div>
+  <!-- Navbar -->
+  <nav class="navbar primaryNav navbar-expand-xl navbar-dark p-0 wow animate__animated animate__slideInDown"
+    data-wow-duration="1000ms" data-wow-delay="400ms">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand textLogo p-0" href="index.html">
+          iDigital
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav desktop-nav ms-auto mb-2 mb-lg-0 align-items-center">
+          <li class="nav-item">
+            <a class="nav-link " aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item dropdown service_dropDownMenu">
+            <a class="nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Services
+            </a>
+            <div class="dropdown-menu services-dropdown" data-wow-duration="300ms" data-wow-delay="0ms"
+              aria-labelledby="navbarDropdown">
+              <ul class="nav nav-tabs services-dropdown_wrap" id="services-dropdown_wrap" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <a class="services-dropdown_item" id="home-tab" data-bs-toggle="tab" type="button"
+                    data-bs-target="#home" role="tab" aria-controls="home" aria-selected="true">
+                    <img class="start-repair_services-img" src="img/start_repair/recovery.png" alt="">
+                    <h4 class="start-repair_services-text">Data Recovery</h4>
+                  </a>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <a class="services-dropdown_item" id="profile-tab" data-bs-toggle="tab" type="button"
+                    data-bs-target="#profile" role="tab" aria-controls="profile" aria-selected="false">
+                    <img class="start-repair_services-img" src="img/start_repair/service.png" alt="">
+                    <h4 class="start-repair_services-text">Repair Service</h4>
+                  </a>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <a class="services-dropdown_item" id="contact-tab" data-bs-toggle="tab" type="button"
+                    data-bs-target="#contact" role="tab" aria-controls="contact" aria-selected="false">
+                    <img class="start-repair_services-img" src="img/start_repair/home.png" alt="">
+                    <h4 class="start-repair_services-text">Home Services</h4>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="nav-item dropdown support_dropDownMenu" onmouseover="supportMenu()">
+            <a class="nav-link" id="support-tab" data-bs-toggle="tab" type="button" data-bs-target="#support" role="tab"
+              aria-controls="support" aria-selected="true">
+              Support
+
+            </a>
+          </li>
+
+
+          <li class="nav-item">
+            <a class="nav-link link-search" href="#"><i class="fas fa-search"></i></a>
+          </li>
+          <li class="nav-item ">
+            <!--<a class="nav-link find-your-store" href="#"><img src="img/icons/map-pin.png" />Find Your Store</a>-->
+            <div class="locationbar">
+              <input type="text" class="input LocationInput" placeholder="location">
+              <div class="btn btnLocation"><img src="img/icons/map-pin.png" /><a class="btnTextLocation">Find Your
+                  Store</a></div>
+            </div>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link sign-in btn-primary" href="sign-in.html"><i class="fa fa-arrow-right"></i>Sign In</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link language dropdown-toggle_custom" href="#" id="navbarDropdown" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              <img width="36px" height="24px" class="lang-selected-img" src="img/flags/usa.png" />
+            </a>
+
+            <ul class="dropdown-menu dropdown-menu-end language_dropdown" data-wow-duration="300ms" data-wow-delay="0ms"
+              aria-labelledby="navbarDropdown">
+              <li><a data-lang-code="en-GB" class="dropdown-item selected" href="#"><img
+                    src="img/flags/usa.png" /><span>en</span></a></li>
+              <li><a data-lang-code="fr-FR" class="dropdown-item" href="#"><img
+                    src="img/flags/fr.png" /><span>fr</span></a></li>
+              <li><a data-lang-code="es-ES" class="dropdown-item" href="#"><img
+                    src="img/flags/es.png" /><span>es</span></a></li>
+              <li><a data-lang-code="ar-AR" class="dropdown-item" href="#"><img
+                    src="img/flags/pal.jpg" /><span>ar</span></a></li>
+            </ul>
+          </li>
+        </ul>
+        <img src="img/icons/moon.png" id="icon-mode" class="icon-mode" />
+      </div>
+    </div>
+  </nav>
+
+  <!-- Search icon -->
+  <div class="search-container hide">
+    <div class="link-search"><i class="fas fa-search" style="color:#fff"></i>
+    </div>
+    <div class="search-bar">
+      <form action="" class="ui-widget">
+        <input type="text" class="inputSearch" placeholder="Search iDigital.com" id="inputSearch">
+      </form>
+    </div>
+    <div class="link-close"></div>
+
+    <div class="quick-links">
+      <h2>Quick Links</h2>
+      <ul>
+        <li>
+          <a href="#">Covid -19 information</a>
+        </li>
+        <li>
+          <a href="#">Most popular Questions</a>
+        </li>
+        <li>
+          <a href="#">Amet minim mollit non deserunt</a>
+        </li>
+        <li>
+          <a href="#">Velit officia consequat duis en</a>
+        </li>
+        <li>
+          <a href="#">Exercitation veniam consequat sunt</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="tab-content services-dropdown_menu hide" id="services-dropdown_tab">
+    <div class="tab-pane fade" id="home" role="tabpanel" aria-labelledby="home-tab">
+      <div class="container">
+        <div class="services-swiper_wrap">
+          <!-- Swiper -->
+          <div class="swiper-container services-swiper services-swiper1">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide box">
+                <a href="Single-hard-drive.html" class="services-swiper_item">
+                  <img src="img/services/single_hard.png" alt="">
+                  <h5>Single Hard Drive</h5>
+                </a>
+              </div>
+              <div class="swiper-slide box">
+                <a href="raid-hard.html" class="services-swiper_item">
+                  <img src="img/services/raid_hard.png" alt="">
+                  <h5>Raid Hard Drive</h5>
+                </a>
+              </div>
+              <div class="swiper-slide box">
+                <a href="solid-state.html" class="services-swiper_item">
+                  <img src="img/services/solid_state.png" alt="">
+                  <h5>Solid State</h5>
+                </a>
+              </div>
+              <div class="swiper-slide box">
+                <a href="smartphone.html" class="services-swiper_item">
+                  <img src="img/services/smartphone.png" alt="">
+                  <h5>Smartphone</h5>
+                </a>
+              </div>
+              <div class="swiper-slide box">
+                <a href="Nand&Chip.html" class="services-swiper_item">
+                  <img src="img/services/nand.png" alt="">
+                  <h5>Nand & Chip Off</h5>
+                </a>
+              </div>
+              <div class="swiper-slide box">
+                <a href="USB-flash.html" class="services-swiper_item">
+                  <img src="img/services/flash.png" alt="">
+                  <h5>USB Flash</h5>
+                </a>
+              </div>
+              <div class="swiper-slide box">
+                <a href="file-system.html" class="services-swiper_item">
+                  <img src="img/services/file.png" alt="">
+                  <h5>File System</h5>
+                </a>
+              </div>
+              <div class="swiper-slide box">
+                <a href="Mac-OS.html" class="services-swiper_item">
+                  <img src="img/services/mac.png" alt="">
+                  <h5>Mac OS</h5>
+                </a>
+              </div>
+              <div class="swiper-slide box">
+                <a href="windows-repair.html" class="services-swiper_item">
+                  <img src="img/services/windows.png" alt="">
+                  <h5>Windows</h5>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="Linux&Unix.html" class="services-swiper_item">
+                  <img src="img/services/linux.png" alt="">
+                  <h5>Linux & Unix</h5>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="exchange-repair.html" class="services-swiper_item">
+                  <img src="img/services/exchange.png" alt="">
+                  <h5>Exchange Server</h5>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="sql-server.html" class="services-swiper_item">
+                  <img src="img/services/sql.png" alt="">
+                  <h5>SQL Server</h5>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="virtual-machine.html" class="services-swiper_item">
+                  <img src="img/services/virtual.png" alt="">
+                  <h5>Virtual Machine</h5>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="voip-system.html" class="services-swiper_item">
+                  <img src="img/services/voip.png" alt="">
+                  <h5>VoIP System</h5>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="password.html" class="services-swiper_item">
+                  <img src="img/services/pass.png" alt="">
+                  <h5>Password</h5>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="Bitcoin.html" class="services-swiper_item">
+                  <img src="img/services/bitcoin.png" alt="">
+                  <h5>Bitcoin</h5>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="Tape.html" class="services-swiper_item">
+                  <img src="img/services/tape.png" alt="">
+                  <h5>Tape</h5>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="CD-DVD-Bluray.html" class="services-swiper_item">
+                  <img src="img/services/cd.png" alt="">
+                  <h5>CD - DVD - BLURAY</h5>
+                </a>
+              </div>
+            </div>
+
+          </div>
+          <div class="swiper-button-next services-swiper-button services-swiper1-button"><img
+              src="img/icons/chevron-right.png" /></div>
+          <div class="swiper-button-prev services-swiper-button services-swiper1-button"><img
+              src="img/icons/chevron-left.png" /></div>
+        </div>
+      </div>
+    </div>
+    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+      <div class="container">
+        <div class="services-swiper_wrap">
+          <!-- Swiper -->
+          <div class="swiper-container services-swiper services-swiper2">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <a href="smartphone.html" class="services-swiper_item">
+                  <img src="img/services/smartphone.png" alt="">
+                  <h5>Smartphone</h5>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="SmartWatch.html" class="services-swiper_item">
+                  <img src="img/services/watch.png" alt="">
+                  <h5>Smart Watches</h5>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="tablet.html" class="services-swiper_item">
+                  <img src="img/services/tablet.png" alt="">
+                  <h5>Tablet</h5>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="computer.html" class="services-swiper_item">
+                  <img src="img/services/computer.png" alt="">
+                  <h5>Computer</h5>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="laptop.html" class="services-swiper_item">
+                  <img src="img/services/laptop.png" alt="">
+                  <h5>Laptop</h5>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="game-console-repair.html" class="services-swiper_item">
+                  <img src="img/services/console.png" alt="">
+                  <h5>Game Consoles</h5>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="Drone-Automation.html" class="services-swiper_item">
+                  <img src="img/services/drone.png" alt="">
+                  <h5>Drone & Automation</h5>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="Portable-music-playery.html" class="services-swiper_item">
+                  <img src="img/services/player.png" alt="">
+                  <h5>Portable Music Player</h5>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="Virtual-Reality.html" class="services-swiper_item">
+                  <img src="img/services/vr.png" alt="">
+                  <h5>Virtual Reality</h5>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="sound-system.html" class="services-swiper_item">
+                  <img src="img/services/sound.png" alt="">
+                  <h5>Sound System</h5>
+                </a>
+              </div>
+
+              <div class="swiper-slide">
+                <a href="motherBoard-repair.html" class="services-swiper_item">
+                  <img src="img/services/logic.png" alt="">
+                  <h5>Logic Boards</h5>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="Medical-devices.html" class="services-swiper_item">
+                  <img src="img/services/med.png" alt="">
+                  <h5>Medical Devices</h5>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="home-appliances.html" class="services-swiper_item">
+                  <img src="https://i.postimg.cc/tJ0WCVxV/electric-appliance.png" alt="">
+                  <h5>Appliances</h5>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button-next services-swiper-button services-swiper2-button"><img
+              src="img/icons/chevron-right.png" /></div>
+          <div class="swiper-button-prev services-swiper-button services-swiper2-button"><img
+              src="img/icons/chevron-left.png" /></div>
+        </div>
+      </div>
+    </div>
+    <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+      <div class="container">
+        <div class="services-swiper_wrap">
+          <!-- Swiper -->
+          <div class="swiper-container services-swiper services-swiper3">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <a href="solar-panel.html" class="services-swiper_item">
+                  <img src="img/services/solar.png" alt="">
+                  <h5>Solar Panel</h5>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="smart-home.html" class="services-swiper_item">
+                  <img src="img/services/smarthome.png" alt="">
+                  <h5>Smarthome</h5>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="home-security.html" class="services-swiper_item">
+                  <img src="img/services/security.png" alt="">
+                  <h5>Home Security</h5>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="tv-sound.html" class="services-swiper_item">
+                  <img src="img/services/tv_sound.png" alt="">
+                  <h5>TV Sound System</h5>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button-next services-swiper-button services-swiper3-button"><img
+              src="img/icons/chevron-right.png" /></div>
+          <div class="swiper-button-prev services-swiper-button services-swiper3-button"><img
+              src="img/icons/chevron-left.png" /></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-content support-dropdown_menu hide" id="support-dropdown_tab">
+    <div id="support" role="tabpanel" aria-labelledby="support-tab">
+      <div class="container">
+        <div class="services-swiper_wrap">
+          <!-- Swiper -->
+          <div class="swiper-container services-swiper support-swiper1">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide box">
+                <a href="about-us.html" class="services-swiper_item">
+                  <img src="https://i.postimg.cc/DyshNTMx/team.png" alt="">
+                  <h5>About Us</h5>
+                </a>
+              </div>
+              <div class="swiper-slide box">
+                <a href="contact-us.html" class="services-swiper_item">
+                  <img src="https://i.postimg.cc/MG276kMh/contact-Us.png" alt="">
+                  <h5>Contact Us</h5>
+                </a>
+              </div>
+              <div class="swiper-slide box">
+                <a href="partners.html" class="services-swiper_item">
+                  <img src="https://i.postimg.cc/43t474nc/team-1.png" alt="">
+                  <h5>Partners</h5>
+                </a>
+              </div>
+              <div class="swiper-slide box">
+                <a href="franchising.html" class="services-swiper_item">
+                  <img src="https://i.postimg.cc/nhLzM1Yy/franchise.png" alt="">
+                  <h5>Franchising</h5>
+                </a>
+              </div>
+              <div class="swiper-slide box">
+                <a href="pricing.html" class="services-swiper_item">
+                  <img src="https://i.postimg.cc/tgNnxgnf/price-tag.png" alt="">
+                  <h5>Pricing</h5>
+                </a>
+              </div>
+              <div class="swiper-slide box">
+                <a href="Policies.html" class="services-swiper_item">
+                  <img src="https://i.postimg.cc/hvp0brJk/privacy-policy.png" alt="">
+                  <h5>Policies</h5>
+                </a>
+              </div>
+              <div class="swiper-slide box">
+                <a href="go-green.html" class="services-swiper_item">
+                  <img src="https://i.postimg.cc/Zq7D4JKk/353727633-979064989956272-7164428973325253639-n.png" alt="">
+                  <h5>Go Green life at iDigital</h5>
+                </a>
+              </div>
+              <div class="swiper-slide box">
+                <a href="iDigital-careers.html" class="services-swiper_item">
+                  <img src="https://i.postimg.cc/HWvznTM3/career-choice.png" alt="">
+                  <h5>iDigital Career</h5>
+                </a>
+              </div>
+              <div class="swiper-slide box">
+                <a href="work-at-iDigital.html" class="services-swiper_item">
+                  <img src="https://i.postimg.cc/tJcsjSYt/work.png" alt="">
+                  <h5>Work at iDigital</h5>
+                </a>
+              </div>
+              <div class="swiper-slide box">
+                <a href="life-at-iDigital.html" class="services-swiper_item">
+                  <img src="https://i.postimg.cc/4NtWSrK5/working-at-home.png" alt="">
+                  <h5>life at iDigital</h5>
+                </a>
+              </div>
+              <div class="swiper-slide box">
+                <a href="blog.html" class="services-swiper_item">
+                  <img src="https://i.postimg.cc/kMvzRgL3/blog.png" alt="">
+                  <h5>Blog</h5>
+                </a>
+              </div>
+              <div class="swiper-slide box">
+                <a href="solid-state.html" class="services-swiper_item">
+                  <img src="https://i.postimg.cc/sDBbTQck/a86e5695-6268-441b-bf2a-8fd4473969ba.png" alt="">
+                  <h5>Discussion</h5>
+                </a>
+              </div>
+              <div class="swiper-slide box">
+                <a href="faq.html" class="services-swiper_item">
+                  <img src="https://i.postimg.cc/T1ryqYpB/question.png" alt="">
+                  <h5>FAQ</h5>
+                </a>
+              </div>
+
+            </div>
+
+          </div>
+          <div class="swiper-button-next support-swiper-button support-swiper1-button"><img
+              src="img/icons/chevron-right.png" /></div>
+          <div class="swiper-button-prev support-swiper-button support-swiper1-button"><img
+              src="img/icons/chevron-left.png" /></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Mobile Menu Start -->
+  <ul class="mobile-menu">
+    <li>
+      <a href="index.html">Home</a>
+    </li>
+    <li>Services
+      <ul class="submenu">
+        <li class="submenu-item"><img class="img-fluid" src="img/start_repair/recovery.png" alt="">Data
+          Recovery
+          <ul class="submenu-list">
+            <li><a href="Single-hard-drive.html">Single Hard Drive</a></li>
+            <li><a href="raid-hard.html">Raid Hard Drive</a></li>
+            <li><a href="solid-state.html">Solid State</a></li>
+            <li><a href="smartphone.html">Smartphone</a></li>
+            <li><a href="Nand&Chip.html">Nand & Chip Off</a></li>
+            <li><a href="USB-flash.html">USB Flash</a></li>
+            <li><a href="file-system.html">File System</a></li>
+            <li><a href="Mac-OS.html">Mac OS</a></li>
+            <li><a href="windows-repair.html">Windows</a></li>
+            <li><a href="life-at-iDigital.html">Linux & Unix</a></li>
+            <li><a href="exchange-repair.html">Exchange Server</a></li>
+            <li><a href="sql-server.html">SQL Server</a></li>
+            <li><a href="virtual-machine.html">Virtual Machine</a></li>
+            <li><a href="voip-system.html">VoIP System</a></li>
+            <li><a href="password.html">Password</a></li>
+            <li><a href="Bitcoin.html">Bitcoin</a></li>
+            <li><a href="Tape.html">Tape</a></li>
+            <li><a href="CD-DVD-Bluray.html">CD - DVD - BLURAY</a></li>
+          </ul>
+        </li>
+        <li class="submenu-item"><img class="img-fluid" src="img/start_repair/service.png" alt="">Repair
+          Service
+          <ul class="submenu-list">
+            <li><a href="smartphone.html">Smartphone</a></li>
+            <li><a href="SmartWatch.html">Smart Watches</a></li>
+            <li><a href="tablet.html">Tablet</a></li>
+            <li><a href="computer.html">Computer</a></li>
+            <li><a href="laptop.html">Laptop</a></li>
+            <li><a href="game-console-repair.html">Game Consoles</a></li>
+            <li><a href="Drone-Automation.html">Drone & Automation</a></li>
+            <li><a href="Portable-music-playery.html">Portable Music Player</a></li>
+            <li><a href="Virtual-Reality.html">Virtual Reality</a></li>
+            <li><a href="sound-system.html">Sound System</a></li>
+            <li><a href="motherBoard-repair.html">Logic Boards</a></li>
+            <li><a href="Medical-devices.html">Medical Devices</a></li>
+            <li><a href="appliances.html">Appliances</a></li>
+          </ul>
+
+        </li>
+        <li class="submenu-item"><img class="img-fluid" src="img/start_repair/home.png" alt="">Home Services
+          <ul class="submenu-list">
+            <li><a href="solar-panel.html">Solar Panel</a></li>
+            <li><a href="smart-home.html">Smarthome</a></li>
+            <li><a href="home-security.html">Home Security</a></li>
+            <li><a href="tv-sound.html">TV Sound System</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li>
+      Support
+      <ul class="submenu supportSubmenu">
+        <li><a href="about-us.html">About Us</a></li>
+        <li><a href="contact-us.html">Contact Us</a></li>
+        <li><a href="partners.html">Partners</a></li>
+        <li><a href="franchising.html">Franchising</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="Policies.html">Policies</a></li>
+        <li><a href="go-green.html">Go Green life at iDigtal</a></li>
+        <li><a href="iDigital-careers.html">iDigital Career</a></li>
+        <li><a href="work-at-iDigital.html">Work at iDigital</a></li>
+        <li><a href="life-at-iDigital.html">life at iDigital</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="discussion.html">discussion</a></li>
+        <li><a href="faq.html">faq</a></li>
+
+      </ul>
+    </li>
+    <li>
+      <a href="contact-us.html">Contact</a>
+    </li>
+    <li>
+      <a href="covid19.html">Covid 19</a>
+    </li>
+    <li>
+      Search
+      <ul class="submenu">
+        <li>
+          <form class="" action="index.html" method="post">
+            <input type="text" class="form-control" placeholder="Search iDigital.com">
+          </form>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="sign-in.html">Sign In</a>
+    </li>
+    <li>
+      Language
+      <ul class="submenu language_dropdown">
+        <li><a data-lang-code="en-GB" class="dropdown-item selected" href="#"><img
+              src="img/flags/usa.png" /><span>en</span></a></li>
+        <li><a data-lang-code="fr-FR" class="dropdown-item" href="#"><img src="img/flags/fr.png" /><span>fr</span></a>
+        </li>
+        <li><a data-lang-code="es-ES" class="dropdown-item" href="#"><img src="img/flags/es.png" /><span>es</span></a>
+        </li>
+        <li><a data-lang-code="ar-AR" class="dropdown-item" href="#"><img src="img/flags/ar.png" /><span>ar</span></a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <img class="icon-mode-mobile" onclick="MobileMode()" src="img/icons/moon.png" />
+    </li>
+  </ul>
+  <!-- Mobile Menu End -->
+  <div class="overlay"></div>
+  <section class="privacy-policy_section header-privacy-policy wow animate__animated animate__fadeIn"
+    data-wow-duration="1000ms" data-wow-delay="300ms">
+    <!-- <a onclick="topFunction()" id="scroll-btn" class="scroll"></a> -->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h2 class="privacy-policy_section-title">iDigital Policies</h2>
+          <p class="privacy-policy_section-description">Please select the policy you would like to review</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="privacy-policy_section bg-grey">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <p class="privacy-policy_choose-text">Choose topic</p>
+          <div class="row d-flex justify-content-between privacy-policy_topic-wrap">
+
+            <div class="col-xl-1 col-lg-2  col-md-4 d-flex justify-content-center">
+              <a href="#repair-policy" id="RepairPolicy" class="privacy-policy_topic-item">
+                <img class="privacy-policy_topic-image" src="https://i.postimg.cc/VkHqvnC0/2.png" alt="">
+                <p class="privacy-policy_topic-title">Repair Policy</p>
+              </a>
+            </div>
+
+            <div class="col-xl-1 col-lg-2 col-md-4 d-flex justify-content-center">
+              <a href="#privacy-policy" id="PrivacyPolicy" class="privacy-policy_topic-item">
+                <img class="privacy-policy_topic-image" src="https://i.postimg.cc/0yNG9cbq/1.png" alt="">
+                <p class="privacy-policy_topic-title">Privacy Policy</p>
+              </a>
+            </div>
+
+            <div class="col-xl-1 col-lg-2 col-md-4 d-flex justify-content-center">
+              <a href="#cookie-policy" id="TermsOfUse" class="privacy-policy_topic-item">
+                <img class="privacy-policy_topic-image" src="https://i.postimg.cc/3ws2Ch9K/4.png" alt="">
+                <p class="privacy-policy_topic-title">Cookie Policy</p>
+              </a>
+            </div>
+            <div class="col-xl-1 col-lg-2 col-md-4 d-flex justify-content-center">
+              <a href="#terms-and-conditions" id="PrivacyGovernance" class="privacy-policy_topic-item">
+                <img class="privacy-policy_topic-image" src="https://i.postimg.cc/ZqBrdn87/3.png" alt="">
+                <p class="privacy-policy_topic-title">Terms and Condition</p>
+              </a>
+            </div>
+            <div class="col-xl-1 col-lg-2 col-md-4 d-flex justify-content-center">
+              <a href="#End-User-License-Agreement" id="EULA" class="privacy-policy_topic-item">
+                <img class="privacy-policy_topic-image" src="https://i.postimg.cc/mZq0rVY8/policy-1.png" alt="">
+                <p class="privacy-policy_topic-title">EULA</p>
+              </a>
+            </div>
+
+            <div class="col-xl-1 col-lg-2 col-md-4 d-flex justify-content-center">
+              <a href="#return-policy" id="ReturnPolicy" class="privacy-policy_topic-item">
+                <img class="privacy-policy_topic-image" src="https://i.postimg.cc/TP9ycKdH/product-return.png" alt="">
+                <p class="privacy-policy_topic-title">Return Policy</p>
+              </a>
+            </div>
+            <div class="col-lg-1 col-md-4 d-flex justify-content-center">
+              <a href="#terms-of-Disclaimer" id="Disclaimer" class="privacy-policy_topic-item">
+                <img class="privacy-policy_topic-image" src="https://i.postimg.cc/vBw4M5PB/limitation.png" alt="">
+                <p class="privacy-policy_topic-title">Disclaimer</p>
+              </a>
+            </div>
+            <div class="col-xl-1 col-lg-2 col-md-4 d-flex justify-content-center">
+              <a href="#shipping-policy" id="ShippingPolicy" class="privacy-policy_topic-item">
+                <img class="privacy-policy_topic-image" src="https://i.postimg.cc/k5b2kTvz/shipping.png" alt="">
+                <p class="privacy-policy_topic-title">Shipping Policy</p>
+              </a>
+            </div>
+            <div class="col-xl-1 col-lg-2 col-md-4 d-flex justify-content-center">
+              <a href="#acceptable-use-policy" id="AcceptableUsePolicy" class="privacy-policy_topic-item">
+                <img class="privacy-policy_topic-image" src="https://i.postimg.cc/LX8JQmh4/contract.png" alt="">
+                <p class="privacy-policy_topic-title">Acceptable Use Policy</p>
+              </a>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="repair-policy" class="terms-of-use">
+    <div class="container" id="RepairPolicyText">
+      <h2>Repair Policy</h2>
+      <hr>
+      <p>iDigital is not responsible for any loss, corruption, or breach of the data on the customer product during
+        service; loss of data may occur as a result of their service, it is the customer responsibility to make a backup
+        copy of their data
+        before bringing the product to iDigital for service. </p>
+      <p>iDigital may use parts or products that are new or equivalent to new *Refurbished in reliability and
+        performance.</p>
+      <p>When a repair ticket is initiated, we start working on it immediately, If the customer decides not to proceed
+        with the repairs after diagnosis, they will be charged labor fees for that diagnosis as set by the technician.
+        Our Labor fees
+        start
+        at a $50 rate.</p>
+      <p>Repairs include a 90 day warranty. The warranty is restricted to defects in workmanship and parts for the life
+        of the specific device repaired. This warranty will be void if the item is damaged by water, physically damaged
+        (e.g. scratched
+        or
+        dropped), or suffers failure due to using non-authentic accessories. Our limited warranty applies only to
+        services provided by iDigital, and it is non-transferable.</p>
+      <p>iDigital cannot be held responsible for any pre-existing damage to any item provided for repair, including any
+        issues caused by improper use of the device, such as Jailbreaking or rooting. This also includes our limited
+        warranty for
+        repaired
+        items as damage caused by misuse voids that warranty with immediate effect. If we suspect that any damage caused
+        was the result of any drops, fall, slip, or other unintended use, it will not be covered under our warranty.</p>
+      <p> Customer should remove and accessories prior to sending their device in for repairs. iDigital cannot be held
+        liable for any damage that can occur to external device accessories that can break while in services such as
+        case, screen
+        protector,
+        and any other accessory. iDigital cannot be held liable for damage or loss of the SIM card, SD card, connected
+        USB and/or the data it contains. It is the customer's responsibility to keep these outsides of the serviced
+        device.<br />
+        If iDigital received any gaming console that does not turn on, no image or turns on and produces beeping sounds
+        and it lead to iDigital not being able to test the functionality of the console. iDigital will not be held
+        liable if the gaming
+        console did not read disk, eject disk, communicate with the controller or did not update or read the hard drive,
+        overheated, beeping sounds, or glitching image after 10 minutes of playing. iDigital can not be held liable for
+        any disk, memory
+        card that is in the console while doing the repair. iDigital can not be held liable if any data loss. Every case
+        is different and every case will be evaluated according to the presence issue. For any device that is not
+        booting and we replace
+        the hard drive, we do not replace the thermal paste and it will be an additional service if the customer wants
+        to do so. If after replacing the hard drive the console is overheating, iDigital will not be held liable for
+        this issue. iDigital
+        can not be held liable for Nintendo right-left controllers, reading the sd card, volume issues or wifi issues if
+        we can not test the Nintendo in advance. iDigital can not be held liable for over heated gaming consoles caused
+        by dust, dirt,
+        build up oil or roaches and the customer is advised to vacuum their device before bringing it for repair</p>
+      <p>Our limited warranty excludes cracked, damaged, or broken screens. iDigital cannot be held accountable for any
+        problems that result from user error, nor are we responsible in any way for issues with a device that has been
+        dropped or subject
+        to
+        other unintended use after the repair has been completed.</p>
+      <p>If during the repair process, we damage a customerâ€™s device, we will endeavor to repair the damage at our own
+        cost. This can extend the repair schedule and we ask that 10 business days are allowed to obtain parts and
+        repair the device. If
+        we
+        are unable to repair a device damaged by us, we will replace the device with a new/used/refurbished model of the
+        same type and capacity within 30 business days. If a replacement is not required, the original repair cost will
+        still apply.</p>
+      <p>iDigital will hold the customerâ€™s device for up to 30 days after the repair is completed. The customer will
+        be
+        notified through an email, text message, or a phone call once the device is ready for pick-up and payment of the
+        repair shall be
+        paid fully. After that period, the customer shall transfer the ownership of the device and the content inside
+        for payment of the service rendered. iDigital has the right to add daily storage fees of $20 after the 30 day
+        period.</p>
+      <p>Should iDigital have to file a lawsuit, the customer shall be responsible for all court costs, all interest of
+        1% of the principal balance owned a month until it's collected, and all reasonable attorneyâ€™s fees.</p>
+      <p>There will be no compensation offered or given for the device, nor for any deposit or other payment made before
+        the repair was undertaken. iDigital reserves the right to hold any device until payment in full is received for
+        parts and labor
+        associated with the repair. No inscription or engraving will be issued or refunded if we must replace the item.
+      </p>
+      <p>For Water Damage, LOGIC BOARDS repair we will warranty the device up to 6 months AND EACH CASE various. For
+        Logic Board Repair we will provide up to 6 months warranty on what we repaired ONLY. Warranty for battery and
+        charging port or any
+        plug
+        and play ports is up to 90 days.</p>
+      <p>iDigital Parts ordering and shipping. When we order any parts from any vendor we use UPS, FEDEX, USPS, DHL. By
+        using a third-party carrier even on overnight shipping, we will not be able to guarantee the delivery.
+        Furthermore, we hold any
+        liability over shipping delays and the client cannot ask for a shipping cost refund or part refund until we
+        contact the shipper to request our refund.</p>
+      <p>Any tool or parts ordered for the data recovery or any repair case will not be refunded. If the customer
+        decides to stop the data recovery at any time, the client will be liable to pay the cost of the parts, tools,
+        and any additional labor
+        fees that will concur.</p>
+      <p>Since we use sensitive devices and tools that are not available to the public, we are not permitted to provide
+        their names, in addition to the cost of the tools and any invoices of any kind. We are only permitted to provide
+        this information
+        in
+        Digital Forensics Investigation cases that are assigned to Federal court cases. For Data recovery cases the
+        customer will be provided with another form to be signed with more information on the specific device to be
+        serviced. The second form
+        will have the price and both these policies will be considered as one</p>
+      <p>If the client is not happy with our customer service or the quality of work we provided after submitting the
+        case and receiving the service, we ask that they please let us know before attempting to leave us a negative
+        review. We aim to
+        fully
+        satisfy our clients by providing the highest quality of work.</p>
+      <p>We take fraud seriously and any attempt to commit fraud against iDigital will be reported to law enforcement
+        immediately and we will seek legal recompense through the courts. Fraudulent clients who receive service and
+        dispute the charge
+        will
+        be put on a list of fraudulent clients, the audio and video interaction will be posted on social media so other
+        business owners are aware of them. Google and Yelp will have a copy of the documents to void their fake negative
+        reviews. We will
+        not tolerate fraudulent interactions and we take legal action for damaging our reputation and destroying our
+        brand.</p>
+      <p>iDigital policies are continuously being developed and modified to better assist our clients. Please follow our
+        website for the newest policies or ask one of our representatives</p>
+      <p>By submitting your device for repair with iDigital, either through verbal agreement or a written one, you are
+        acknowledging and agreeing to these terms and conditions in full.</p>
+    </div>
+  </section>
+
+  <section id="privacy-policy" class="terms-of-use">
+    <div class="container " id="TermsOfUseText">
+      <h2>Privacy Policy (10DLC Compliant)</h2>
+      <hr>
+      <p>iDigital is committed to protecting the privacy of our users. This Privacy Policy outlines the types of
+        personal information we collect, how we use it, and the measures we take to safeguard your information.</p>
+
+      <h4>Information We Collect</h4>
+
+      <p>Personal Information: When you visit our website or interact with our services, we may collect personal
+        information such as your name, email address, phone number, and billing information.</p>
+
+      <p>Usage Information: We may collect non-personal information about your interactions with our website, including
+        your IP address, browser type, pages visited, and time spent on our site.</p>
+
+      <p>Cookies: We may use cookies and similar tracking technologies to enhance your browsing experience and analyze
+        usage patterns.</p>
+
+      <h4>How We Use Your Information</h4>
+
+      <p>Provide Services: We use your personal information to fulfill your requests, process transactions, and provide
+        customer support.</p>
+
+      <p>Improve Services: We may analyze usage data to improve our website, products, and services.</p>
+
+      <p>Marketing: With your consent, we may send promotional emails about our products, services, and special offers.
+      </p>
+
+      <p>Legal Compliance: We may use your information to comply with legal obligations or respond to law enforcement
+        requests.</p>
+
+      <h4>Information Sharing</h4>
+
+      <p>We do not sell, trade, or rent your personal information to third parties for marketing purposes. We may share
+        your information with trusted third-party service providers who assist us in operating our website, conducting
+        business, or servicing you. We may disclose your information in response to a legal request or to protect the
+        rights, property, or safety of our company, users, or others.</p>
+
+      <h4>SMS Privacy Policy</h4>
+
+      <p>No mobile information will be shared with third parties/affiliates for marketing/promotional purposes. All the
+        above categories exclude text messaging originator opt-in data and consent; this information will not be shared
+        with any third parties.</p>
+
+      <h4>Data Security</h4>
+
+      <p>We implement reasonable security measures to protect your personal information from unauthorized access,
+        disclosure, alteration, or destruction. However, no method of transmission over the Internet or electronic
+        storage is 100% secure, so we cannot guarantee absolute security.</p>
+
+      <h4>Your Choices</h4>
+
+      <p>You have the right to access, update, or delete your personal information by contacting us. You may opt out of
+        receiving promotional emails by following the instructions in the email or contacting us directly.</p>
+
+      <h4>Changes to This Policy</h4>
+
+      <p>We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new
+        Privacy Policy on this page.</p>
+
+      <h4>Contact Us</h4>
+
+      <p>If you have any questions about this Privacy Policy or our practices, please contact us at:</p>
+      <ul>
+        <li>Phone: +1(504)342-9109</li>
+        <li>Email: <a href="mailto:privacy@idigital.com">privacy@idigital.com</a></li>
+      </ul>
+      <p>This Privacy Policy was last updated on January 15, 2024.</p>
+    </div>
+  </section>
+
+
+  <section id="cookie-policy" class="terms-of-use">
+    <div class="container" id="PrivacyGovernanceText">
+      <h2>Cookie Policy</h2>
+      <hr>
+      <p>This Cookie Policy explains how iDigital uses cookies and similar technologies on our website.</p>
+
+      <h4>What Are Cookies?</h4>
+      <p>Cookies are small text files that are stored on your device when you visit our website. They help us provide
+        you with a better browsing experience by remembering your preferences and analyzing how you use our site.</p>
+
+      <h4>Types of Cookies We Use</h4>
+      <br>
+      <h5>Essential Cookies</h5>
+      <p>These cookies are necessary for our website to function properly. They enable basic functions like page
+        navigation, access to secure areas, and form submissions. The website cannot function properly without these
+        cookies.</p>
+
+      <h5>Analytics Cookies</h5>
+      <p>We use analytics cookies to understand how visitors interact with our website. These cookies help us:</p>
+      <ul>
+        <li>Count visitors and track their movements</li>
+        <li>Understand which pages are most popular</li>
+        <li>Identify technical issues and improve performance</li>
+        <li>Measure the effectiveness of our content</li>
+      </ul>
+
+      <h5>Marketing Cookies</h5>
+      <p>These cookies are used to track visitors across websites to display relevant and engaging advertisements. They
+        help us:</p>
+      <ul>
+        <li>Show you relevant ads on other websites</li>
+        <li>Measure the effectiveness of our advertising campaigns</li>
+        <li>Limit the number of times you see the same ad</li>
+      </ul>
+
+      <h5>Preference Cookies</h5>
+      <p>These cookies remember your choices and preferences, such as:</p>
+      <ul>
+        <li>Language settings</li>
+        <li>Location preferences</li>
+        <li>Login information</li>
+        <li>Customized content</li>
+      </ul>
+
+      <h5>Third-Party Cookies</h5>
+      <p>We may use third-party services that set their own cookies, including:</p>
+      <ul>
+        <li>Google Analytics: For website traffic analysis</li>
+        <li>Social Media Platforms: For social sharing features</li>
+        <li>Payment Processors: For secure payment processing</li>
+        <li>Customer Support: For live chat functionality</li>
+      </ul>
+
+      <h4>Managing Your Cookie Preferences</h4>
+      <br>
+      <h5>Browser Settings</h5>
+      <p>You can control cookies through your browser settings:</p>
+      <ul>
+        <li>Chrome: Settings &gt; Privacy and Security &gt; Cookies</li>
+        <li>Firefox: Options &gt; Privacy &amp; Security &gt; Cookies</li>
+        <li>Safari: Preferences &gt; Privacy &gt; Cookies</li>
+        <li>Edge: Settings &gt; Cookies and Site Permissions</li>
+      </ul>
+
+      <h5>Cookie Consent</h5>
+      <p>When you first visit our website, you'll see a cookie consent banner. You can:</p>
+      <ul>
+        <li>Accept all cookies</li>
+        <li>Reject non-essential cookies</li>
+        <li>Customize your preferences</li>
+        <li>Change your settings at any time</li>
+      </ul>
+
+      <h5>Impact of Disabling Cookies</h5>
+      <p>If you disable cookies, some features of our website may not work properly:</p>
+      <ul>
+        <li>You may need to re-enter information repeatedly</li>
+        <li>Personalized content may not be available</li>
+        <li>Some forms and features may not function</li>
+        <li>Your preferences may not be saved</li>
+      </ul>
+
+      <h5>Cookie Retention</h5>
+      <p>Different cookies are stored for different periods:</p>
+      <ul>
+        <li>Session Cookies: Deleted when you close your browser</li>
+        <li>Persistent Cookies: Remain for a set period (usually 30 days to 2 years)</li>
+        <li>Essential Cookies: Stored for the duration of your session</li>
+        <li>Analytics Cookies: Typically stored for 2 years</li>
+      </ul>
+
+      <h4>Updates to This Policy</h4>
+      <p>We may update this Cookie Policy from time to time to reflect changes in our practices or for other
+        operational, legal, or regulatory reasons.</p>
+
+      <h4>Contact Us</h4>
+      <p>If you have questions about our use of cookies, please contact us at:</p>
+      <ul>
+        <li>Phone: +1(504)342-9109</li>
+        <li>Email: <a href="mailto:privacy@idigital.com">privacy@idigital.com</a></li>
+        <li>Address: 1851 Rousseau St, New Orleans, LA 70130, USA</li>
+      </ul>
+      <p>This Cookie Policy was last updated on January 15, 2024.</p>
+
+
+    </div>
+  </section>
+
+  <section id="terms-and-conditions" class="terms-of-use">
+    <div class="container" id="ManageYourAccountText">
+      <h2>Terms and Conditions</h2>
+      <hr>
+      <p>Welcome to iDigital. These Terms and Conditions ("Terms") govern your use of our website and services. By
+        accessing or using our services, you agree to be bound by these Terms.</p>
+
+      <h4>1. Acceptance of Terms</h4>
+      <p>By accessing our website or using our services, you agree to be bound by these Terms and all applicable laws
+        and regulations. If you do not agree with any of these terms, you are prohibited from using or accessing this
+        site.</p>
+
+      <h4>2. Service Description</h4>
+      <p>iDigital provides electronic device repair services, including but not limited to:</p>
+      <ul>
+        <li>Smartphone repairs</li>
+        <li>Laptop and computer repairs</li>
+        <li>Tablet repairs</li>
+        <li>Gaming console repairs</li>
+        <li>Home appliance repairs</li>
+        <li>Data recovery services</li>
+      </ul>
+
+      <h4>3. Service Limitations</h4>
+      <p>Our repair services are subject to the following limitations:</p>
+      <ul>
+        <li>Success of repairs cannot be guaranteed</li>
+        <li>Data loss may occur during repair processes</li>
+        <li>Some devices may be beyond economical repair</li>
+        <li>Original parts may not be available for all devices</li>
+      </ul>
+
+      <h4>4. Service Process and Fees</h4>
+      <ul>
+        <li>All services require a diagnostic fee</li>
+        <li>Repair costs will be provided after diagnosis</li>
+        <li>Payment is required before device return</li>
+        <li>Additional fees may apply for expedited services</li>
+      </ul>
+
+      <h4>5. Warranty</h4>
+      <ul>
+        <li>Repairs come with a 90-day warranty on parts and labor</li>
+        <li>Warranty does not cover physical damage or misuse</li>
+        <li>Warranty is void if device is opened by unauthorized personnel</li>
+        <li>Warranty covers only the specific repair performed</li>
+      </ul>
+
+      <h4>6. Customer Responsibilities</h4>
+      <ul>
+        <li>Provide accurate device information</li>
+        <li>Remove personal data before service (recommended)</li>
+        <li>Pay all fees as agreed</li>
+        <li>Pick up devices within 30 days of completion</li>
+        <li>Follow care instructions provided</li>
+      </ul>
+
+      <h4>7. Limitation of Liability</h4>
+      <p>iDigital's liability is limited to the cost of the repair service provided. We are not liable for:</p>
+      <ul>
+        <li>Data loss or corruption</li>
+        <li>Consequential or incidental damages</li>
+        <li>Loss of use or business interruption</li>
+        <li>Damages exceeding the repair cost</li>
+      </ul>
+
+      <h4>8. Intellectual Property</h4>
+      <p>All content on this website, including text, graphics, logos, and software, is the property of iDigital and is
+        protected by copyright laws.</p>
+
+      <h4>9. Prohibited Uses</h4>
+      <p>You may not use our services for:</p>
+      <ul>
+        <li>Illegal activities</li>
+        <li>Infringing on intellectual property rights</li>
+        <li>Transmitting harmful or malicious content</li>
+        <li>Attempting to gain unauthorized access to systems</li>
+      </ul>
+
+      <h4>10. Privacy</h4>
+      <p>Your privacy is important to us. Please review our Privacy Policy for information
+        on how we collect, use, and protect your information.</p>
+
+      <h4>11. Modifications</h4>
+      <p>We reserve the right to modify these Terms at any time. Changes will be posted on this page with an updated
+        revision date.</p>
+
+      <h4>12. Termination</h4>
+      <p>We may terminate or suspend your access to our services immediately, without prior notice, for any reason
+        whatsoever.</p>
+
+      <h4>13. Governing Law</h4>
+      <p>These Terms are governed by the laws of Louisiana, United States.</p>
+
+      <h4>14. Contact Information</h4>
+      <p>For questions about these Terms, contact us at:</p>
+      <ul>
+        <li>Phone: +1(504)342-9109</li>
+        <li>Email: <a href="mailto:legal@idigital.com">legal@idigital.com</a></li>
+        <li>Address: 1851 Rousseau St, New Orleans, LA 70130, USA</li>
+      </ul>
+
+      <p>These Terms and Conditions were last updated on January 15, 2024.</p>
+
+    </div>
+  </section>
+
+  <section id="End-User-License-Agreement" class="terms-of-use">
+    <div class="container" id="EULATxt">
+      <h2>End User License Agreement (EULA)</h2>
+      <hr>
+      <p>This End User License Agreement ("Agreement") is a legal agreement between you and iDigital for the use of our
+        software, applications, and digital services.</p>
+
+      <h4>1. Grant of License</h4>
+      <p>Subject to the terms of this Agreement, iDigital grants you a limited, non-exclusive, non-transferable license
+        to use our software and services for personal or business purposes.</p>
+
+      <h4>2. Permitted Uses</h4>
+      <p>You may:</p>
+      <ul>
+        <li>Use the software for its intended purpose</li>
+        <li>Install the software on devices you own</li>
+        <li>Make backup copies for personal use</li>
+        <li>Use the software in accordance with applicable laws</li>
+      </ul>
+
+      <h4>3. Prohibited Uses</h4>
+      <p>You may not:</p>
+      <ul>
+        <li>Reverse engineer, decompile, or disassemble the software</li>
+        <li>Distribute, sell, or sublicense the software</li>
+        <li>Remove or modify copyright notices</li>
+        <li>Use the software for illegal purposes</li>
+        <li>Circumvent security measures</li>
+      </ul>
+
+      <h4>4. Intellectual Property</h4>
+      <p>All rights, title, and interest in the software remain with iDigital. This Agreement does not grant you
+        ownership of the software.</p>
+
+      <h4>5. Updates and Modifications</h4>
+      <p>iDigital may provide updates, patches, or modifications to the software. Continued use of the software
+        constitutes acceptance of such updates.</p>
+
+      <h4>6. Data and Privacy</h4>
+      <p>Your use of the software is subject to our Privacy Policy. We may collect and use
+        data as described in our Privacy Policy.</p>
+
+      <h4>7. Termination</h4>
+      <p>This license terminates automatically if you fail to comply with any term of this Agreement. Upon termination,
+        you must cease all use of the software.</p>
+
+      <h4>8. Disclaimer of Warranties</h4>
+      <p>The software is provided "as is" without warranties of any kind, either express or implied, including but not
+        limited to warranties of merchantability and fitness for a particular purpose.</p>
+
+      <h4>9. Limitation of Liability</h4>
+      <p>In no event shall iDigital be liable for any indirect, incidental, special, or consequential damages arising
+        out of or in connection with the use of this software.</p>
+
+      <h4>10. Governing Law</h4>
+      <p>This Agreement is governed by the laws of Louisiana, United States.</p>
+
+      <h4>11. Contact Information</h4>
+      <p>For questions about this EULA, contact us at:</p>
+      <ul>
+        <li>Phone: +1(504)342-9109</li>
+        <li>Email: <a href="mailto:legal@idigital.com">legal@idigital.com</a></li>
+        <li>Address: 1851 Rousseau St, New Orleans, LA 70130, USA</li>
+      </ul>
+
+      <p>This EULA was last updated on January 15, 2024.</p>
+    </div>
+  </section>
+
+  <section id="return-policy" class="terms-of-use">
+    <div class="container" id="ReturnPolicyText">
+      <h2>Return Policy</h2>
+      <hr>
+      <p>At iDigital, we stand behind our repair services. This Return Policy outlines our procedures for service
+        returns and refunds.</p>
+
+      <h4>Service Returns and Refunds</h4>
+      <ul>
+        <li>All repair services come with a 90-day warranty</li>
+        <li>If your device fails within the warranty period due to our repair, we will re-repair it at no additional
+          cost</li>
+        <li>If we cannot repair the device, we will provide a full refund of the repair cost</li>
+        <li>Refunds are processed within 5–7 business days</li>
+      </ul>
+
+      <h4>Parts and Accessories</h4>
+      <ul>
+        <li>Parts purchased separately are non-refundable unless defective</li>
+        <li>Defective parts will be replaced at no cost within the warranty period</li>
+        <li>Original parts are preferred, but aftermarket parts may be used if originals are unavailable</li>
+      </ul>
+
+      <h4>Device Pickup Policy</h4>
+      <ul>
+        <li>Devices must be picked up within 30 days of repair completion</li>
+        <li>Unclaimed devices may be subject to storage fees</li>
+        <li>Devices left for more than 90 days may be disposed of</li>
+        <li>We will attempt to contact you multiple times before disposal</li>
+      </ul>
+
+      <h4>Refund Processing</h4>
+      <ul>
+        <li>Refunds will be issued to the original payment method</li>
+        <li>Processing time: 5–7 business days</li>
+        <li>Refund amounts exclude any diagnostic fees for successful repairs</li>
+        <li>Shipping costs are non-refundable</li>
+      </ul>
+
+      <h4>Non-Refundable Items</h4>
+      <ul>
+        <li>Diagnostic fees for successful repairs</li>
+        <li>Data recovery services (successful or not)</li>
+        <li>Shipping and handling charges</li>
+        <li>Services completed more than 90 days ago</li>
+      </ul>
+
+      <h4>Exchange Policy</h4>
+      <ul>
+        <li>We do not offer exchanges for repair services</li>
+        <li>If a repair fails, we will attempt to re-repair the device</li>
+        <li>If re-repair is not possible, a refund will be provided</li>
+      </ul>
+
+      <h4>Special Circumstances</h4>
+      <ul>
+        <li>Natural disasters or circumstances beyond our control may affect service timelines</li>
+        <li>We will work with customers on a case-by-case basis for exceptional situations</li>
+        <li>Documentation may be required for certain refund requests</li>
+      </ul>
+
+      <h4>Return Process</h4>
+      <ol>
+        <li>Contact us within the warranty period</li>
+        <li>Describe the issue with your repair</li>
+        <li>Bring the device to our location for evaluation</li>
+        <li>We will determine if the issue is covered under warranty</li>
+        <li>If covered, we will repair or refund as appropriate</li>
+      </ol>
+
+      <h4>Contact Information</h4>
+      <p>For return requests or questions:</p>
+      <ul>
+        <li>Phone: +1(504)342-9109</li>
+        <li>Email: <a href="mailto:returns@idigital.com">returns@idigital.com</a></li>
+        <li>Address: 1851 Rousseau St, New Orleans, LA 70130, USA</li>
+      </ul>
+
+      <p>This Return Policy was last updated on January 15, 2024.</p>
+
+    </div>
+  </section>
+
+  <section id="terms-of-Disclaimer" class="terms-of-use">
+    <div class="container" id="DisclamierText">
+      <h2>Disclaimer</h2>
+      <hr>
+      <p>This Disclaimer outlines the limitations and risks associated with our repair services.</p>
+
+      <h4>Service Limitations</h4>
+
+      <h5>Data Loss Risk</h5>
+      <ul>
+        <li>There is always a risk of data loss during repair processes</li>
+        <li>We recommend backing up your data before service</li>
+        <li>We are not responsible for data loss that occurs during repairs</li>
+        <li>Data recovery services are available but not guaranteed</li>
+      </ul>
+
+      <h5>Repair Success</h5>
+      <ul>
+        <li>We cannot guarantee that all devices can be repaired</li>
+        <li>Some damage may be beyond economical repair</li>
+        <li>Age and condition of devices may limit repair options</li>
+        <li>Water damage and severe physical damage may not be repairable</li>
+      </ul>
+
+      <h4>Parts and Components</h4>
+      <ul>
+        <li>We use quality parts, but some may be aftermarket or refurbished</li>
+        <li>Original manufacturer parts may not be available for all devices</li>
+        <li>Parts availability may affect repair timelines</li>
+        <li>Some repairs may require multiple attempts</li>
+      </ul>
+
+      <h4>Warranty Limitations</h4>
+      <ul>
+        <li>Our warranty covers only the specific repair performed</li>
+        <li>Warranty does not cover new damage or unrelated issues</li>
+        <li>Physical damage voids the warranty</li>
+        <li>Warranty is limited to parts and labor costs</li>
+      </ul>
+
+      <h4>Data Recovery Disclaimer</h4>
+      <ul>
+        <li>Data recovery is not guaranteed</li>
+        <li>Success depends on the extent of damage</li>
+        <li>Some data may be permanently lost</li>
+        <li>We will attempt recovery but cannot guarantee results</li>
+      </ul>
+
+      <h4>Third-Party Services</h4>
+      <ul>
+        <li>We may use third-party services for certain repairs</li>
+        <li>Third-party services are subject to their own terms and conditions</li>
+        <li>We are not responsible for third-party service failures</li>
+        <li>Additional costs may apply for third-party services</li>
+      </ul>
+
+      <h4>Limitation of Liability</h4>
+      <ul>
+        <li>Our liability is limited to the cost of the repair service</li>
+        <li>We are not liable for consequential or incidental damages</li>
+        <li>We are not liable for data loss or business interruption</li>
+        <li>Maximum liability is the amount paid for the service</li>
+      </ul>
+
+      <h4>Professional Advice</h4>
+      <ul>
+        <li>Our services are for repair purposes only</li>
+        <li>We do not provide legal, financial, or medical advice</li>
+        <li>Customers should consult appropriate professionals for other matters</li>
+        <li>Our recommendations are based on technical expertise only</li>
+      </ul>
+
+      <h4>Website Content</h4>
+      <ul>
+        <li>Information on our website is for general purposes only</li>
+        <li>We strive for accuracy but cannot guarantee all information</li>
+        <li>Technical specifications may change without notice</li>
+        <li>Prices and services are subject to change</li>
+      </ul>
+
+      <h4>External Links</h4>
+      <ul>
+        <li>Our website may contain links to external sites</li>
+        <li>We are not responsible for external site content</li>
+        <li>External sites have their own terms and conditions</li>
+        <li>Use external sites at your own risk</li>
+      </ul>
+
+      <h4>Force Majeure</h4>
+      <ul>
+        <li>We are not liable for delays or failures due to circumstances beyond our control</li>
+        <li>This includes natural disasters, government actions, or supplier issues</li>
+        <li>We will work to minimize impact on customers</li>
+        <li>Alternative solutions may be offered when possible</li>
+      </ul>
+
+      <h4>Jurisdiction</h4>
+      <ul>
+        <li>This disclaimer is governed by Louisiana law</li>
+        <li>Any disputes will be resolved in Louisiana courts</li>
+        <li>Customers agree to jurisdiction in Louisiana</li>
+      </ul>
+
+      <h4>Contact Information</h4>
+      <p>For questions about this disclaimer:</p>
+      <ul>
+        <li>Phone: +1(504)342-9109</li>
+        <li>Email: <a href="mailto:legal@idigital.com">legal@idigital.com</a></li>
+        <li>Address: 1851 Rousseau St, New Orleans, LA 70130, USA</li>
+      </ul>
+
+      <p>This Disclaimer was last updated on January 15, 2024.</p>
+
+    </div>
+  </section>
+
+  <section id="shipping-policy" class="terms-of-use">
+    <div class="container" id="ShippingPolicyText">
+      <h2>Shipping Policy</h2>
+      <hr>
+      <p>This Shipping Policy outlines our procedures for shipping devices to and from our repair facility.</p>
+
+      <h4>Shipping Methods</h4>
+      <p>We offer several shipping options:</p>
+      <ul>
+        <li>Standard Ground Shipping (5–7 business days)</li>
+        <li>Expedited Shipping (2–3 business days)</li>
+        <li>Overnight Shipping (1 business day)</li>
+        <li>Local Pickup and Delivery (New Orleans area)</li>
+      </ul>
+
+      <h4>Packaging Requirements</h4>
+      <ul>
+        <li>All devices must be properly packaged to prevent damage</li>
+        <li>We provide packaging materials for devices brought to our location</li>
+        <li>Original packaging is preferred when available</li>
+        <li>Fragile items require additional protection</li>
+      </ul>
+
+      <h4>Shipping Costs</h4>
+      <ul>
+        <li>Shipping costs are calculated based on weight, size, and destination</li>
+        <li>Free shipping is available for repairs over $100</li>
+        <li>Expedited shipping incurs additional charges</li>
+        <li>International shipping is available with additional fees</li>
+      </ul>
+
+      <h4>Delivery Times</h4>
+      <ul>
+        <li>Standard shipping: 5–7 business days</li>
+        <li>Expedited shipping: 2–3 business days</li>
+        <li>Overnight shipping: 1 business day</li>
+        <li>Times may vary due to weather or carrier delays</li>
+      </ul>
+
+      <h4>Tracking and Notifications</h4>
+      <ul>
+        <li>All shipments include tracking numbers</li>
+        <li>Customers receive email notifications with tracking information</li>
+        <li>Real-time tracking is available through carrier websites</li>
+        <li>Delivery confirmation is provided when available</li>
+      </ul>
+
+      <h4>Insurance and Liability</h4>
+      <ul>
+        <li>All shipments are insured up to $500</li>
+        <li>Additional insurance is available for high-value items</li>
+        <li>We are not liable for carrier delays or lost packages</li>
+        <li>Claims must be filed within 30 days of shipment</li>
+      </ul>
+
+      <h4>International Shipping</h4>
+      <ul>
+        <li>International shipping is available to most countries</li>
+        <li>Additional documentation may be required</li>
+        <li>Customs fees and duties are the customer's responsibility</li>
+        <li>Delivery times may be extended for international shipments</li>
+      </ul>
+
+      <h4>Special Handling</h4>
+      <ul>
+        <li>Fragile items require special handling</li>
+        <li>Additional fees may apply for special handling</li>
+        <li>We will notify customers of any special requirements</li>
+        <li>Proper packaging is essential for safe transport</li>
+      </ul>
+
+      <h4>Delivery Issues</h4>
+      <ul>
+        <li>If delivery fails, packages will be returned to sender</li>
+        <li>Redelivery attempts may incur additional charges</li>
+        <li>Customers must be available to receive packages</li>
+        <li>Alternative delivery arrangements can be made</li>
+      </ul>
+
+      <h4>Contact Information</h4>
+      <p>For shipping questions or concerns:</p>
+      <ul>
+        <li>Phone: +1(504)342-9109</li>
+        <li>Email: <a href="mailto:shipping@idigital.com">shipping@idigital.com</a></li>
+        <li>Address: 1851 Rousseau St, New Orleans, LA 70130, USA</li>
+      </ul>
+
+      <p>This Shipping Policy was last updated on January 15, 2024.</p>
+
+    </div>
+  </section>
+
+  <section id="acceptable-use-policy" class="terms-of-use">
+    <div class="container" id="AcceptableText">
+      <h2>Acceptable Use Policy</h2>
+      <hr>
+      <p>This Acceptable Use Policy ("Policy") governs the use of iDigital's services, website, and facilities.</p>
+
+      <h4>General Principles</h4>
+      <ul>
+        <li>Use our services responsibly and lawfully.</li>
+        <li>Respect the rights and privacy of others.</li>
+        <li>Follow all applicable laws and regulations.</li>
+        <li>Maintain a professional and courteous environment.</li>
+      </ul>
+
+      <h4>Permitted Uses</h4>
+      <p>You may use our services for:</p>
+      <ul>
+        <li>Legitimate repair and service requests.</li>
+        <li>Accessing information about our services.</li>
+        <li>Communicating with our staff.</li>
+        <li>Using our facilities for authorized purposes.</li>
+      </ul>
+
+      <h4>Prohibited Uses</h4>
+
+      <h5>Illegal Activities</h5>
+      <ul>
+        <li>Using our services for any illegal purpose.</li>
+        <li>Violating any applicable laws or regulations.</li>
+        <li>Engaging in fraudulent activities.</li>
+        <li>Infringing on intellectual property rights.</li>
+      </ul>
+
+      <h5>Security Violations</h5>
+      <ul>
+        <li>Attempting to gain unauthorized access to systems.</li>
+        <li>Disrupting or damaging our systems.</li>
+        <li>Introducing malware or harmful code.</li>
+        <li>Interfering with other customers' use of services.</li>
+      </ul>
+
+      <h5>Inappropriate Content</h5>
+      <ul>
+        <li>Harassing or threatening behavior.</li>
+        <li>Discriminatory language or actions.</li>
+        <li>Offensive or inappropriate content.</li>
+        <li>Violating others' privacy or rights.</li>
+      </ul>
+
+      <h4>Data and Privacy</h4>
+      <ul>
+        <li>Respect the privacy of other customers.</li>
+        <li>Do not access or use others' personal information.</li>
+        <li>Follow our Privacy Policy guidelines.</li>
+        <li>Report any privacy violations immediately.</li>
+      </ul>
+
+      <h4>System Resources</h4>
+      <ul>
+        <li>Use our systems efficiently and responsibly.</li>
+        <li>Do not overload or abuse system resources.</li>
+        <li>Follow technical guidelines and requirements.</li>
+        <li>Report technical issues promptly.</li>
+      </ul>
+
+      <h4>Business Use</h4>
+      <ul>
+        <li>Use our services for legitimate business purposes.</li>
+        <li>Follow professional standards and ethics.</li>
+        <li>Maintain confidentiality of sensitive information.</li>
+        <li>Comply with industry regulations.</li>
+      </ul>
+
+      <h4>Customer Conduct</h4>
+      <ul>
+        <li>Treat staff and other customers with respect.</li>
+        <li>Follow facility rules and guidelines.</li>
+        <li>Maintain a clean and safe environment.</li>
+        <li>Report any safety concerns immediately.</li>
+      </ul>
+
+      <h4>Violations and Enforcement</h4>
+      <ul>
+        <li>Violations may result in service termination.</li>
+        <li>We reserve the right to refuse service.</li>
+        <li>Legal action may be taken for serious violations.</li>
+        <li>Appeals process is available for disputed actions.</li>
+      </ul>
+
+      <h4>Monitoring and Compliance</h4>
+      <ul>
+        <li>We may monitor service usage for compliance.</li>
+        <li>Customer cooperation is required for investigations.</li>
+        <li>Documentation may be required for certain activities.</li>
+        <li>Regular reviews ensure policy compliance.</li>
+      </ul>
+
+      <h4>Policy Updates</h4>
+      <ul>
+        <li>This policy may be updated periodically.</li>
+        <li>Changes will be communicated to customers.</li>
+        <li>Continued use constitutes acceptance of changes.</li>
+        <li>Previous versions are available upon request.</li>
+      </ul>
+
+      <h4>Contact Information</h4>
+      <p>For questions about this policy:</p>
+      <ul>
+        <li>Phone: +1(504)342-9109.</li>
+        <li>Email: <a href="mailto:legal@idigital.com">legal@idigital.com</a>.</li>
+        <li>Address: 1851 Rousseau St, New Orleans, LA 70130, USA.</li>
+      </ul>
+
+      <p>This Acceptable Use Policy was last updated on January 15, 2024.</p>
+
+    </div>
+
+  </section>
+  <!-- Footer start -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 info-col mb-5 mb-md-0">
+          <h2 class="textLogo">iDigital</h2>
+          <form action="javascript:void(0);" class="EmailFormBlue" method="post">
+            <div class="input-group">
+              <input type="email" class="form-control" placeholder="Enter email address" required>
+              <div class="input-group-append">
+                <button class="btn btn-primary" type="submit" value="submit">Send</button>
+                <!-- Modal -->
+                <div class="modal fade" id="verificationModalBlue" tabindex="-1" role="dialog"
+                  aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Verification</h5>
+                        <button type="button" class="close HideVerification" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        Your Subscribe done successfully!
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-primary HideVerification"
+                          data-dismiss="modal">Submit</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+          <ul class="list-unstyled">
+            <li><i class="fas fa-phone-alt"></i>+1(504)342-9109</li>
+            <hr>
+            <li><i class="far fa-map"></i><span>1851 Rousseau st New Orleans<br> LA 70130 USA</span></li>
+          </ul>
+        </div>
+        <div class="col-md-3 offset-md-1 mb-5 mb-md-0 list-col">
+          <h3>Start your Repair</h3>
+          <ul class="list-unstyled">
+            <li><a href="#">Phone/Tablet Repair</a></li>
+            <li><a href="#">Computer Repair</a></li>
+            <li><a href="#">Game Console Repair</a></li>
+            <li><a href="#">Smart Watch Repair</a></li>
+            <li><a href="#">Drone/Automation Repair</a></li>
+            <li><a href="#">VR Repair</a></li>
+          </ul>
+        </div>
+        <div class="col-md-2 list-col mb-5 mb-md-0">
+          <h3>Company</h3>
+          <ul class="list-unstyled">
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Partnership</a></li>
+          </ul>
+        </div>
+        <div class="col-md-2 list-col mb-5 mb-md-0">
+          <h3>Social</h3>
+          <ul class="list-unstyled">
+            <li><a href="#"><i class="fab fa-linkedin-in"></i>LinkedIn</a></li>
+            <li><a href="#"><i class="fab fa-twitter"></i>Twitter</a></li>
+            <li><a href="#"><i class="fab fa-facebook-f"></i>Facebook</a></li>
+            <li><a href="#"><i class="fab fa-instagram"></i>Instagram</a></li>
+            <li><a href="#"><i class="fab fa-google"></i>Google</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="row copyright">
+        <div class="col-md-6 mb-md-0 mb-2">
+          <a href="#">Privacy Policy / Terms of Use</a>
+        </div>
+        <div class="col-md-6 d-flex justify-content-md-end justify-content-start">
+          <p>Â©2020 All Rights Reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Footer end -->
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.min.js"
+    integrity="sha256-8lykApyIgj9dWMIK4VPvhLQQ1pOLjP12j4zZnHHMCws=" crossorigin="anonymous""></script>
+  <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js""></script>
+  <script src=" js/jquery.slicknav.js"></script>
+  <script src="js/wow.js"></script>
+  <script src="js/main.js"></script>
+
+
+  <script>
+    ///////////////Privacy Policy choises
+    // Item
+    const PrivacyPolicy = document.querySelector("#PrivacyPolicy "),
+      TermsOfUse = document.querySelector("#TermsOfUse"),
+      RepairPolicy = document.querySelector("#RepairPolicy"),
+      PrivacyGovernance = document.querySelector("#PrivacyGovernance"),
+      EULA = document.querySelector("#EULA"),
+      ReturnPolicy = document.querySelector("#ReturnPolicy"),
+      Disclaimer = document.querySelector("#Disclaimer"),
+      ShippingPolicy = document.querySelector("#ShippingPolicy"),
+      AcceptableUsePolicy = document.querySelector("#AcceptableUsePolicy"),
+
+      // Section
+      RepairPolicyText = document.querySelector("#RepairPolicyText "),
+      TermsOfUseText = document.querySelector("#TermsOfUseText"),
+      PrivacyGovernanceText = document.querySelector("#PrivacyGovernanceText"),
+      ManageYourAccountText = document.querySelector("#ManageYourAccountText"),
+      EULATxt = document.querySelector("#EULATxt"),
+      ReturnPolicyText = document.querySelector("#ReturnPolicyText"),
+      DisclamierText = document.querySelector("#DisclamierText"),
+      ShippingPolicyText = document.querySelector("#ShippingPolicyText"),
+      AcceptableText = document.querySelector("#AcceptableText"),
+
+      termsOfUseSection = document.querySelectorAll(".terms-of-use"),
+      PrivacyPolicyTopic = document.querySelectorAll(".privacy-policy_topic-item");
+
+    //(1)
+    RepairPolicy.addEventListener("click", () => {
+      TermsOfUseText.style.display = "none";
+      PrivacyGovernanceText.style.display = "none";
+      EULATxt.style.display = "none";
+      ManageYourAccountText.style.display = "none";
+      ReturnPolicyText.style.display = "none";
+      DisclamierText.style.display = "none";
+      ShippingPolicyText.style.display = "none";
+      AcceptableText.style.display = "none";
+
+      PrivacyPolicyTopic.forEach(function (element) {
+        element.classList.remove("active");
+      });
+      RepairPolicyText.style.display = "block";
+      if (termsOfUseSection[0].classList.contains("active")) {
+        console.log("Idle");
+        termsOfUseSection[0].classList.remove("active");
+        PrivacyPolicyTopic[0].classList.remove("active");
+      }
+      else {
+        termsOfUseSection.forEach(function (element) {
+          element.classList.remove("active");
+        });
+        console.log("Active");
+        termsOfUseSection[0].classList.add("active");
+        PrivacyPolicyTopic[0].classList.add("active");
+      }
+    });
+    //(2)
+    PrivacyPolicy.addEventListener("click", () => {
+      PrivacyGovernanceText.style.display = "none";
+      EULATxt.style.display = "none";
+      ManageYourAccountText.style.display = "none";
+      ReturnPolicyText.style.display = "none";
+      DisclamierText.style.display = "none";
+      ShippingPolicyText.style.display = "none";
+      AcceptableText.style.display = "none";
+      RepairPolicyText.style.display = "none";
+
+      PrivacyPolicyTopic.forEach(function (element) {
+        element.classList.remove("active");
+      });
+      TermsOfUseText.style.display = "block";
+      if (termsOfUseSection[1].classList.contains("active")) {
+        console.log("Idle");
+        termsOfUseSection[1].classList.remove("active");
+        PrivacyPolicyTopic[1].classList.remove("active");
+      }
+      else {
+        termsOfUseSection.forEach(function (element) {
+          element.classList.remove("active");
+        });
+        console.log("Active");
+        termsOfUseSection[1].classList.add("active");
+        PrivacyPolicyTopic[1].classList.add("active");
+      }
+    });
+
+    //(3)
+    TermsOfUse.addEventListener("click", () => {
+      TermsOfUseText.style.display = "none";
+      EULATxt.style.display = "none";
+      ManageYourAccountText.style.display = "none";
+      ReturnPolicyText.style.display = "none";
+      DisclamierText.style.display = "none";
+      ShippingPolicyText.style.display = "none";
+      AcceptableText.style.display = "none";
+      RepairPolicyText.style.display = "none";
+
+      PrivacyPolicyTopic.forEach(function (element) {
+        element.classList.remove("active");
+      });
+      PrivacyGovernanceText.style.display = "block";
+      if (termsOfUseSection[2].classList.contains("active")) {
+        console.log("Idle");
+        termsOfUseSection[2].classList.remove("active");
+        PrivacyPolicyTopic[1].classList.remove("active");
+      }
+      else {
+        console.log("Active");
+        termsOfUseSection.forEach(function (element) {
+          element.classList.remove("active");
+        });
+        termsOfUseSection[2].classList.add("active");
+        PrivacyPolicyTopic[2].classList.add("active");
+      }
+    });
+
+    //(4)
+    PrivacyGovernance.addEventListener("click", () => {
+      TermsOfUseText.style.display = "none";
+      EULATxt.style.display = "none";
+      PrivacyGovernanceText.style.display = "none";
+      ReturnPolicyText.style.display = "none";
+      DisclamierText.style.display = "none";
+      ShippingPolicyText.style.display = "none";
+      AcceptableText.style.display = "none";
+      RepairPolicyText.style.display = "none";
+
+      PrivacyPolicyTopic.forEach(function (element) {
+        element.classList.remove("active");
+      });
+      ManageYourAccountText.style.display = "block";
+      if (termsOfUseSection[3].classList.contains("active")) {
+        console.log("Idle");
+        termsOfUseSection[3].classList.remove("active");
+        PrivacyPolicyTopic[3].classList.remove("active");
+      }
+      else {
+        console.log("Active");
+        termsOfUseSection.forEach(function (element) {
+          element.classList.remove("active");
+        });
+        termsOfUseSection[3].classList.add("active");
+        PrivacyPolicyTopic[3].classList.add("active");
+      }
+    });
+
+    //(5)
+    EULA.addEventListener("click", () => {
+      TermsOfUseText.style.display = "none";
+      ManageYourAccountText.style.display = "none";
+      PrivacyGovernanceText.style.display = "none";
+      ReturnPolicyText.style.display = "none";
+      DisclamierText.style.display = "none";
+      ShippingPolicyText.style.display = "none";
+      AcceptableText.style.display = "none";
+      RepairPolicyText.style.display = "none";
+
+      PrivacyPolicyTopic.forEach(function (element) {
+        element.classList.remove("active");
+      });
+      EULATxt.style.display = "block";
+      if (termsOfUseSection[4].classList.contains("active")) {
+        console.log("Idle");
+        termsOfUseSection[4].classList.remove("active");
+        PrivacyPolicyTopic[4].classList.remove("active");
+      }
+      else {
+        console.log("Active");
+        termsOfUseSection.forEach(function (element) {
+          element.classList.remove("active");
+        });
+        termsOfUseSection[4].classList.add("active");
+        PrivacyPolicyTopic[4].classList.add("active");
+      }
+    });
+    //(6)
+    ReturnPolicy.addEventListener("click", () => {
+      TermsOfUseText.style.display = "none";
+      PrivacyGovernanceText.style.display = "none";
+      EULATxt.style.display = "none";
+      ManageYourAccountText.style.display = "none";
+      DisclamierText.style.display = "none";
+      ShippingPolicyText.style.display = "none";
+      AcceptableText.style.display = "none";
+      RepairPolicyText.style.display = "none";
+
+      PrivacyPolicyTopic.forEach(function (element) {
+        element.classList.remove("active");
+      });
+      ReturnPolicyText.style.display = "block";
+      if (termsOfUseSection[5].classList.contains("active")) {
+        console.log("Idle");
+        termsOfUseSection[5].classList.remove("active");
+        PrivacyPolicyTopic[5].classList.remove("active");
+      }
+      else {
+        termsOfUseSection.forEach(function (element) {
+          element.classList.remove("active");
+        });
+        console.log("Active");
+        termsOfUseSection[5].classList.add("active");
+        PrivacyPolicyTopic[5].classList.add("active");
+      }
+    });
+    //(7)
+    Disclaimer.addEventListener("click", () => {
+      TermsOfUseText.style.display = "none";
+      PrivacyGovernanceText.style.display = "none";
+      EULATxt.style.display = "none";
+      ManageYourAccountText.style.display = "none";
+      ReturnPolicyText.style.display = "none";
+      ShippingPolicyText.style.display = "none";
+      AcceptableText.style.display = "none";
+      RepairPolicyText.style.display = "none";
+
+      PrivacyPolicyTopic.forEach(function (element) {
+        element.classList.remove("active");
+      });
+      DisclamierText.style.display = "block";
+      if (termsOfUseSection[6].classList.contains("active")) {
+        console.log("Idle");
+        termsOfUseSection[6].classList.remove("active");
+        PrivacyPolicyTopic[6].classList.remove("active");
+      }
+      else {
+        termsOfUseSection.forEach(function (element) {
+          element.classList.remove("active");
+        });
+        console.log("Active");
+        termsOfUseSection[6].classList.add("active");
+        PrivacyPolicyTopic[6].classList.add("active");
+      }
+    });
+    //(8)
+    ShippingPolicy.addEventListener("click", () => {
+      TermsOfUseText.style.display = "none";
+      PrivacyGovernanceText.style.display = "none";
+      EULATxt.style.display = "none";
+      ManageYourAccountText.style.display = "none";
+      ReturnPolicyText.style.display = "none";
+      DisclamierText.style.display = "none";
+      AcceptableText.style.display = "none";
+      RepairPolicyText.style.display = "none";
+
+      PrivacyPolicyTopic.forEach(function (element) {
+        element.classList.remove("active");
+      });
+      ShippingPolicyText.style.display = "block";
+      if (termsOfUseSection[7].classList.contains("active")) {
+        console.log("Idle");
+        termsOfUseSection[7].classList.remove("active");
+        PrivacyPolicyTopic[7].classList.remove("active");
+      }
+      else {
+        termsOfUseSection.forEach(function (element) {
+          element.classList.remove("active");
+        });
+        console.log("Active");
+        termsOfUseSection[7].classList.add("active");
+        PrivacyPolicyTopic[7].classList.add("active");
+      }
+    });
+    //(9)
+    AcceptableUsePolicy.addEventListener("click", () => {
+      TermsOfUseText.style.display = "none";
+      PrivacyGovernanceText.style.display = "none";
+      EULATxt.style.display = "none";
+      ManageYourAccountText.style.display = "none";
+      ReturnPolicyText.style.display = "none";
+      DisclamierText.style.display = "none";
+      ShippingPolicyText.style.display = "none";
+      RepairPolicyText.style.display = "none";
+      AcceptableText.style.display = "block";
+      PrivacyPolicyTopic.forEach(function (element) {
+        element.classList.remove("active");
+      });
+      AcceptableText.style.display = "block";
+      if (termsOfUseSection[8].classList.contains("active")) {
+        console.log("Idle", "AcceptableUsePolicy");
+        termsOfUseSection[8].classList.remove("active");
+        PrivacyPolicyTopic[8].classList.remove("active");
+      }
+      else {
+        termsOfUseSection.forEach(function (element) {
+          element.classList.remove("active");
+        });
+        console.log("Active");
+        termsOfUseSection[8].classList.add("active");
+        PrivacyPolicyTopic[8].classList.add("active");
+      }
+    });
+  </script>
+</body>
+
+</html>

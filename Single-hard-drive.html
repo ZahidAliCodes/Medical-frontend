@@ -1,0 +1,1392 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1,user-scalable=no">
+
+  <!-- Meta tags -->
+  <meta name="keywords" content="">
+  <meta name="author" content="">
+
+  <!-- Title -->
+  <title>iDigital - Single Hard Drive</title>
+
+  <!-- Shortcut icon -->
+  <link rel="shortcut icon" href="" type="image/x-icon">
+
+  <!-- Fonts -->
+  <link href="fonts/fontawesome/css/all.css" rel="stylesheet">
+
+  <!-- Styles -->
+
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"" />
+    <link rel=" stylesheet" href="css/slicknav.css">
+  <link rel="stylesheet" href="css/style.css" class="StyleLink">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous""></script>
+    <script src=" https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.7.0/jquery.lettering.min.js"></script>
+</head>
+
+<body class="single-hard-drive-page">
+  <!-- Header section start -->
+  <header class="single-hard-drive-header">
+    <!-- Preloader -->
+    <div class="loader">
+      <div class="word">iDigital...</div>
+      <div class="loadOverlay"></div>
+    </div>
+
+    <script type="text/javascript">
+      function Ticker(elem) {
+        elem.lettering();
+        this.done = false;
+        this.cycleCount = 5;
+        this.cycleCurrent = 0;
+        this.chars = 'iDigital...'.split('');
+        this.charsCount = this.chars.length;
+        this.letters = elem.find('span');
+        this.letterCount = this.letters.length;
+        this.letterCurrent = 0;
+
+        this.letters.each(function () {
+          var $this = $(this);
+          $this.attr('data-orig', $this.text());
+          $this.text('-');
+        });
+      }
+
+      Ticker.prototype.getChar = function () {
+        return this.chars[Math.floor(Math.random() * this.charsCount)];
+      };
+
+      Ticker.prototype.reset = function () {
+        this.done = false;
+        this.cycleCurrent = 0;
+        this.letterCurrent = 0;
+        this.letters.each(function () {
+          var $this = $(this);
+          $this.text($this.attr('data-orig'));
+          $this.removeClass('done');
+        });
+        this.loop();
+      };
+
+      Ticker.prototype.loop = function () {
+        var self = this;
+
+        this.letters.each(function (index, elem) {
+          var $elem = $(elem);
+          if (index >= self.letterCurrent) {
+            if ($elem.text() !== ' ') {
+              $elem.text(self.getChar());
+              $elem.css('opacity', Math.random());
+            }
+          }
+        });
+
+        if (this.cycleCurrent < this.cycleCount) {
+          this.cycleCurrent++;
+        } else if (this.letterCurrent < this.letterCount) {
+          var currLetter = this.letters.eq(this.letterCurrent);
+          this.cycleCurrent = 0;
+          currLetter.text(currLetter.attr('data-orig')).css('opacity', 1).addClass('done');
+          this.letterCurrent++;
+        } else {
+          this.done = true;
+        }
+
+        if (!this.done) {
+          requestAnimationFrame(function () {
+            self.loop();
+          });
+        } else {
+          setTimeout(function () {
+            self.reset();
+          }, 750);
+        }
+      };
+
+      $words = $(".word");
+
+      $words.each(function () {
+        var $this = $(this),
+          ticker = new Ticker($this).reset();
+        $this.data('ticker', ticker);
+      });
+    </script>
+    <!--Ended Preloading -->
+    <!-- ScrollBar -->
+    <div class="scrollbar" id="style-7">
+      <div class="force-overflow"></div>
+    </div>
+    <!-- Back to Top -->
+    <div class="BackTop-wrap">
+      <svg class="BackTop-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+      </svg>
+    </div>
+    <!-- Navbar -->
+    <nav class="navbar primaryNav navbar-expand-xl navbar-dark p-0 wow animate__animated animate__slideInDown"
+      data-wow-duration="1000ms" data-wow-delay="400ms">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand textLogo p-0" href="index.html">
+            iDigital
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav desktop-nav ms-auto mb-2 mb-lg-0 align-items-center">
+            <li class="nav-item">
+              <a class="nav-link " aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item dropdown service_dropDownMenu">
+              <a class="nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Services
+              </a>
+              <div class="dropdown-menu services-dropdown" data-wow-duration="300ms" data-wow-delay="0ms"
+                aria-labelledby="navbarDropdown">
+                <ul class="nav nav-tabs services-dropdown_wrap" id="services-dropdown_wrap" role="tablist">
+                  <li class="nav-item" role="presentation">
+                    <a class="services-dropdown_item" id="home-tab" data-bs-toggle="tab" type="button"
+                      data-bs-target="#home" role="tab" aria-controls="home" aria-selected="true">
+                      <img class="start-repair_services-img" src="img/start_repair/recovery.png" alt="">
+                      <h4 class="start-repair_services-text">Data Recovery</h4>
+                    </a>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <a class="services-dropdown_item" id="profile-tab" data-bs-toggle="tab" type="button"
+                      data-bs-target="#profile" role="tab" aria-controls="profile" aria-selected="false">
+                      <img class="start-repair_services-img" src="img/start_repair/service.png" alt="">
+                      <h4 class="start-repair_services-text">Repair Service</h4>
+                    </a>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <a class="services-dropdown_item" id="contact-tab" data-bs-toggle="tab" type="button"
+                      data-bs-target="#contact" role="tab" aria-controls="contact" aria-selected="false">
+                      <img class="start-repair_services-img" src="img/start_repair/home.png" alt="">
+                      <h4 class="start-repair_services-text">Home Services</h4>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="nav-item dropdown support_dropDownMenu" onmouseover="supportMenu()">
+              <a class="nav-link" id="support-tab" data-bs-toggle="tab" type="button" data-bs-target="#support"
+                role="tab" aria-controls="support" aria-selected="true">
+                Support
+
+              </a>
+            </li>
+
+
+            <li class="nav-item">
+              <a class="nav-link link-search" href="#"><i class="fas fa-search"></i></a>
+            </li>
+            <li class="nav-item ">
+              <!--<a class="nav-link find-your-store" href="#"><img src="img/icons/map-pin.png" />Find Your Store</a>-->
+              <div class="locationbar">
+                <input type="text" class="input LocationInput" placeholder="location">
+                <div class="btn btnLocation"><img src="img/icons/map-pin.png" /><a class="btnTextLocation">Find Your
+                    Store</a></div>
+              </div>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link sign-in btn-primary" href="sign-in.html"><i class="fa fa-arrow-right"></i>Sign In</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link language dropdown-toggle_custom" href="#" id="navbarDropdown" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                <img width="36px" height="24px" class="lang-selected-img" src="img/flags/usa.png" />
+              </a>
+
+              <ul class="dropdown-menu dropdown-menu-end language_dropdown" data-wow-duration="300ms"
+                data-wow-delay="0ms" aria-labelledby="navbarDropdown">
+                <li><a data-lang-code="en-GB" class="dropdown-item selected" href="#"><img
+                      src="img/flags/usa.png" /><span>en</span></a></li>
+                <li><a data-lang-code="fr-FR" class="dropdown-item" href="#"><img
+                      src="img/flags/fr.png" /><span>fr</span></a></li>
+                <li><a data-lang-code="es-ES" class="dropdown-item" href="#"><img
+                      src="img/flags/es.png" /><span>es</span></a></li>
+                <li><a data-lang-code="ar-AR" class="dropdown-item" href="#"><img
+                      src="img/flags/pal.jpg" /><span>ar</span></a></li>
+              </ul>
+            </li>
+          </ul>
+          <img src="img/icons/moon.png" id="icon-mode" class="icon-mode" />
+        </div>
+      </div>
+    </nav>
+
+    <!-- Search icon -->
+    <div class="search-container hide">
+      <div class="link-search"><i class="fas fa-search" style="color:#fff"></i>
+      </div>
+      <div class="search-bar">
+        <form action="" class="ui-widget">
+          <input type="text" class="inputSearch" placeholder="Search iDigital.com" id="inputSearch">
+        </form>
+      </div>
+      <div class="link-close"></div>
+
+      <div class="quick-links">
+        <h2>Quick Links</h2>
+        <ul>
+          <li>
+            <a href="#">Covid -19 information</a>
+          </li>
+          <li>
+            <a href="#">Most popular Questions</a>
+          </li>
+          <li>
+            <a href="#">Amet minim mollit non deserunt</a>
+          </li>
+          <li>
+            <a href="#">Velit officia consequat duis en</a>
+          </li>
+          <li>
+            <a href="#">Exercitation veniam consequat sunt</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="tab-content services-dropdown_menu hide" id="services-dropdown_tab">
+      <div class="tab-pane fade" id="home" role="tabpanel" aria-labelledby="home-tab">
+        <div class="container">
+          <div class="services-swiper_wrap">
+            <!-- Swiper -->
+            <div class="swiper-container services-swiper services-swiper1">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide box">
+                  <a href="Single-hard-drive.html" class="services-swiper_item">
+                    <img src="img/services/single_hard.png" alt="">
+                    <h5>Single Hard Drive</h5>
+                  </a>
+                </div>
+                <div class="swiper-slide box">
+                  <a href="raid-hard.html" class="services-swiper_item">
+                    <img src="img/services/raid_hard.png" alt="">
+                    <h5>Raid Hard Drive</h5>
+                  </a>
+                </div>
+                <div class="swiper-slide box">
+                  <a href="solid-state.html" class="services-swiper_item">
+                    <img src="img/services/solid_state.png" alt="">
+                    <h5>Solid State</h5>
+                  </a>
+                </div>
+                <div class="swiper-slide box">
+                  <a href="smartphone.html" class="services-swiper_item">
+                    <img src="img/services/smartphone.png" alt="">
+                    <h5>Smartphone</h5>
+                  </a>
+                </div>
+                <div class="swiper-slide box">
+                  <a href="Nand&Chip.html" class="services-swiper_item">
+                    <img src="img/services/nand.png" alt="">
+                    <h5>Nand & Chip Off</h5>
+                  </a>
+                </div>
+                <div class="swiper-slide box">
+                  <a href="USB-flash.html" class="services-swiper_item">
+                    <img src="img/services/flash.png" alt="">
+                    <h5>USB Flash</h5>
+                  </a>
+                </div>
+                <div class="swiper-slide box">
+                  <a href="file-system.html" class="services-swiper_item">
+                    <img src="img/services/file.png" alt="">
+                    <h5>File System</h5>
+                  </a>
+                </div>
+                <div class="swiper-slide box">
+                  <a href="Mac-OS.html" class="services-swiper_item">
+                    <img src="img/services/mac.png" alt="">
+                    <h5>Mac OS</h5>
+                  </a>
+                </div>
+                <div class="swiper-slide box">
+                  <a href="windows-repair.html" class="services-swiper_item">
+                    <img src="img/services/windows.png" alt="">
+                    <h5>Windows</h5>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="Linux&Unix.html" class="services-swiper_item">
+                    <img src="img/services/linux.png" alt="">
+                    <h5>Linux & Unix</h5>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="exchange-repair.html" class="services-swiper_item">
+                    <img src="img/services/exchange.png" alt="">
+                    <h5>Exchange Server</h5>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="sql-server.html" class="services-swiper_item">
+                    <img src="img/services/sql.png" alt="">
+                    <h5>SQL Server</h5>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="virtual-machine.html" class="services-swiper_item">
+                    <img src="img/services/virtual.png" alt="">
+                    <h5>Virtual Machine</h5>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="voip-system.html" class="services-swiper_item">
+                    <img src="img/services/voip.png" alt="">
+                    <h5>VoIP System</h5>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="password.html" class="services-swiper_item">
+                    <img src="img/services/pass.png" alt="">
+                    <h5>Password</h5>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="Bitcoin.html" class="services-swiper_item">
+                    <img src="img/services/bitcoin.png" alt="">
+                    <h5>Bitcoin</h5>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="Tape.html" class="services-swiper_item">
+                    <img src="img/services/tape.png" alt="">
+                    <h5>Tape</h5>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="CD-DVD-Bluray.html" class="services-swiper_item">
+                    <img src="img/services/cd.png" alt="">
+                    <h5>CD - DVD - BLURAY</h5>
+                  </a>
+                </div>
+              </div>
+
+            </div>
+            <div class="swiper-button-next services-swiper-button services-swiper1-button"><img
+                src="img/icons/chevron-right.png" /></div>
+            <div class="swiper-button-prev services-swiper-button services-swiper1-button"><img
+                src="img/icons/chevron-left.png" /></div>
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+        <div class="container">
+          <div class="services-swiper_wrap">
+            <!-- Swiper -->
+            <div class="swiper-container services-swiper services-swiper2">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <a href="smartphone.html" class="services-swiper_item">
+                    <img src="img/services/smartphone.png" alt="">
+                    <h5>Smartphone</h5>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="SmartWatch.html" class="services-swiper_item">
+                    <img src="img/services/watch.png" alt="">
+                    <h5>Smart Watches</h5>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="tablet.html" class="services-swiper_item">
+                    <img src="img/services/tablet.png" alt="">
+                    <h5>Tablet</h5>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="computer.html" class="services-swiper_item">
+                    <img src="img/services/computer.png" alt="">
+                    <h5>Computer</h5>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="laptop.html" class="services-swiper_item">
+                    <img src="img/services/laptop.png" alt="">
+                    <h5>Laptop</h5>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="game-console-repair.html" class="services-swiper_item">
+                    <img src="img/services/console.png" alt="">
+                    <h5>Game Consoles</h5>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="Drone-Automation.html" class="services-swiper_item">
+                    <img src="img/services/drone.png" alt="">
+                    <h5>Drone & Automation</h5>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="Portable-music-playery.html" class="services-swiper_item">
+                    <img src="img/services/player.png" alt="">
+                    <h5>Portable Music Player</h5>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="Virtual-Reality.html" class="services-swiper_item">
+                    <img src="img/services/vr.png" alt="">
+                    <h5>Virtual Reality</h5>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="sound-system.html" class="services-swiper_item">
+                    <img src="img/services/sound.png" alt="">
+                    <h5>Sound System</h5>
+                  </a>
+                </div>
+
+                <div class="swiper-slide">
+                  <a href="motherBoard-repair.html" class="services-swiper_item">
+                    <img src="img/services/logic.png" alt="">
+                    <h5>Logic Boards</h5>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="Medical-devices.html" class="services-swiper_item">
+                    <img src="img/services/med.png" alt="">
+                    <h5>Medical Devices</h5>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="home-appliances.html" class="services-swiper_item">
+                    <img src="https://i.postimg.cc/tJ0WCVxV/electric-appliance.png" alt="">
+                    <h5>Appliances</h5>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-button-next services-swiper-button services-swiper2-button"><img
+                src="img/icons/chevron-right.png" /></div>
+            <div class="swiper-button-prev services-swiper-button services-swiper2-button"><img
+                src="img/icons/chevron-left.png" /></div>
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+        <div class="container">
+          <div class="services-swiper_wrap">
+            <!-- Swiper -->
+            <div class="swiper-container services-swiper services-swiper3">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <a href="solar-panel.html" class="services-swiper_item">
+                    <img src="img/services/solar.png" alt="">
+                    <h5>Solar Panel</h5>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="smart-home.html" class="services-swiper_item">
+                    <img src="img/services/smarthome.png" alt="">
+                    <h5>Smarthome</h5>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="home-security.html" class="services-swiper_item">
+                    <img src="img/services/security.png" alt="">
+                    <h5>Home Security</h5>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="tv-sound.html" class="services-swiper_item">
+                    <img src="img/services/tv_sound.png" alt="">
+                    <h5>TV Sound System</h5>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-button-next services-swiper-button services-swiper3-button"><img
+                src="img/icons/chevron-right.png" /></div>
+            <div class="swiper-button-prev services-swiper-button services-swiper3-button"><img
+                src="img/icons/chevron-left.png" /></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tab-content support-dropdown_menu hide" id="support-dropdown_tab">
+      <div id="support" role="tabpanel" aria-labelledby="support-tab">
+        <div class="container">
+          <div class="services-swiper_wrap">
+            <!-- Swiper -->
+            <div class="swiper-container services-swiper support-swiper1">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide box">
+                  <a href="about-us.html" class="services-swiper_item">
+                    <img src="https://i.postimg.cc/DyshNTMx/team.png" alt="">
+                    <h5>About Us</h5>
+                  </a>
+                </div>
+                <div class="swiper-slide box">
+                  <a href="contact-us.html" class="services-swiper_item">
+                    <img src="https://i.postimg.cc/MG276kMh/contact-Us.png" alt="">
+                    <h5>Contact Us</h5>
+                  </a>
+                </div>
+                <div class="swiper-slide box">
+                  <a href="partners.html" class="services-swiper_item">
+                    <img src="https://i.postimg.cc/43t474nc/team-1.png" alt="">
+                    <h5>Partners</h5>
+                  </a>
+                </div>
+                <div class="swiper-slide box">
+                  <a href="franchising.html" class="services-swiper_item">
+                    <img src="https://i.postimg.cc/nhLzM1Yy/franchise.png" alt="">
+                    <h5>Franchising</h5>
+                  </a>
+                </div>
+                <div class="swiper-slide box">
+                  <a href="pricing.html" class="services-swiper_item">
+                    <img src="https://i.postimg.cc/tgNnxgnf/price-tag.png" alt="">
+                    <h5>Pricing</h5>
+                  </a>
+                </div>
+                <div class="swiper-slide box">
+                  <a href="Policies.html" class="services-swiper_item">
+                    <img src="https://i.postimg.cc/hvp0brJk/privacy-policy.png" alt="">
+                    <h5>Policies</h5>
+                  </a>
+                </div>
+                <div class="swiper-slide box">
+                  <a href="go-green.html" class="services-swiper_item">
+                    <img src="https://i.postimg.cc/Zq7D4JKk/353727633-979064989956272-7164428973325253639-n.png" alt="">
+                    <h5>Go Green life at iDigital</h5>
+                  </a>
+                </div>
+                <div class="swiper-slide box">
+                  <a href="iDigital-careers.html" class="services-swiper_item">
+                    <img src="https://i.postimg.cc/HWvznTM3/career-choice.png" alt="">
+                    <h5>iDigital Career</h5>
+                  </a>
+                </div>
+                <div class="swiper-slide box">
+                  <a href="work-at-iDigital.html" class="services-swiper_item">
+                    <img src="https://i.postimg.cc/tJcsjSYt/work.png" alt="">
+                    <h5>Work at iDigital</h5>
+                  </a>
+                </div>
+                <div class="swiper-slide box">
+                  <a href="life-at-iDigital.html" class="services-swiper_item">
+                    <img src="https://i.postimg.cc/4NtWSrK5/working-at-home.png" alt="">
+                    <h5>life at iDigital</h5>
+                  </a>
+                </div>
+                <div class="swiper-slide box">
+                  <a href="blog.html" class="services-swiper_item">
+                    <img src="https://i.postimg.cc/kMvzRgL3/blog.png" alt="">
+                    <h5>Blog</h5>
+                  </a>
+                </div>
+                <div class="swiper-slide box">
+                  <a href="solid-state.html" class="services-swiper_item">
+                    <img src="https://i.postimg.cc/sDBbTQck/a86e5695-6268-441b-bf2a-8fd4473969ba.png" alt="">
+                    <h5>Discussion</h5>
+                  </a>
+                </div>
+                <div class="swiper-slide box">
+                  <a href="faq.html" class="services-swiper_item">
+                    <img src="https://i.postimg.cc/T1ryqYpB/question.png" alt="">
+                    <h5>FAQ</h5>
+                  </a>
+                </div>
+
+              </div>
+
+            </div>
+            <div class="swiper-button-next support-swiper-button support-swiper1-button"><img
+                src="img/icons/chevron-right.png" /></div>
+            <div class="swiper-button-prev support-swiper-button support-swiper1-button"><img
+                src="img/icons/chevron-left.png" /></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Mobile Menu Start -->
+    <ul class="mobile-menu">
+      <li>
+        <a href="index.html">Home</a>
+      </li>
+      <li>Services
+        <ul class="submenu">
+          <li class="submenu-item"><img class="img-fluid" src="img/start_repair/recovery.png" alt="">Data
+            Recovery
+            <ul class="submenu-list">
+              <li><a href="Single-hard-drive.html">Single Hard Drive</a></li>
+              <li><a href="raid-hard.html">Raid Hard Drive</a></li>
+              <li><a href="solid-state.html">Solid State</a></li>
+              <li><a href="smartphone.html">Smartphone</a></li>
+              <li><a href="Nand&Chip.html">Nand & Chip Off</a></li>
+              <li><a href="USB-flash.html">USB Flash</a></li>
+              <li><a href="file-system.html">File System</a></li>
+              <li><a href="Mac-OS.html">Mac OS</a></li>
+              <li><a href="windows-repair.html">Windows</a></li>
+              <li><a href="life-at-iDigital.html">Linux & Unix</a></li>
+              <li><a href="exchange-repair.html">Exchange Server</a></li>
+              <li><a href="sql-server.html">SQL Server</a></li>
+              <li><a href="virtual-machine.html">Virtual Machine</a></li>
+              <li><a href="voip-system.html">VoIP System</a></li>
+              <li><a href="password.html">Password</a></li>
+              <li><a href="Bitcoin.html">Bitcoin</a></li>
+              <li><a href="Tape.html">Tape</a></li>
+              <li><a href="CD-DVD-Bluray.html">CD - DVD - BLURAY</a></li>
+            </ul>
+          </li>
+          <li class="submenu-item"><img class="img-fluid" src="img/start_repair/service.png" alt="">Repair
+            Service
+            <ul class="submenu-list">
+              <li><a href="smartphone.html">Smartphone</a></li>
+              <li><a href="SmartWatch.html">Smart Watches</a></li>
+              <li><a href="tablet.html">Tablet</a></li>
+              <li><a href="computer.html">Computer</a></li>
+              <li><a href="laptop.html">Laptop</a></li>
+              <li><a href="game-console-repair.html">Game Consoles</a></li>
+              <li><a href="Drone-Automation.html">Drone & Automation</a></li>
+              <li><a href="Portable-music-playery.html">Portable Music Player</a></li>
+              <li><a href="Virtual-Reality.html">Virtual Reality</a></li>
+              <li><a href="sound-system.html">Sound System</a></li>
+              <li><a href="motherBoard-repair.html">Logic Boards</a></li>
+              <li><a href="Medical-devices.html">Medical Devices</a></li>
+              <li><a href="appliances.html">Appliances</a></li>
+            </ul>
+
+          </li>
+          <li class="submenu-item"><img class="img-fluid" src="img/start_repair/home.png" alt="">Home Services
+            <ul class="submenu-list">
+              <li><a href="solar-panel.html">Solar Panel</a></li>
+              <li><a href="smart-home.html">Smarthome</a></li>
+              <li><a href="home-security.html">Home Security</a></li>
+              <li><a href="tv-sound.html">TV Sound System</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        Support
+        <ul class="submenu supportSubmenu">
+          <li><a href="about-us.html">About Us</a></li>
+          <li><a href="contact-us.html">Contact Us</a></li>
+          <li><a href="partners.html">Partners</a></li>
+          <li><a href="franchising.html">Franchising</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="Policies.html">Policies</a></li>
+          <li><a href="go-green.html">Go Green life at iDigtal</a></li>
+          <li><a href="iDigital-careers.html">iDigital Career</a></li>
+          <li><a href="work-at-iDigital.html">Work at iDigital</a></li>
+          <li><a href="life-at-iDigital.html">life at iDigital</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="discussion.html">discussion</a></li>
+          <li><a href="faq.html">faq</a></li>
+
+        </ul>
+      </li>
+      <li>
+        <a href="contact-us.html">Contact</a>
+      </li>
+      <li>
+        <a href="covid19.html">Covid 19</a>
+      </li>
+      <li>
+        Search
+        <ul class="submenu">
+          <li>
+            <form class="" action="index.html" method="post">
+              <input type="text" class="form-control" placeholder="Search iDigital.com">
+            </form>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="sign-in.html">Sign In</a>
+      </li>
+      <li>
+        Language
+        <ul class="submenu language_dropdown">
+          <li><a data-lang-code="en-GB" class="dropdown-item selected" href="#"><img
+                src="img/flags/usa.png" /><span>en</span></a></li>
+          <li><a data-lang-code="fr-FR" class="dropdown-item" href="#"><img src="img/flags/fr.png" /><span>fr</span></a>
+          </li>
+          <li><a data-lang-code="es-ES" class="dropdown-item" href="#"><img src="img/flags/es.png" /><span>es</span></a>
+          </li>
+          <li><a data-lang-code="ar-AR" class="dropdown-item" href="#"><img src="img/flags/ar.png" /><span>ar</span></a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <img class="icon-mode-mobile" onclick="MobileMode()" src="img/icons/moon.png" />
+      </li>
+    </ul>
+    <!-- Mobile Menu End -->
+    <div class="overlay"></div>
+
+    <div id="cDdvDBluray" class="container cDdvDBluray-header_container d-flex align-items-end">
+      <div class="row">
+        <div class="col-md-10 offset-md-1">
+          <div class="singleHardDrive-header_content wow animate__animated animate__fadeInUp" data-wow-duration="1000ms"
+            data-wow-delay="300ms">
+            <div class="row">
+              <div class="col-md-8 offset-md-2">
+                <h2 class="singleHardDrive-header_title">Hard Drive Data Recovery</h2>
+                <h4 class="singleHardDrive-header_description">With our vast experience in this field
+                  and
+                  with customized technique, we can recover data from any hard drives.</h4>
+                <button class="btn blog-header_btn btn-primary head-btn" type="button" name="button"><i
+                    class="fas fa-arrow-right"></i>Book a Repair</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- Header section end -->
+  <!-- Section 1 single hard drive start-->
+  <section class="ISO-section">
+    <div class="container">
+      <h3>ISO Class 10 Cleanroom Environment for Hard Drive Recovery Services
+      </h3>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card drive-img1">
+            <div class="icon-center"><img src="./img/icons/zoom.png" alt="zoom icon"></div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card drive-img2">
+            <div class="icon-center"><img src="./img/icons/zoom.png" alt="zoom icon"></div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card drive-img3">
+            <div class="icon-center"><img src="./img/icons/zoom.png" alt="zoom icon"></div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card drive-img4">
+            <div class="icon-center"><img src="./img/icons/zoom.png" alt="zoom icon"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Section 1 ISO end-->
+  <!-- Services section start -->
+  <section class="medical-services-section">
+    <div class="container">
+      <h2 class="partners-section_title">Recent Works</h2>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="row hard-drive-works">
+            <div class="col-md-6">
+              <img class="hard-drive-works-image" src="https://i.postimg.cc/jjhVckgt/raid-data-recovery-img.png" alt="">
+            </div>
+            <div class="col-md-6 content">
+              <h3 class="hard-drive-works-title">RAID5 DATA Recovery | <br>ASUSTOR Storage</h3>
+              <p class="hard-drive-works-description">
+                Data is the lifeblood of any businesses nowadays. Data loss can be a near-certain death
+                sentence for them. Constantly monitored backup plan is the only bullet-proof way to keep
+                your data safe. If this option is too late and there is a data recovery emergency, give
+                us a chance to help and build trust. Ourâ€¦</p>
+              <a class="partners-section_block-link" href="#">Learn more<i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="row hard-drive-works">
+            <div class="col-md-6">
+              <img class="hard-drive-works-image" src="https://i.postimg.cc/KYTjYF8Q/monday-delight-img.png" alt="">
+            </div>
+            <div class="col-md-6">
+              <h3 class="hard-drive-works-title">Monday Delight | Data<br> Recovery From A Damaged<br>
+                Micro SD</h3>
+              <p class="hard-drive-works-description">
+                A Micro SD card with damaged micro-controller. More than 98% of precious data from 64GB
+                Micro SD card with a damaged controller was recovered. One should never store the only
+                copy of sensitive and critical data in Micro SD card. Data recovery from such monolithic
+                cards requires a different set of skills. Moreover, there isâ€¦</p>
+              <a class="partners-section_block-link" href="#">Learn more<i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="row hard-drive-works">
+            <div class="col-md-6">
+              <img class="hard-drive-works-image" src="https://i.postimg.cc/ZYx93TFM/MHA-img.png" alt="">
+            </div>
+            <div class="col-md-6">
+              <h3 class="hard-drive-works-title">Magnetic Heads Assembly â€“<br> MHA | HDD Data Recovery
+              </h3>
+              <p class="hard-drive-works-description">
+                A very delicate part of a traditional hard disk drive â€“ magnetic heads assembly. So what
+                is it? Magnetic heads assembly consists of two different main units. One of them is
+                called the Head Stack Assembly (HSA). HSA itself has many subassemblies. There is a
+                special chip attached to HSA called preamplifier or preamp inâ€¦</p>
+              <a class="partners-section_block-link" href="#">Learn more<i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--Services section end -->
+  <!-- FAQ section start -->
+  <section
+    class="faq-section faq-recovery-section frequently-questions container-fluid wow animate__animated animate__fadeIn"
+    data-wow-duration="1000ms" data-wow-delay="300ms">
+    <div>
+      <h2>Frequently Asked Questions</h2>
+      <ul class="nav nav-tabs faq-tabs faq-exchange-tabs" id="pricing-tabs" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="Service-tab" data-bs-toggle="tab" data-bs-target="#Service" type="button"
+            role="tab" aria-controls="Service" aria-selected="true">Service</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="Cost-tab" data-bs-toggle="tab" data-bs-target="#Cost" type="button" role="tab"
+            aria-controls="Cost" aria-selected="false">Cost</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="Success-tab" data-bs-toggle="tab" data-bs-target="#Success" type="button"
+            role="tab" aria-controls="Success" aria-selected="false">Success</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="Payment-tab" data-bs-toggle="tab" data-bs-target="#Payment" type="button"
+            role="tab" aria-controls="Payment" aria-selected="false">Payment Plans</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="Shipping-tab" data-bs-toggle="tab" data-bs-target="#Shipping" type="button"
+            role="tab" aria-controls="Shipping" aria-selected="false">Shipping</button>
+        </li>
+        <br>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="Location-tab" data-bs-toggle="tab" data-bs-target="#Location" type="button"
+            role="tab" aria-controls="Location" aria-selected="false">Location</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="Miscellaneous-tab" data-bs-toggle="tab" data-bs-target="#Miscellaneous"
+            type="button" role="tab" aria-controls="Miscellaneous" aria-selected="false">Miscellaneous</button>
+        </li>
+      </ul>
+    </div>
+    <div class="tab-content exchange-faq faq-tabs_content" id="pricing-tabs_content">
+      <div class="tab-pane fade show active" id="Service" role="tabpanel" aria-labelledby="Service-tab">
+        <div class="container">
+          <div class="faq-tabe-content">
+            <div>
+              <h4>How long does it take?</h4>
+              <p>DriveSavers offers a range of turnaround times to best suit your needs for getting your
+                recovered data back to you in a timely and economical manner.</p>
+              <div class="faq-content-with-space">
+                <h4>Priority Service</h4>
+                <p>Time Critical Recovery; Recovery begins upon receipt of drive â€“ 365 days a year,
+                  including nights, weekends, and holidays.</p>
+                <h4>Standard Service</h4>
+                <p>1-2 Business Day Turnaround; Fastest Standard turnaround time in the industry, at 24
+                  to 48 hours during normal business hours, Monday through Friday.</p>
+                <h4>Economy Service</h4>
+                <p>5-7 Business Day Turnaround; An economical service option offering job completion
+                  during normal business hours.
+                  10-14 Business Day Turnaround; Smart Devices</p>
+              </div>
+              <h4> Do you offer a remote data recovery service?</h4>
+              <p>In certain situations, DriveSavers provides unparalleled remote data recovery service
+                for
+                data loss situations that do not involve mechanical or physical damage. It is an ideal
+                recovery option for RAID, NAS, and SAN systems, hardware too large to ship (i.e. large
+                servers), and for highly sensitive data that needs to stay on-premises.</p>
+              <h4> Do you offer a remote data recovery service?</h4>
+              <p>In certain situations, DriveSavers provides unparalleled remote data recovery service
+                for
+                data loss situations that do not involve mechanical or physical damage. It is an ideal
+                recovery option for RAID, NAS, and SAN systems, hardware too large to ship (i.e. large
+                servers), and for highly sensitive data that needs to stay on-premises.</p>
+
+              <h4>Will it change/ruin my warranty? (i.e. Apple, Samsung, etc.)</h4>
+              <p>All data recoveries are performed in accordance with standards set by leading hard
+                drive and
+                data storage manufacturers. All leading manufacturers authorize DriveSavers to open
+                sealed
+                drive mechanisms; our data recovery process will not void their original warranty.</p>
+
+              <h4>How do you return my data, what does it look like?</h4>
+              <p>The recovered data is transferred onto a new storage device and shipped back to you
+                along
+                with the original device via FedEx. Your package will include easy-to-follow
+                instructions
+                and links to support videos on how to review and back up your recovered data.</p>
+
+              <h4>Will my data be at risk?</h4>
+              <p>Your data is never compromised. An exact copy of the original data on the source
+                drive is
+                made; all recovery attempts are done on the copy.</p>
+
+              <p>DriveSavers provides the highest level of data security in the data recovery industry
+                today
+                and is the only data recovery company in the industry today to post proof of annual,
+                company-wide security audits.</p>
+
+              <p>The security control objectives established for our annual audit are designed to
+                satisfy the
+                stringent security requirements and audits mandated by the corporate clients and
+                government
+                agencies we serve.</p>
+
+              <p>DriveSavers is compliant with data privacy, security standards, and guidelines.
+                DriveSavers
+                undergoes an annual SOC 2 Type II audit of its internal data hosting and processing
+                controls
+                to guarantee that our data recovery services uphold the stringent data security and
+                privacy
+                protocols mandated by the corporate clients and government agencies we serve.</p>
+
+              <h4>Certified Cleanroom</h4>
+              <p>Data recoveries are performed in a pristine Cleanroom environment that meets ISO
+                standards
+                to minimize contamination and maximize recovery results.</p>
+
+              <h4>Maximum Security</h4>
+              <p>Accounting, auditing, and information security professionals have verified that the
+                facilityâ€™s information technology controls and processes are operating effectively and
+                provide maximum data security.</p>
+
+              <h4>Data Safety</h4>
+              <p>Your critical and proprietary data is safe from external breaches while on the firmâ€™s
+                network during the data recovery process.</p>
+
+              <h4>Certified Engineers</h4>
+              <p>Data recovery engineers are certified to properly and safely recover encrypted files and
+                drives.</p>
+
+              <div class="faq-more-ref"><a href="#">More about our certifications and security</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="Cost" role="tabpanel" aria-labelledby="Cost-tab">
+        <div class="container">
+          <div class="faq-tabe-content">
+            <div>
+              <h4>What does it cost?</h4>
+              <p>The final cost is determined by the success and completeness of the recovery and the
+                selected turnaround time. A successful recovery will generally fall in the top third of
+                the original quote range. We will never exceed the price that we initially quoted.</p>
+              <h4>Why does the price have a range?</h4>
+              <p>Every data loss scenario is different. Until the device has been examined by our Data
+                Recovery Engineers, the severity and complexity of the data loss canâ€™t be determined.
+                After the free evaluation of your device, you will be provided a more accurate price
+                range, however, the maximum final price will never exceed the maximum price that you
+                were first quoted.</p>
+              <h4>How do you determine the cost of the recovery?</h4>
+              <p>The final cost of the recovery is determined by the complexity and completeness of the
+                recovery, based on the complexity of the mechanical and/or logical issues, the quality
+                of the recovered data, the quality of file names, and data structure. The final cost
+                will never exceed the initial quote that you received when you first call DriveSavers.
+                We call that our maximum price gap guarantee.</p>
+
+              <h4>What if I only want a few files does that change the cost?</h4>
+              <p>The work involved in recovering files from data storage devices is very complex. Whether
+                you need one file or all files the effort is the same for the engineers, and we always
+                attempt to recover all data on the device. </p>
+
+              <h4>How do I pay you, when do you need my payment information?</h4>
+              <p>Payment is collected when the recovery is complete, before shipping or pickup. You do not
+                need to provide payment to start the data recovery process. DriveSavers accepts all
+                major credit cards. Purchase orders and NET terms can be provided for Fortune 500
+                companies and government institutions.</p>
+              <p>We also offer two payment plan options PayPal Credit, a Digital Reusable Credit Line, and
+                Affirm, a Consumer Finance Company. </p>
+
+              <div class="faq-more-ref"><a href="#">View our payment plans</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="Success" role="tabpanel" aria-labelledby="Success-tab">
+        <div class="container">
+          <div class="faq-tabe-content">
+            <div>
+              <h4>What is the success rate for your recovery?</h4>
+              <p>We have the highest chance of success in the industry. Our in-house R&D team combined
+                with relationships with the industry-leading storage device manufacturers, allows us the
+                highest opportunity for success, with over 90% recovery rate across all device types.
+              </p>
+              <h4>Can you recover the data?</h4>
+              <p>Our engineers are stubborn, and will not stop attempting recovery until the data is
+                recovered or it is determined by a number of engineers and a supervisor that the data is
+                unrecoverable.</p>
+              <h4>Have you worked on this specific issue before?</h4>
+              <p>Weâ€™ve received hundreds of thousands of devices and hundreds of different issues. We have
+                been in the data recovery business for over 35 years and have seen everything you can
+                imagine - but there are always new data loss scenarios.</p>
+
+              <h4>Can you recover data from XYZ?</h4>
+              <p>DriveSavers recovers data from almost any digital storage device. Call our Data Recovery
+                Advisors for a free quote <b>1.800.440.1904.</b></p>
+
+              <h4>Why can't you guys just recover everything?</h4>
+              <p>Some devices have logical issues (corruption, software errors, deletion) or physical
+                issues (head crash) where data is destroyed beyond recovery.
+              </p>
+
+              <h4>What if you only recover a portion of the files and not all of them?</h4>
+              <p>We will calculate the final cost of the data recovery based on the complexity and
+                completeness of the recovery. It is our goal to get everything as it was before the data
+                loss. If the files or documents you requested are not fully recovered, we will adjust
+                the cost accordingly.
+              </p>
+              <h4>What happens if you cannot recover my data?
+              </h4>
+              <p>In the unlikely event that your data is not recoverable, there is NO charge for our data
+                recovery attempt, and we even ship your device back to you, for free!
+              </p>
+
+              <h4>What does it look like when I have the data recovered? (HDD, Phones, Flash Drives, etc.)
+              </h4>
+              <p>In most cases, we are able to restore the original folder structure of the device, but in
+                cases where there is damage to the directory, we will return the data in a custom file
+                structure.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="Payment" role="tabpanel" aria-labelledby="Payment-tab">
+        <div class="container">
+          <div class="faq-tabe-content">
+            <div>
+              <h4>What are your payment options?</h4>
+              <p>We accept all major credit cards including Discovery and Diners Club. Business checks and
+                Net 30 Purchase
+                orders are an option with the approval of the DriveSavers accounting department.</p>
+              <h4>Do you have payment plans?</h4>
+              <p>We also offer two payment options PayPal Credit, a Digital Reusable Credit Line, and
+                Affirm, a Consumer
+                Finance Company.</p>
+              <div class="faq-more-ref"><a href="#">View our payment plans</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="Shipping" role="tabpanel" aria-labelledby="Shipping-tab">
+        <div class="container">
+          <div class="faq-tabe-content">
+            <div>
+              <h4>How do I get my device to you?</h4>
+              <p>Call us to set up an order and we will email you a free overnight shipping label.</p>
+              <h4>How do I package a device to ship to you?</h4>
+              <p>To safely ship your device to DriveSavers, follow these five steps:</p>
+              <div class="faq-content-with-space">
+                <p>1. Put your device in an antistatic bag or ziplock bag and seal it.
+                </p>
+                <p>2. Wrap your device with an adequate amount of bubble wrap, about 2-5 inches for most
+                  types of devices. (Do not use packing peanuts or another lightweight packing. These
+                  tend to shift during shipping and can increase the chance of damage.)
+                </p>
+                <p>3. Seal the sides of the bubble wrap with strong tape.
+                </p>
+                <p>4. Put your device into a sturdy cardboard box and make sure itâ€™s tightly packed.
+                  Your
+                  media should not be able to move around during shipment.
+                </p>
+                <p>5. Securely apply tape to seal the box as well as place your prepaid overnight
+                  shipping
+                  label that you received with your service order confirmation on the top of the box.
+                </p>
+              </div>
+              <h4> Do you offer a remote data recovery service?</h4>
+              <p>In certain situations, DriveSavers provides unparalleled remote data recovery service
+                for
+                data loss situations that do not involve mechanical or physical damage. It is an ideal
+                recovery option for RAID, NAS, and SAN systems, hardware too large to ship (i.e. large
+                servers), and for highly sensitive data that needs to stay on-premises.</p>
+              <h4>Can I ship with anyone else besides FedEx?</h4>
+              <p>You may ship your device to us using any mailing/shipping service. We suggest you use a
+                service with tracking. We offer free prepaid overnight shipping only via FedEx.</p>
+
+              <h4>Do I get the device I shipped to you back?</h4>
+              <p>Yes, we ship the device back to you, unless you have asked us to recycle it for you.</p>
+
+              <h4>Can I get my recovered data returned to me on the cloud?</h4>
+              <p>We offer a Data Express service. Depending on the amount of data you need ASAP, we may be
+                able to transfer data via our Data Express SFTP portal over the Internet. We would still
+                ship the completed recovery to you.</p>
+
+              <div class="faq-more-ref"><a href="#">Get more info about shipping best practices here</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="Location" role="tabpanel" aria-labelledby="Location-tab">
+        <div class="container">
+          <div class="faq-tabe-content">
+            <div>
+              <h4>Where is DriveSavers located?</h4>
+              <p>DriveSavers is located in the San Francisco Bay Area, the technology hub of the world.
+                Our Cleanroom, engineers, call center, sales, and marketing team all work at the
+                DriveSavers headquarters. We believe keeping the DriveSavers team in one location
+                enhances our knowledge and supports our customers with the best data recovery services
+                in the industry.</p>
+              <h4>Do you have a local place or is there another company that does the same work?</h4>
+              <p>DriveSavers is the industry leader in Data Recovery. DriveSavers strategically has a
+                single data recovery lab, with all of our Data Recovery Engineers in a single location,
+                helping with overall recoverability rates of devices due to increased collaboration
+                between our team of engineers. Our single location also allows DriveSavers to have
+                engineers who specialize in all different device types all in one single location. This
+                ensures that all customers have a specialist working on their job.</p>
+              <h4>Why does your website say you have a location near me, do you have a location near me?
+              </h4>
+              <p>We offer and have served all major cities and states throughout the United States on a
+                daily basis. Although we do not have other physical locations - we work internationally
+                and offer free shipping of your device to our certified secure data recovery lab.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="Miscellaneous" role="tabpanel" aria-labelledby="Miscellaneous-tab">
+        <div class="container">
+          <div class="faq-tabe-content">
+            <div>
+              <h4>What if I canâ€™t recall the name of the folder or how it was stored?</h4>
+              <p>Any information you can provide about the data you need to be recovered will help us to
+                know what is most critical to you to ensure a successful recovery. However, we will
+                attempt to recover all the data on the device.</p>
+              <h4>Do you fix the devices?</h4>
+              <p>No, and Yes â€“ If the device is malfunctioning we may repair it using parts from our
+                inventory in order to get it functioning long enough to get the data off. After the
+                repair, the used part is then returned to the inventory.</p>
+              <p>If the repair involves soldering the device might seem to function when you receive it
+                back. We donâ€™t repair devices for reuse, at times devices are returned in a
+                semi-functional manner.</p>
+              <h4>Can you recover the data from the cloud or an online backup service?</h4>
+              <p>No, you will need to contact your cloud provider or backup service provider.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+  <!-- FAQ section end -->
+  <section class="data-recovery-process-section">
+    <div class="container">
+      <h3>The Data Recovery Process. <br>How it all works
+      </h3>
+      <div class="row">
+        <div class="col-lg-3 col-md-6">
+          <div class="card">
+            <h4 class="numberOfList">1</h4>
+            <h3>Request <br> Help</h3>
+            <p>Whatever the cause for hard drive failure, mechanical or logical, our data recovery
+              experts will exhaust every possible methods to retrieve your data.</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="card">
+            <h4 class="numberOfList">2</h4>
+            <h3>Submit A <br>Recovery Case</h3>
+            <p>Once you receive a data recovery service quote and decided to start the data recovery
+              process, you should submit a case on our website and ship the drive to our lab.</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="card">
+            <h4 class="numberOfList">3</h4>
+            <h3>Verify<br> Recovered Data</h3>
+            <p>Once we recover your data, we will arrange a remote session for you to verify the
+              recovered data before making payment. If you don't like the result, we will not ask for
+              payment.</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="card">
+            <h4 class="numberOfList">4</h4>
+            <h3>Make <br>Payment</h3>
+            <p>Once you verify and accept the result, you will receive an invoice for payment. Once we
+              receive your payment, we will arrange the delivery of the recovered data.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Section 1 ISO end-->
+  <!-- Request help start -->
+  <section class="request-help-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-7">
+          <h3>Request Help</h3>
+          <p>
+            Have a question? Need help? Get in touch with us.
+          </p>
+        </div>
+        <div class="col-lg-4 offset-md-1">
+          <button class="btn blog-header_btn btn-primary book-help-btn head-btn" type="button" name="button"><i
+              class="fas fa-arrow-right"></i>Book a Repair</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Request help end -->
+  <!-- Subscribe section start-->
+  <section class="subscribe home-page">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <h2>Subscribe</h2>
+          <h3>for our best deals</h3>
+          <p class="mb-4 mb-lg-0">Get the latest information about new products, special deals, news,
+            top-rated items,
+            promotions and more!</p>
+        </div>
+        <div class="col-lg-6">
+          <form action="javascript:void(0);" class="EmailFormYellow" method="post">
+            <div class="input-group">
+              <input type="email" class="form-control" placeholder="Enter email address" required>
+              <div class="input-group-append">
+                <button class="btn btn-primary head-btn wow animate__animated animate__fadeInUp"
+                  data-wow-duration="1000ms" data-wow-delay="800ms" type="submit" value="Submit">Subscribe<i
+                    class="fa fa-angle-right"></i></button>
+                <!-- Modal -->
+                <div class="modal fade" id="verificationModalYellow" tabindex="-1" role="dialog"
+                  aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Verification</h5>
+                        <button type="button" class="close HideVerification" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        Your Subscribe done successfully!
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-warninig HideVerification"
+                          data-dismiss="modal">Submit</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Footer start -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 info-col mb-5 mb-md-0">
+          <h2 class="textLogo">iDigital</h2>
+          <form action="javascript:void(0);" class="EmailFormBlue" method="post">
+            <div class="input-group">
+              <input type="email" class="form-control" placeholder="Enter email address" required>
+              <div class="input-group-append">
+                <button class="btn btn-primary" type="submit" value="submit">Send</button>
+                <!-- Modal -->
+                <div class="modal fade" id="verificationModalBlue" tabindex="-1" role="dialog"
+                  aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Verification</h5>
+                        <button type="button" class="close HideVerification" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        Your Subscribe done successfully!
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-primary HideVerification"
+                          data-dismiss="modal">Submit</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+          <ul class="list-unstyled">
+            <li><i class="fas fa-phone-alt"></i>+1(504)342-9109</li>
+            <hr>
+            <li><i class="far fa-map"></i><span>1851 Rousseau st New Orleans<br> LA 70130 USA</span></li>
+          </ul>
+        </div>
+        <div class="col-md-3 offset-md-1 mb-5 mb-md-0 list-col">
+          <h3>Start your Repair</h3>
+          <ul class="list-unstyled">
+            <li><a href="#">Phone/Tablet Repair</a></li>
+            <li><a href="#">Computer Repair</a></li>
+            <li><a href="#">Game Console Repair</a></li>
+            <li><a href="#">Smart Watch Repair</a></li>
+            <li><a href="#">Drone/Automation Repair</a></li>
+            <li><a href="#">VR Repair</a></li>
+          </ul>
+        </div>
+        <div class="col-md-2 list-col mb-5 mb-md-0">
+          <h3>Company</h3>
+          <ul class="list-unstyled">
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Partnership</a></li>
+          </ul>
+        </div>
+        <div class="col-md-2 list-col mb-5 mb-md-0">
+          <h3>Social</h3>
+          <ul class="list-unstyled">
+            <li><a href="#"><i class="fab fa-linkedin-in"></i>LinkedIn</a></li>
+            <li><a href="#"><i class="fab fa-twitter"></i>Twitter</a></li>
+            <li><a href="#"><i class="fab fa-facebook-f"></i>Facebook</a></li>
+            <li><a href="#"><i class="fab fa-instagram"></i>Instagram</a></li>
+            <li><a href="#"><i class="fab fa-google"></i>Google</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="row copyright">
+        <div class="col-md-6 mb-md-0 mb-2">
+          <a href="#">Privacy Policy / Terms of Use</a>
+        </div>
+        <div class="col-md-6 d-flex justify-content-md-end justify-content-start">
+          <p>Â©2020 All Rights Reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Footer end -->
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.min.js"
+    integrity="sha256-8lykApyIgj9dWMIK4VPvhLQQ1pOLjP12j4zZnHHMCws=" crossorigin="anonymous""></script>
+    <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js""></script>
+    <script src=" js/jquery.slicknav.js"></script>
+  <script src="js/wow.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

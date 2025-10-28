@@ -1,0 +1,32 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://idigital.com/sitemap.xml
+
+# Crawl-delay for better server performance
+Crawl-delay: 1
+
+# Disallow admin areas
+Disallow: /admin/
+Disallow: /private/
+Disallow: /*.json$
+Disallow: /js/
+Disallow: /css/
+
+# Allow important pages
+Allow: /img/
+Allow: /assets/
+Allow: /fonts/
+
+# Specific bot instructions
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 2

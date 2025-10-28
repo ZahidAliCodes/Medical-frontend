@@ -1,0 +1,872 @@
+@import url("style.css");
+
+html[dir="rtl"] #icon-mode {
+  margin-left: auto;
+  margin-right: 1rem;
+}
+
+html[dir="rtl"] .navbar-dark .navbar-nav .nav-link {
+  margin-left: auto;
+  margin-right: 24px;
+}
+html[dir="rtl"] .slicknav_btn {
+  margin: 11px 15px;
+}
+html[dir="rtl"] .home-page{
+  overflow-x: hidden;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+html[dir="rtl"] .home-page-header .head-btn{
+  padding-left: 6rem;
+}
+html[dir="rtl"] .navbar-dark .navbar-nav .nav-link.find-your-store {
+  padding: 8px 13px 8px 20px;
+}
+
+html[dir="rtl"] .ms-auto {
+  margin-right: auto !important;
+}
+
+html[dir="rtl"] .navbar-dark .navbar-nav .nav-link.find-your-store img {
+  margin-left: 10px;
+  margin-right: auto;
+}
+
+html[dir="rtl"] .navbar-dark .navbar-nav .nav-link.sign-in {
+  padding: 13px 15px 13px 20px;
+}
+
+html[dir="rtl"] .navbar-dark .navbar-nav .nav-link.sign-in i {
+  margin-left: 13px;
+  margin-right: auto;
+}
+
+html[dir="rtl"] .slicknav_btn {
+  float: left;
+}
+
+html[dir="rtl"] .dropdown-menu.services-dropdown {
+  margin-right: 30px;
+  padding: 37px 10px 22px;
+}
+
+html[dir="rtl"] .language_dropdown[data-bs-popper]::before {
+  left: 12px;
+  right: auto;
+}
+
+html[dir="rtl"] .language_dropdown .dropdown-item span {
+  margin-right: 12px;
+  margin-left: auto;
+}
+
+html[dir="rtl"] .dropdown-menu.services-dropdown::before {
+  right: 12px;
+  left: auto;
+}
+
+
+html[dir="rtl"] .services-swiper .swiper-slide {
+  margin-left: 0px !important;
+  margin-right: auto;
+}
+
+@media (min-width: 768px) {
+  html[dir="rtl"] .text-md-start {
+    text-align: right !important;
+  }
+}
+
+html[dir="rtl"] .navbar-dark .navbar-nav .nav-link.active:after,
+html[dir="rtl"] .navbar-dark .navbar-nav .show>.nav-link:after {
+  right: 0;
+  left: auto;
+}
+
+html[dir="rtl"] .dropdown-toggle_custom::after {
+  margin-right: 10px;
+  margin-left: auto;
+}
+
+html[dir="rtl"] .search-container {
+  right: 0;
+  left: 0;
+}
+
+html[dir="rtl"] .search-container .link-search {
+  right: 12px;
+  left: auto;
+}
+
+html[dir="rtl"] .search-container .link-close {
+  left: 12px;
+  right: auto;
+}
+
+html[dir="rtl"] .overlay.show {
+  right: 0;
+  left: auto;
+}
+
+html[dir="rtl"] ul.ui-autocomplete {
+  right: 315px;
+  left: 0 !important;
+}
+
+html[dir="rtl"] .search-container .quick-links {
+  right: 0;
+  left: 0;
+}
+
+html[dir="rtl"] .search-modal form input {
+  margin-right: 20px;
+  margin-left: auto;
+}
+
+html[dir="rtl"] .offset-1 {
+  margin-right: 8.3333333333%;
+}
+
+html[dir="rtl"] .modal-quick_links-list {
+  padding-right: 20px;
+  padding-left: auto;
+}
+
+html[dir="rtl"] .locationbar {
+  margin: .2rem .6rem .2rem 0rem;
+}
+
+html[dir="rtl"] .locationbar .input {
+  padding-right: 4rem;
+  padding-left: 0;
+
+}
+
+html[dir="rtl"] .locationbar .btn {
+  right: 0;
+  left: auto;
+  text-align: right;
+}
+
+html[dir="rtl"] .locationbar #btnText {
+  padding-right: .2rem;
+  padding-left: auto;
+}
+
+
+@media screen and (max-width: 1199.9px) {
+
+  html[dir="rtl"] .slicknav_menu ul.submenu li img {
+    margin-left: 15px;
+    margin-right: auto;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  html[dir="rtl"] .swiper-scrollbar-drag {
+    right: 26.8rem;
+  }
+}
+@media screen and (max-width: 1100px) {
+  html[dir="rtl"] .swiper-scrollbar-drag {
+    right: 35vw;
+    left: 0;
+  }
+  }
+@media screen and (max-width: 576px) {
+  html[dir="rtl"] .swiper-scrollbar-drag {
+    right: 15.5rem;
+  }
+}
+html[dir="rtl"] header .head-subtitle {
+  padding-left: 1rem;
+  padding-right: auto;
+}
+
+html[dir="rtl"] header .head-btn {
+  /*padding-left: 6rem;*/
+  padding-right: auto;
+}
+
+html[dir="rtl"] header .head-btn::after {
+  left: 64px;
+  right: auto;
+}
+
+html[dir="rtl"] header .head-btn i {
+  left: 27px;
+  right: auto;
+}
+html[dir="rtl"] .head-btn i {
+  transform: rotate(180deg) !important;
+}
+
+html[dir="rtl"] header .head-swiper .swiper-slide img {
+  object-position: left;
+}
+
+html[dir="rtl"] header .swiper-container-horizontal.head-swiper>.swiper-scrollbar {
+  right: auto;
+  left: auto;
+}
+
+
+html[dir="rtl"] header .head-swiper .swiper-button-wrap .swiper-button-prev,
+html[dir="rtl"] header .head-swiper .swiper-button-wrap .swiper-button-next {
+  right: auto;
+  left: auto;
+}
+
+html[dir="rtl"] header .head-swiper .swiper-button-wrap .swiper-button-next {
+  margin-right: 20px;
+}
+
+html[dir="rtl"] .form-group label {
+  padding-right: 15px;
+  padding-left: auto;
+}
+
+html[dir="rtl"] .custom-label {
+  padding-right: 15px;
+  padding-left: auto;
+}
+
+html[dir="rtl"] .home-page .title img {
+  margin-left: 15px;
+  margin-right: auto;
+}
+
+html[dir="rtl"] .start .card::after {
+  right: 0;
+  left: auto;
+}
+
+html[dir="rtl"] .start .card .card-title {
+  right: 3rem;
+  left: auto;
+}
+
+html[dir="rtl"] .about hr:after {
+  right: 0;
+  left: auto;
+}
+
+html[dir="rtl"] .about .description-wrap .description-link {
+  display: flex;
+  align-items: flex-end;
+}
+
+html[dir="rtl"] .about .description-wrap .description-link i {
+  margin-right: 15px;
+  margin-left: auto;
+}
+
+@media (min-width: 768px) {
+  html[dir="rtl"] .about .picture.right {
+    padding-right: 50px;
+    padding-left: auto;
+  }
+
+  html[dir="rtl"] .about .picture.left {
+    padding-left: 50px;
+    padding-right: auto;
+  }
+
+  html[dir="rtl"] .about .description.right {
+    padding-right: 50px;
+    padding-left: auto;
+
+  }
+
+  html[dir="rtl"] .about .description.left {
+    padding-left: 50px;
+    padding-right: auto;
+  }
+}
+
+html[dir="rtl"] .intouch img {
+  position: absolute;
+  left: 0;
+  right: auto;
+}
+
+html[dir="rtl"] .intouch .btn {
+  padding-left: 110px;
+  padding-right: auto;
+}
+html[dir="rtl"] .faq-tabe-content ul{
+  list-style-image: none;
+}
+html[dir="rtl"] .hyper-v-content{
+  margin-left: 0%;
+}
+html[dir="rtl"] .VMs-content .row{
+  margin-right:.1rem;
+}
+html[dir="rtl"] .VMWare-content{
+  margin-left: 0%;
+  margin-right: 4%;
+}
+html[dir="rtl"] .Bitcoin-section2 h3{
+  padding-right: 0vw;
+  padding-left: 24vw;
+}
+html[dir="rtl"] .intouch .btn::after {
+  left: 64px;
+  right: auto;
+}
+
+html[dir="rtl"] .intouch .btn i {
+  left: 27px;
+  right: auto;
+}
+html[dir="rtl"] .computer-brand {
+  padding: 1.3rem 3rem 1.3rem 0rem;
+}
+html[dir="rtl"] .drone-automation-img {
+  right: -10rem;
+}
+html[dir="rtl"] .drone-item p::before {
+  right: -23px;
+  left: 0px;
+}
+
+html[dir="rtl"] .partners .title {
+  margin-right: 3rem;
+  margin-left: auto;
+}
+
+.partners .partners-actions {
+  direction: ltr;
+  display: flex;
+  justify-content: flex-start;
+}
+
+html[dir="rtl"] .subscribe .input-group .form-control {
+  padding-right: 25px;
+  padding-left: auto;
+}
+
+html[dir="rtl"] .subscribe .input-group .btn {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+html[dir="rtl"] .subscribe .input-group .btn i {
+  margin-right: 15px;
+  margin-left: auto;
+}
+
+html[dir="rtl"] body.sign-in {
+  background-position: left;
+}
+
+html[dir="rtl"] .sign-in-block form label {
+  padding-right: 15px;
+  padding-left: auto;
+
+}
+
+html[dir="rtl"] .sign-in-block form .btn.login {
+  text-align: right;
+}
+
+html[dir="rtl"] .sign-in-block form .btn.login::after {
+  left: 66px;
+  right: auto;
+}
+
+html[dir="rtl"] .sign-in-block form .btn.login i {
+  left: 27px;
+  right: auto;
+}
+
+html[dir="rtl"] .sign-in-block .dont-have-account a {
+  margin-right: 10px;
+  margin-left: auto;
+
+}
+
+html[dir="rtl"] .back-to-login i {
+  margin-left: 20px;
+  margin-right: auto;
+
+}
+
+html[dir="rtl"] .sign-in-block .text-muted {
+  padding-right: 8px;
+  padding-left: auto;
+
+}
+
+html[dir="rtl"] .input-group.show-password:not(.has-validation)>.dropdown-toggle:nth-last-child(n+3),
+html[dir="rtl"] .input-group.show-password:not(.has-validation)>:not(:last-child):not(.dropdown-toggle):not(.dropdown-menu),
+html[dir="rtl"] .input-group.show-password .form-control {
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+  padding-left: 45px;
+  padding-right: auto;
+}
+
+html[dir="rtl"] .input-group.show-password .input-group-append {
+  left: 15px;
+  right: auto;
+}
+
+html[dir="rtl"] .sign-up-section {
+  background-position: top left;
+}
+
+html[dir="rtl"] .already-have-account a {
+  margin-right: 10px;
+  margin-left: auto;
+}
+
+html[dir="rtl"] .sign-up-section form .form-group label {
+  padding-right: 15px;
+  padding-left: auto;
+}
+
+html[dir="rtl"] .sign-up-section form .btn.login {
+  text-align: right;
+  padding-left: 140px;
+  padding-right: auto;
+
+}
+
+html[dir="rtl"] .sign-up-section form .btn.login::after {
+  left: 66px;
+  right: auto;
+}
+
+html[dir="rtl"] .sign-up-section form .btn.login i {
+  left: 27px;
+  right: auto;
+}
+
+
+html[dir="rtl"] .form-check-input[type=checkbox] {
+  margin-left: 0px;
+  margin-right: auto;
+}
+
+
+html[dir="rtl"] .contact-us header .sign-in-block form button i {
+  margin-left: 10px;
+  margin-right: auto;
+}
+
+html[dir="rtl"] .me-3 {
+  margin-left: 1rem !important;
+}
+
+html[dir="rtl"] .contact-us_block-link i {
+  margin-left: 15px;
+  margin-right: auto;
+}
+
+html[dir="rtl"] .about-us_page-header_image {
+  margin-left: 0%;
+}
+
+
+html[dir="rtl"] .provide_section-block_title {
+  text-align: right;
+}
+
+html[dir="rtl"] .provide_section-block_subtitle {
+  text-align: right;
+}
+
+html[dir="rtl"] .team_section-quote {
+  padding-right: 18rem;
+  padding-left: 0 !important;
+}
+
+.team_section .members-actions {
+  display: flex;
+  justify-content: flex-start;
+  direction: ltr;
+}
+
+
+html[dir="rtl"] .repair-service_btn i {
+  margin-left: 15px;
+  margin-right: auto;
+}
+
+html[dir="rtl"] .partners-header_btn i {
+  margin-left: 15px;
+  margin-right: auto;
+}
+
+html[dir="rtl"] .partners-section_1 {
+  background-position: 0% 92%;
+}
+
+html[dir="rtl"] .partners-section_block-link i {
+  margin-right: 15px;
+  margin-left: auto;
+}
+
+html[dir="rtl"] .blog-header_title span {
+  margin-right: 1.6rem;
+  margin-left: auto;
+}
+
+html[dir="rtl"] .blog-header_description {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+html[dir="rtl"] .blog-header_btn i {
+  margin-left: 15px;
+  margin-right: auto;
+}
+
+html[dir="rtl"] .blog-section_video-overlay {
+  right: 0;
+  left: auto;
+}
+
+html[dir="rtl"] .blog-section_video-play {
+  right: 50%;
+  left: auto;
+}
+
+html[dir="rtl"] .blog-section_contact-us .sign-in-block form button i {
+  margin-left: 10px;
+  margin-right: auto;
+}
+
+html[dir="rtl"] .start-repair_brand-checkbox {
+  left: 15px;
+  right: auto;
+}
+
+html[dir="rtl"] .form-check.form-switch .form-check-input[type=checkbox] {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+html[dir="rtl"] .start-repair_info-back_btn i {
+  margin-left: 20px;
+  margin-right: auto;
+}
+
+html[dir="rtl"] .start-repair_info-continue_btn i {
+  margin-right: 25px;
+  margin-left: auto;
+}
+
+html[dir="rtl"] .start-repair_subservices-item:hover,
+html[dir="rtl"] .start-repair_subservices-item.active {
+  padding-right: 95px;
+  padding-left: auto;
+}
+
+html[dir="rtl"] .start-repair_subservices-item i {
+  right: 55px;
+}
+
+html[dir="rtl"] .start-repair_model-image {
+  left: 50px;
+  right:10px;
+}
+
+html[dir="rtl"] .start-repair_model-title{
+  text-align: left;
+}
+html[dir="rtl"] .team-section_card-name {
+  margin-left: 40px;
+}
+
+html[dir="rtl"] .tracking-section_image {
+  left: 0;
+}
+
+html[dir="rtl"] .tracking-section_form .btn i {
+  margin-left: 1rem;
+}
+
+html[dir="rtl"] .tracking-status_section-id span {
+  margin-right: 10px;
+}
+
+html[dir="rtl"] .tracking-status_content-title {
+  text-align: right;
+}
+
+html[dir="rtl"] .tracking-status_content-description span {
+  margin-left: 10px;
+}
+
+html[dir="rtl"] .repair-details_list-icon {
+  margin-left: 32px;
+}
+
+html[dir="rtl"] .repair-details_title {
+  text-align: center;
+  direction: rtl;
+}
+
+html[dir="rtl"] .repair-details {
+  direction: rtl;
+}
+
+html[dir="rtl"] .blog-section {
+  background-position: top left;
+}
+
+html[dir="rtl"] .blog-section_card-btn i {
+  margin-right: 24px;
+}
+
+html[dir="rtl"] .blog-section_card-link {
+  display: flex;
+  align-items: flex-end;
+}
+
+html[dir="rtl"] .blog-section_card-link i {
+  margin-right: 15px;
+}
+
+.news-actions {
+  display: flex;
+  justify-content: flex-start;
+  direction: ltr;
+}
+
+
+html[dir="rtl"] .news-actions .swiper-button-prev {
+  left: auto;
+  right: auto;
+  margin-left: 70px;
+}
+
+html[dir="rtl"] .news-actions .swiper-button-next {
+  left: auto;
+  margin-left: 50px;
+}
+
+html[dir="rtl"] .news-swiper .swiper-pagination {
+  text-align: right;
+}
+
+html[dir="rtl"] .news-card_link {
+  display: flex;
+  align-items: flex-end;
+}
+
+html[dir="rtl"] .news-card_link i {
+  margin-right: 15px;
+}
+
+html[dir="rtl"] .gogreen-content_section::after {
+  right: 70px;
+  left: auto;
+}
+
+html[dir="rtl"] .gogreen-info_block::after {
+  right: 35px;
+  left: auto;
+}
+
+html[dir="rtl"] .accordion-button::after {
+  margin-right: auto;
+  margin-left: 0;
+}
+
+html[dir="rtl"] .ms-3 {
+  margin-right: 1rem !important;
+}
+
+.pricing-section {
+  background-position: top left;
+}
+
+html[dir="rtl"] .nav {
+  padding-right: 2rem;
+}
+
+html[dir="rtl"] .ms-4 {
+  margin-right: 1.5rem !important;
+}
+
+html[dir="rtl"] .discussion-section_ask a {
+  margin-right: 10px;
+}
+
+html[dir="rtl"] .discussion-row_user {
+  margin-left: 50px;
+}
+
+html[dir="rtl"] .discussion-row_user span {
+  margin-right: 10px;
+}
+
+html[dir="rtl"] .discussion-section_pagination .page-link {
+  flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .popup-modal .modal-content .btn-close {
+  left: 35px;
+  right: auto;
+}
+
+html[dir="rtl"] .popup-modal .modal-content .popup-title {
+  margin-left: 65px;
+}
+
+html[dir="rtl"] .popup-modal .modal-content .popup-with {
+  padding-right: 60px;
+}
+
+html[dir="rtl"] .popup-modal .modal-content .popup-subtitle {
+  padding-right: 60px;
+}
+
+html[dir="rtl"] .popup-modal .modal-content .popup-available {
+  left: 50px;
+  right: auto;
+}
+
+html[dir="rtl"] .popup-modal .modal-content .popup-title .popup-val {
+  margin-left: 10px;
+}
+
+html[dir="rtl"] .popup-modal .modal-content .popup-title .popup-text {
+  margin-right: 10px;
+}
+
+html[dir="rtl"] .popup-modal .popup-modal_background {
+  right: 0;
+  left: auto;
+}
+
+@media (max-width: 992px) {
+
+  html[dir="rtl"] .popup-modal .modal-content .popup-title {
+    margin-left: 0;
+  }
+
+  html[dir="rtl"] .popup-modal .modal-content .popup-subtitle {
+    padding-right: 0px;
+  }
+
+  html[dir="rtl"] .popup-modal .modal-content .popup-with {
+    padding-right: 0px;
+  }
+}
+
+html[dir="rtl"] .page404 .btn i {
+  margin-left: 30px;
+}
+
+html[dir="rtl"] footer .info-col ul li {
+  padding-right: 10px;
+}
+
+html[dir="rtl"] footer .info-col ul li i {
+  margin-left: 10px;
+}
+
+@media (min-width: 768px) {
+  html[dir="rtl"] .offset-md-1 {
+    margin-right: 8.33333%;
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  html[dir="rtl"] .offset-md-2 {
+    margin-right: 16.6666666667%;
+  }
+}
+
+@media (min-width: 992px) {
+  html[dir="rtl"] .offset-lg-1 {
+    margin-right: 8.3333333333%;
+  }
+}
+
+@media (min-width: 992px) {
+  html[dir="rtl"] .offset-lg-2 {
+    margin-right: 14.6666666667%;
+    margin-left: 0 !important;
+  }
+}
+@media (min-width: 1200px) {
+  html[dir="rtl"] .offset-xl-2 {
+    margin-right: 16.6666666667%;
+    margin-left: 0;
+  }
+}
+html[dir="rtl"] .list-unstyled {
+  padding-right: 0;
+  padding-left: 2rem;
+}
+
+html[dir="rtl"] footer .list-col a i {
+  margin-left: 10px;
+}
+
+html[dir="rtl"] footer .info-col .btn {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+html[dir="rtl"] .input-group>:not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
+  margin-right: -1px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+html[dir="rtl"] .input-group:not(.has-validation)>.dropdown-toggle:nth-last-child(n+3),
+.input-group:not(.has-validation)>:not(:last-child):not(.dropdown-toggle):not(.dropdown-menu) {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+html[dir="rtl"] .buy-back-section .has-search .form-control {
+  padding-right: 2.375rem;
+}
+html[dir="rtl"] .check-box-list.verification li label input {
+  margin-left: 6px;
+}
+
+html[dir="rtl"] .workAtiDigital-video{
+  transform: rotate(180deg);
+}
+html[dir="rtl"] .intl-tel-input .selected-flag{
+  padding: 0px 15px 0px 0px;
+}
+html[dir="rtl"] .accordion-body .check-box-list li label input{
+  margin-left: 6px;
+  margin-right: 0px;
+}
+html[dir="rtl"] .shopHomeList .carousel-item{
+  margin-right: 0;
+}
+html[dir="rtl"] .small-banner .single-banner .content{
+  padding-left: 0px;
+  padding-right: 35px;
+  right: 0;
+}
+@media (min-width: 768px){
+html[dir="rtl"] .offset-md-2 {
+    margin-right: 16.6666666667%;
+    margin-left: 0%;
+}
+}
+html[dir="rtl"] .Navbar__Items--right {
+  margin-right: auto;
+  margin-left: 0px;
+}

@@ -1,0 +1,956 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1,user-scalable=no">
+
+  <!-- Meta tags -->
+  <meta name="keywords" content="">
+  <meta name="author" content="">
+
+  <!-- Title -->
+  <title>iDigital - Solar Panel</title>
+
+  <!-- Shortcut icon -->
+  <link rel="shortcut icon" href="" type="image/x-icon">
+
+  <!-- Fonts -->
+  <link href="fonts/fontawesome/css/all.css" rel="stylesheet">
+
+  <!-- Styles -->
+
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"" />
+  <link rel=" stylesheet" href="css/slicknav.css">
+  <link rel="stylesheet" href="css/style.css" class="StyleLink">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous""></script>
+  <script src=" https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.7.0/jquery.lettering.min.js"></script>
+</head>
+
+<body class="solar-panel-page">
+  <!-- Preloader -->
+  <div class="loader">
+    <div class="word">iDigital...</div>
+    <div class="loadOverlay"></div>
+  </div>
+
+  <script type="text/javascript">
+    function Ticker(elem) {
+      elem.lettering();
+      this.done = false;
+      this.cycleCount = 5;
+      this.cycleCurrent = 0;
+      this.chars = 'iDigital...'.split('');
+      this.charsCount = this.chars.length;
+      this.letters = elem.find('span');
+      this.letterCount = this.letters.length;
+      this.letterCurrent = 0;
+
+      this.letters.each(function () {
+        var $this = $(this);
+        $this.attr('data-orig', $this.text());
+        $this.text('-');
+      });
+    }
+
+    Ticker.prototype.getChar = function () {
+      return this.chars[Math.floor(Math.random() * this.charsCount)];
+    };
+
+    Ticker.prototype.reset = function () {
+      this.done = false;
+      this.cycleCurrent = 0;
+      this.letterCurrent = 0;
+      this.letters.each(function () {
+        var $this = $(this);
+        $this.text($this.attr('data-orig'));
+        $this.removeClass('done');
+      });
+      this.loop();
+    };
+
+    Ticker.prototype.loop = function () {
+      var self = this;
+
+      this.letters.each(function (index, elem) {
+        var $elem = $(elem);
+        if (index >= self.letterCurrent) {
+          if ($elem.text() !== ' ') {
+            $elem.text(self.getChar());
+            $elem.css('opacity', Math.random());
+          }
+        }
+      });
+
+      if (this.cycleCurrent < this.cycleCount) {
+        this.cycleCurrent++;
+      } else if (this.letterCurrent < this.letterCount) {
+        var currLetter = this.letters.eq(this.letterCurrent);
+        this.cycleCurrent = 0;
+        currLetter.text(currLetter.attr('data-orig')).css('opacity', 1).addClass('done');
+        this.letterCurrent++;
+      } else {
+        this.done = true;
+      }
+
+      if (!this.done) {
+        requestAnimationFrame(function () {
+          self.loop();
+        });
+      } else {
+        setTimeout(function () {
+          self.reset();
+        }, 750);
+      }
+    };
+
+    $words = $(".word");
+
+    $words.each(function () {
+      var $this = $(this),
+        ticker = new Ticker($this).reset();
+      $this.data('ticker', ticker);
+    });
+  </script>
+  <!--Ended Preloading -->
+  <!-- ScrollBar -->
+  <div class="scrollbar" id="style-7">
+    <div class="force-overflow"></div>
+  </div>
+  <!-- Back to Top -->
+  <div class="BackTop-wrap">
+    <svg class="BackTop-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+      <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+    </svg>
+  </div>
+  <!-- Header section start -->
+  <header class="blog-header solar-panel">
+    <!-- Navbar -->
+    <nav class="navbar primaryNav navbar-expand-xl navbar-dark p-0 wow animate__animated animate__slideInDown"
+      data-wow-duration="1000ms" data-wow-delay="400ms">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand textLogo p-0" href="index.html">
+            iDigital
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav desktop-nav ms-auto mb-2 mb-lg-0 align-items-center">
+            <li class="nav-item">
+              <a class="nav-link " aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item dropdown service_dropDownMenu">
+              <a class="nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Services
+              </a>
+              <div class="dropdown-menu services-dropdown" data-wow-duration="300ms" data-wow-delay="0ms"
+                aria-labelledby="navbarDropdown">
+                <ul class="nav nav-tabs services-dropdown_wrap" id="services-dropdown_wrap" role="tablist">
+                  <li class="nav-item" role="presentation">
+                    <a class="services-dropdown_item" id="home-tab" data-bs-toggle="tab" type="button"
+                      data-bs-target="#home" role="tab" aria-controls="home" aria-selected="true">
+                      <img class="start-repair_services-img" src="img/start_repair/recovery.png" alt="">
+                      <h4 class="start-repair_services-text">Data Recovery</h4>
+                    </a>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <a class="services-dropdown_item" id="profile-tab" data-bs-toggle="tab" type="button"
+                      data-bs-target="#profile" role="tab" aria-controls="profile" aria-selected="false">
+                      <img class="start-repair_services-img" src="img/start_repair/service.png" alt="">
+                      <h4 class="start-repair_services-text">Repair Service</h4>
+                    </a>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <a class="services-dropdown_item" id="contact-tab" data-bs-toggle="tab" type="button"
+                      data-bs-target="#contact" role="tab" aria-controls="contact" aria-selected="false">
+                      <img class="start-repair_services-img" src="img/start_repair/home.png" alt="">
+                      <h4 class="start-repair_services-text">Home Services</h4>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="nav-item dropdown support_dropDownMenu" onmouseover="supportMenu()">
+              <a class="nav-link" id="support-tab" data-bs-toggle="tab" type="button" data-bs-target="#support"
+                role="tab" aria-controls="support" aria-selected="true">
+                Support
+
+              </a>
+            </li>
+
+
+            <li class="nav-item">
+              <a class="nav-link link-search" href="#"><i class="fas fa-search"></i></a>
+            </li>
+            <li class="nav-item ">
+              <!--<a class="nav-link find-your-store" href="#"><img src="img/icons/map-pin.png" />Find Your Store</a>-->
+              <div class="locationbar">
+                <input type="text" class="input LocationInput" placeholder="location">
+                <div class="btn btnLocation"><img src="img/icons/map-pin.png" /><a class="btnTextLocation">Find Your
+                    Store</a></div>
+              </div>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link sign-in btn-primary" href="sign-in.html"><i class="fa fa-arrow-right"></i>Sign In</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link language dropdown-toggle_custom" href="#" id="navbarDropdown" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                <img width="36px" height="24px" class="lang-selected-img" src="img/flags/usa.png" />
+              </a>
+
+              <ul class="dropdown-menu dropdown-menu-end language_dropdown" data-wow-duration="300ms"
+                data-wow-delay="0ms" aria-labelledby="navbarDropdown">
+                <li><a data-lang-code="en-GB" class="dropdown-item selected" href="#"><img
+                      src="img/flags/usa.png" /><span>en</span></a></li>
+                <li><a data-lang-code="fr-FR" class="dropdown-item" href="#"><img
+                      src="img/flags/fr.png" /><span>fr</span></a></li>
+                <li><a data-lang-code="es-ES" class="dropdown-item" href="#"><img
+                      src="img/flags/es.png" /><span>es</span></a></li>
+                <li><a data-lang-code="ar-AR" class="dropdown-item" href="#"><img
+                      src="img/flags/pal.jpg" /><span>ar</span></a></li>
+              </ul>
+            </li>
+          </ul>
+          <img src="img/icons/moon.png" id="icon-mode" class="icon-mode" />
+        </div>
+      </div>
+    </nav>
+
+    <!-- Search icon -->
+    <div class="search-container hide">
+      <div class="link-search"><i class="fas fa-search" style="color:#fff"></i>
+      </div>
+      <div class="search-bar">
+        <form action="" class="ui-widget">
+          <input type="text" class="inputSearch" placeholder="Search iDigital.com" id="inputSearch">
+        </form>
+      </div>
+      <div class="link-close"></div>
+
+      <div class="quick-links">
+        <h2>Quick Links</h2>
+        <ul>
+          <li>
+            <a href="#">Covid -19 information</a>
+          </li>
+          <li>
+            <a href="#">Most popular Questions</a>
+          </li>
+          <li>
+            <a href="#">Amet minim mollit non deserunt</a>
+          </li>
+          <li>
+            <a href="#">Velit officia consequat duis en</a>
+          </li>
+          <li>
+            <a href="#">Exercitation veniam consequat sunt</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="tab-content services-dropdown_menu hide" id="services-dropdown_tab">
+      <div class="tab-pane fade" id="home" role="tabpanel" aria-labelledby="home-tab">
+        <div class="container">
+          <div class="services-swiper_wrap">
+            <!-- Swiper -->
+            <div class="swiper-container services-swiper services-swiper1">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide box">
+                  <a href="Single-hard-drive.html" class="services-swiper_item">
+                    <img src="img/services/single_hard.png" alt="">
+                    <h5>Single Hard Drive</h5>
+                  </a>
+                </div>
+                <div class="swiper-slide box">
+                  <a href="raid-hard.html" class="services-swiper_item">
+                    <img src="img/services/raid_hard.png" alt="">
+                    <h5>Raid Hard Drive</h5>
+                  </a>
+                </div>
+                <div class="swiper-slide box">
+                  <a href="solid-state.html" class="services-swiper_item">
+                    <img src="img/services/solid_state.png" alt="">
+                    <h5>Solid State</h5>
+                  </a>
+                </div>
+                <div class="swiper-slide box">
+                  <a href="smartphone.html" class="services-swiper_item">
+                    <img src="img/services/smartphone.png" alt="">
+                    <h5>Smartphone</h5>
+                  </a>
+                </div>
+                <div class="swiper-slide box">
+                  <a href="Nand&Chip.html" class="services-swiper_item">
+                    <img src="img/services/nand.png" alt="">
+                    <h5>Nand & Chip Off</h5>
+                  </a>
+                </div>
+                <div class="swiper-slide box">
+                  <a href="USB-flash.html" class="services-swiper_item">
+                    <img src="img/services/flash.png" alt="">
+                    <h5>USB Flash</h5>
+                  </a>
+                </div>
+                <div class="swiper-slide box">
+                  <a href="file-system.html" class="services-swiper_item">
+                    <img src="img/services/file.png" alt="">
+                    <h5>File System</h5>
+                  </a>
+                </div>
+                <div class="swiper-slide box">
+                  <a href="Mac-OS.html" class="services-swiper_item">
+                    <img src="img/services/mac.png" alt="">
+                    <h5>Mac OS</h5>
+                  </a>
+                </div>
+                <div class="swiper-slide box">
+                  <a href="windows-repair.html" class="services-swiper_item">
+                    <img src="img/services/windows.png" alt="">
+                    <h5>Windows</h5>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="Linux&Unix.html" class="services-swiper_item">
+                    <img src="img/services/linux.png" alt="">
+                    <h5>Linux & Unix</h5>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="exchange-repair.html" class="services-swiper_item">
+                    <img src="img/services/exchange.png" alt="">
+                    <h5>Exchange Server</h5>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="sql-server.html" class="services-swiper_item">
+                    <img src="img/services/sql.png" alt="">
+                    <h5>SQL Server</h5>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="virtual-machine.html" class="services-swiper_item">
+                    <img src="img/services/virtual.png" alt="">
+                    <h5>Virtual Machine</h5>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="voip-system.html" class="services-swiper_item">
+                    <img src="img/services/voip.png" alt="">
+                    <h5>VoIP System</h5>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="password.html" class="services-swiper_item">
+                    <img src="img/services/pass.png" alt="">
+                    <h5>Password</h5>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="Bitcoin.html" class="services-swiper_item">
+                    <img src="img/services/bitcoin.png" alt="">
+                    <h5>Bitcoin</h5>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="Tape.html" class="services-swiper_item">
+                    <img src="img/services/tape.png" alt="">
+                    <h5>Tape</h5>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="CD-DVD-Bluray.html" class="services-swiper_item">
+                    <img src="img/services/cd.png" alt="">
+                    <h5>CD - DVD - BLURAY</h5>
+                  </a>
+                </div>
+              </div>
+
+            </div>
+            <div class="swiper-button-next services-swiper-button services-swiper1-button"><img
+                src="img/icons/chevron-right.png" /></div>
+            <div class="swiper-button-prev services-swiper-button services-swiper1-button"><img
+                src="img/icons/chevron-left.png" /></div>
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+        <div class="container">
+          <div class="services-swiper_wrap">
+            <!-- Swiper -->
+            <div class="swiper-container services-swiper services-swiper2">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <a href="smartphone.html" class="services-swiper_item">
+                    <img src="img/services/smartphone.png" alt="">
+                    <h5>Smartphone</h5>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="SmartWatch.html" class="services-swiper_item">
+                    <img src="img/services/watch.png" alt="">
+                    <h5>Smart Watches</h5>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="tablet.html" class="services-swiper_item">
+                    <img src="img/services/tablet.png" alt="">
+                    <h5>Tablet</h5>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="computer.html" class="services-swiper_item">
+                    <img src="img/services/computer.png" alt="">
+                    <h5>Computer</h5>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="laptop.html" class="services-swiper_item">
+                    <img src="img/services/laptop.png" alt="">
+                    <h5>Laptop</h5>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="game-console-repair.html" class="services-swiper_item">
+                    <img src="img/services/console.png" alt="">
+                    <h5>Game Consoles</h5>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="Drone-Automation.html" class="services-swiper_item">
+                    <img src="img/services/drone.png" alt="">
+                    <h5>Drone & Automation</h5>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="Portable-music-playery.html" class="services-swiper_item">
+                    <img src="img/services/player.png" alt="">
+                    <h5>Portable Music Player</h5>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="Virtual-Reality.html" class="services-swiper_item">
+                    <img src="img/services/vr.png" alt="">
+                    <h5>Virtual Reality</h5>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="sound-system.html" class="services-swiper_item">
+                    <img src="img/services/sound.png" alt="">
+                    <h5>Sound System</h5>
+                  </a>
+                </div>
+
+                <div class="swiper-slide">
+                  <a href="motherBoard-repair.html" class="services-swiper_item">
+                    <img src="img/services/logic.png" alt="">
+                    <h5>Logic Boards</h5>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="Medical-devices.html" class="services-swiper_item">
+                    <img src="img/services/med.png" alt="">
+                    <h5>Medical Devices</h5>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="home-appliances.html" class="services-swiper_item">
+                    <img src="https://i.postimg.cc/tJ0WCVxV/electric-appliance.png" alt="">
+                    <h5>Appliances</h5>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-button-next services-swiper-button services-swiper2-button"><img
+                src="img/icons/chevron-right.png" /></div>
+            <div class="swiper-button-prev services-swiper-button services-swiper2-button"><img
+                src="img/icons/chevron-left.png" /></div>
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+        <div class="container">
+          <div class="services-swiper_wrap">
+            <!-- Swiper -->
+            <div class="swiper-container services-swiper services-swiper3">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <a href="solar-panel.html" class="services-swiper_item">
+                    <img src="img/services/solar.png" alt="">
+                    <h5>Solar Panel</h5>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="smart-home.html" class="services-swiper_item">
+                    <img src="img/services/smarthome.png" alt="">
+                    <h5>Smarthome</h5>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="home-security.html" class="services-swiper_item">
+                    <img src="img/services/security.png" alt="">
+                    <h5>Home Security</h5>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="tv-sound.html" class="services-swiper_item">
+                    <img src="img/services/tv_sound.png" alt="">
+                    <h5>TV Sound System</h5>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-button-next services-swiper-button services-swiper3-button"><img
+                src="img/icons/chevron-right.png" /></div>
+            <div class="swiper-button-prev services-swiper-button services-swiper3-button"><img
+                src="img/icons/chevron-left.png" /></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tab-content support-dropdown_menu hide" id="support-dropdown_tab">
+      <div id="support" role="tabpanel" aria-labelledby="support-tab">
+        <div class="container">
+          <div class="services-swiper_wrap">
+            <!-- Swiper -->
+            <div class="swiper-container services-swiper support-swiper1">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide box">
+                  <a href="about-us.html" class="services-swiper_item">
+                    <img src="https://i.postimg.cc/DyshNTMx/team.png" alt="">
+                    <h5>About Us</h5>
+                  </a>
+                </div>
+                <div class="swiper-slide box">
+                  <a href="contact-us.html" class="services-swiper_item">
+                    <img src="https://i.postimg.cc/MG276kMh/contact-Us.png" alt="">
+                    <h5>Contact Us</h5>
+                  </a>
+                </div>
+                <div class="swiper-slide box">
+                  <a href="partners.html" class="services-swiper_item">
+                    <img src="https://i.postimg.cc/43t474nc/team-1.png" alt="">
+                    <h5>Partners</h5>
+                  </a>
+                </div>
+                <div class="swiper-slide box">
+                  <a href="franchising.html" class="services-swiper_item">
+                    <img src="https://i.postimg.cc/nhLzM1Yy/franchise.png" alt="">
+                    <h5>Franchising</h5>
+                  </a>
+                </div>
+                <div class="swiper-slide box">
+                  <a href="pricing.html" class="services-swiper_item">
+                    <img src="https://i.postimg.cc/tgNnxgnf/price-tag.png" alt="">
+                    <h5>Pricing</h5>
+                  </a>
+                </div>
+                <div class="swiper-slide box">
+                  <a href="Policies.html" class="services-swiper_item">
+                    <img src="https://i.postimg.cc/hvp0brJk/privacy-policy.png" alt="">
+                    <h5>Policies</h5>
+                  </a>
+                </div>
+                <div class="swiper-slide box">
+                  <a href="go-green.html" class="services-swiper_item">
+                    <img src="https://i.postimg.cc/Zq7D4JKk/353727633-979064989956272-7164428973325253639-n.png" alt="">
+                    <h5>Go Green life at iDigital</h5>
+                  </a>
+                </div>
+                <div class="swiper-slide box">
+                  <a href="iDigital-careers.html" class="services-swiper_item">
+                    <img src="https://i.postimg.cc/HWvznTM3/career-choice.png" alt="">
+                    <h5>iDigital Career</h5>
+                  </a>
+                </div>
+                <div class="swiper-slide box">
+                  <a href="work-at-iDigital.html" class="services-swiper_item">
+                    <img src="https://i.postimg.cc/tJcsjSYt/work.png" alt="">
+                    <h5>Work at iDigital</h5>
+                  </a>
+                </div>
+                <div class="swiper-slide box">
+                  <a href="life-at-iDigital.html" class="services-swiper_item">
+                    <img src="https://i.postimg.cc/4NtWSrK5/working-at-home.png" alt="">
+                    <h5>life at iDigital</h5>
+                  </a>
+                </div>
+                <div class="swiper-slide box">
+                  <a href="blog.html" class="services-swiper_item">
+                    <img src="https://i.postimg.cc/kMvzRgL3/blog.png" alt="">
+                    <h5>Blog</h5>
+                  </a>
+                </div>
+                <div class="swiper-slide box">
+                  <a href="solid-state.html" class="services-swiper_item">
+                    <img src="https://i.postimg.cc/sDBbTQck/a86e5695-6268-441b-bf2a-8fd4473969ba.png" alt="">
+                    <h5>Discussion</h5>
+                  </a>
+                </div>
+                <div class="swiper-slide box">
+                  <a href="faq.html" class="services-swiper_item">
+                    <img src="https://i.postimg.cc/T1ryqYpB/question.png" alt="">
+                    <h5>FAQ</h5>
+                  </a>
+                </div>
+
+              </div>
+
+            </div>
+            <div class="swiper-button-next support-swiper-button support-swiper1-button"><img
+                src="img/icons/chevron-right.png" /></div>
+            <div class="swiper-button-prev support-swiper-button support-swiper1-button"><img
+                src="img/icons/chevron-left.png" /></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Mobile Menu Start -->
+    <ul class="mobile-menu">
+      <li>
+        <a href="index.html">Home</a>
+      </li>
+      <li>Services
+        <ul class="submenu">
+          <li class="submenu-item"><img class="img-fluid" src="img/start_repair/recovery.png" alt="">Data
+            Recovery
+            <ul class="submenu-list">
+              <li><a href="Single-hard-drive.html">Single Hard Drive</a></li>
+              <li><a href="raid-hard.html">Raid Hard Drive</a></li>
+              <li><a href="solid-state.html">Solid State</a></li>
+              <li><a href="smartphone.html">Smartphone</a></li>
+              <li><a href="Nand&Chip.html">Nand & Chip Off</a></li>
+              <li><a href="USB-flash.html">USB Flash</a></li>
+              <li><a href="file-system.html">File System</a></li>
+              <li><a href="Mac-OS.html">Mac OS</a></li>
+              <li><a href="windows-repair.html">Windows</a></li>
+              <li><a href="life-at-iDigital.html">Linux & Unix</a></li>
+              <li><a href="exchange-repair.html">Exchange Server</a></li>
+              <li><a href="sql-server.html">SQL Server</a></li>
+              <li><a href="virtual-machine.html">Virtual Machine</a></li>
+              <li><a href="voip-system.html">VoIP System</a></li>
+              <li><a href="password.html">Password</a></li>
+              <li><a href="Bitcoin.html">Bitcoin</a></li>
+              <li><a href="Tape.html">Tape</a></li>
+              <li><a href="CD-DVD-Bluray.html">CD - DVD - BLURAY</a></li>
+            </ul>
+          </li>
+          <li class="submenu-item"><img class="img-fluid" src="img/start_repair/service.png" alt="">Repair
+            Service
+            <ul class="submenu-list">
+              <li><a href="smartphone.html">Smartphone</a></li>
+              <li><a href="SmartWatch.html">Smart Watches</a></li>
+              <li><a href="tablet.html">Tablet</a></li>
+              <li><a href="computer.html">Computer</a></li>
+              <li><a href="laptop.html">Laptop</a></li>
+              <li><a href="game-console-repair.html">Game Consoles</a></li>
+              <li><a href="Drone-Automation.html">Drone & Automation</a></li>
+              <li><a href="Portable-music-playery.html">Portable Music Player</a></li>
+              <li><a href="Virtual-Reality.html">Virtual Reality</a></li>
+              <li><a href="sound-system.html">Sound System</a></li>
+              <li><a href="motherBoard-repair.html">Logic Boards</a></li>
+              <li><a href="Medical-devices.html">Medical Devices</a></li>
+              <li><a href="appliances.html">Appliances</a></li>
+            </ul>
+
+          </li>
+          <li class="submenu-item"><img class="img-fluid" src="img/start_repair/home.png" alt="">Home Services
+            <ul class="submenu-list">
+              <li><a href="solar-panel.html">Solar Panel</a></li>
+              <li><a href="smart-home.html">Smarthome</a></li>
+              <li><a href="home-security.html">Home Security</a></li>
+              <li><a href="tv-sound.html">TV Sound System</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        Support
+        <ul class="submenu supportSubmenu">
+          <li><a href="about-us.html">About Us</a></li>
+          <li><a href="contact-us.html">Contact Us</a></li>
+          <li><a href="partners.html">Partners</a></li>
+          <li><a href="franchising.html">Franchising</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="Policies.html">Policies</a></li>
+          <li><a href="go-green.html">Go Green life at iDigtal</a></li>
+          <li><a href="iDigital-careers.html">iDigital Career</a></li>
+          <li><a href="work-at-iDigital.html">Work at iDigital</a></li>
+          <li><a href="life-at-iDigital.html">life at iDigital</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="discussion.html">discussion</a></li>
+          <li><a href="faq.html">faq</a></li>
+
+        </ul>
+      </li>
+      <li>
+        <a href="contact-us.html">Contact</a>
+      </li>
+      <li>
+        <a href="covid19.html">Covid 19</a>
+      </li>
+      <li>
+        Search
+        <ul class="submenu">
+          <li>
+            <form class="" action="index.html" method="post">
+              <input type="text" class="form-control" placeholder="Search iDigital.com">
+            </form>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="sign-in.html">Sign In</a>
+      </li>
+      <li>
+        Language
+        <ul class="submenu language_dropdown">
+          <li><a data-lang-code="en-GB" class="dropdown-item selected" href="#"><img
+                src="img/flags/usa.png" /><span>en</span></a></li>
+          <li><a data-lang-code="fr-FR" class="dropdown-item" href="#"><img src="img/flags/fr.png" /><span>fr</span></a>
+          </li>
+          <li><a data-lang-code="es-ES" class="dropdown-item" href="#"><img src="img/flags/es.png" /><span>es</span></a>
+          </li>
+          <li><a data-lang-code="ar-AR" class="dropdown-item" href="#"><img src="img/flags/ar.png" /><span>ar</span></a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <img class="icon-mode-mobile" onclick="MobileMode()" src="img/icons/moon.png" />
+      </li>
+    </ul>
+    <!-- Mobile Menu End -->
+    <div class="overlay"></div>
+
+    <!--Blog header -->
+    <div class="container blog-header_container d-flex align-items-end">
+      <div class="row">
+        <div class="col-md-10 offset-md-1">
+          <div class="blog-header_content wow animate__animated animate__fadeInUp" data-wow-duration="1000ms"
+            data-wow-delay="300ms">
+            <div class="row">
+              <div class="col-md-10 offset-md-1">
+                <h2 class="blog-header_title">Solar Panel<br />Installation and Support</h2>
+                <h4 class="blog-header_description">
+                  Solar power has come a long way. Today, whether as a standalone power option, or integrated into your
+                  mains supply, solar panels can power your entire home, and with solar charged battery solution, it can
+                  even be the only power
+                  supply you need.
+                  Our professional solar panel installations are designed, delivered and implemented by our in-house
+                  team. We create complete solar power solutions for the home that meet your needs and budget, providing
+                  reliable, effective systems
+                  that are built to last.
+                </h4>
+                <button class="btn blog-header_btn head-btn px-5 btn-primary" type="button" name="button"><i
+                    class="fas fa-arrow-right"></i>Book installation now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- Header section end -->
+  <section class="blog-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10 offset-md-1">
+          <p class="blog-section_services-title">Services</p>
+          <div class="row blog-section_services-wrap d-flex justify-content-between px-md-5">
+            <div class="col-lg-auto col-md-12 d-flex justify-content-center">
+              <div class="blog-section_services-item">
+                <img class="blog-section_services-img" src="https://i.postimg.cc/JhVX4w0M/services-1.png" alt="">
+                <h4 class="blog-section_services-text">Design</h4>
+              </div>
+            </div>
+            <div class="col-lg-auto col-md-12 d-flex justify-content-center">
+              <div class="blog-section_services-item">
+                <img class="blog-section_services-img" src="https://i.postimg.cc/hjK7T9VY/services-2.png" alt="">
+                <h4 class="blog-section_services-text">Installation</h4>
+              </div>
+            </div>
+            <div class="col-lg-auto col-md-12 d-flex justify-content-center">
+              <div class="blog-section_services-item">
+                <img class="blog-section_services-img" src="https://i.postimg.cc/KzQ3NRN8/services-3.png" alt="">
+                <h4 class="blog-section_services-text">Troubleshooting</h4>
+              </div>
+            </div>
+          </div>
+          <a class="blog-section_video-wrap" href="//www.youtube.com/watch?v=XSGBVzeBUbk" data-lity>
+            <img class="blog-section_video-screenshot" src="https://i.postimg.cc/ZRYCCJSt/video-screenshot.png" alt="">
+            <div class="blog-section_video-overlay"></div>
+            <img class="blog-section_video-play" src="img/blog/play.png" alt="">
+          </a>
+          <div class="row">
+            <div class="col-md-10 offset-md-1">
+              <p class="blog-section_video-subtitle"> From solar panel installation to a complete integrated
+                entertainment solution, we provide a discreet, professional solution for home technology installation to
+                meet your needs.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="partners solar-panel">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h2 class="title">
+            <p>
+              Our Partners
+            </p>
+          </h2>
+          <!-- Swiper -->
+          <div class="swiper-container partners-swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide box">
+                <div class="div-img"><img src="https://i.postimg.cc/h4zrSs90/partner-1.png" /></div>
+                <div class="div-img"><img src="https://i.postimg.cc/yY0yRNpg/partner-2.png" /></div>
+                <div class="div-img"><img src="https://i.postimg.cc/05TCrSn1/partner-3.png" /></div>
+              </div>
+
+              <div class="swiper-slide box">
+                <div class="div-img"><img src="https://i.postimg.cc/wjV5WGp9/partner-4.png" /></div>
+                <div class="div-img"><img src="https://i.postimg.cc/Bv7T3Pby/partner-5.png" /></div>
+                <div class="div-img"><img src="https://i.postimg.cc/SKx6HfSC/partner-6.png" /></div>
+              </div>
+
+              <div class="swiper-slide box">
+                <div class="div-img"><img src="https://i.postimg.cc/mDcQgZFr/partner-7.png" /></div>
+                <div class="div-img"><img src="https://i.postimg.cc/gkbvGWcY/partner-8.png" /></div>
+                <div class="div-img"><img src="https://i.postimg.cc/8cMMLy4Q/partner-9.png" /></div>
+              </div>
+
+              <div class="swiper-slide box">
+                <div class="div-img"><img src="https://i.postimg.cc/VsCqy68G/partner-10.png" /></div>
+                <div class="div-img"><img src="https://i.postimg.cc/LXrjYdz3/partner-11.png" /></div>
+                <div class="div-img"><img src="https://i.postimg.cc/4NvpdSnp/partner-12.png" /></div>
+              </div>
+
+              <div class="swiper-slide box">
+                <div class="div-img"><img src="https://i.postimg.cc/h4zrSs90/partner-1.png" /></div>
+                <div class="div-img"><img src="https://i.postimg.cc/yY0yRNpg/partner-2.png" /></div>
+                <div class="div-img"><img src="https://i.postimg.cc/05TCrSn1/partner-3.png" /></div>
+              </div>
+            </div>
+          </div>
+          <div class="partners-actions">
+            <div class="swiper-button-prev partners-swiper-button"><img src="img/icons/chevron-left.png" /></div>
+            <div class="swiper-button-next partners-swiper-button"><img src="img/icons/chevron-right.png" /></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Footer start -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 info-col mb-5 mb-md-0">
+          <h2 class="textLogo">iDigital</h2>
+          <form action="javascript:void(0);" class="EmailFormBlue" method="post">
+            <div class="input-group">
+              <input type="email" class="form-control" placeholder="Enter email address" required>
+              <div class="input-group-append">
+                <button class="btn btn-primary" type="submit" value="submit">Send</button>
+                <!-- Modal -->
+                <div class="modal fade" id="verificationModalBlue" tabindex="-1" role="dialog"
+                  aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Verification</h5>
+                        <button type="button" class="close HideVerification" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        Your Subscribe done successfully!
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-primary HideVerification"
+                          data-dismiss="modal">Submit</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+          <ul class="list-unstyled">
+            <li><i class="fas fa-phone-alt"></i>+1(504)342-9109</li>
+            <hr>
+            <li><i class="far fa-map"></i><span>1851 Rousseau st New Orleans<br> LA 70130 USA</span></li>
+          </ul>
+        </div>
+        <div class="col-md-3 offset-md-1 mb-5 mb-md-0 list-col">
+          <h3>Start your Repair</h3>
+          <ul class="list-unstyled">
+            <li><a href="#">Phone/Tablet Repair</a></li>
+            <li><a href="#">Computer Repair</a></li>
+            <li><a href="#">Game Console Repair</a></li>
+            <li><a href="#">Smart Watch Repair</a></li>
+            <li><a href="#">Drone/Automation Repair</a></li>
+            <li><a href="#">VR Repair</a></li>
+          </ul>
+        </div>
+        <div class="col-md-2 list-col mb-5 mb-md-0">
+          <h3>Company</h3>
+          <ul class="list-unstyled">
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Partnership</a></li>
+          </ul>
+        </div>
+        <div class="col-md-2 list-col mb-5 mb-md-0">
+          <h3>Social</h3>
+          <ul class="list-unstyled">
+            <li><a href="#"><i class="fab fa-linkedin-in"></i>LinkedIn</a></li>
+            <li><a href="#"><i class="fab fa-twitter"></i>Twitter</a></li>
+            <li><a href="#"><i class="fab fa-facebook-f"></i>Facebook</a></li>
+            <li><a href="#"><i class="fab fa-instagram"></i>Instagram</a></li>
+            <li><a href="#"><i class="fab fa-google"></i>Google</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="row copyright">
+        <div class="col-md-6 mb-md-0 mb-2">
+          <a href="#">Privacy Policy / Terms of Use</a>
+        </div>
+        <div class="col-md-6 d-flex justify-content-md-end justify-content-start">
+          <p>Â©2020 All Rights Reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Footer end -->
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.min.js"
+    integrity="sha256-8lykApyIgj9dWMIK4VPvhLQQ1pOLjP12j4zZnHHMCws=" crossorigin="anonymous""></script>
+  <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js""></script>
+  <script src=" js/lity.js"></script>
+  <script src="js/jquery.slicknav.js"></script>
+  <script src="js/wow.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
