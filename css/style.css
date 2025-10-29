@@ -12772,11 +12772,13 @@ div.carousel-nav-icon>svg {
     width: 64px;
     height: 64px;
     position: relative;
-    overflow: hidden;
+    overflow: visible; /* <--- change this */
     border-radius: 40px;
     outline: 1px #589CFF solid;
-    outline-offset: -1px
+    outline-offset: -1px;
 }
+
+
 
 .our_partners .container {
     font-family: 'Poppins', Helvatica, sans-serif;
@@ -12890,7 +12892,8 @@ div.carousel-nav-icon>svg {
 }
 
 .common-appliances_bg {
-    background: linear-gradient(137deg, var(--card-linear-color1) 0%, var(--card-linear-color2) 0%, var(--card-linear-color3) 49%, var(--card-linear-color1) 100%);
+    background: linear-gradient(137deg, var(--card-linear-color1) 0%, var(--card-linear-color2) 0%, var(--card-linear-color3) 49%, var(--card-linear-color1) 100%) !important;
+    z-index: 1 !important;
 }
 
 .common-appliances_bg.appliances-contactus_form {
@@ -12990,10 +12993,12 @@ div.carousel-nav-icon>svg {
     border-radius: 0 0 893px 893px;
     box-shadow: 0 0 148px rgba(88, 156, 255, 0.6);
     filter: blur(65px);
+    
 }
 
 .appliances-contactus_form {
     border-radius: 16px;
+    z-index: 10;
 }
 
 .appliances-contactus_form label {
@@ -13058,6 +13063,20 @@ div.carousel-nav-icon>svg {
 .dark_map {
     display: none;
 }
+
+.map-container {
+  width: 100%;
+  height: 100%; /* Full viewport height, change as needed */
+  position: relative;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+
 
 body.dark-theme .light_map {
     display: none;
