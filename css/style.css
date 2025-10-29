@@ -795,18 +795,21 @@ nav .desktop-nav li a:hover {
 
 /* Search Container */
 
-
 .search-container {
-    width: 55%;
+    width: 500px;
     margin: 1.4rem auto;
     padding: 0 2.3rem;
     position: fixed;
-    top: 0;
+    top: 40px;
     left: 0;
     right: 0;
-    z-index: 201;
+    z-index: 1001; /* above overlay */
     transition: all 400ms ease;
+    background-color: #0c0c0c;
 }
+
+
+
 
 .search-container .link-search {
     position: absolute;
@@ -855,6 +858,10 @@ nav .desktop-nav li a:hover {
     left: 0;
     top: 0;
     z-index: 2;
+}
+
+.navbar-collapse .hide{
+    
 }
 
 /* Quick Links */
@@ -924,9 +931,7 @@ ul.ui-autocomplete {
 }
 
 .desktop-nav.hide li {
-    opacity: 0;
-    transform: scale(0.8);
-    pointer-events: none;
+   display: block;
 }
 
 /* Overlay Animation */
@@ -12736,7 +12741,8 @@ div.carousel-nav-icon>svg {
     }
     .progress_app,
    .col-Z-10{
-    padding: 0 !important;
+    padding: 0 !important
+;
    }
    
 }
