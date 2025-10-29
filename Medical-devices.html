@@ -978,27 +978,33 @@
     </header>
 
     <!-- banner section -->
-<section class="medical_devices_hero">
-  <video autoplay muted loop playsinline class="banner_video" id="medicalVideo">
-    <source src="assets/images/medical.mp4" type="video/mp4" />
-    Your browser does not support the video tag.
-  </video>
-  <div class="container">
-    <div class="col-lg-6 col-md-10 col-sm-12">
-      <h1> Advanced Medical Device Repair & Maintenance </h1>
-      <p>
-        Reliable, compliant, and rapid service for your facility's critical
-        equipment. Get instant pricing and schedule your service today.
-      </p>
-      <div class="d-flex gap-3 align-items-center hero_btns">
-        <a href="#devices" class="btn btn-primary py-3"
-          >Find Your Device <i class="fas fa-arrow-right"></i
-        ></a>
-        <a href="#services" class="btn btn-secondary py-3">Our Services</a>
+    <section class="medical_devices_hero">
+      <video
+        autoplay
+        muted
+        loop
+        playsinline
+        class="banner_video"
+        id="medicalVideo">
+        <source src="assets/images/medical.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <div class="container">
+        <div class="col-lg-6 col-md-10 col-sm-12">
+          <h1> Advanced Medical Device Repair & Maintenance </h1>
+          <p>
+            Reliable, compliant, and rapid service for your facility's critical
+            equipment. Get instant pricing and schedule your service today.
+          </p>
+          <div class="d-flex gap-3 align-items-center hero_btns">
+            <a href="#devices" class="btn btn-primary py-3"
+              >Find Your Device <i class="fas fa-arrow-right"></i
+            ></a>
+            <a href="#services" class="btn btn-secondary py-3">Our Services</a>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
     <!-- services section -->
     <section class="service_wrapper">
@@ -1117,89 +1123,14 @@
       </div>
     </section>
 
-    <!-- Find Your Medical Device -->
-    <!-- <section class="table_wrapper" data-table-container >
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-7 col-md-12 col-sm-12 section_heading text-center">
-                    <h2 class="fw-bold text-dark">
-                        Your End-to-End Service Partner
-                    </h2>
-                    <p>
-                        We provide comprehensive solutions to keep your medical equipment operational, compliant, and in peak condition.
-                    </p>
-                </div>
-            </div>
-            <div class="table_box">
-                <div class="directory-container">
-                  <div class="directory-filters">
-                    <div class="custom-select">
-                      <select>
-                        <option selected disabled>Select Facility Type</option>
-                        <option>Hospital</option>
-                        <option>Clinic</option>
-                        <option>Laboratory</option>
-                      </select>
-                    </div>
-                    <div class="custom-select">
-                      <select>
-                        <option selected disabled>Select Medical Device</option>
-                        <option>ECG Machine</option>
-                        <option>X-Ray Machine</option>
-                        <option>Ventilator</option>
-                        <option>Ultrasound</option>
-                      </select>
-                    </div>
-                  </div>
-                  
-                  <div class="table-container">
-                    <table>
-                      <thead>
-                        <tr>
-                          <th>Device Name</th>
-                          <th>Category</th>
-                          <th>Availability</th>
-                          <th>Base Service Price</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td>ECG Machine</td>
-                          <td>Cardiology</td>
-                          <td class="availability-instock">In Stock</td>
-                          <td>$1,200</td>
-                        </tr>
-                        <tr>
-                          <td>X-Ray Machine</td>
-                          <td>Radiology</td>
-                          <td class="availability-limited">Limited</td>
-                          <td>$3,500</td>
-                        </tr>
-                        <tr>
-                          <td>Ventilator</td>
-                          <td>Respiratory</td>
-                          <td class="availability-preorder">Pre-order</td>
-                          <td>$5,000</td>
-                        </tr>
-                        <tr>
-                          <td>Ultrasound System</td>
-                          <td>Imaging</td>
-                          <td class="availability-instock">In Stock</td>
-                          <td>$2,800</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
-
+    <!-- SALMAN -->
     <section id="devices" class="table_wrapper" data-table-container>
       <div class="container">
         <div class="row justify-content-center">
-          <div class="col-lg-7 col-md-12 col-sm-12 section_heading text-center">
-            <h2 class="fw-bold text-dark"> Your End-to-End Service Partner </h2>
+          <div
+            class="col-lg-7 col-md-12 col-sm-12 section_heading text-center"
+            data-aos="fade-up">
+            <h2 class="fw-bold text-dark">Your End-to-End Service Partner</h2>
             <p>
               We provide comprehensive solutions to keep your medical equipment
               operational, compliant, and in peak condition.
@@ -1208,36 +1139,324 @@
         </div>
         <div class="table_box">
           <div class="directory-container">
-            <div class="directory-filters">
+            <div
+              class="directory-filters"
+              data-aos="fade-up"
+              data-aos-delay="200">
               <div class="custom-select">
                 <select id="entity-select">
-                  <option value="" disabled selected
-                    >Select Facility Type</option
-                  >
+                  <option value="" disabled selected>
+                    Select Facility Type
+                  </option>
                 </select>
               </div>
               <div class="custom-select">
                 <select id="device-select" disabled>
-                  <option value="" disabled selected
-                    >Select Medical Device</option
-                  >
+                  <option value="" disabled selected>
+                    Select Medical Device
+                  </option>
                 </select>
               </div>
             </div>
 
-            <div class="table-container" id="data-output">
-              <p class="placeholder-text"
-                >Select a Facility Type and a Medical Device to see the cost
-                breakdown.</p
-              >
+            <div
+              class="table-container"
+              id="data-output"
+              data-aos="fade-up"
+              data-aos-delay="400">
+              <p class="placeholder-text">
+                Select a Facility Type and a Medical Device to see the cost
+                breakdown.
+              </p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
+    <section id="logo-marquee-section" class="py-5">
+      <div class="container-fluid">
+        <div class="row justify-content-center mb-4">
+          <div class="col-lg-8 text-center section_heading">
+            <h2 class="fw-bold text-dark" data-aos="fade-up">
+              Our Valued Partners
+            </h2>
+            <p class=" " data-aos="fade-up" data-aos-delay="100">
+              Proudly collaborating with leading organizations in the medical
+              industry.
+            </p>
+          </div>
+        </div>
+
+        <div class="logo-marquee-wrapper">
+          <div class="logo-marquee">
+            <img
+              src="./assets/images/logos/Logo.1_6.svg"
+              alt="Partner Logo 1"
+              loading="lazy" />
+            <img
+              src="./assets/images/logos/Logo.1_7.svg"
+              alt="Partner Logo 2"
+              loading="lazy" />
+            <img
+              src="./assets/images/logos/Logo.1_8.svg"
+              alt="Partner Logo 3"
+              loading="lazy" />
+
+            <img
+              src="./assets/images/logos/Logo.1_6.svg"
+              alt="Partner Logo 1"
+              loading="lazy" />
+            <img
+              src="./assets/images/logos/Logo.1_7.svg"
+              alt="Partner Logo 2"
+              loading="lazy" />
+            <img
+              src="./assets/images/logos/Logo.1_8.svg"
+              alt="Partner Logo 3"
+              loading="lazy" />
+
+            <img
+              src="./assets/images/logos/Logo.1_6.svg"
+              alt="Partner Logo 1"
+              loading="lazy" />
+            <img
+              src="./assets/images/logos/Logo.1_7.svg"
+              alt="Partner Logo 2"
+              loading="lazy" />
+            <img
+              src="./assets/images/logos/Logo.1_8.svg"
+              alt="Partner Logo 3"
+              loading="lazy" />
+
+            <img
+              src="./assets/images/logos/Logo.1_6.svg"
+              alt="Partner Logo 1"
+              loading="lazy" />
+            <img
+              src="./assets/images/logos/Logo.1_7.svg"
+              alt="Partner Logo 2"
+              loading="lazy" />
+            <img
+              src="./assets/images/logos/Logo.1_8.svg"
+              alt="Partner Logo 3"
+              loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <style>
+      /* CSS for the Infinite Logo Marquee */
+      #logo-marquee-section {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        overflow: hidden; /* Hide anything outside the marquee wrapper */
+      }
+
+      .logo-marquee-wrapper {
+        position: relative;
+        width: 100%;
+        overflow: hidden; /* Hides content spilling horizontally */
+        white-space: nowrap; /* Keeps all logos on one line */
+      }
+
+      .logo-marquee {
+        will-change: transform;
+        display: inline-block; /* Allows items to flow horizontally */
+        animation: marquee-scroll 20s linear infinite; /* Adjust speed (20s) as needed */
+        /* Duplicating the content inside for seamless loop. If you have 5 logos, you need 5 + 5 for continuous animation */
+        /* The width of this div should ideally be enough to hold all duplicated logos. */
+        /* We achieve this by letting the content define the width and using transform. */
+      }
+
+      .logo-marquee:hover {
+        animation-play-state: paused; /* Pause animation on hover */
+      }
+
+      .logo-marquee img {
+        display: inline-block; /* Position logos side-by-side */
+        vertical-align: middle;
+        height: 60px; /* Base height for logos */
+        margin: 0 40px; /* Space between logos */
+        filter: grayscale(100%); /* Start in grayscale */
+        opacity: 0.6;
+        transition: all 0.3s ease-in-out;
+      }
+
+      .logo-marquee img:hover {
+        filter: grayscale(0%); /* Full color on hover */
+        opacity: 1;
+        /* transform: scale(1.1); */
+      }
+
+      /* Keyframe animation for scrolling */
+      @keyframes marquee-scroll {
+        0% {
+          transform: translateX(0%); /* Start from original position */
+        }
+        100% {
+          transform: translateX(
+            -50%
+          ); /* Move left by 50% of the combined width of duplicated logos */
+          /* Since we duplicated the content, -50% means one full set has scrolled past */
+        }
+      }
+
+      /* Responsive adjustments for logo size and spacing */
+      @media (max-width: 768px) {
+        .logo-marquee img {
+          height: 40px; /* Smaller logos on mobile */
+          margin: 0 25px;
+        }
+        .logo-marquee {
+          animation-duration: 15s; /* Slightly faster scroll on smaller screens */
+        }
+      }
+
+      @media (max-width: 480px) {
+        .logo-marquee img {
+          height: 30px; /* Even smaller logos on very small screens */
+          margin: 0 15px;
+        }
+        .logo-marquee {
+          animation-duration: 12s; /* Faster still on tiny screens */
+        }
+      }
+    </style>
+    <section id="services-offered-images" class="py-5 proud-services">
+      <div class="container">
+        <div class="row justify-content-center mb-5">
+          <div class="col-lg-8 text-center section_heading">
+            <h2 class="fw-bold text-dark">We Proudly Service</h2>
+            <p class=" ">
+              Comprehensive solutions tailored to keep your critical equipment
+              operational.
+            </p>
+          </div>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+          <div
+            class="col-sm-6 col-md-4 col-lg-3"
+            data-aos="fade-up"
+            data-aos-delay="100">
+            <div class="card h-100 shadow-sm border-0 service-card">
+              <div class="card-body">
+                <img
+                  src="./assets/images/proud-image-1.jpg"
+                  class="img-fluid service-img mb-3"
+                  alt="Advanced Repair Icon" />
+
+                <h5 class="card-title fw-bold">Advanced Repair</h5>
+                <p class="card-text text-muted">
+                  Certified technicians for complex diagnostics and equipment
+                  restoration.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="col-sm-6 col-md-4 col-lg-3"
+            data-aos="fade-up"
+            data-aos-delay="200">
+            <div class="card h-100 shadow-sm border-0 service-card">
+              <div class="card-body">
+                <img
+                  src="./assets/images/proud-image-2.jpg"
+                  class="img-fluid service-img mb-3"
+                  alt="Preventative Maintenance Icon" />
+
+                <h5 class="card-title fw-bold">Preventative Plans</h5>
+                <p class="card-text text-muted">
+                  Scheduled maintenance to maximize uptime and extend device
+                  longevity.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="col-sm-6 col-md-4 col-lg-3"
+            data-aos="fade-up"
+            data-aos-delay="300">
+            <div class="card h-100 shadow-sm border-0 service-card">
+              <div class="card-body">
+                <img
+                  src="./assets/images/proud-image-3.jpg"
+                  class="img-fluid service-img mb-3"
+                  alt="Calibration and QA Icon" />
+
+                <h5 class="card-title fw-bold">Calibration & QA</h5>
+                <p class="card-text text-muted">
+                  Ensuring all devices meet strict regulatory standards and
+                  accuracy checks.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="col-sm-6 col-md-4 col-lg-3"
+            data-aos="fade-up"
+            data-aos-delay="400">
+            <div class="card h-100 shadow-sm border-0 service-card">
+              <div class="card-body">
+                <img
+                  src="./assets/images/proud-image-4.jpg"
+                  class="img-fluid service-img mb-3"
+                  alt="Parts Sourcing Icon" />
+
+                <h5 class="card-title fw-bold">Parts Sourcing</h5>
+                <p class="card-text text-muted">
+                  Access to certified OEM and aftermarket parts to minimize
+                  repair delays.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <style>
+      .service-img {
+        border-radius: 12px;
+        height: auto;
+        display: block;
+        margin-top: 0;
+        margin-bottom: 0.5rem;
+      }
+      .service-card .card-body {
+        text-align: left;
+        padding-top: 1.5rem;
+      }
+      .service-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .service-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+      }
+      .proud-services img {
+        aspect-ratio: 3/2;
+        object-fit: cover;
+      }
+      .proud-services {
+        .row .card {
+          border-radius: 8px;
+        }
+        .card-body p {
+          text-align: left;
+        }
+      }
+    </style>
+    <!-- SALMAN -->
+
     <!-- Testimonial -->
-    <section class="Testimonial_wrapper">
+    <section class="Testimonial_wrapper pt-0 pt-md-4 pt-lg-4">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-7 col-md-10 col-sm-12 section_heading text-center">
@@ -1446,8 +1665,12 @@
               Get instant pricing and book a certified technician today.
             </p>
             <div class="d-flex gap-3 justify-content-center cta_button">
-              <a href="about-us.html" class="btn btn-primary py-3"> Get Started </a>
-              <a href="contact-us.html" class="btn btn-secondary py-3"> Contact us </a>
+              <a href="about-us.html" class="btn btn-primary py-3">
+                Get Started
+              </a>
+              <a href="contact-us.html" class="btn btn-secondary py-3">
+                Contact us
+              </a>
             </div>
           </div>
         </div>
@@ -1657,10 +1880,103 @@
         font-weight: 500;
       }
     </style>
+    <script>
+      const video = document.getElementById("medicalVideo");
+      const cutTime = 100; // 1:40 in seconds
 
+      video.addEventListener("timeupdate", () => {
+        if (video.currentTime >= cutTime) {
+          video.pause(); // stop at 1:40
+          video.currentTime = 0; // optional: reset to start if you want looping
+        }
+      });
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/papaparse@5.3.0/papaparse.min.js"></script>
+    <style>
+      /* Custom CSS for the new Card Display */
+      .data-card {
+        border: 1px solid #dee2e6;
+        border-radius: 0.5rem;
+        margin-top: 1.5rem;
+        box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+      }
+
+      .card-header-main {
+        font-size: 1.25rem;
+        font-weight: 700;
+        padding: 1rem 1.5rem;
+        background-color: #f8f9fa;
+        border-bottom: 1px solid #dee2e6;
+      }
+
+      .data-item {
+        padding: 0.75rem 0;
+        border-bottom: 1px dotted #e9ecef;
+      }
+
+      .data-item:last-child {
+        border-bottom: none;
+      }
+
+      .data-label {
+        font-weight: 600;
+        color: #495057;
+      }
+
+      .cost-value {
+        font-weight: 700;
+        color: #007bff; /* Highlight for cost values */
+      }
+
+      .regulatory-notes {
+        margin-top: 2rem;
+        padding: 1rem;
+        background-color: #fff3cd;
+        border-left: 5px solid #ffc107;
+        border-radius: 0.25rem;
+      }
+
+      /* Optional: Improve styling for the custom select menus */
+      .directory-filters {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 2rem;
+      }
+      .custom-select {
+        flex: 1;
+      }
+      .custom-select select {
+        width: 100%;
+        padding: 0.375rem 2.25rem 0.375rem 0.75rem;
+        -moz-padding-start: calc(0.75rem - 3px);
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #212529;
+        background-color: #fff;
+        background-repeat: no-repeat;
+        background-position: right 0.75rem center;
+        background-size: 16px 12px;
+        border: 1px solid #ced4da;
+        border-radius: 0.25rem;
+        appearance: none;
+        height: 38px;
+      }
+
+      /* Ensure placeholder text is visible */
+      .placeholder-text,
+      .error-text {
+        text-align: center;
+        padding: 2rem 0;
+        font-style: italic;
+        color: #6c757d;
+      }
+    </style>
 
     <script>
+      // NOTE: The asynchronous flaw in the original MAX_LINES_TO_PROCESS logic remains.
+      // The loadDataAndInitialize function will likely execute before the CSV line count finishes.
+
       async function countCsvLines(csvUrl) {
         try {
           const response = await fetch(csvUrl);
@@ -1697,11 +2013,7 @@
       let deviceData = [];
       const CSV_FILE_PATH = "data.csv";
 
-      // 🚨 GLOBAL VARIABLE FOR ROW LIMIT 🚨
-      //   const abc = countCsvLines();
-      //   console.log(abc);
-
-      // Columns we will display in the table, in order
+      // Columns we will display in the card, in order
       const DISPLAY_COLUMNS = [
         "Context_Multiplier",
         "Estimate_Repair_Price_USD",
@@ -1719,7 +2031,7 @@
           .replace(/_/g, " ")
           .replace(/(\b[a-z])/g, (char) => char.toUpperCase())
           .replace(" Usd", " (USD)")
-          .replace("Repair Price (USD)", "Repair") // Shorten column names for table
+          .replace("Repair Price (USD)", "Repair") // Shorten column names for card
           .replace("Purchase Price (USD)", "Purchase")
           .replace("Adjusted Estimate", "Adj. Estimate")
           .replace("Total Cost Of Ownership 5 Years (USD)", "TCO (5Y)");
@@ -1877,58 +2189,61 @@
       }
 
       // ====================================================================
-      // D. FINAL DISPLAY LOGIC (Table Output)
+      // D. FINAL DISPLAY LOGIC (Card Output - UPDATED FOR RESPONSIVENESS)
       // ====================================================================
 
       function displayData(data) {
-        let tableHTML = `
-                <table id="data-output-table">
-                    <thead>
-                        <tr>
-                            <th>Device</th>
-            `;
-        // 1. Build Table Headers dynamically
-        DISPLAY_COLUMNS.forEach((key) => {
-          tableHTML += `<th>${formatLabel(key)}</th>`;
-        });
-        tableHTML += `
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>${data.Medical_Device}</strong></td>
-            `;
+        // Start of the main card structure
+        let cardHTML = `
+            <div class="data-card mb-4">
+                <div class="card-header-main">
+                    Cost Breakdown for: <strong>${data.Medical_Device}</strong>
+                </div>
+                <div class="card-body">
+                    <div class="container-fluid">
+        `;
 
-        // 2. Build Table Row data dynamically
+        // 1. Iterate through the columns to create responsive row/card items
         DISPLAY_COLUMNS.forEach((key) => {
           let value = data[key];
           let formattedValue = key.includes("USD")
             ? formatCurrency(value)
             : value;
+
+          let label = formatLabel(key);
           let classModifier = key.includes("USD") ? "cost-value" : "";
 
-          tableHTML += `<td class="${classModifier}">${formattedValue}</td>`;
+          // Use Bootstrap's row/col structure for responsive display
+          // On screens below medium, label/value use col-6 for side-by-side or wrap if needed
+          // On medium and above, label uses col-4, value uses col-8
+          cardHTML += `
+                <div class="row data-item">
+                    <div class="col-6 col-md-4 data-label">${label}</div>
+                    <div class="col-6 col-md-8 ${classModifier}">${formattedValue}</div>
+                </div>
+            `;
         });
 
-        tableHTML += `
-                        </tr>
-                    </tbody>
-                </table>
-            `;
+        // Close card body and card structure
+        cardHTML += `
+                    </div>
+                </div>
+            </div>
+        `;
 
-        // 3. Add Regulatory Notes below the table
+        // 2. Add Regulatory Notes below the card
         let notesHTML = "";
         if (data.Regulatory_Notes) {
           notesHTML = `
-                    <div class="regulatory-notes">
-                        <strong>Regulatory & Compliance Notes:</strong>
-                        <p>${data.Regulatory_Notes}</p>
-                    </div>
-                `;
+            <div class="regulatory-notes">
+                <strong>Regulatory & Compliance Notes:</strong>
+                <p>${data.Regulatory_Notes}</p>
+            </div>
+        `;
         }
 
         // Combine and display the HTML
-        dataOutput.innerHTML = tableHTML + notesHTML;
+        dataOutput.innerHTML = cardHTML + notesHTML;
       }
 
       // ====================================================================
@@ -1939,19 +2254,5 @@
       deviceSelect.addEventListener("change", handleDeviceChange);
       document.addEventListener("DOMContentLoaded", loadDataAndInitialize);
     </script>
-
-
-<script>
-  const video = document.getElementById('medicalVideo');
-  const cutTime = 100; // 1:40 in seconds
-
-  video.addEventListener('timeupdate', () => {
-    if (video.currentTime >= cutTime) {
-      video.pause(); // stop at 1:40
-      video.currentTime = 0; // optional: reset to start if you want looping
-    }
-  });
-</script>
-
   </body>
 </html>
