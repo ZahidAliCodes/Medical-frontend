@@ -98,98 +98,73 @@ for (let i = 0; i < swiperService.length; i++) {
 };
 
 
-////// Navbar Animation (Search -- Dropdown Services & Support)
-const servicesDropdown = document.querySelector(".services-dropdown"),
-  supportDropdown = document.querySelector(".support-dropdown_menu"),
-  serviceMenu = document.querySelector(".service_dropDownMenu"),
-  supportMenuBtn = document.querySelector(".support_dropDownMenu"),
+////// Navbar Animation (Search -- Dropwdown Services)
+const servicesItem1 = document.querySelector("#home-tab"),
+  servicesItem2 = document.querySelector("#profile-tab"),
+  servicesItem3 = document.querySelector("#contact-tab"),
+  supportItem = document.querySelector("#support-tab"),
   searchButton = document.querySelector("nav .navbar-nav .link-search"),
+  inputBox = document.querySelector('.inputSearch'),
   closeButton = document.querySelector(".search-container .link-close"),
   desktopNav = document.querySelector(".desktop-nav"),
   searchContainer = document.querySelector(".search-container"),
-  overlay = document.querySelector(".overlay"),
-  navbar = document.querySelector(".primaryNav"); // header area
+  servicesDropdown = document.querySelector(".services-dropdown_menu"),
+  supportDropdown = document.querySelector(".support-dropdown_menu"),
+  service_dropDownMenu = document.querySelector(".service_dropDownMenu"),
+  support_dropDownMenu = document.querySelector(".suppport_dropDownMenu"),
+  overlay = document.querySelector(".overlay");
 
-// Helper: hide everything
-function hideAll() {
-  servicesDropdown.classList.add("hide");
+service_dropDownMenu.addEventListener("mouseover", () => {
   supportDropdown.classList.add("hide");
-  searchContainer.classList.add("hide");
-  overlay.classList.remove("show");
-  desktopNav.classList.remove("hide");
-}
-
-// Helper: hide only dropdowns
-function hideDropdowns() {
-  servicesDropdown.classList.add("hide");
-  supportDropdown.classList.add("hide");
-}
-
-// ====== SERVICES (hover) ======
-serviceMenu.addEventListener("mouseenter", () => {
-  hideAll();
-  servicesDropdown.classList.remove("hide");
-  overlay.classList.add("show");
-});
-
-servicesDropdown.addEventListener("mouseleave", () => {
   servicesDropdown.classList.add("hide");
   overlay.classList.remove("show");
-});
-
-// ====== SUPPORT (hover) ======
-supportMenuBtn.addEventListener("mouseenter", () => {
-  hideAll();
+})
+function supportMenu() {
   supportDropdown.classList.remove("hide");
   overlay.classList.add("show");
-});
-
-supportDropdown.addEventListener("mouseleave", () => {
-  supportDropdown.classList.add("hide");
-  overlay.classList.remove("show");
-});
-
-// ====== SEARCH (click toggle only) ======
-searchButton.addEventListener("click", (e) => {
-  e.preventDefault();
-  const isSearchVisible = !searchContainer.classList.contains("hide");
-
-  if (isSearchVisible) {
-    hideAll();
-  } else {
-    hideAll();
-    searchContainer.classList.remove("hide");
-    overlay.classList.add("show");
-    desktopNav.classList.add("hide");
-  }
-});
-
-// ====== Close button in search ======
-if (closeButton) {
-  closeButton.addEventListener("click", hideAll);
 }
 
-// ====== Overlay click hides everything ======
-overlay.addEventListener("click", hideAll);
 
-// ====== Hide dropdowns when cursor leaves header ======
-navbar.addEventListener("mousemove", (e) => {
-  const target = e.target;
+searchButton.addEventListener("click", () => {
+  desktopNav.classList.add("hide");
+  searchContainer.classList.remove("hide");
+  overlay.classList.add("show");
+})
 
-  // Skip if search is open
-  if (!searchContainer.classList.contains("hide")) return;
+closeButton.addEventListener("click", () => {
+  desktopNav.classList.remove("hide");
+  searchContainer.classList.add("hide");
+  overlay.classList.remove("show");
+})
 
-  if (
-    !supportDropdown.contains(target) &&
-    !supportMenuBtn.contains(target) &&
-    !servicesDropdown.contains(target) &&
-    !serviceMenu.contains(target)
-  ) {
-    hideDropdowns();
-    overlay.classList.remove("show");
-  }
+servicesItem1.addEventListener("click", () => {
+  servicesDropdown.classList.remove("hide");
+  overlay.classList.add("show");
+})
+servicesItem2.addEventListener("click", () => {
+  servicesDropdown.classList.remove("hide");
+  overlay.classList.add("show");
+})
+servicesItem3.addEventListener("click", () => {
+  servicesDropdown.classList.remove("hide");
+  overlay.classList.add("show");
+})
+supportItem.addEventListener("click", () => {
+  supportDropdown.classList.remove("hide");
+  overlay.classList.add("show");
+})
+
+overlay.addEventListener("mouseover", () => {
+  desktopNav.classList.remove("hide");
+  searchContainer.classList.add("hide");
+  servicesDropdown.classList.add("hide");
+  supportDropdown.classList.add("hide");
+  document.querySelector(".slicknav_nav").style.display = "none";
+  overlay.classList.remove("show");
+  $(".btnLocation").removeClass("btn_active");
+  $(".btnTextLocation").removeClass("text_active");
+  $(".LocationInput").removeClass("input_active");
 });
-
 
 
 $(document).ready(function () {

@@ -631,6 +631,28 @@ header {
     display: none;
 }
 
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.3);
+  backdrop-filter: blur(6px);
+  z-index: 100;
+  display: none;
+}
+
+.overlay.show {
+  display: block;
+}
+
+.services-dropdown_menu,
+.support-dropdown_menu {
+  position: fixed;
+  z-index: 200; /* must be higher than overlay */
+}
+
+
+
 .services-swiper .swiper-slide,
 .support-swiper .swiper-slide {
     max-width: 125px;
@@ -10004,6 +10026,8 @@ ol.steps li.current~li a::after {
 .buy-back-section .check-box-list {
     width: 90%;
 }
+
+
 
 .CheckOut-section .check-box-list li,
 .buy-back-section .check-box-list li {
