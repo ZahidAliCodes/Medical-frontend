@@ -80,6 +80,10 @@ $(".icon-mode").click(function () {
   }
 });
 
+
+
+
+
 const swiperService = document.querySelectorAll(".services-swiper .swiper-slide"),
   servicesImg = document.querySelectorAll(".services-swiper_item img"),
   servicesHeader = document.querySelectorAll(".services-swiper_item h5");
@@ -122,8 +126,7 @@ service_dropDownMenu.addEventListener("mouseover", () => {
 function supportMenu() {
   supportDropdown.classList.remove("hide");
   overlay.classList.add("show");
-}
-
+} 
 
 searchButton.addEventListener("click", () => {
   desktopNav.classList.add("hide");
@@ -137,9 +140,20 @@ closeButton.addEventListener("click", () => {
   overlay.classList.remove("show");
 })
 
+document.querySelectorAll("nav .navbar-collapse > ul > li.nav-item:not(:has(.link-search))").forEach(i=> {
+  i.addEventListener("mouseover", ()=> {
+      desktopNav.classList.remove("hide");
+  searchContainer.classList.add("hide");
+  overlay.classList.remove("show");
+  })
+})
+
+
 servicesItem1.addEventListener("click", () => {
   servicesDropdown.classList.remove("hide");
   overlay.classList.add("show");
+
+  
 })
 servicesItem2.addEventListener("click", () => {
   servicesDropdown.classList.remove("hide");
@@ -166,6 +180,15 @@ overlay.addEventListener("mouseover", () => {
   $(".LocationInput").removeClass("input_active");
 });
 
+searchButton.addEventListener("mouseover", ()=> {
+   desktopNav.classList.remove("hide"); 
+  servicesDropdown.classList.add("hide");
+  supportDropdown.classList.add("hide");
+  document.querySelector(".slicknav_nav").style.display = "none";
+  overlay.classList.remove("show");
+  $(".btnLocation").removeClass("btn_active");
+  $(".btnTextLocation").removeClass("text_active"); 
+})
 
 $(document).ready(function () {
   var swiper1 = new Swiper(".head-swiper", {
