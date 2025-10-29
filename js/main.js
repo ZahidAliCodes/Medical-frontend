@@ -80,10 +80,6 @@ $(".icon-mode").click(function () {
   }
 });
 
-
-
-
-
 const swiperService = document.querySelectorAll(".services-swiper .swiper-slide"),
   servicesImg = document.querySelectorAll(".services-swiper_item img"),
   servicesHeader = document.querySelectorAll(".services-swiper_item h5");
@@ -102,7 +98,7 @@ for (let i = 0; i < swiperService.length; i++) {
 };
 
 
-////// Navbar Animation (Search -- Dropwdown Services)
+////// Navbar Animation (Search -- Dropdown Services)
 const servicesItem1 = document.querySelector("#home-tab"),
   servicesItem2 = document.querySelector("#profile-tab"),
   servicesItem3 = document.querySelector("#contact-tab"),
@@ -118,15 +114,62 @@ const servicesItem1 = document.querySelector("#home-tab"),
   support_dropDownMenu = document.querySelector(".suppport_dropDownMenu"),
   overlay = document.querySelector(".overlay");
 
+// Assuming the Support link and its dropdown are wrapped in a single parent element
+const supportParent = document.querySelector(".support-nav-parent"); // **ADJUST THIS SELECTOR IF NEEDED**
+
+// --- Services Dropdown Hover Fix (Ensures it hides if mouse leaves the dropdown container) ---
+
 service_dropDownMenu.addEventListener("mouseover", () => {
+  // Your original logic to ensure other menus/overlays are handled
   supportDropdown.classList.add("hide");
-  servicesDropdown.classList.add("hide");
-  overlay.classList.remove("show");
+  // servicesDropdown.classList.add("hide"); // Removed this, as the mouse is currently OVER the services dropdown, so it should be visible
+  overlay.classList.remove("show"); // If the overlay is used as a full-screen background, you might want to remove this
 })
-function supportMenu() {
-  supportDropdown.classList.remove("hide");
-  overlay.classList.add("show");
-} 
+
+// Add an event listener to hide the services dropdown when the mouse leaves it
+service_dropDownMenu.addEventListener("mouseout", () => {
+    servicesDropdown.classList.add("hide");
+    overlay.classList.remove("show");
+});
+
+
+// --- Support Dropdown Hover Fix (Using parent container for reliable hover) ---
+
+// Assuming the parent exists, this handles both the link and the dropdown
+if (supportParent) {
+    supportParent.addEventListener("mouseover", () => {
+        supportDropdown.classList.remove("hide");
+        servicesDropdown.classList.add("hide"); // Ensure services is hidden
+        overlay.classList.add("show");
+    });
+
+    supportParent.addEventListener("mouseout", () => {
+        // Use a short timeout to prevent immediate flickering if the mouse briefly leaves
+        setTimeout(() => {
+            if (!supportParent.matches(':hover')) {
+                supportDropdown.classList.add("hide");
+                overlay.classList.remove("show");
+            }
+        }, 50); 
+    });
+} else {
+    // Fallback if no parent selector is used (less reliable)
+    supportItem.addEventListener("mouseover", () => {
+        supportDropdown.classList.remove("hide");
+        servicesDropdown.classList.add("hide");
+        overlay.classList.add("show");
+    });
+    
+    // You MUST add a mouseout to hide it
+    supportItem.addEventListener("mouseout", () => {
+        // You'll need logic here to check if the mouse is moving to the dropdown or completely away
+        supportDropdown.classList.add("hide");
+        overlay.classList.remove("show");
+    });
+}
+
+
+// --- Existing Search and Close Logic ---
 
 searchButton.addEventListener("click", () => {
   desktopNav.classList.add("hide");
@@ -140,33 +183,41 @@ closeButton.addEventListener("click", () => {
   overlay.classList.remove("show");
 })
 
+// --- Existing Logic to Hide Search/Overlay when hovering other links ---
+
 document.querySelectorAll("nav .navbar-collapse > ul > li.nav-item:not(:has(.link-search))").forEach(i=> {
   i.addEventListener("mouseover", ()=> {
       desktopNav.classList.remove("hide");
-  searchContainer.classList.add("hide");
-  overlay.classList.remove("show");
+      searchContainer.classList.add("hide");
+      overlay.classList.remove("show");
   })
 })
 
 
+// --- Existing Service Click Logic (Kept as is) ---
+
 servicesItem1.addEventListener("click", () => {
   servicesDropdown.classList.remove("hide");
+  supportDropdown.classList.add("hide"); // Added to ensure only one is visible
   overlay.classList.add("show");
-
-  
 })
 servicesItem2.addEventListener("click", () => {
   servicesDropdown.classList.remove("hide");
+  supportDropdown.classList.add("hide"); // Added to ensure only one is visible
   overlay.classList.add("show");
 })
 servicesItem3.addEventListener("click", () => {
   servicesDropdown.classList.remove("hide");
+  supportDropdown.classList.add("hide"); // Added to ensure only one is visible
   overlay.classList.add("show");
 })
-supportItem.addEventListener("click", () => {
-  supportDropdown.classList.remove("hide");
-  overlay.classList.add("show");
-})
+
+// NOTE: Your original supportItem.addEventListener("click") is removed
+// as it conflicts with the new mouseover/mouseout hover logic.
+// If you need it to open on click as well, let me know.
+
+
+// --- Existing Overlay Logic (Hides everything) ---
 
 overlay.addEventListener("mouseover", () => {
   desktopNav.classList.remove("hide");
@@ -175,10 +226,13 @@ overlay.addEventListener("mouseover", () => {
   supportDropdown.classList.add("hide");
   document.querySelector(".slicknav_nav").style.display = "none";
   overlay.classList.remove("show");
+  // Assuming these are related to a separate location feature
   $(".btnLocation").removeClass("btn_active");
   $(".btnTextLocation").removeClass("text_active");
   $(".LocationInput").removeClass("input_active");
 });
+
+// --- Existing Search Button Mouseover Logic (Cleaned up) ---
 
 searchButton.addEventListener("mouseover", ()=> {
    desktopNav.classList.remove("hide"); 
@@ -186,9 +240,11 @@ searchButton.addEventListener("mouseover", ()=> {
   supportDropdown.classList.add("hide");
   document.querySelector(".slicknav_nav").style.display = "none";
   overlay.classList.remove("show");
+  // Assuming these are related to a separate location feature
   $(".btnLocation").removeClass("btn_active");
   $(".btnTextLocation").removeClass("text_active"); 
 })
+
 
 $(document).ready(function () {
   var swiper1 = new Swiper(".head-swiper", {
